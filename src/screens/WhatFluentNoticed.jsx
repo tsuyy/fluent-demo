@@ -3,7 +3,9 @@ import { motion } from 'framer-motion'
 import WeeklyRhythmChart from '../components/charts/WeeklyRhythmChart'
 import SportHRVChart from '../components/charts/SportHRVChart'
 import RHRTrendChart from '../components/charts/RHRTrendChart'
-
+import SleepHRVChart      from '../components/charts/SleepHRVChart'
+import RetirementArcChart from '../components/charts/RetirementArcChart'
+import SeasonalStepsChart from '../components/charts/SeasonalStepsChart'
 
 const CARDS = {
   jamie: [
@@ -79,17 +81,14 @@ const Q1_ROUTES = {
 }
 
 function VizPlaceholder({ type, persona }) {
-  if (type === 'weekly_rhythm' && persona === 'jamie') {
-    return <WeeklyRhythmChart />
-  }
-  if (type === 'sport_hrv') {
-    return <SportHRVChart height={160} />
-  }
-  if (type === 'rhr_trend') {
-    return <RHRTrendChart height={140} />
-  }
+  if (type === 'weekly_rhythm'    && persona === 'jamie')  return <WeeklyRhythmChart />
+  if (type === 'sleep_hrv_quadrant')                       return <SleepHRVChart height={160} />
+  if (type === 'sport_hrv')                                return <SportHRVChart height={160} />
+  if (type === 'rhr_trend')                                return <RHRTrendChart height={140} />
+  if (type === 'retirement_arc')                           return <RetirementArcChart height={160} />
+  if (type === 'seasonal_steps')                           return <SeasonalStepsChart height={160} />
   if (!type) return null
-    return (
+  return (
     <div style={{
       height: 140,
       background: 'rgba(255,255,255,0.05)',

@@ -69,6 +69,24 @@ export default function WeeklyRhythmChart() {
           },
           background: 'transparent',
         }}
+        useMesh={true}
+        enableCrosshair={true}
+        crosshairType="x"
+        // For line charts, tooltip receives { point } not { node }:
+        tooltip={({ point }) => (
+        <div style={{
+            background: 'rgba(15,15,14,0.95)',
+            border: '1px solid rgba(255,255,255,0.1)',
+            borderRadius: 6, padding: '6px 10px',
+            fontSize: 11, color: '#fff',
+        }}>
+            <strong>{point.data.xFormatted}</strong>
+            <br />
+            <span style={{ color: point.serieColor }}>
+            {point.data.yFormatted} {point.serieId === 'RHR' ? 'bpm' : 'ms'}
+            </span>
+        </div>
+        )}
         animate={true}
         motionConfig="gentle"
         markers={[{

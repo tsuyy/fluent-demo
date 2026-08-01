@@ -166,6 +166,24 @@ export default function WeeklyRhythmFullChart({ height = 200, metric = 'RHR' }) 
         xScale={{ type: 'point', domain: allXValues }}
         curve="cardinal"
         lineWidth={1.5}
+        useMesh={true}
+        enableCrosshair={true}
+        crosshairType="x"
+        // For line charts, tooltip receives { point } not { node }:
+        tooltip={({ point }) => (
+        <div style={{
+            background: 'rgba(15,15,14,0.95)',
+            border: '1px solid rgba(255,255,255,0.1)',
+            borderRadius: 6, padding: '6px 10px',
+            fontSize: 11, color: '#fff',
+        }}>
+            <strong>{point.data.xFormatted}</strong>
+            <br />
+            <span style={{ color: point.serieColor }}>
+            {point.data.yFormatted} {point.serieId === 'RHR' ? 'bpm' : 'ms'}
+            </span>
+        </div>
+        )}
         pointSize={5}
         pointColor="#0F0F0E"
         pointBorderColor={{ from: 'serieColor' }}
