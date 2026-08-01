@@ -1,0 +1,38 @@
+{
+  "strength": {
+    "hrr1": 31.3,
+    "hrr2": 36.1,
+    "active_hr": 136.9,
+    "n": 15
+  },
+  "running": {
+    "hrr1": 29.1,
+    "hrr2": 42.9,
+    "active_hr": 169.3,
+    "n": 59
+  },
+  "tennis": {
+    "hrr1": 28.5,
+    "hrr2": 31.4,
+    "active_hr": 131.5,
+    "n": 13
+  },
+  "cycling": {
+    "hrr1": 24.8,
+    "hrr2": 30.6,
+    "active_hr": 150.4,
+    "n": 112
+  },
+  "mindfulness": {
+    "hrr1": 24.8,
+    "hrr2": 19.6,
+    "active_hr": 146.4,
+    "n": 15
+  },
+  "skiing": {
+    "hrr1": 20.1,
+    "hrr2": 26.8,
+    "active_hr": 132.2,
+    "n": 9
+  }
+}

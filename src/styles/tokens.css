@@ -1,0 +1,50 @@
+/* src/styles/tokens.css */
+:root {
+  /* Base */
+  --color-base:       #0F0F0E;
+  --color-surface:    #1A1A18;
+  --color-surface-2:  #242422;
+  --color-border:     rgba(255,255,255,0.08);
+  
+  /* Brand */
+  --color-accent:     #0681fc;
+  --color-recovery:   #27C48A;
+  --color-stress:     #E8504A;
+  --color-quiet:      #888780;
+  
+  /* Text */
+  --color-text-primary:   #FFFFFF;
+  --color-text-secondary: rgba(255,255,255,0.6);
+  --color-text-tertiary:  rgba(255,255,255,0.35);
+  
+  /* Typography */
+  --font-display: 'DM Sans', system-ui, sans-serif;
+  --font-body:    system-ui, -apple-system, sans-serif;
+  
+  /* Spacing */
+  --space-xs:   4px;
+  --space-sm:   8px;
+  --space-md:   16px;
+  --space-lg:   24px;
+  --space-xl:   40px;
+  --space-2xl:  64px;
+  --space-3xl:  96px;
+  
+  /* Border radius */
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+body {
+  background: var(--color-base);
+  color: var(--color-text-primary);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}

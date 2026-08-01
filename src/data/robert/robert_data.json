@@ -1,0 +1,176 @@
+{
+  "persona": "robert",
+  "meta": {
+    "name": "Robert",
+    "age": "65+",
+    "dataStart": "2023-06-01",
+    "dataEnd": "2025-05-31",
+    "totalDays": 730,
+    "retirementDate": "2023-08-15",
+    "retirementDateLabel": "Robert retired"
+  },
+
+  "retirementArc": [
+    { "month": "Jun 2023",  "rhr": 63.2, "hrv": 28.4, "label": "pre-retirement",  "phase": "before" },
+    { "month": "Jul 2023",  "rhr": 62.8, "hrv": 29.1, "label": "",                "phase": "before" },
+    { "month": "Aug 2023",  "rhr": 65.4, "hrv": 26.2, "label": "retired Aug 15",  "phase": "transition" },
+    { "month": "Sep 2023",  "rhr": 66.1, "hrv": 24.8, "label": "adjustment",      "phase": "transition" },
+    { "month": "Oct 2023",  "rhr": 64.8, "hrv": 26.5, "label": "",                "phase": "transition" },
+    { "month": "Nov 2023",  "rhr": 63.1, "hrv": 28.2, "label": "settling",        "phase": "settling"   },
+    { "month": "Dec 2023",  "rhr": 62.4, "hrv": 29.8, "label": "",                "phase": "settling"   },
+    { "month": "Jan 2024",  "rhr": 61.2, "hrv": 30.5, "label": "golf routine",    "phase": "new_normal" },
+    { "month": "Feb 2024",  "rhr": 60.8, "hrv": 31.2, "label": "",                "phase": "new_normal" },
+    { "month": "Mar 2024",  "rhr": 60.1, "hrv": 32.1, "label": "",                "phase": "new_normal" },
+    { "month": "Apr 2024",  "rhr": 59.6, "hrv": 32.8, "label": "",                "phase": "new_normal" },
+    { "month": "May 2024",  "rhr": 59.2, "hrv": 33.4, "label": "Portugal trip",   "phase": "new_normal" },
+    { "month": "Jun 2024",  "rhr": 58.9, "hrv": 33.8, "label": "",                "phase": "new_normal" },
+    { "month": "Jul 2024",  "rhr": 58.4, "hrv": 34.2, "label": "",                "phase": "new_normal" },
+    { "month": "Aug 2024",  "rhr": 58.1, "hrv": 34.8, "label": "",                "phase": "new_normal" },
+    { "month": "Sep 2024",  "rhr": 57.8, "hrv": 35.1, "label": "",                "phase": "new_normal" },
+    { "month": "Oct 2024",  "rhr": 57.5, "hrv": 35.4, "label": "",                "phase": "new_normal" },
+    { "month": "Nov 2024",  "rhr": 57.2, "hrv": 35.8, "label": "",                "phase": "new_normal" },
+    { "month": "Dec 2024",  "rhr": 57.8, "hrv": 34.9, "label": "",                "phase": "new_normal" },
+    { "month": "Jan 2025",  "rhr": 57.4, "hrv": 35.5, "label": "",                "phase": "new_normal" },
+    { "month": "Feb 2025",  "rhr": 57.1, "hrv": 35.9, "label": "",                "phase": "new_normal" },
+    { "month": "Mar 2025",  "rhr": 56.8, "hrv": 36.2, "label": "",                "phase": "new_normal" },
+    { "month": "Apr 2025",  "rhr": 56.5, "hrv": 36.6, "label": "",                "phase": "new_normal" },
+    { "month": "May 2025",  "rhr": 56.2, "hrv": 36.9, "label": "",                "phase": "new_normal" }
+  ],
+
+  "structureDependency": {
+    "structured": {
+      "label": "Structured weeks",
+      "description": "Golf scheduled, social commitments, regular plans",
+      "rhr": 57.9,
+      "hrv": 33.0,
+      "steps": 7800,
+      "n": 52
+    },
+    "unstructured": {
+      "label": "Unstructured weeks",
+      "description": "No plans, open calendar",
+      "rhr": 62.0,
+      "hrv": 26.6,
+      "steps": 5100,
+      "n": 18
+    }
+  },
+
+  "trendCards": {
+    "rhr": {
+      "current": 57.2,
+      "beforeRetirement": 63.0,
+      "change": -5.8,
+      "direction": "down_good",
+      "label": "Resting Heart Rate",
+      "unit": "bpm",
+      "insight": "Your heart settled into a new, lower range after retirement"
+    },
+    "hrv": {
+      "current": 35.5,
+      "beforeRetirement": 28.5,
+      "change": 7.0,
+      "direction": "up_good",
+      "label": "Heart Rate Variability",
+      "unit": "ms",
+      "insight": "Your nervous system is more regulated in structured weeks"
+    },
+    "steps": {
+      "current": 6900,
+      "beforeRetirement": 5200,
+      "change": 1700,
+      "direction": "up_good",
+      "label": "Daily Steps",
+      "unit": "steps avg",
+      "insight": "You move more in retirement — but structured weeks show 53% more steps than open weeks"
+    },
+    "sleep": {
+      "current": 7.0,
+      "beforeRetirement": 6.4,
+      "change": 0.6,
+      "direction": "up_good",
+      "label": "Sleep",
+      "unit": "hr avg",
+      "insight": "Retirement gave your sleep back — 36 more minutes per night on average"
+    }
+  },
+
+  "sleepArchitecture": {
+    "beforeRetirement": {
+      "deep": 48.2, "rem": 68.4, "core": 280.1, "awake": 42.3, "total": 384.0
+    },
+    "afterRetirement": {
+      "deep": 52.4, "rem": 71.8, "core": 286.4, "awake": 28.1, "total": 420.0
+    },
+    "structuredWeeks": {
+      "deep": 54.1, "rem": 73.2, "core": 288.0, "awake": 24.8, "total": 428.0
+    },
+    "unstructuredWeeks": {
+      "deep": 46.8, "rem": 67.4, "core": 278.2, "awake": 38.6, "total": 402.0
+    }
+  },
+
+  "qqrt": {
+    "quantity": { "value": 7.0,  "unit": "hr",  "direction": "up",     "label": "Quantity"    },
+    "quality":  { "value": 88,   "unit": "%",   "direction": "stable", "label": "Quality"     },
+    "regularity":{ "value": 31,  "unit": "min", "direction": "stable", "label": "Regularity", "note": "Bedtime variance" },
+    "timing":   { "value": "6:45am", "unit": "", "direction": "stable", "label": "Timing"     }
+  },
+
+  "moments": [
+    {
+      "date": "2023-08-15",
+      "label": "Robert retired",
+      "type": "major",
+      "effect": "RHR rose initially then declined over 5 months"
+    },
+    {
+      "date": "2024-01-08",
+      "label": "Golf routine established",
+      "type": "positive",
+      "effect": "Structure dependency pattern begins to show"
+    },
+    {
+      "date": "2024-05-12",
+      "label": "Portugal trip",
+      "type": "travel",
+      "effect": "Brief disruption, quick recovery"
+    },
+    {
+      "date": "2025-03-01",
+      "label": "Structure dependency discovered",
+      "type": "insight",
+      "effect": "Pattern confirmed across 18 months of data"
+    }
+  ],
+
+  "calibratedSilence": {
+    "quarter": "Q1 2025",
+    "message": "Your key patterns this quarter — resting heart rate, activity, sleep — are all consistent with how you've been trending. Nothing exceeded the threshold that would normally prompt a closer look.",
+    "rhrVsBaseline": 0.3,
+    "hrvVsBaseline": 0.8,
+    "stepsVsBaseline": -2.1,
+    "status": "stable"
+  },
+
+  "interestingFacts": [
+    {
+      "category": "heart",
+      "stat": "5.8 bpm",
+      "context": "RHR improvement since retirement",
+      "insight": "Your heart takes roughly 3,600 fewer beats every day than before you retired."
+    },
+    {
+      "category": "structure",
+      "stat": "53% more steps",
+      "context": "structured vs unstructured weeks",
+      "insight": "Structure isn't just a preference. For your body, it's a health variable."
+    },
+    {
+      "category": "sleep",
+      "stat": "36 min more",
+      "context": "per night vs pre-retirement",
+      "insight": "Retirement gave your sleep back. Your body has been using it."
+    }
+  ]
+}

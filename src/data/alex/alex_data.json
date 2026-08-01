@@ -1,0 +1,206 @@
+{
+  "persona": "alex",
+  "meta": {
+    "name": "Alex",
+    "age": "mid 40s",
+    "dataStart": "2021-01-01",
+    "dataEnd": "2025-12-31",
+    "dataType": "phone_steps_only",
+    "device": "iPhone",
+    "note": "No wearable. Step data only. 5 years of movement patterns."
+  },
+
+  "monthlySteps": [
+    { "month": "Jan", "year": 2021, "avgDaily": 6200, "monthlyTotal": 192200 },
+    { "month": "Feb", "year": 2021, "avgDaily": 5800, "monthlyTotal": 162400 },
+    { "month": "Mar", "year": 2021, "avgDaily": 7100, "monthlyTotal": 220100 },
+    { "month": "Apr", "year": 2021, "avgDaily": 7600, "monthlyTotal": 228000 },
+    { "month": "May", "year": 2021, "avgDaily": 8200, "monthlyTotal": 254200 },
+    { "month": "Jun", "year": 2021, "avgDaily": 8800, "monthlyTotal": 264000 },
+    { "month": "Jul", "year": 2021, "avgDaily": 8600, "monthlyTotal": 266600 },
+    { "month": "Aug", "year": 2021, "avgDaily": 8400, "monthlyTotal": 260400 },
+    { "month": "Sep", "year": 2021, "avgDaily": 8900, "monthlyTotal": 267000 },
+    { "month": "Oct", "year": 2021, "avgDaily": 9800, "monthlyTotal": 303800, "peak": true },
+    { "month": "Nov", "year": 2021, "avgDaily": 8100, "monthlyTotal": 243000 },
+    { "month": "Dec", "year": 2021, "avgDaily": 6900, "monthlyTotal": 213900 },
+
+    { "month": "Jan", "year": 2022, "avgDaily": 5900, "monthlyTotal": 182900, "low": true },
+    { "month": "Feb", "year": 2022, "avgDaily": 5400, "monthlyTotal": 151200, "lowest": true },
+    { "month": "Mar", "year": 2022, "avgDaily": 7000, "monthlyTotal": 217000 },
+    { "month": "Apr", "year": 2022, "avgDaily": 7800, "monthlyTotal": 234000 },
+    { "month": "May", "year": 2022, "avgDaily": 8400, "monthlyTotal": 260400 },
+    { "month": "Jun", "year": 2022, "avgDaily": 8600, "monthlyTotal": 258000 },
+    { "month": "Jul", "year": 2022, "avgDaily": 8300, "monthlyTotal": 257300 },
+    { "month": "Aug", "year": 2022, "avgDaily": 8100, "monthlyTotal": 251100 },
+    { "month": "Sep", "year": 2022, "avgDaily": 8700, "monthlyTotal": 261000 },
+    { "month": "Oct", "year": 2022, "avgDaily": 9600, "monthlyTotal": 297600, "peak": true },
+    { "month": "Nov", "year": 2022, "avgDaily": 7900, "monthlyTotal": 237000 },
+    { "month": "Dec", "year": 2022, "avgDaily": 6700, "monthlyTotal": 207700 },
+
+    { "month": "Jan", "year": 2023, "avgDaily": 6100, "monthlyTotal": 189100 },
+    { "month": "Feb", "year": 2023, "avgDaily": 5600, "monthlyTotal": 156800, "lowest": true },
+    { "month": "Mar", "year": 2023, "avgDaily": 7200, "monthlyTotal": 223200 },
+    { "month": "Apr", "year": 2023, "avgDaily": 8000, "monthlyTotal": 240000 },
+    { "month": "May", "year": 2023, "avgDaily": 8500, "monthlyTotal": 263500 },
+    { "month": "Jun", "year": 2023, "avgDaily": 8700, "monthlyTotal": 261000 },
+    { "month": "Jul", "year": 2023, "avgDaily": 8400, "monthlyTotal": 260400 },
+    { "month": "Aug", "year": 2023, "avgDaily": 8200, "monthlyTotal": 254200 },
+    { "month": "Sep", "year": 2023, "avgDaily": 8800, "monthlyTotal": 264000 },
+    { "month": "Oct", "year": 2023, "avgDaily": 10100, "monthlyTotal": 313100, "peak": true },
+    { "month": "Nov", "year": 2023, "avgDaily": 8300, "monthlyTotal": 249000 },
+    { "month": "Dec", "year": 2023, "avgDaily": 7100, "monthlyTotal": 220100 },
+
+    { "month": "Jan", "year": 2024, "avgDaily": 6300, "monthlyTotal": 195300 },
+    { "month": "Feb", "year": 2024, "avgDaily": 5700, "monthlyTotal": 165300, "lowest": true },
+    { "month": "Mar", "year": 2024, "avgDaily": 7400, "monthlyTotal": 229400 },
+    { "month": "Apr", "year": 2024, "avgDaily": 8100, "monthlyTotal": 243000 },
+    { "month": "May", "year": 2024, "avgDaily": 8600, "monthlyTotal": 266600 },
+    { "month": "Jun", "year": 2024, "avgDaily": 8900, "monthlyTotal": 267000 },
+    { "month": "Jul", "year": 2024, "avgDaily": 8500, "monthlyTotal": 263500 },
+    { "month": "Aug", "year": 2024, "avgDaily": 8300, "monthlyTotal": 257300 },
+    { "month": "Sep", "year": 2024, "avgDaily": 9100, "monthlyTotal": 273000 },
+    { "month": "Oct", "year": 2024, "avgDaily": 10400, "monthlyTotal": 322400, "peak": true },
+    { "month": "Nov", "year": 2024, "avgDaily": 8600, "monthlyTotal": 258000 },
+    { "month": "Dec", "year": 2024, "avgDaily": 7300, "monthlyTotal": 226300 },
+
+    { "month": "Jan", "year": 2025, "avgDaily": 6400, "monthlyTotal": 198400 },
+    { "month": "Feb", "year": 2025, "avgDaily": 5900, "monthlyTotal": 165200, "lowest": true },
+    { "month": "Mar", "year": 2025, "avgDaily": 7500, "monthlyTotal": 232500 },
+    { "month": "Apr", "year": 2025, "avgDaily": 8200, "monthlyTotal": 246000 },
+    { "month": "May", "year": 2025, "avgDaily": 8700, "monthlyTotal": 269700 },
+    { "month": "Jun", "year": 2025, "avgDaily": 9000, "monthlyTotal": 270000 },
+    { "month": "Jul", "year": 2025, "avgDaily": 8600, "monthlyTotal": 266600 },
+    { "month": "Aug", "year": 2025, "avgDaily": 8400, "monthlyTotal": 260400 },
+    { "month": "Sep", "year": 2025, "avgDaily": 9200, "monthlyTotal": 276000 },
+    { "month": "Oct", "year": 2025, "avgDaily": 10600, "monthlyTotal": 328600, "peak": true },
+    { "month": "Nov", "year": 2025, "avgDaily": 8800, "monthlyTotal": 264000 },
+    { "month": "Dec", "year": 2025, "avgDaily": 7500, "monthlyTotal": 232500 }
+  ],
+
+  "weeklyRhythm": [
+    { "day": "Mon", "avgSteps": 7200  },
+    { "day": "Tue", "avgSteps": 8900  },
+    { "day": "Wed", "avgSteps": 9400  },
+    { "day": "Thu", "avgSteps": 9100  },
+    { "day": "Fri", "avgSteps": 8600  },
+    { "day": "Sat", "avgSteps": 10200 },
+    { "day": "Sun", "avgSteps": 7800  }
+  ],
+
+  "seasonalSummary": {
+    "peakMonth": "October",
+    "peakAvgDaily": 10200,
+    "quietMonth": "February",
+    "quietAvgDaily": 5680,
+    "difference": 4520,
+    "patternConsistency": "Every year, without exception",
+    "yearsOfData": 5
+  },
+
+  "yearOverYear": [
+    {
+      "year": 2021,
+      "octAvg": 9800,
+      "febAvg": 5400,
+      "annualAvg": 7900
+    },
+    {
+      "year": 2022,
+      "octAvg": 9600,
+      "febAvg": 5400,
+      "annualAvg": 7900
+    },
+    {
+      "year": 2023,
+      "octAvg": 10100,
+      "febAvg": 5600,
+      "annualAvg": 8100
+    },
+    {
+      "year": 2024,
+      "octAvg": 10400,
+      "febAvg": 5700,
+      "annualAvg": 8200,
+      "note": "Most active October"
+    },
+    {
+      "year": 2025,
+      "octAvg": 10600,
+      "febAvg": 5900,
+      "annualAvg": 8400
+    }
+  ],
+
+  "capabilityGap": {
+    "whatStepsShow": [
+      "When you move more and less",
+      "Weekly patterns — which days are most active",
+      "Seasonal variation — October vs February",
+      "Year-over-year trends in activity volume"
+    ],
+    "whatStepsCantShow": [
+      "Whether active days left you energized or depleted",
+      "How your body recovered overnight",
+      "Whether your sleep was restoring or just passing time",
+      "How your heart is adapting over time"
+    ],
+    "ghostLayers": [
+      {
+        "id": "recovery",
+        "label": "Recovery signals",
+        "description": "How your body responded",
+        "metric": "HRV",
+        "color": "#27C48A"
+      },
+      {
+        "id": "sleep",
+        "label": "Sleep architecture",
+        "description": "How you recovered overnight",
+        "metric": "Deep + REM sleep",
+        "color": "#0681fc"
+      },
+      {
+        "id": "cardiovascular",
+        "label": "Cardiovascular trend",
+        "description": "How your heart is adapting",
+        "metric": "Resting HR",
+        "color": "#E8504A"
+      }
+    ]
+  },
+
+  "trendCards": {
+    "steps": {
+      "current": 8400,
+      "start": 7900,
+      "change": 500,
+      "direction": "up",
+      "label": "Daily Steps",
+      "unit": "steps avg",
+      "insight": "Gradually increasing year over year"
+    },
+    "seasonal": {
+      "peak": "October",
+      "peakValue": 10200,
+      "quiet": "February",
+      "quietValue": 5680,
+      "label": "Seasonal Pattern",
+      "insight": "October is your most active month — every year"
+    }
+  },
+
+  "interestingFacts": [
+    {
+      "category": "activity",
+      "stat": "October",
+      "context": "most active month — every year",
+      "insight": "Your most active October was 2024, at 10,400 steps avg. Your quietest February was 2022 at 5,400. The gap is 4,520 steps — nearly double."
+    },
+    {
+      "category": "consistency",
+      "stat": "5 years",
+      "context": "same seasonal pattern",
+      "insight": "The October peak and February trough have appeared every single year. This isn't a coincidence — it's a rhythm."
+    }
+  ]
+}

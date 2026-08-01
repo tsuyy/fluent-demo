@@ -1,0 +1,74 @@
+[
+  {
+    "date": "2026-06-23",
+    "hr": 145,
+    "pace_min": 13,
+    "pace_sec": 40,
+    "dist": 3.5,
+    "label": "first run"
+  },
+  {
+    "date": "2026-06-27",
+    "hr": 137,
+    "pace_min": 16,
+    "pace_sec": 24,
+    "dist": 3.3,
+    "label": "trail"
+  },
+  {
+    "date": "2026-07-03",
+    "hr": 142,
+    "pace_min": 13,
+    "pace_sec": 23,
+    "dist": 3.2,
+    "label": ""
+  },
+  {
+    "date": "2026-07-05",
+    "hr": 137,
+    "pace_min": 13,
+    "pace_sec": 7,
+    "dist": 3.6,
+    "label": ""
+  },
+  {
+    "date": "2026-07-10",
+    "hr": 139,
+    "pace_min": 14,
+    "pace_sec": 10,
+    "dist": 5.5,
+    "label": "hot day"
+  },
+  {
+    "date": "2026-07-21",
+    "hr": 135,
+    "pace_min": 13,
+    "pace_sec": 32,
+    "dist": 3.25,
+    "label": ""
+  },
+  {
+    "date": "2026-07-22",
+    "hr": 135,
+    "pace_min": 13,
+    "pace_sec": 32,
+    "dist": 3.8,
+    "label": "Wisconsin"
+  },
+  {
+    "date": "2026-07-26",
+    "hr": 137,
+    "pace_min": 13,
+    "pace_sec": 39,
+    "dist": 3.0,
+    "label": "bug run"
+  },
+  {
+    "date": "2026-07-31",
+    "hr": 138,
+    "pace_min": 13,
+    "pace_sec": 56,
+    "dist": 6.6,
+    "label": "longest"
+  }
+]

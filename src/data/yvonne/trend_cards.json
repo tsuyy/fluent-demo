@@ -1,0 +1,29 @@
+{
+  "rhr": {
+    "current": 59.0,
+    "start": 64.1,
+    "change": -5.2,
+    "label": "Resting Heart Rate",
+    "unit": "bpm",
+    "direction": "down_good",
+    "insight": "Your heart takes 10,080 fewer beats every day"
+  },
+  "hrv": {
+    "current": 46.2,
+    "start": 8.9,
+    "change": 37.3,
+    "label": "Heart Rate Variability",
+    "unit": "ms",
+    "direction": "up_good",
+    "insight": "Your nervous system is 37% more regulated than your personal low"
+  },
+  "resp": {
+    "current": 15.9,
+    "start": 20.2,
+    "change": -4.2,
+    "label": "Breathing Rate",
+    "unit": "br/min",
+    "direction": "down_good",
+    "insight": "The most underrated signal in your data"
+  }
+}

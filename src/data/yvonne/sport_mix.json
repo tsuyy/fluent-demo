@@ -1,0 +1,158 @@
+[
+  {
+    "year": 2022,
+    "sport": "cycling",
+    "minutes": 2449.6,
+    "hours": 40.8
+  },
+  {
+    "year": 2022,
+    "sport": "mindfulness",
+    "minutes": 848.6999999999999,
+    "hours": 14.1
+  },
+  {
+    "year": 2022,
+    "sport": "running",
+    "minutes": 1850.4,
+    "hours": 30.8
+  },
+  {
+    "year": 2022,
+    "sport": "skiing",
+    "minutes": 2684.8,
+    "hours": 44.7
+  },
+  {
+    "year": 2022,
+    "sport": "strength",
+    "minutes": 858.3000000000001,
+    "hours": 14.3
+  },
+  {
+    "year": 2023,
+    "sport": "cycling",
+    "minutes": 11690.3,
+    "hours": 194.8
+  },
+  {
+    "year": 2023,
+    "sport": "mindfulness",
+    "minutes": 223.5,
+    "hours": 3.7
+  },
+  {
+    "year": 2023,
+    "sport": "running",
+    "minutes": 197.4,
+    "hours": 3.3
+  },
+  {
+    "year": 2023,
+    "sport": "skiing",
+    "minutes": 3808.9,
+    "hours": 63.5
+  },
+  {
+    "year": 2023,
+    "sport": "strength",
+    "minutes": 2681.1,
+    "hours": 44.7
+  },
+  {
+    "year": 2024,
+    "sport": "cycling",
+    "minutes": 6958.6,
+    "hours": 116.0
+  },
+  {
+    "year": 2024,
+    "sport": "running",
+    "minutes": 6854.2,
+    "hours": 114.2
+  },
+  {
+    "year": 2024,
+    "sport": "skiing",
+    "minutes": 2284.3,
+    "hours": 38.1
+  },
+  {
+    "year": 2024,
+    "sport": "strength",
+    "minutes": 3914.3,
+    "hours": 65.2
+  },
+  {
+    "year": 2025,
+    "sport": "cycling",
+    "minutes": 5521.5,
+    "hours": 92.0
+  },
+  {
+    "year": 2025,
+    "sport": "mindfulness",
+    "minutes": 902.4,
+    "hours": 15.0
+  },
+  {
+    "year": 2025,
+    "sport": "running",
+    "minutes": 4897.0,
+    "hours": 81.6
+  },
+  {
+    "year": 2025,
+    "sport": "skiing",
+    "minutes": 2274.8,
+    "hours": 37.9
+  },
+  {
+    "year": 2025,
+    "sport": "strength",
+    "minutes": 3032.4,
+    "hours": 50.5
+  },
+  {
+    "year": 2025,
+    "sport": "tennis",
+    "minutes": 591.5,
+    "hours": 9.9
+  },
+  {
+    "year": 2026,
+    "sport": "cycling",
+    "minutes": 2417.2,
+    "hours": 40.3
+  },
+  {
+    "year": 2026,
+    "sport": "mindfulness",
+    "minutes": 1343.6,
+    "hours": 22.4
+  },
+  {
+    "year": 2026,
+    "sport": "running",
+    "minutes": 4117.3,
+    "hours": 68.6
+  },
+  {
+    "year": 2026,
+    "sport": "skiing",
+    "minutes": 2272.3,
+    "hours": 37.9
+  },
+  {
+    "year": 2026,
+    "sport": "strength",
+    "minutes": 1557.5,
+    "hours": 26.0
+  },
+  {
+    "year": 2026,
+    "sport": "tennis",
+    "minutes": 754.1,
+    "hours": 12.6
+  }
+]
