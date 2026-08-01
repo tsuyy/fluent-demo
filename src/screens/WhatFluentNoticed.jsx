@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import WeeklyRhythmChart from '../components/charts/WeeklyRhythmChart'
 import SportHRVChart from '../components/charts/SportHRVChart'
+import RHRTrendChart from '../components/charts/RHRTrendChart'
 
 
 
@@ -85,8 +86,11 @@ function VizPlaceholder({ type, persona }) {
   if (type === 'sport_hrv') {
     return <SportHRVChart height={160} />
   }
+  if (type === 'rhr_trend') {
+    return <RHRTrendChart height={140} />
+  }
   if (!type) return null
-  return (
+    return (
     <div style={{
       height: 140,
       background: 'rgba(255,255,255,0.05)',
