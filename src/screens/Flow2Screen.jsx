@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import WeeklyRhythmChart from '../components/charts/WeeklyRhythmChart'
+import WeeklyRhythmFullChart from '../components/charts/WeeklyRhythmFullChart'
 
 const FLOW2_CONTENT = {
   monday: {
@@ -23,6 +23,8 @@ export default function Flow2Screen({ cardId, persona, onBack, onNext }) {
   const [step, setStep]           = useState('chart')  // chart | question | context | ack
   const [feltAnswer, setFeltAnswer] = useState(null)
   const [contextChips, setContextChips] = useState([])
+  const [metric, setMetric] = useState('RHR')
+
 
   const content = FLOW2_CONTENT[cardId] || FLOW2_CONTENT.monday
 
@@ -123,18 +125,27 @@ export default function Flow2Screen({ cardId, persona, onBack, onNext }) {
           {/* Metric toggle */}
           <div style={{ display: 'flex', gap: 8, marginBottom: 8 }}>
             {['RHR', 'HRV'].map(m => (
-              <span key={m} style={{
-                background: m === 'RHR' ? 'var(--color-accent)' : 'rgba(255,255,255,0.08)',
-                borderRadius: 20, padding: '4px 12px',
-                fontSize: 12, fontWeight: 500,
-                cursor: 'pointer',
-                color: m === 'RHR' ? '#fff' : 'var(--color-text-secondary)',
-              }}>
-                {m}
-              </span>
+                <span
+                    key={m}
+                    onClick={() => setMetric(m)}
+                    style={{
+                    background: metric === m
+                        ? 'var(--color-accent)'
+                        : 'rgba(255,255,255,0.08)',
+                    borderRadius: 20, padding: '4px 12px',
+                    fontSize: 12, fontWeight: 500,
+                    cursor: 'pointer',
+                    color: metric === m
+                        ? '#fff'
+                        : 'var(--color-text-secondary)',
+                    transition: 'all 0.2s',
+                    }}
+                >
+                    {m}
+                </span>
             ))}
           </div>
-          <WeeklyRhythmChart />
+          <WeeklyRhythmFullChart height={200} metric={metric} />
         </motion.div>
 
         {/* Data note */}
@@ -182,21 +193,34 @@ export default function Flow2Screen({ cardId, persona, onBack, onNext }) {
             {content.chips.map(chip => (
               <motion.span
                 key={chip}
-                onClick={() => step === 'chart' && handleFelt(chip)}
+                onClick={() => {
+                    if (step === 'ack') return  // ← locked after acknowledgment
+                    setFeltAnswer(chip)
+                    if (chip === 'Skip') {
+                        setStep('ack')
+                    } else {
+                        setStep('context')
+                    }
+                }}             
                 whileHover={{ scale: 1.02 }}
                 style={{
-                  background: feltAnswer === chip
-                    ? 'rgba(6,129,252,0.2)'
-                    : 'rgba(255,255,255,0.08)',
-                  border: feltAnswer === chip
-                    ? '1px solid rgba(6,129,252,0.5)'
-                    : '1px solid rgba(255,255,255,0.1)',
-                  borderRadius: 20, padding: '8px 16px',
-                  fontSize: 13, cursor: 'pointer',
-                  color: feltAnswer === chip
-                    ? '#0681fc'
-                    : 'var(--color-text-secondary)',
-                  transition: 'all 0.15s',
+                    background: feltAnswer === chip
+                        ? step === 'ack'
+                        ? 'rgba(6,129,252,0.15)'   // dimmer when locked
+                        : 'rgba(6,129,252,0.2)'
+                        : 'rgba(255,255,255,0.08)',
+                    border: feltAnswer === chip
+                        ? '1px solid rgba(6,129,252,0.4)'
+                        : '1px solid rgba(255,255,255,0.1)',
+                    borderRadius: 20, padding: '8px 16px',
+                    fontSize: 13,
+                    cursor: step === 'ack' ? 'default' : 'pointer',  // ← no pointer when locked
+                    color: feltAnswer === chip
+                        ? '#0681fc'
+                        : 'var(--color-text-secondary)',
+                    opacity: step === 'ack' && feltAnswer !== chip ? 0.4 : 1,  // ← others fade
+                    transition: 'all 0.15s',
+                    pointerEvents: step === 'ack' ? 'none' : 'auto',  // ← belt and suspenders
                 }}
               >
                 {chip}

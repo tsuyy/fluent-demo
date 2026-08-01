@@ -5,7 +5,6 @@ import SportHRVChart from '../components/charts/SportHRVChart'
 import RHRTrendChart from '../components/charts/RHRTrendChart'
 
 
-
 const CARDS = {
   jamie: [
     {
