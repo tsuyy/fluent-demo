@@ -7,6 +7,8 @@ import LoadingScreen from './screens/LoadingScreen'
 import PersonaPicker from './screens/PersonaPicker'
 import WhatFluentNoticed from './screens/WhatFluentNoticed'
 import HomeScreen from './screens/HomeScreen'
+import Flow2Screen from './screens/Flow2Screen'
+
 
 // Temporary placeholder
 function PlaceholderScreen({ name, onNext }) {
@@ -41,6 +43,8 @@ export default function App() {
   const [persona, setPersona] = useState(null)
   const [q1, setQ1]           = useState(null)
   const [q2, setQ2]           = useState(null)
+  const [flow2Card, setFlow2Card] = useState(null)
+
 
   if (screen === 'q1') return (
     <OnboardingQ1 onSelect={(ans) => { setQ1(ans); setScreen('q2') }} />
@@ -65,10 +69,26 @@ export default function App() {
     <WhatFluentNoticed
         persona={persona}
         q1={q1}
-        onExplore={(dest) => setScreen(dest === 'home' || dest === 'topics' ? 'home' : 'flow2')}
+        onExplore={(dest) => {
+        if (dest === 'home' || dest === 'topics') {
+            setScreen('home')
+        } else {
+            setFlow2Card(dest)
+            setScreen('flow2')
+        }
+        }}
         onBack={() => setScreen('suggestion')}
     />
-  )
+)
+
+    if (screen === 'flow2') return (
+    <Flow2Screen
+        cardId={flow2Card || 'monday'}
+        persona={persona}
+        onBack={() => setScreen('noticed')}
+        onNext={() => setScreen('noticed')}
+    />
+)
 
   if (screen === 'home') return (
     <HomeScreen
