@@ -1,4 +1,6 @@
 import { ResponsiveBar } from '@nivo/bar'
+import { CHART_THEME } from '../../data/chartTheme'
+
 
 const SPORT_DATA = [
   { sport: 'Tennis',   'Day of': -0.2, 'Day +1': 4.2,  'Day +2': 5.2,  'Day +3': 3.1  },
@@ -36,20 +38,7 @@ export default function SportHRVChart({ height = 320 }) {
             return 'rgba(255,255,255,0.3)'
         }}        
         borderRadius={2}
-        theme={{
-          axis: {
-            ticks: {
-              text: { fill: 'rgba(255,255,255,0.4)', fontSize: 10 },
-            },
-            legend: {
-              text: { fill: 'rgba(255,255,255,0.25)', fontSize: 9 },
-            },
-          },
-          grid: {
-            line: { stroke: 'rgba(255,255,255,0.05)' },
-          },
-          background: 'transparent',
-        }}
+        theme={CHART_THEME}
         axisLeft={{
           tickSize: 0,
           tickPadding: 8,
@@ -88,6 +77,7 @@ export default function SportHRVChart({ height = 320 }) {
             </span>
           </div>
         )}
+        margin={{ top: 12, right: 2, bottom: 36, left: 44 }}
         animate
         motionConfig="gentle"
       />

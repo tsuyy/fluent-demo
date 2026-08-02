@@ -8,6 +8,9 @@ import PersonaPicker from './screens/PersonaPicker'
 import WhatFluentNoticed from './screens/WhatFluentNoticed'
 import HomeScreen from './screens/HomeScreen'
 import Flow2Screen from './screens/Flow2Screen'
+import MovementRecoveryScreen from './screens/MovementRecoveryScreen'
+import FloatingNav from './components/nav/FloatingNav'
+import SleepScreen from './screens/SleepScreen'
 
 
 // Temporary placeholder
@@ -79,22 +82,37 @@ export default function App() {
         }}
         onBack={() => setScreen('suggestion')}
     />
-)
+  )
 
-    if (screen === 'flow2') return (
+  if (screen === 'flow2') return (
     <Flow2Screen
         cardId={flow2Card || 'monday'}
         persona={persona}
         onBack={() => setScreen('noticed')}
         onNext={() => setScreen('noticed')}
     />
-)
+  )
 
   if (screen === 'home') return (
     <HomeScreen
         persona={persona}
         onNavigate={(cat) => setScreen(cat)}
         onPersonaSwitch={() => setScreen('suggestion')}
+    />
+  )
+  if (screen === 'activity') return (
+    <MovementRecoveryScreen
+        persona={persona}
+        onNavigate={(cat) => setScreen(cat)}
+        onBack={() => setScreen('home')}
+    />
+  )
+
+  if (screen === 'sleep') return (
+    <SleepScreen
+        persona={persona}
+        onNavigate={(cat) => setScreen(cat)}
+        onBack={() => setScreen('home')}
     />
   )
 }

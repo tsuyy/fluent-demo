@@ -1,4 +1,6 @@
 import { ResponsiveLine } from '@nivo/line'
+import { CHART_THEME } from '../../data/chartTheme'
+
 
 const JAMIE_WEEKLY = [
   { x: 'Mon', y: 68.2 },
@@ -58,17 +60,7 @@ export default function WeeklyRhythmChart() {
           tickPadding: 8,
           tickRotation: 0,
         }}
-        theme={{
-          axis: {
-            ticks: {
-              text: {
-                fill: 'rgba(255,255,255,0.4)',
-                fontSize: 11,
-              },
-            },
-          },
-          background: 'transparent',
-        }}
+        theme={CHART_THEME}
         useMesh={true}
         enableCrosshair={true}
         crosshairType="x"

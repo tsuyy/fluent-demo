@@ -1,4 +1,6 @@
 import { ResponsiveLine } from '@nivo/line'
+import { CHART_THEME } from '../../data/chartTheme'
+
 
 const RETIREMENT_DATA = [
   { x: 'Jun 23',  y: 63.2 },
@@ -50,14 +52,7 @@ export default function RetirementArcChart({ height = 160 }) {
           tickPadding: 6,
           tickValues: ['Jun 23', 'Sep 23', 'Jan 24', 'May 24', 'Sep 24'],
         }}
-        theme={{
-          axis: {
-            ticks: {
-              text: { fill: 'rgba(255,255,255,0.3)', fontSize: 9 },
-            },
-          },
-          background: 'transparent',
-        }}
+        theme={CHART_THEME}
         useMesh={true}
         enableCrosshair={true}
         crosshairType="x"

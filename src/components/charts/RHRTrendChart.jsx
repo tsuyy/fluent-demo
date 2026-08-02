@@ -1,4 +1,6 @@
 import { ResponsiveLine } from '@nivo/line'
+import { CHART_THEME } from '../../data/chartTheme'
+
 
 export default function RHRTrendChart({ height = 140, showShift = true }) {
   // Last 8 weeks of daily RHR — simulated from quarterly averages
@@ -63,14 +65,7 @@ export default function RHRTrendChart({ height = 140, showShift = true }) {
           tickPadding: 6,
           tickRotation: -20,
         }}
-        theme={{
-          axis: {
-            ticks: {
-              text: { fill: 'rgba(255,255,255,0.35)', fontSize: 9 },
-            },
-          },
-          background: 'transparent',
-        }}
+        theme={CHART_THEME}
         markers={[
           {
             axis: 'x',

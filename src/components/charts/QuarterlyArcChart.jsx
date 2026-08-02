@@ -1,4 +1,5 @@
 import { ResponsiveLine } from '@nivo/line'
+import { CHART_THEME } from '../../data/chartTheme'
 
 // Real data from Yvonne's quarterly.json
 const QUARTERLY_DATA = [
@@ -74,17 +75,7 @@ export default function QuarterlyArcChart({ height = 320 }) {
             .filter((_, i) => i % 3 === 0)
             .map(d => d.quarter),
         }}
-        theme={{
-          axis: {
-            ticks: {
-              text: { fill: 'rgba(255,255,255,0.35)', fontSize: 9 },
-            },
-          },
-          grid: {
-            line: { stroke: 'rgba(255,255,255,0.05)' },
-          },
-          background: 'transparent',
-        }}
+        theme={CHART_THEME}
         markers={ANNOTATIONS.map(a => ({
           axis: 'x',
           value: a.quarter,

@@ -1,42 +1,49 @@
-import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import FloatingNav from '../components/nav/FloatingNav'
+import IconDifferent from '../components/nav/icons/IconDifferent'
+import IconChanged   from '../components/nav/icons/IconChanged'
+import IconActivity  from '../components/nav/icons/IconActivity'
+import IconCardio    from '../components/nav/icons/IconCardio'
+import IconSleep     from '../components/nav/icons/IconSleep'
+import IconMoments   from '../components/nav/icons/IconMoments'
+import { useState, useEffect } from 'react'
 
 const CATEGORIES = [
   {
     id: 'different',
     label: 'Something feels different lately',
     description: 'A pattern shifted in your data.',
-    icon: '↗',
+    Icon: IconDifferent,
   },
   {
     id: 'changed',
     label: "How I've changed over time",
     description: 'Through the lens of your wearable data.',
-    icon: '·L·',
+    Icon: IconChanged,
   },
   {
     id: 'activity',
     label: 'Movement & Recovery',
     description: 'What you do, what it costs, and how your body responds.',
-    icon: '✳',
+    Icon: IconActivity,
   },
   {
     id: 'cardio',
     label: 'Heart & Nervous System',
     description: 'Your cardiovascular health over time.',
-    icon: '♥',
+    Icon: IconCardio,
   },
   {
     id: 'sleep',
     label: 'Sleep',
     description: 'What your sleep is actually doing.',
-    icon: '◗',
+    Icon: IconSleep,
   },
   {
     id: 'moments',
     label: 'Moments that shaped my health',
     description: 'When life showed up in your data.',
-    icon: '◉',
+    Icon: IconMoments,
   },
 ]
 
@@ -49,6 +56,15 @@ const GRADIENTS = {
 
 export default function HomeScreen({ persona, onNavigate, onPersonaSwitch }) {
   const [hovered, setHovered] = useState(null)
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePos({ x: e.clientX, y: e.clientY })
+    }
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
+
   const gradient = GRADIENTS[persona] || GRADIENTS.yvonne
   const personaLabel = persona
     ? persona.charAt(0).toUpperCase() + persona.slice(1)
@@ -63,6 +79,7 @@ export default function HomeScreen({ persona, onNavigate, onPersonaSwitch }) {
       justifyContent: 'center',
       padding: '80px 120px',
     }}>
+      
 
       {/* Background gradient */}
       <motion.div
@@ -152,43 +169,52 @@ export default function HomeScreen({ persona, onNavigate, onPersonaSwitch }) {
                 {cat.label}
               </motion.p>
 
-              {/* Hover tooltip */}
-              <AnimatePresence>
-                {isHovered && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 4, scale: 0.97 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 4, scale: 0.97 }}
-                    transition={{ duration: 0.15 }}
-                    style={{
-                      position: 'absolute',
-                      left: '105%', top: '50%',
-                      transform: 'translateY(-50%)',
-                      background: 'rgba(30,30,28,0.95)',
-                      border: '1px solid rgba(255,255,255,0.12)',
-                      borderRadius: 10,
-                      padding: '10px 14px',
-                      display: 'flex', alignItems: 'center', gap: 10,
-                      whiteSpace: 'nowrap',
-                      zIndex: 20,
-                      backdropFilter: 'blur(12px)',
-                      pointerEvents: 'none',
-                    }}
-                  >
-                    <span style={{ fontSize: 18 }}>{cat.icon}</span>
-                    <span style={{
-                      fontSize: 13,
-                      color: 'var(--color-text-secondary)',
-                    }}>
-                      {cat.description}
-                    </span>
-                  </motion.div>
-                )}
-              </AnimatePresence>
             </motion.div>
           )
         })}
       </div>
+      <FloatingNav active={null} onNavigate={onNavigate} />
+      <AnimatePresence>
+        {hovered && (() => {
+          const cat = CATEGORIES.find(c => c.id === hovered)
+          if (!cat) return null
+          return (
+            <motion.div
+              key={hovered}
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.96 }}
+              transition={{ duration: 0.12 }}
+              style={{
+                position: 'fixed',
+                left: mousePos.x + 20,   // 20px offset from cursor
+                top: mousePos.y - 20,    // slightly above cursor
+                background: 'rgba(20,20,18,0.92)',
+                border: '1px solid rgba(255,255,255,0.1)',
+                borderRadius: 10,
+                padding: '10px 14px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 10,
+                whiteSpace: 'nowrap',
+                zIndex: 1000,
+                backdropFilter: 'blur(12px)',
+                pointerEvents: 'none',  // critical — doesn't block clicks
+                boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
+              }}
+            >
+              <cat.Icon size={18} color="rgba(255,255,255,0.7)" />
+              <span style={{
+                fontSize: 13,
+                color: 'var(--color-text-secondary)',
+              }}>
+                {cat.description}
+              </span>
+            </motion.div>
+          )
+        })()}
+      </AnimatePresence>
+
 
       {/* Bottom left back arrow */}
       <motion.span

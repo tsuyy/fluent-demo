@@ -1,4 +1,6 @@
 import { ResponsiveLine } from '@nivo/line'
+import { CHART_THEME } from '../../data/chartTheme'
+
 
 // 8 weeks of daily RHR data with realistic gaps
 // null = no reading (watch not worn)
@@ -214,14 +216,7 @@ export default function WeeklyRhythmFullChart({ height = 200, metric = 'RHR' }) 
             .filter(d => d.x.includes('Mon') || d.x.includes('Sat'))
             .map(d => d.x),
         }}
-        theme={{
-          axis: {
-            ticks: {
-              text: { fill: 'rgba(255,255,255,0.3)', fontSize: 9 },
-            },
-          },
-          background: 'transparent',
-        }}
+        theme={CHART_THEME}
         markers={[
           {
             axis: 'y',

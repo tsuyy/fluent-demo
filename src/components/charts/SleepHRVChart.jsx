@@ -1,4 +1,6 @@
 import { ResponsiveScatterPlot } from '@nivo/scatterplot'
+import { CHART_THEME } from '../../data/chartTheme'
+
 
 // Each night: sleep efficiency % (x) vs next-morning HRV (y)
 // Mismatch nights: sleep looks fine (high efficiency) but HRV low
@@ -90,17 +92,7 @@ export default function SleepHRVChart({ height = 180 }) {
             ? '#E8504A'
             : 'rgba(255,255,255,0.3)'
         }
-        theme={{
-          axis: {
-            ticks: {
-              text: { fill: 'rgba(255,255,255,0.3)', fontSize: 9 },
-            },
-          },
-          grid: {
-            line: { stroke: 'rgba(255,255,255,0.04)' },
-          },
-          background: 'transparent',
-        }}
+        theme={CHART_THEME}
         axisLeft={{
           tickSize: 0,
           tickPadding: 6,

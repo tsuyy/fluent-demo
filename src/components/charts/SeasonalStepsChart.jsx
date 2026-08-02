@@ -1,4 +1,6 @@
 import { ResponsiveBar } from '@nivo/bar'
+import { CHART_THEME } from '../../data/chartTheme'
+
 
 const MONTHLY_STEPS = [
   { month: 'Jan', steps: 6300, highlight: false },
@@ -30,17 +32,7 @@ export default function SeasonalStepsChart({ height = 160 }) {
           return 'rgba(255,255,255,0.2)'
         }}
         borderRadius={2}
-        theme={{
-          axis: {
-            ticks: {
-              text: { fill: 'rgba(255,255,255,0.35)', fontSize: 10 },
-            },
-          },
-          grid: {
-            line: { stroke: 'rgba(255,255,255,0.04)' },
-          },
-          background: 'transparent',
-        }}
+        theme={CHART_THEME}
         axisLeft={{
           tickSize: 0,
           tickPadding: 6,
