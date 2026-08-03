@@ -4,6 +4,8 @@ import SleepArchitectureChart from '../components/charts/SleepArchitectureChart'
 import SleepHRVChart from '../components/charts/SleepHRVChart'
 import QQRTCard from '../components/cards/QQRTCard'
 import SleepTrendCards from '../components/cards/SleepTrendCards'
+import PageContainer from '../components/layout/PageContainer'
+
 
 const GRADIENTS = {
   jamie:  'radial-gradient(ellipse at 15% 70%, rgba(180,60,60,0.2) 0%, transparent 55%)',
@@ -53,11 +55,15 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
 
   return (
     <div style={{
-      width: '100vw', height: '100vh',
+      width: '100%', height: '100%',
       background: 'var(--color-base)',
       position: 'relative', overflow: 'hidden',
       display: 'flex', flexDirection: 'column',
+      flex: 1, overflowY: 'auto',
+      padding: '48px',
+      zIndex: 1,
     }}>
+      <PageContainer>
       <div style={{
         position: 'absolute', inset: 0,
         background: gradient, pointerEvents: 'none',
@@ -210,6 +216,7 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
       </div>
 
       <FloatingNav active="sleep" onNavigate={onNavigate} />
+      </PageContainer>
     </div>
   )
 }

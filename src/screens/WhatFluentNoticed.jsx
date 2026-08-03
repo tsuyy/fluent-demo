@@ -6,6 +6,8 @@ import RHRTrendChart from '../components/charts/RHRTrendChart'
 import SleepHRVChart      from '../components/charts/SleepHRVChart'
 import RetirementArcChart from '../components/charts/RetirementArcChart'
 import SeasonalStepsChart from '../components/charts/SeasonalStepsChart'
+import PageContainer from '../components/layout/PageContainer'
+
 
 const CARDS = {
   jamie: [
@@ -114,14 +116,14 @@ export default function WhatFluentNoticed({ persona, q1, onExplore, onBack }) {
 
   return (
     <div style={{
-        width: '100vw',
-        height: '100vh',
+        width: '100%',
+        height: '100%',
         background: 'var(--color-base)',
         position: 'relative',
         overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
-        padding: '60px 48px 0',    // ← no bottom padding
+        padding: '48px',    // ← no bottom padding
      }}>
 
       {/* Background gradient */}
@@ -145,6 +147,8 @@ export default function WhatFluentNoticed({ persona, q1, onExplore, onBack }) {
           {persona}
         </span>
       </div>
+      
+      <PageContainer>
 
       {/* Heading */}
       <motion.h1
@@ -165,7 +169,7 @@ export default function WhatFluentNoticed({ persona, q1, onExplore, onBack }) {
       <div style={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
-        gap: 20, 
+        gap: 24, 
         alignItems: 'start',
         position: 'relative', zIndex: 1,
         overflow:'hidden',
@@ -214,6 +218,7 @@ export default function WhatFluentNoticed({ persona, q1, onExplore, onBack }) {
           </motion.div>
         ))}
       </div>
+      </PageContainer>
 
       {/* Bottom nav — fixed to bottom of screen */}
         <div style={{

@@ -76,6 +76,9 @@ export default function QuarterlyArcChart({ height = 320 }) {
             .map(d => d.quarter),
         }}
         theme={CHART_THEME}
+        useMesh={true}
+        enableCrosshair={true}
+        crosshairType="x"
         markers={ANNOTATIONS.map(a => ({
           axis: 'x',
           value: a.quarter,

@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import PageContainer from '../components/layout/PageContainer'
+
 
 const OPTIONS = [
   { id: 'consistent',   text: 'I track consistently, including sleep' },
@@ -19,14 +21,15 @@ export default function OnboardingQ2({ onSelect }) {
 
   return (
     <div style={{
-      width: '100vw', height: '100vh',
+      width: '100%', height: '100%',
       background: 'var(--color-base)',
       display: 'flex', flexDirection: 'column',
       justifyContent: 'center',
-      padding: '80px 120px',
+      padding: '48px',
       position: 'relative',
       overflow: 'hidden',
     }}>
+      <PageContainer>
 
       <div style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
@@ -108,6 +111,8 @@ export default function OnboardingQ2({ onSelect }) {
           )
         })}
       </div>
+      </PageContainer>
+
     </div>
   )
 }

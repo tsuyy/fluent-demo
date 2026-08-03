@@ -11,6 +11,9 @@ import Flow2Screen from './screens/Flow2Screen'
 import MovementRecoveryScreen from './screens/MovementRecoveryScreen'
 import FloatingNav from './components/nav/FloatingNav'
 import SleepScreen from './screens/SleepScreen'
+import HowIveChangedScreen from './screens/HowIveChangedScreen'
+import HeartNervousSystemScreen from './screens/HeartNervousSystemScreen'
+import MomentsScreen from './screens/MomentsScreen'
 
 
 // Temporary placeholder
@@ -110,6 +113,45 @@ export default function App() {
 
   if (screen === 'sleep') return (
     <SleepScreen
+        persona={persona}
+        onNavigate={(cat) => setScreen(cat)}
+        onBack={() => setScreen('home')}
+    />
+  )
+  if (screen === 'changed') return (
+    <HowIveChangedScreen
+        persona={persona}
+        onNavigate={(cat) => setScreen(cat)}
+        onBack={() => setScreen('home')}
+    />
+  )
+  if (screen === 'cardio') return (
+    <HeartNervousSystemScreen
+        persona={persona}
+        onNavigate={(cat) => setScreen(cat)}
+        onBack={() => setScreen('home')}
+    />
+ )
+  if (screen === 'different') {
+    // Route to the first "what we noticed" card for this persona
+    // as a Flow 2 deep dive
+    const firstCard = {
+        jamie:  'monday',
+        yvonne: 'rhr_shift',
+        robert: 'retirement',
+        alex:   'seasonal',
+    }
+    return (
+        <Flow2Screen
+        cardId={firstCard[persona] || 'monday'}
+        persona={persona}
+        onBack={() => setScreen('home')}
+        onNext={() => setScreen('noticed')}
+        />
+    )
+  }
+  if (screen === 'moments') return (
+    <MomentsScreen
         persona={persona}
         onNavigate={(cat) => setScreen(cat)}
         onBack={() => setScreen('home')}

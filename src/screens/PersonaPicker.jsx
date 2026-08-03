@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import PageContainer from '../components/layout/PageContainer'
+
 
 const PERSONAS = [
   {
@@ -49,12 +51,16 @@ export default function PersonaPicker({ q1, q2, onSelect }) {
 
   return (
     <div style={{
-      width: '100vw', minHeight: '100vh',
+      width: '100%', minHeight: '100%',
       background: 'var(--color-base)',
       display: 'flex', flexDirection: 'column',
-      padding: '80px 64px 64px',
       position: 'relative',
+      flex: 1, overflowY: 'auto',
+      padding: '48px',
+      zIndex: 1,
     }}>
+
+      <PageContainer>
 
       {/* Nav */}
       <div style={{
@@ -212,7 +218,7 @@ export default function PersonaPicker({ q1, q2, onSelect }) {
           )
         })}
       </div>
-
+      </PageContainer>
       {/* Bottom nav */}
       <div style={{
         display: 'flex', justifyContent: 'flex-start',

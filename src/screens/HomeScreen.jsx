@@ -7,6 +7,8 @@ import IconCardio    from '../components/nav/icons/IconCardio'
 import IconSleep     from '../components/nav/icons/IconSleep'
 import IconMoments   from '../components/nav/icons/IconMoments'
 import { useState, useEffect } from 'react'
+import PageContainer from '../components/layout/PageContainer'
+
 
 const CATEGORIES = [
   {
@@ -72,12 +74,12 @@ export default function HomeScreen({ persona, onNavigate, onPersonaSwitch }) {
 
   return (
     <div style={{
-      width: '100vw', height: '100vh',
+      width: '100%', height: '100%',
       background: 'var(--color-base)',
       position: 'relative', overflow: 'hidden',
       display: 'flex', flexDirection: 'column',
       justifyContent: 'center',
-      padding: '80px 120px',
+      padding: '48px',
     }}>
       
 
@@ -110,6 +112,7 @@ export default function HomeScreen({ persona, onNavigate, onPersonaSwitch }) {
           {personaLabel}
         </motion.span>
       </div>
+      <PageContainer>
 
       {/* Question */}
       <motion.h1
@@ -173,7 +176,8 @@ export default function HomeScreen({ persona, onNavigate, onPersonaSwitch }) {
           )
         })}
       </div>
-      <FloatingNav active={null} onNavigate={onNavigate} />
+      </PageContainer>
+      {/* <FloatingNav active={null} onNavigate={onNavigate} /> */}
       <AnimatePresence>
         {hovered && (() => {
           const cat = CATEGORIES.find(c => c.id === hovered)

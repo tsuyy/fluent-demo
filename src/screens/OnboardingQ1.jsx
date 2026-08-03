@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import PageContainer from '../components/layout/PageContainer'
+
 
 const OPTIONS = [
   { id: 'workouts', text: 'I want to understand how my workouts are affecting my body' },
@@ -19,14 +21,15 @@ export default function OnboardingQ1({ onSelect }) {
 
   return (
     <div style={{
-      width: '100vw', height: '100vh',
+      width: '100%', height: '100%',
       background: 'var(--color-base)',
       display: 'flex', flexDirection: 'column',
       justifyContent: 'center',
-      padding: '80px 120px',
+      padding: '48px',
       position: 'relative',
       overflow: 'hidden',
     }}>
+    <PageContainer>
 
       {/* Subtle gradient background */}
       <div style={{
@@ -113,6 +116,8 @@ export default function OnboardingQ1({ onSelect }) {
           )
         })}
       </div>
+      </PageContainer>
+
     </div>
   )
 }

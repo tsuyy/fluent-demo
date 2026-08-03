@@ -5,6 +5,8 @@ import RetirementArcChart from '../components/charts/RetirementArcChart'
 import SeasonalStepsChart from '../components/charts/SeasonalStepsChart'
 import HRRecoveryChart from '../components/charts/HRRecoveryChart'
 import SportMixChart from '../components/charts/SportMixChart'
+import PageContainer from '../components/layout/PageContainer'
+
 
 
 const GRADIENTS = {
@@ -58,11 +60,16 @@ export default function MovementRecoveryScreen({ persona, onNavigate, onBack }) 
 
   return (
     <div style={{
-      width: '100vw', height: '100vh',
+      width: '100%', height: '100%',
       background: 'var(--color-base)',
       position: 'relative', overflow: 'hidden',
       display: 'flex', flexDirection: 'column',
+      flex: 1, overflowY: 'auto',
+      padding: '48px',
+      zIndex: 1,
     }}>
+
+      <PageContainer>
 
       {/* Background */}
       <div style={{
@@ -286,6 +293,7 @@ export default function MovementRecoveryScreen({ persona, onNavigate, onBack }) 
 
       {/* Floating nav */}
       <FloatingNav active="activity" onNavigate={onNavigate} />
+      </PageContainer>
     </div>
   )
 }

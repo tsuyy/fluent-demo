@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import WeeklyRhythmFullChart from '../components/charts/WeeklyRhythmFullChart'
+import PageContainer from '../components/layout/PageContainer'
+
 
 const FLOW2_CONTENT = {
   monday: {
@@ -52,11 +54,15 @@ export default function Flow2Screen({ cardId, persona, onBack, onNext }) {
 
   return (
     <div style={{
-      width: '100vw', height: '100vh',
+      width: '100%', height: '100%',
       background: 'var(--color-base)',
       display: 'flex', flexDirection: 'column',
       overflow: 'hidden', position: 'relative',
+      flex: 1, overflowY: 'auto',
+      padding: '48px',
+      zIndex: 1,
     }}>
+      <PageContainer>
 
       {/* Background gradient */}
       <div style={{
@@ -81,6 +87,7 @@ export default function Flow2Screen({ cardId, persona, onBack, onNext }) {
         flex: 1, overflowY: 'auto',
         padding: '80px 120px 120px',
         position: 'relative', zIndex: 1,
+        maxWidth: 800, margin: '0 auto', width: '100%' 
       }}>
 
         {/* Headline */}
@@ -318,7 +325,7 @@ export default function Flow2Screen({ cardId, persona, onBack, onNext }) {
           </AnimatePresence>
         </motion.div>
       </div>
-
+      </PageContainer>
       {/* Fixed navigation */}
       <div style={{
         position: 'fixed',

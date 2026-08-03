@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import PageContainer from '../components/layout/PageContainer'
+
 
 const COPY = {
   jamie: {
@@ -61,12 +63,13 @@ export default function LoadingScreen({ persona, onComplete }) {
 
   return (
     <div style={{
-      width: '100vw', height: '100vh',
+      width: '100%', height: '100%',
       background: 'var(--color-base)',
       position: 'relative', overflow: 'hidden',
       display: 'flex', alignItems: 'center',
-      padding: '80px 120px',
+      padding: '48px',
     }}>
+    <PageContainer>
 
       {/* Animated gradient */}
       <motion.div
@@ -134,6 +137,8 @@ export default function LoadingScreen({ persona, onComplete }) {
           </AnimatePresence>
         </div>
       </div>
+      </PageContainer>
+
     </div>
   )
 }
