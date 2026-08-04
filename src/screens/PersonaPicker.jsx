@@ -39,7 +39,7 @@ const PERSONAS = [
   },
 ]
 
-export default function PersonaPicker({ q1, q2, onSelect }) {
+export default function PersonaPicker({ q1, q2, onSelect, onBack }) {
   const [hovered, setHovered] = useState(null)
 
   // Suggest persona based on Q2
@@ -50,6 +50,7 @@ export default function PersonaPicker({ q1, q2, onSelect }) {
     q2 === 'nothing'      ? 'alex'   : 'yvonne'
 
   return (
+    <>
     <div style={{
       width: '100%', minHeight: '100%',
       background: 'var(--color-base)',
@@ -219,18 +220,30 @@ export default function PersonaPicker({ q1, q2, onSelect }) {
         })}
       </div>
       </PageContainer>
-      {/* Bottom nav */}
-      <div style={{
-        display: 'flex', justifyContent: 'flex-start',
-        marginTop: 32,
-      }}>
-        <span style={{
+    </div>
+
+    <div style={{
+      position: 'fixed',
+      bottom: 32,
+      left: 48,
+      right: 48,
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      zIndex: 100,
+      pointerEvents: 'none',
+    }}>
+      <span
+        onClick={onBack}
+        style={{
           color: 'var(--color-text-tertiary)',
           fontSize: 14, cursor: 'pointer',
-        }}>
-          ← back
-        </span>
-      </div>
+          pointerEvents: 'all',
+        }}
+      >
+        ← back
+      </span>
     </div>
+    </>
   )
 }

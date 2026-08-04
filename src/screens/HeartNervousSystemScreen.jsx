@@ -107,7 +107,7 @@ function BloodPanelCard() {
           <div key={m.label} style={{
             display: 'flex', justifyContent: 'space-between',
             alignItems: 'center',
-            padding: '10px 14px',
+            padding: '48px',
             background: 'rgba(255,255,255,0.04)',
             borderRadius: 8,
           }}>
@@ -154,12 +154,13 @@ export default function HeartNervousSystemScreen({ persona, onNavigate, onBack }
 
   return (
     <div style={{
-      width: '100vw', height: '100vh',
       background: 'var(--color-base)',
       position: 'relative', overflow: 'hidden',
       display: 'flex', flexDirection: 'column',
+      flex: 1, overflowY: 'auto',
+      padding: '48px',
+      zIndex: 1,
     }}>
-    <PageContainer>
 
       <div style={{
         position: 'absolute', inset: 0,
@@ -167,27 +168,29 @@ export default function HeartNervousSystemScreen({ persona, onNavigate, onBack }
       }} />
 
       {/* Nav */}
-      <div style={{
+    <div style={{
         position: 'absolute', top: 32, left: 48, right: 48,
         display: 'flex', justifyContent: 'space-between',
         alignItems: 'center', zIndex: 10,
-      }}>
+    }}>
         <span style={{ fontSize: 16, fontWeight: 500 }}>fluent</span>
         <span
-          onClick={onBack}
-          style={{
-            fontSize: 14, color: 'var(--color-text-secondary)',
+            onClick={() => onNavigate('suggestion')}  // ← routes to picker
+            style={{
+            fontSize: 14,
+            color: 'var(--color-text-secondary)',
             cursor: 'pointer',
-          }}
+            }}
         >
-          {persona}
+            {persona}
         </span>
-      </div>
+    </div>
+    <PageContainer>
 
       {/* Content */}
       <div style={{
         flex: 1, overflowY: 'auto',
-        padding: '80px 64px 120px',
+        padding: '48px',
         position: 'relative', zIndex: 1,
       }}>
         <motion.div

@@ -101,7 +101,7 @@ export default function HomeScreen({ persona, onNavigate, onPersonaSwitch }) {
       }}>
         <span style={{ fontSize: 16, fontWeight: 500 }}>fluent</span>
         <motion.span
-          onClick={onPersonaSwitch}
+          onClick={() => onNavigate('suggestion')}
           whileHover={{ opacity: 0.7 }}
           style={{
             fontSize: 14,

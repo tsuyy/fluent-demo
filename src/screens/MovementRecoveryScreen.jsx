@@ -60,7 +60,6 @@ export default function MovementRecoveryScreen({ persona, onNavigate, onBack }) 
 
   return (
     <div style={{
-      width: '100%', height: '100%',
       background: 'var(--color-base)',
       position: 'relative', overflow: 'hidden',
       display: 'flex', flexDirection: 'column',
@@ -85,8 +84,8 @@ export default function MovementRecoveryScreen({ persona, onNavigate, onBack }) 
       }}>
         <span style={{ fontSize: 16, fontWeight: 500 }}>fluent</span>
         <span
-          onClick={onBack}
-          style={{
+            onClick={() => onNavigate('suggestion')}          
+            style={{
             fontSize: 14,
             color: 'var(--color-text-secondary)',
             cursor: 'pointer',
@@ -99,7 +98,7 @@ export default function MovementRecoveryScreen({ persona, onNavigate, onBack }) 
       {/* Content */}
       <div style={{
         flex: 1, overflowY: 'auto',
-        padding: '80px 64px 120px',
+        padding: '48px',
         position: 'relative', zIndex: 1,
       }}>
 

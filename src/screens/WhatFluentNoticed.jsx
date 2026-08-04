@@ -116,8 +116,8 @@ export default function WhatFluentNoticed({ persona, q1, onExplore, onBack }) {
 
   return (
     <div style={{
-        width: '100%',
-        height: '100%',
+        // width: '100%',
+        // height: '100%',
         background: 'var(--color-base)',
         position: 'relative',
         overflow: 'hidden',
@@ -138,12 +138,17 @@ export default function WhatFluentNoticed({ persona, q1, onExplore, onBack }) {
         display: 'flex', justifyContent: 'space-between',
         alignItems: 'center', zIndex: 10,
       }}>
-        <span style={{ fontSize: 16, fontWeight: 500 }}>fluent</span>
-        <span style={{
-          fontSize: 14, color: 'var(--color-text-secondary)',
-          cursor: 'pointer',
-          textTransform: 'capitalize',
-        }}>
+        <span style={{ fontSize: 16, fontWeight: 500, flexShrink: 0}}>fluent</span>
+        <span
+          onClick={() => onNavigate('suggestion')}
+          style={{
+            fontSize: 14,
+            color: 'var(--color-text-secondary)',
+            cursor: 'pointer',
+            flexShrink: 0,    // ← prevents label from shrinking
+            whiteSpace: 'nowrap',  // ← prevents wrapping to nothing
+          }}
+        >
           {persona}
         </span>
       </div>

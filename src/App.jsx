@@ -14,35 +14,7 @@ import SleepScreen from './screens/SleepScreen'
 import HowIveChangedScreen from './screens/HowIveChangedScreen'
 import HeartNervousSystemScreen from './screens/HeartNervousSystemScreen'
 import MomentsScreen from './screens/MomentsScreen'
-
-
-// Temporary placeholder
-function PlaceholderScreen({ name, onNext }) {
-  return (
-    <div style={{
-      width: '100vw', height: '100vh',
-      background: 'var(--color-base)',
-      display: 'flex', flexDirection: 'column',
-      alignItems: 'center', justifyContent: 'center',
-      gap: 24,
-    }}>
-      <p style={{ color: 'var(--color-text-secondary)', fontSize: 14 }}>
-        {name}
-      </p>
-      <button
-        onClick={onNext}
-        style={{
-          background: 'var(--color-accent)',
-          color: '#fff', border: 'none',
-          padding: '12px 24px', borderRadius: 8,
-          cursor: 'pointer', fontSize: 16,
-        }}
-      >
-        Next →
-      </button>
-    </div>
-  )
-}
+import SomethingDifferentScreen from './screens/SomethingDifferentScreen'
 
 export default function App() {
   const [screen, setScreen]   = useState('q1')
@@ -64,6 +36,7 @@ export default function App() {
     <PersonaPicker
         q1={q1} q2={q2}
         onSelect={(p) => { setPersona(p); setScreen('loading') }}
+        onBack={() => setScreen('q2')}
     />
   )
 
@@ -132,24 +105,17 @@ export default function App() {
         onBack={() => setScreen('home')}
     />
  )
-  if (screen === 'different') {
-    // Route to the first "what we noticed" card for this persona
-    // as a Flow 2 deep dive
-    const firstCard = {
-        jamie:  'monday',
-        yvonne: 'rhr_shift',
-        robert: 'retirement',
-        alex:   'seasonal',
-    }
-    return (
-        <Flow2Screen
-        cardId={firstCard[persona] || 'monday'}
+  if (screen === 'different') return (
+    <SomethingDifferentScreen
         persona={persona}
+        onNavigate={(cat) => setScreen(cat)}
         onBack={() => setScreen('home')}
-        onNext={() => setScreen('noticed')}
-        />
-    )
-  }
+        onFlow2={(cardId) => {
+        setFlow2Card(cardId)
+        setScreen('flow2')
+        }}
+    />
+  )
   if (screen === 'moments') return (
     <MomentsScreen
         persona={persona}
