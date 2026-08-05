@@ -15,6 +15,8 @@ import HowIveChangedScreen from './screens/HowIveChangedScreen'
 import HeartNervousSystemScreen from './screens/HeartNervousSystemScreen'
 import MomentsScreen from './screens/MomentsScreen'
 import SomethingDifferentScreen from './screens/SomethingDifferentScreen'
+import ScrollytellingScreen from './screens/ScrollytellingScreen'
+
 
 export default function App() {
   const [screen, setScreen]   = useState('q1')

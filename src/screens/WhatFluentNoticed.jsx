@@ -117,7 +117,7 @@ export default function WhatFluentNoticed({ persona, q1, onExplore, onBack }) {
   return (
     <div style={{
         // width: '100%',
-        // height: '100%',
+        height: '100%',
         background: 'var(--color-base)',
         position: 'relative',
         overflow: 'hidden',

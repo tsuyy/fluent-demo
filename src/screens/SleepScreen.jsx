@@ -55,6 +55,7 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
 
   return (
     <div style={{
+      height: '100%',
       background: 'var(--color-base)',
       position: 'relative', overflow: 'hidden',
       display: 'flex', flexDirection: 'column',
@@ -64,7 +65,8 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
     }}>
       <PageContainer>
       <div style={{
-        position: 'absolute', inset: 0,
+        position: 'fixed', inset: 0,
+        height: '100%',
         background: gradient, pointerEvents: 'none',
       }} />
 

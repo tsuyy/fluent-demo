@@ -137,11 +137,11 @@ export default function MomentsScreen({ persona, onNavigate, onBack }) {
 
   return (
     <div style={{
-      width: '100%', height: '100%',
+      height: '100%',
       background: 'var(--color-base)',
       position: 'relative', overflow: 'hidden',
       display: 'flex', flexDirection: 'column',
-      flex: 1,
+      flex: 1, padding: '48px',
     }}>
 
       {/* Background */}
@@ -167,14 +167,13 @@ export default function MomentsScreen({ persona, onNavigate, onBack }) {
           {persona}
         </span>
       </div>
-
+    <PageContainer>
       {/* Content */}
       <div style={{
         flex: 1, overflowY: 'auto',
-        padding: '100px 24px 120px',
+        padding: '48px',
         position: 'relative', zIndex: 1,
       }}>
-        <PageContainer>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -217,7 +216,7 @@ export default function MomentsScreen({ persona, onNavigate, onBack }) {
                 {/* Timeline dot */}
                 <div style={{
                   position: 'absolute',
-                  left: -28, top: 6,
+                  left: -32, top: 15,
                   width: 12, height: 12,
                   borderRadius: '50%',
                   background: moment.color,
@@ -359,9 +358,9 @@ export default function MomentsScreen({ persona, onNavigate, onBack }) {
               that's the conversation Fluent is trying to start.
             </motion.p>
           )}
-        </PageContainer>
-      </div>
 
+      </div>
+      </PageContainer>
       <FloatingNav active="moments" onNavigate={onNavigate} />
     </div>
   )
