@@ -251,7 +251,7 @@ export default function HowIveChangedScreen({ persona, onNavigate, onBack }) {
       }}>
         <span style={{ fontSize: 16, fontWeight: 500 }}>fluent</span>
         <span
-        onClick={() => onNavigate('suggestion')}          
+        onClick={() => onNavigate('switch')}          
         style={{
             fontSize: 14, color: 'var(--color-text-secondary)',
             cursor: 'pointer',
@@ -410,6 +410,23 @@ export default function HowIveChangedScreen({ persona, onNavigate, onBack }) {
           </motion.div>
         )}
       </div>
+       {['yvonne', 'robert'].includes(persona) && (
+        <div style={{ display: 'flex', justifyContent: 'center', paddingTop: 48 }}>
+          <motion.button
+            onClick={() => setScreen('scrollytelling')}
+            style={{
+              background: 'transparent',
+              border: '1px solid rgba(255,255,255,0.15)',
+              borderRadius: 8, padding: '12px 24px',
+              color: 'var(--color-text-secondary)',
+              fontSize: 14, cursor: 'pointer',
+              fontFamily: 'inherit',
+            }}
+          >
+            Your 2026 story →
+          </motion.button>
+        </div>
+      )}
         </PageContainer>
 
       <FloatingNav active="changed" onNavigate={onNavigate} />

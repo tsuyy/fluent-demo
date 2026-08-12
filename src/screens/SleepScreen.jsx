@@ -78,7 +78,7 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
       }}>
         <span style={{ fontSize: 16, fontWeight: 500 }}>fluent</span>
         <span
-        onClick={() => onNavigate('suggestion')}          
+        onClick={() => onNavigate('switch')}          
         style={{
             fontSize: 14, color: 'var(--color-text-secondary)',
             cursor: 'pointer',
@@ -108,7 +108,7 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
           <p style={{
             color: 'var(--color-text-secondary)', fontSize: 15,
           }}>
-            What your sleep is actually doing
+            How your body and mind recover overnight
           </p>
         </motion.div>
 

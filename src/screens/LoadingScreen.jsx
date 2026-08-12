@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import PageContainer from '../components/layout/PageContainer'
-
 
 const COPY = {
   jamie: {
@@ -46,20 +44,31 @@ const COPY = {
   },
 }
 
-export default function LoadingScreen({ persona, onComplete }) {
+export default function LoadingScreen({ persona, isRepeatVisit, onComplete }) {
   const [visibleLines, setVisibleLines] = useState(0)
   const copy = COPY[persona] || COPY.yvonne
 
   useEffect(() => {
     setVisibleLines(0)
+
+    if (isRepeatVisit) {
+      const timer = setTimeout(onComplete, 800)
+      return () => clearTimeout(timer)
+    }
+
+    // Normal full sequence
     const timers = copy.lines.map((_, i) =>
       setTimeout(() => setVisibleLines(v => Math.max(v, i + 1)),
         600 + i * 700)
     )
     const done = setTimeout(onComplete,
       600 + copy.lines.length * 700 + 1000)
-    return () => { timers.forEach(clearTimeout); clearTimeout(done) }
-  }, [persona])
+
+    return () => {
+      timers.forEach(clearTimeout)
+      clearTimeout(done)
+    }
+  }, [persona, isRepeatVisit])
 
   return (
     <div style={{
@@ -69,7 +78,6 @@ export default function LoadingScreen({ persona, onComplete }) {
       display: 'flex', alignItems: 'center',
       padding: '48px',
     }}>
-    <PageContainer>
 
       {/* Animated gradient */}
       <motion.div
@@ -137,8 +145,6 @@ export default function LoadingScreen({ persona, onComplete }) {
           </AnimatePresence>
         </div>
       </div>
-      </PageContainer>
-
     </div>
   )
 }

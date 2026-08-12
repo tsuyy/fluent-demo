@@ -158,7 +158,7 @@ export default function MomentsScreen({ persona, onNavigate, onBack }) {
       }}>
         <span style={{ fontSize: 16, fontWeight: 500 }}>fluent</span>
         <span
-            onClick={() => onNavigate('suggestion')}          
+            onClick={() => onNavigate('switch')}          
             style={{
             fontSize: 14, color: 'var(--color-text-secondary)',
             cursor: 'pointer',

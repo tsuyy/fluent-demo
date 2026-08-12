@@ -175,7 +175,7 @@ export default function HeartNervousSystemScreen({ persona, onNavigate, onBack }
     }}>
         <span style={{ fontSize: 16, fontWeight: 500 }}>fluent</span>
         <span
-            onClick={() => onNavigate('suggestion')}  // ← routes to picker
+            onClick={() => onNavigate('switch')}  // ← routes to picker
             style={{
             fontSize: 14,
             color: 'var(--color-text-secondary)',

@@ -1,128 +1,200 @@
 import { useState } from 'react'
 import './styles/tokens.css'
 import './index.css'
-import OnboardingQ1 from './screens/OnboardingQ1'
-import OnboardingQ2 from './screens/OnboardingQ2'
-import LoadingScreen from './screens/LoadingScreen'
-import PersonaPicker from './screens/PersonaPicker'
-import WhatFluentNoticed from './screens/WhatFluentNoticed'
-import HomeScreen from './screens/HomeScreen'
-import Flow2Screen from './screens/Flow2Screen'
-import MovementRecoveryScreen from './screens/MovementRecoveryScreen'
-import FloatingNav from './components/nav/FloatingNav'
-import SleepScreen from './screens/SleepScreen'
-import HowIveChangedScreen from './screens/HowIveChangedScreen'
-import HeartNervousSystemScreen from './screens/HeartNervousSystemScreen'
-import MomentsScreen from './screens/MomentsScreen'
+ 
+import ThesisScreen             from './screens/ThesisScreen'
+import LoadingScreen            from './screens/LoadingScreen'
+import PersonaPicker            from './screens/PersonaPicker'
+import WhatFluentNoticed        from './screens/WhatFluentNoticed'
+import HomeScreen               from './screens/HomeScreen'
+import Flow2Screen              from './screens/Flow2Screen'
 import SomethingDifferentScreen from './screens/SomethingDifferentScreen'
-import ScrollytellingScreen from './screens/ScrollytellingScreen'
-
-
+import MovementRecoveryScreen   from './screens/MovementRecoveryScreen'
+import HeartNervousSystemScreen from './screens/HeartNervousSystemScreen'
+import SleepScreen              from './screens/SleepScreen'
+import HowIveChangedScreen      from './screens/HowIveChangedScreen'
+import MomentsScreen            from './screens/MomentsScreen'
+import ScrollytellingScreen     from './screens/ScrollytellingScreen'
+ 
 export default function App() {
-  const [screen, setScreen]   = useState('q1')
-  const [persona, setPersona] = useState(null)
-  const [q1, setQ1]           = useState(null)
-  const [q2, setQ2]           = useState(null)
-  const [flow2Card, setFlow2Card] = useState(null)
-
-
-  if (screen === 'q1') return (
-    <OnboardingQ1 onSelect={(ans) => { setQ1(ans); setScreen('q2') }} />
-  )
-
-  if (screen === 'q2') return (
-    <OnboardingQ2 onSelect={(ans) => { setQ2(ans); setScreen('suggestion') }} />
-  )
-
-  if (screen === 'suggestion') return (
-    <PersonaPicker
-        q1={q1} q2={q2}
-        onSelect={(p) => { setPersona(p); setScreen('loading') }}
-        onBack={() => setScreen('q2')}
+  const [screen,          setScreen]          = useState('thesis')
+  const [persona,         setPersona]         = useState(null)
+  const [flow2Card,       setFlow2Card]       = useState(null)
+  const [visitedPersonas, setVisitedPersonas] = useState(new Set())
+  const [pickerPrev,      setPickerPrev]      = useState('noticed') // where picker's back button goes
+ 
+  // ── Helpers ───────────────────────────────────────────────────────────────
+ 
+  function goToPicker(from) {
+    setPickerPrev(from)
+    setScreen('picker')
+  }
+ 
+  // Flow2Screen emits 'flow2:cardId' for next-insight, 'picker' for persona chip,
+  // 'home' for last-card CTA, and category strings for other nav.
+  function handleFlow2Navigate(target) {
+    if (target.startsWith('flow2:')) {
+      setFlow2Card(target.slice(6))
+      // stay on flow2 screen — card change handled by the prop update
+    } else if (target === 'picker') {
+      goToPicker('flow2')
+    } else {
+      setScreen(target)
+    }
+  }
+ 
+  // ── Primary path ──────────────────────────────────────────────────────────
+ 
+  if (screen === 'thesis') return (
+    <ThesisScreen
+      onContinue={() => {
+        setPersona('yvonne')
+        setScreen('loading')
+      }}
     />
   )
-
+ 
+  // ── Loading (shared) ──────────────────────────────────────────────────────
+ 
   if (screen === 'loading') return (
-    <LoadingScreen persona={persona} onComplete={() => setScreen('noticed')} />
+    <LoadingScreen
+      persona={persona}
+      isRepeatVisit={visitedPersonas.has(persona)}
+      onComplete={() => {
+        setVisitedPersonas(prev => new Set([...prev, persona]))
+        setScreen('noticed')
+      }}
+    />
   )
-
+ 
+  // ── What Fluent Noticed ───────────────────────────────────────────────────
+ 
   if (screen === 'noticed') return (
     <WhatFluentNoticed
-        persona={persona}
-        q1={q1}
-        onExplore={(dest) => {
-        if (dest === 'home' || dest === 'topics') {
-            setScreen('home')
+      persona={persona}
+      onExplore={(dest) => {
+        if (dest === 'home') {
+          setScreen('home')
         } else {
-            setFlow2Card(dest)
-            setScreen('flow2')
+          setFlow2Card(dest)
+          setScreen('flow2')
         }
-        }}
-        onBack={() => setScreen('suggestion')}
+      }}
+      onHome={() => setScreen('thesis')}         // fluent wordmark → thesis
+      onSwitch={() => goToPicker('noticed')}     // persona chip → picker
     />
   )
-
+ 
+  // ── Flow 2 ────────────────────────────────────────────────────────────────
+ 
   if (screen === 'flow2') return (
     <Flow2Screen
-        cardId={flow2Card || 'monday'}
-        persona={persona}
-        onBack={() => setScreen('noticed')}
-        onNext={() => setScreen('noticed')}
+      key={flow2Card}                            // remounts on card change so state resets cleanly
+      cardId={flow2Card || 'rhr_shift'}
+      persona={persona}
+      onBack={() => setScreen('noticed')}
+      onNavigate={handleFlow2Navigate}
     />
   )
-
+ 
+  // ── Home ──────────────────────────────────────────────────────────────────
+ 
   if (screen === 'home') return (
     <HomeScreen
-        persona={persona}
-        onNavigate={(cat) => setScreen(cat)}
-        onPersonaSwitch={() => setScreen('suggestion')}
+      persona={persona}
+      onNavigate={(cat) => {
+        if (cat === 'secondary') {
+          goToPicker('home')
+        } else {
+          setScreen(cat)
+        }
+      }}
+      onBack={() => setScreen('noticed')}
+      onPersonaSwitch={() => goToPicker('home')}
     />
   )
-  if (screen === 'activity') return (
-    <MovementRecoveryScreen
-        persona={persona}
-        onNavigate={(cat) => setScreen(cat)}
-        onBack={() => setScreen('home')}
+ 
+  // ── Persona picker ────────────────────────────────────────────────────────
+ 
+  if (screen === 'picker') return (
+    <PersonaPicker
+      currentPersona={persona}
+      onSelect={(p) => {
+        setPersona(p)
+        setScreen('loading')
+      }}
+      onBack={() => setScreen(pickerPrev)}
     />
   )
-
-  if (screen === 'sleep') return (
-    <SleepScreen
-        persona={persona}
-        onNavigate={(cat) => setScreen(cat)}
-        onBack={() => setScreen('home')}
-    />
-  )
-  if (screen === 'changed') return (
-    <HowIveChangedScreen
-        persona={persona}
-        onNavigate={(cat) => setScreen(cat)}
-        onBack={() => setScreen('home')}
-    />
-  )
-  if (screen === 'cardio') return (
-    <HeartNervousSystemScreen
-        persona={persona}
-        onNavigate={(cat) => setScreen(cat)}
-        onBack={() => setScreen('home')}
-    />
- )
+ 
+  // ── Category screens ──────────────────────────────────────────────────────
+ 
   if (screen === 'different') return (
     <SomethingDifferentScreen
-        persona={persona}
-        onNavigate={(cat) => setScreen(cat)}
-        onBack={() => setScreen('home')}
-        onFlow2={(cardId) => {
-        setFlow2Card(cardId)
-        setScreen('flow2')
-        }}
+      persona={persona}
+      onNavigate={(cat) => setScreen(cat)}
+      onBack={() => setScreen('home')}
+      onFlow2={(cardId) => { setFlow2Card(cardId); setScreen('flow2') }}
     />
   )
+ 
+  if (screen === 'activity') return (
+    <MovementRecoveryScreen
+      persona={persona}
+      onNavigate={(cat) => setScreen(cat)}
+      onBack={() => setScreen('home')}
+    />
+  )
+ 
+  if (screen === 'cardio') return (
+    <HeartNervousSystemScreen
+      persona={persona}
+      onNavigate={(cat) => setScreen(cat)}
+      onBack={() => setScreen('home')}
+    />
+  )
+ 
+  if (screen === 'sleep') return (
+    <SleepScreen
+      persona={persona}
+      onNavigate={(cat) => setScreen(cat)}
+      onBack={() => setScreen('home')}
+    />
+  )
+ 
+  if (screen === 'changed') return (
+    <HowIveChangedScreen
+      persona={persona}
+      onNavigate={(cat) => setScreen(cat)}
+      onBack={() => setScreen('home')}
+    />
+  )
+ 
   if (screen === 'moments') return (
     <MomentsScreen
-        persona={persona}
-        onNavigate={(cat) => setScreen(cat)}
-        onBack={() => setScreen('home')}
+      persona={persona}
+      onNavigate={(cat) => setScreen(cat)}
+      onBack={() => setScreen('home')}
+    />
+  )
+ 
+  if (screen === 'scrollytelling') return (
+    <ScrollytellingScreen
+      persona={persona}
+      onBack={() => setScreen('changed')}
+      onComplete={() => setScreen('home')}
+    />
+  )
+ 
+  // ── Fallback ──────────────────────────────────────────────────────────────
+ 
+  return (
+    <ThesisScreen
+      onContinue={() => {
+        setPersona('yvonne')
+        setScreen('loading')
+      }}
     />
   )
 }
+ 
