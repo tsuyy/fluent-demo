@@ -13,6 +13,8 @@ const GRADIENTS = {
   alex:   'radial-gradient(ellipse at 60% 30%, rgba(39,196,138,0.1) 0%, transparent 55%)',
 }
 
+const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex' }
+
 function ChartCard({ title, subtitle, children, delay = 0, fullWidth = false }) {
   return (
     <motion.div
@@ -168,23 +170,34 @@ export default function HeartNervousSystemScreen({ persona, onNavigate, onBack }
       }} />
 
       {/* Nav */}
-    <div style={{
-        position: 'absolute', top: 32, left: 48, right: 48,
+      <div style={{
+        position: 'fixed', top: 32, left: 48, right: 48,
         display: 'flex', justifyContent: 'space-between',
-        alignItems: 'center', zIndex: 10,
-    }}>
-        <span style={{ fontSize: 16, fontWeight: 500 }}>fluent</span>
-        <span
-            onClick={() => onNavigate('switch')}  // ← routes to picker
-            style={{
+        alignItems: 'center', zIndex: 20,
+      }}>
+        <motion.span
+          whileHover={{ opacity: 0.7 }}
+          onClick={onBack}
+          style={{ fontSize: 16, fontWeight: 500, cursor: 'pointer' }}
+        >
+          fluent
+        </motion.span>
+        <motion.span
+          whileHover={{ opacity: 0.7 }}
+          onClick={() => onNavigate('picker')}
+          style={{
             fontSize: 14,
             color: 'var(--color-text-secondary)',
             cursor: 'pointer',
-            }}
+            flexShrink: 0, whiteSpace: 'nowrap',
+            background: 'rgba(255,255,255,0.06)',
+            border: '1px solid rgba(255,255,255,0.1)',
+            borderRadius: 20, padding: '4px 12px',
+          }}
         >
-            {persona}
-        </span>
-    </div>
+          {PERSONA_LABELS[persona] || persona}
+        </motion.span>
+      </div>
     <PageContainer>
 
       {/* Content */}

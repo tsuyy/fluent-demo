@@ -132,7 +132,13 @@ export default function App() {
   if (screen === 'different') return (
     <SomethingDifferentScreen
       persona={persona}
-      onNavigate={(cat) => setScreen(cat)}
+      onNavigate={(cat) => {
+        if (cat === 'picker') {
+          goToPicker('different')  
+        } else {
+          setScreen(cat)
+        }
+      }}      
       onBack={() => setScreen('home')}
       onFlow2={(cardId) => { setFlow2Card(cardId); setScreen('flow2') }}
     />
@@ -141,7 +147,13 @@ export default function App() {
   if (screen === 'activity') return (
     <MovementRecoveryScreen
       persona={persona}
-      onNavigate={(cat) => setScreen(cat)}
+      onNavigate={(cat) => {
+        if (cat === 'picker') {
+          goToPicker('activity')   
+        } else {
+          setScreen(cat)
+        }
+      }}      
       onBack={() => setScreen('home')}
     />
   )
@@ -149,7 +161,13 @@ export default function App() {
   if (screen === 'cardio') return (
     <HeartNervousSystemScreen
       persona={persona}
-      onNavigate={(cat) => setScreen(cat)}
+      onNavigate={(cat) => {
+        if (cat === 'picker') {
+          goToPicker('cardio')  
+        } else {
+          setScreen(cat)
+        }
+      }}
       onBack={() => setScreen('home')}
     />
   )
@@ -157,7 +175,13 @@ export default function App() {
   if (screen === 'sleep') return (
     <SleepScreen
       persona={persona}
-      onNavigate={(cat) => setScreen(cat)}
+      onNavigate={(cat) => {
+        if (cat === 'picker') {
+          goToPicker('sleep')  
+        } else {
+          setScreen(cat)
+        }
+      }}      
       onBack={() => setScreen('home')}
     />
   )
@@ -165,7 +189,13 @@ export default function App() {
   if (screen === 'changed') return (
     <HowIveChangedScreen
       persona={persona}
-      onNavigate={(cat) => setScreen(cat)}
+      onNavigate={(cat) => {
+        if (cat === 'picker') {
+          goToPicker('changed')   
+        } else {
+          setScreen(cat)
+        }
+      }}
       onBack={() => setScreen('home')}
     />
   )
@@ -173,7 +203,13 @@ export default function App() {
   if (screen === 'moments') return (
     <MomentsScreen
       persona={persona}
-      onNavigate={(cat) => setScreen(cat)}
+      onNavigate={(cat) => {
+        if (cat === 'picker') {
+          goToPicker('moments')   // ← use the actual screen name as prevScreen
+        } else {
+          setScreen(cat)
+        }
+      }}
       onBack={() => setScreen('home')}
     />
   )

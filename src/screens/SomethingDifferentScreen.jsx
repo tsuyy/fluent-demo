@@ -10,6 +10,7 @@ const SIGNALS = [
   { id: 'physical', label: 'Something feels physical',  emoji: '🫀' },
   { id: 'unsure',   label: 'I\'m not sure — show me',   emoji: '🔍' },
 ]
+const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex' }
 
 // Maps felt signal to the most relevant card + explanation
 const SIGNAL_ROUTES = {
@@ -101,20 +102,32 @@ export default function SomethingDifferentScreen({
 
       {/* Nav */}
       <div style={{
-        position: 'absolute', top: 32, left: 48, right: 48,
+        position: 'fixed', top: 32, left: 48, right: 48,
         display: 'flex', justifyContent: 'space-between',
-        alignItems: 'center', zIndex: 10,
+        alignItems: 'center', zIndex: 20,
       }}>
-        <span style={{ fontSize: 16, fontWeight: 500 }}>fluent</span>
-        <span
-          onClick={() => onNavigate('switch')}
+        <motion.span
+          whileHover={{ opacity: 0.7 }}
+          onClick={onBack}
+          style={{ fontSize: 16, fontWeight: 500, cursor: 'pointer' }}
+        >
+          fluent
+        </motion.span>
+        <motion.span
+          whileHover={{ opacity: 0.7 }}
+          onClick={() => onNavigate('picker')}
           style={{
-            fontSize: 14, color: 'var(--color-text-secondary)',
+            fontSize: 14,
+            color: 'var(--color-text-secondary)',
             cursor: 'pointer',
+            flexShrink: 0, whiteSpace: 'nowrap',
+            background: 'rgba(255,255,255,0.06)',
+            border: '1px solid rgba(255,255,255,0.1)',
+            borderRadius: 20, padding: '4px 12px',
           }}
         >
-          {persona}
-        </span>
+          {PERSONA_LABELS[persona] || persona}
+        </motion.span>
       </div>
 
       {/* Content */}
