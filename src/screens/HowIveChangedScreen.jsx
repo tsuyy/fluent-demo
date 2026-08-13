@@ -426,7 +426,7 @@ export default function HowIveChangedScreen({ persona, onNavigate, onBack }) {
        {['yvonne', 'robert'].includes(persona) && (
         <div style={{ display: 'flex', justifyContent: 'center', paddingTop: 48 }}>
           <motion.button
-            onClick={() => setScreen('scrollytelling')}
+            onClick={() => onNavigate('scrollytelling')}
             style={{
               background: 'transparent',
               border: '1px solid rgba(255,255,255,0.15)',

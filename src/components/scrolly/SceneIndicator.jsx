@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
-import { useIsNarrow } from './Scene'
+import { useIsNarrow } from './useIsNarrow'
 
 const QUIET = 'var(--color-quiet, #888780)'
 const TEXT = 'var(--color-text, rgba(255,255,255,0.92))'

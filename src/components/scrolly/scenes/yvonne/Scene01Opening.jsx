@@ -1,4 +1,5 @@
-import { Scene, Beat, useScene, useIsNarrow } from '../../Scene'
+import { Scene, Beat, useScene } from '../../Scene'
+import { useIsNarrow } from '../../useIsNarrow'
 import { Lead, Line, CountUp, PulseDot, ScrollCue } from '../../primitives'
 
 const QUIET = 'var(--color-quiet, #888780)'

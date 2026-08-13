@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
-import { useScene, useIsNarrow } from './Scene'
+import { useScene } from './Scene'
+import { useIsNarrow } from './useIsNarrow'
 
 /* Token fallbacks keep these components safe to drop in even if a
    given custom property isn't defined in tokens.css yet. */

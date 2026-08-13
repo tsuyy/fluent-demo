@@ -1,5 +1,7 @@
-import { Scene, Beat, useIsNarrow } from '../../Scene'
+import { Scene, Beat } from '../../Scene'
+import { useIsNarrow } from '../../useIsNarrow'
 import { Lead, Line, BigNumber, CountUp, InfoNote, VerificationPrompt } from '../../primitives'
+import MetricTooltip from '../../../../components/MetricTooltip'
 
 const QUIET = 'var(--color-quiet, #888780)'
 
@@ -53,11 +55,7 @@ export default function Scene02Heart({ beat, isActive, story, response, onRespon
           </Beat>
 
           <Beat at={2} delay={0.25}>
-            <InfoNote
-              label="What is resting heart rate?"
-              body="The rate your heart settles into when nothing is being asked of it — read here from your overnight data, across every night in your record."
-              caveat="Fluent compares this to your own baseline, not a population range. A falling resting rate is typical as cardiovascular efficiency improves, but it also moves with sleep, illness, alcohol, altitude and stress. One night says very little. A season says more."
-            />
+            <MetricTooltip metric="rhr" marker="＊" />
           </Beat>
 
           <Beat at={3}>
@@ -67,6 +65,7 @@ export default function Scene02Heart({ beat, isActive, story, response, onRespon
                 HRV: {hrv.from}ms → {hrv.to}ms.{' '}
                 <span style={{ color: QUIET }}>{hrv.pctLabel} more regulated.</span>
               </Line>
+              <MetricTooltip metric="hrv" marker="＊" />
             </div>
           </Beat>
 

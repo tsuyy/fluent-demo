@@ -82,6 +82,7 @@ export function Scene({
   children,
   align = 'center',
   maxWidth = 1100,
+  splitColumns,  // override default '5fr 7fr'
 }) {
   const reduced = useReducedMotion()
   const narrow = useIsNarrow()
@@ -89,14 +90,16 @@ export function Scene({
   const frame = {
     position: 'sticky',
     top: 0,
-    minHeight: '100vh', // fallback if dvh is unsupported
-    height: '100dvh', // mobile: excludes the collapsing browser chrome
+    // Inside a fixed overflow:scroll container, 100vh = container height.
+    // Use minHeight so scenes with lots of beats can grow past one screen.
+    minHeight: '100vh',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     padding: narrow ? '72px 20px' : '96px 40px',
     boxSizing: 'border-box',
-    overflow: 'hidden',
+    // No overflow:hidden — lets taller beat stacks breathe
+    overflow: 'visible',
   }
 
   const inner = {
@@ -113,7 +116,7 @@ export function Scene({
         style={{
           ...inner,
           display: 'grid',
-          gridTemplateColumns: narrow ? '1fr' : 'minmax(280px, 5fr) minmax(320px, 7fr)',
+          gridTemplateColumns: narrow ? '1fr' : (splitColumns || 'minmax(280px, 5fr) minmax(320px, 7fr)'),
           gap: narrow ? 32 : 56,
           alignItems: 'center',
         }}
