@@ -135,9 +135,9 @@ export default function Scene04Sports({ beat, isActive, story, response, onRespo
  
           <Beat at={4}>
             <div style={{
-              padding: '16px 0',
+              padding: '16px 0 0 0',
               borderTop: '1px solid rgba(255,255,255,0.08)',
-              borderBottom: '1px solid rgba(255,255,255,0.08)',
+              // borderBottom: '1px solid rgba(255,255,255,0.08)',
               display: 'grid',
               gap: 8,
             }}>

@@ -1,0 +1,19 @@
+{
+  "window": { "start": "2026-08-11", "end": "2026-08-24" },
+  "daily": [
+    { "date": "2026-08-11", "hrv_dev": 1.2, "rhr_dev": -0.8 },
+    { "date": "2026-08-12", "hrv_dev": -2.1, "rhr_dev": 2.3 },
+    { "date": "2026-08-13", "hrv_dev": 0.8, "rhr_dev": 0.4 },
+    { "date": "2026-08-14", "hrv_dev": -3.4, "rhr_dev": 3.8 },
+    { "date": "2026-08-15", "hrv_dev": -1.8, "rhr_dev": 2.1 },
+    { "date": "2026-08-16", "hrv_dev": -4.2, "rhr_dev": 4.6 },
+    { "date": "2026-08-17", "hrv_dev": -2.9, "rhr_dev": 3.2 },
+    { "date": "2026-08-18", "hrv_dev": 0.4, "rhr_dev": -0.3 },
+    { "date": "2026-08-19", "hrv_dev": -3.1, "rhr_dev": 3.4 },
+    { "date": "2026-08-20", "hrv_dev": -4.8, "rhr_dev": 5.1 },
+    { "date": "2026-08-21", "hrv_dev": -2.2, "rhr_dev": 2.7 },
+    { "date": "2026-08-22", "hrv_dev": -1.6, "rhr_dev": 1.2 },
+    { "date": "2026-08-23", "hrv_dev": -3.3, "rhr_dev": 3.9 },
+    { "date": "2026-08-24", "hrv_dev": -2.7, "rhr_dev": 2.8 }
+  ]
+}

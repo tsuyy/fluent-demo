@@ -1,32 +1,40 @@
+import { motion } from 'framer-motion'
 import { Scene, Beat, useScene } from '../../Scene'
 import { useIsNarrow } from '../../useIsNarrow'
 import { Lead, Line, CountUp, PulseDot, ScrollCue } from '../../primitives'
 
 const QUIET = 'var(--color-quiet, #888780)'
-const TEXT = 'var(--color-text, rgba(255,255,255,0.92))'
+const TEXT  = 'var(--color-text, rgba(255,255,255,0.92))'
 
-/* One stat = a figure and the thing it counts. */
-function Stat({ display, label, value, countAt }) {
-  const { beat, reduced } = useScene()
-  const narrow = useIsNarrow()
+// Vertical stat row — number and label on the same line
+function StatRow({ display, label, value, countAt, beat, reduced, narrow }) {
   const counts = typeof value === 'number' && countAt != null && !reduced
-
   return (
-    <div style={{ display: 'grid', gap: 2, justifyItems: 'center' }}>
-      <span
-        style={{
-          fontFamily: 'var(--font-display, "DM Sans"), sans-serif',
-          fontSize: narrow ? 36 : 48,
-          fontWeight: 500,
-          letterSpacing: '-0.04em',
-          lineHeight: 1.05,
-          color: TEXT,
-          fontVariantNumeric: 'tabular-nums',
-        }}
-      >
-        {counts ? <CountUp from={0} to={value} active={beat >= countAt} /> : display}
+    <div style={{
+      display: 'flex',
+      alignItems: 'baseline',
+      gap: narrow ? 10 : 14,
+    }}>
+      <span style={{
+        fontFamily: 'var(--font-display, "DM Sans"), sans-serif',
+        fontSize: narrow ? 32 : 42,
+        fontWeight: 500,
+        letterSpacing: '-0.04em',
+        lineHeight: 1.1,
+        color: TEXT,
+        fontVariantNumeric: 'tabular-nums',
+        minWidth: narrow ? 160 : 220,
+      }}>
+        {counts
+          ? <CountUp from={0} to={value} active={beat >= countAt} duration={2000} />
+          : display}
       </span>
-      <span style={{ fontSize: narrow ? 13 : 14, color: QUIET, letterSpacing: '0.01em' }}>
+      <span style={{
+        fontSize: narrow ? 13 : 15,
+        color: QUIET,
+        letterSpacing: '0.01em',
+        whiteSpace: 'nowrap',
+      }}>
         {label}
       </span>
     </div>
@@ -34,52 +42,60 @@ function Stat({ display, label, value, countAt }) {
 }
 
 export default function Scene01Opening({ beat, isActive, story }) {
-  const narrow = useIsNarrow()
+  const narrow  = useIsNarrow()
+  const { reduced } = useScene()
 
   return (
-    <Scene layout="text" beat={beat} isActive={isActive} label="The beginning">
+    <Scene layout="text" beat={beat} isActive={isActive} label="The beginning" align="left" maxWidth={680}>
+
+      {/* Date — large, prominent, first thing */}
       <Beat at={0}>
-        <Lead>On {story.startDate} you started tracking your health.</Lead>
+        <p style={{
+          fontFamily: 'var(--font-display, "DM Sans"), sans-serif',
+          fontSize: narrow ? 28 : 38,
+          fontWeight: 400,
+          letterSpacing: '-0.02em',
+          color: TEXT,
+          margin: 0,
+        }}>You started tracking on<br />
+          {story.startDate}
+        </p>
       </Beat>
 
-      <Beat at={0} delay={0.35} style={{ padding: '10px 0 4px' }}>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <PulseDot size={14} />
+      {/* Heartbeat dot */}
+      <Beat at={0} delay={0.5} style={{ padding: '4px 0' }}>
+        <PulseDot size={12} />
+      </Beat>
+
+      {/* Stats — stacked vertically, 400ms stagger */}
+      <Beat at={1}>
+        <div style={{ display: 'grid', gap: narrow ? 14 : 18 }}>
+          <StatRow
+            display={story.heartbeats.toLocaleString()}
+            value={story.heartbeats}
+            countAt={1}
+            label="heartbeats recorded"
+            beat={beat} reduced={reduced} narrow={narrow}
+          />
+          <Beat at={2}>
+            <StatRow
+              display={story.workouts.toLocaleString()}
+              label="workouts logged"
+              beat={beat} reduced={reduced} narrow={narrow}
+            />
+          </Beat>
+          <Beat at={3}>
+            <StatRow
+              display={story.sleepHours}
+              label="hr of sleep data"
+              beat={beat} reduced={reduced} narrow={narrow}
+            />
+          </Beat>
         </div>
       </Beat>
 
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: narrow ? 'column' : 'row',
-          gap: narrow ? 22 : 56,
-          alignItems: 'center',
-          justifyContent: 'center',
-          paddingTop: narrow ? 6 : 12,
-        }}
-      >
-        <Beat at={1}>
-          <Stat
-            value={story.heartbeats}
-            display={story.heartbeats.toLocaleString()}
-            countAt={1}
-            label="heartbeats recorded"
-          />
-        </Beat>
-
-        <Beat at={2}>
-          <Stat
-            display={story.workouts.toLocaleString()}
-            label={`workouts — ${story.sportsWord} different sports`}
-          />
-        </Beat>
-
-        <Beat at={3}>
-          <Stat display={story.sleepYears} label="years of sleep data" />
-        </Beat>
-      </div>
-
-      <Beat at={4} style={{ paddingTop: narrow ? 10 : 20 }}>
+      {/* Closing line */}
+      <Beat at={4} style={{ paddingTop: narrow ? 8 : 16 }}>
         <Line tone="secondary" style={{ fontSize: narrow ? 17 : 20 }}>
           Here's what Fluent sees.
         </Line>

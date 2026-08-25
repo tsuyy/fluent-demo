@@ -1,0 +1,366 @@
+{
+  "phases": {
+    "before": {
+      "hrv_avg": 45.5,
+      "rhr_avg": 55.6,
+      "deep_avg": 48.6,
+      "resp_avg": 16.2
+    },
+    "during": {
+      "hrv_avg": 56.3,
+      "rhr_avg": 56.0,
+      "deep_avg": 61.4,
+      "resp_avg": 15.4
+    },
+    "after_clean": {
+      "hrv_avg": 53.1,
+      "deep_avg": 68.0,
+      "n": 14
+    },
+    "after_dirty": {
+      "hrv_avg": 44.7,
+      "n": 8,
+      "note": "WI trip Jul 22-26, went out Aug 1-2, hosted dinner Aug 8"
+    }
+  },
+  "dirty_dates": [
+    "2026-07-22",
+    "2026-07-23",
+    "2026-07-24",
+    "2026-07-25",
+    "2026-07-26",
+    "2026-08-01",
+    "2026-08-02",
+    "2026-08-08"
+  ],
+  "daily": [
+    {
+      "date": "2026-06-20",
+      "hrv": 36.4,
+      "hrv_dev": -9.0,
+      "phase": "before"
+    },
+    {
+      "date": "2026-06-21",
+      "hrv": 43.2,
+      "hrv_dev": -2.7,
+      "phase": "before"
+    },
+    {
+      "date": "2026-06-22",
+      "hrv": 45.1,
+      "hrv_dev": -1.8,
+      "phase": "before"
+    },
+    {
+      "date": "2026-06-23",
+      "hrv": 50.5,
+      "hrv_dev": 3.4,
+      "phase": "before"
+    },
+    {
+      "date": "2026-06-24",
+      "hrv": 38.3,
+      "hrv_dev": -8.6,
+      "phase": "before"
+    },
+    {
+      "date": "2026-06-25",
+      "hrv": 38.0,
+      "hrv_dev": -8.2,
+      "phase": "before"
+    },
+    {
+      "date": "2026-06-26",
+      "hrv": 41.9,
+      "hrv_dev": -4.4,
+      "phase": "before"
+    },
+    {
+      "date": "2026-06-27",
+      "hrv": 58.7,
+      "hrv_dev": 12.3,
+      "phase": "before"
+    },
+    {
+      "date": "2026-06-28",
+      "hrv": 58.0,
+      "hrv_dev": 11.2,
+      "phase": "before"
+    },
+    {
+      "date": "2026-06-29",
+      "hrv": 32.0,
+      "hrv_dev": -14.1,
+      "phase": "before"
+    },
+    {
+      "date": "2026-06-30",
+      "hrv": 42.2,
+      "hrv_dev": -3.8,
+      "phase": "before"
+    },
+    {
+      "date": "2026-07-01",
+      "hrv": 54.8,
+      "hrv_dev": 8.6,
+      "phase": "before"
+    },
+    {
+      "date": "2026-07-02",
+      "hrv": 64.8,
+      "hrv_dev": 18.5,
+      "phase": "before"
+    },
+    {
+      "date": "2026-07-03",
+      "hrv": 32.5,
+      "hrv_dev": -13.3,
+      "phase": "before"
+    },
+    {
+      "date": "2026-07-04",
+      "hrv": 50.0,
+      "hrv_dev": 4.0,
+      "phase": "before"
+    },
+    {
+      "date": "2026-07-05",
+      "hrv": 41.3,
+      "hrv_dev": -4.3,
+      "phase": "before"
+    },
+    {
+      "date": "2026-07-06",
+      "hrv": 57.4,
+      "hrv_dev": 11.3,
+      "phase": "during"
+    },
+    {
+      "date": "2026-07-07",
+      "hrv": 56.6,
+      "hrv_dev": 9.7,
+      "phase": "during"
+    },
+    {
+      "date": "2026-07-08",
+      "hrv": 54.8,
+      "hrv_dev": 7.5,
+      "phase": "during"
+    },
+    {
+      "date": "2026-07-09",
+      "hrv": 65.1,
+      "hrv_dev": 17.3,
+      "phase": "during"
+    },
+    {
+      "date": "2026-07-10",
+      "hrv": 53.5,
+      "hrv_dev": 6.0,
+      "phase": "during"
+    },
+    {
+      "date": "2026-07-11",
+      "hrv": 61.3,
+      "hrv_dev": 13.5,
+      "phase": "during"
+    },
+    {
+      "date": "2026-07-12",
+      "hrv": 50.0,
+      "hrv_dev": 2.1,
+      "phase": "during"
+    },
+    {
+      "date": "2026-07-13",
+      "hrv": 57.4,
+      "hrv_dev": 8.6,
+      "phase": "during"
+    },
+    {
+      "date": "2026-07-14",
+      "hrv": 56.2,
+      "hrv_dev": 7.3,
+      "phase": "during"
+    },
+    {
+      "date": "2026-07-15",
+      "hrv": 69.6,
+      "hrv_dev": 19.7,
+      "phase": "during"
+    },
+    {
+      "date": "2026-07-16",
+      "hrv": 59.0,
+      "hrv_dev": 8.5,
+      "phase": "during"
+    },
+    {
+      "date": "2026-07-17",
+      "hrv": 48.1,
+      "hrv_dev": -2.1,
+      "phase": "during"
+    },
+    {
+      "date": "2026-07-18",
+      "hrv": 47.9,
+      "hrv_dev": -2.4,
+      "phase": "during"
+    },
+    {
+      "date": "2026-07-19",
+      "hrv": 45.6,
+      "hrv_dev": -4.7,
+      "phase": "during"
+    },
+    {
+      "date": "2026-07-20",
+      "hrv": 62.6,
+      "hrv_dev": 11.4,
+      "phase": "during"
+    },
+    {
+      "date": "2026-07-21",
+      "hrv": 53.0,
+      "hrv_dev": 1.5,
+      "phase": "after_clean"
+    },
+    {
+      "date": "2026-07-22",
+      "hrv": 52.0,
+      "hrv_dev": 0.2,
+      "phase": "after_dirty"
+    },
+    {
+      "date": "2026-07-23",
+      "hrv": 37.0,
+      "hrv_dev": -14.3,
+      "phase": "after_dirty"
+    },
+    {
+      "date": "2026-07-24",
+      "hrv": 39.3,
+      "hrv_dev": -12.1,
+      "phase": "after_dirty"
+    },
+    {
+      "date": "2026-07-25",
+      "hrv": 37.8,
+      "hrv_dev": -13.5,
+      "phase": "after_dirty"
+    },
+    {
+      "date": "2026-07-26",
+      "hrv": 48.1,
+      "hrv_dev": -3.5,
+      "phase": "after_dirty"
+    },
+    {
+      "date": "2026-07-27",
+      "hrv": 62.6,
+      "hrv_dev": 10.9,
+      "phase": "after_clean"
+    },
+    {
+      "date": "2026-07-28",
+      "hrv": 37.9,
+      "hrv_dev": -13.1,
+      "phase": "after_clean"
+    },
+    {
+      "date": "2026-07-29",
+      "hrv": 49.8,
+      "hrv_dev": -1.8,
+      "phase": "after_clean"
+    },
+    {
+      "date": "2026-07-30",
+      "hrv": 61.6,
+      "hrv_dev": 9.3,
+      "phase": "after_clean"
+    },
+    {
+      "date": "2026-07-31",
+      "hrv": 48.6,
+      "hrv_dev": -3.4,
+      "phase": "after_clean"
+    },
+    {
+      "date": "2026-08-01",
+      "hrv": 44.1,
+      "hrv_dev": -7.3,
+      "phase": "after_dirty"
+    },
+    {
+      "date": "2026-08-02",
+      "hrv": 56.8,
+      "hrv_dev": 4.6,
+      "phase": "after_dirty"
+    },
+    {
+      "date": "2026-08-03",
+      "hrv": 68.5,
+      "hrv_dev": 15.7,
+      "phase": "after_clean"
+    },
+    {
+      "date": "2026-08-04",
+      "hrv": 47.4,
+      "hrv_dev": -5.6,
+      "phase": "after_clean"
+    },
+    {
+      "date": "2026-08-05",
+      "hrv": 67.7,
+      "hrv_dev": 14.4,
+      "phase": "after_clean"
+    },
+    {
+      "date": "2026-08-06",
+      "hrv": 45.9,
+      "hrv_dev": -7.1,
+      "phase": "after_clean"
+    },
+    {
+      "date": "2026-08-07",
+      "hrv": 44.0,
+      "hrv_dev": -8.6,
+      "phase": "after_clean"
+    },
+    {
+      "date": "2026-08-08",
+      "hrv": 42.5,
+      "hrv_dev": -9.4,
+      "phase": "after_dirty"
+    },
+    {
+      "date": "2026-08-09",
+      "hrv": 51.1,
+      "hrv_dev": -0.7,
+      "phase": "after_clean"
+    },
+    {
+      "date": "2026-08-10",
+      "hrv": 53.9,
+      "hrv_dev": 2.4,
+      "phase": "after_clean"
+    },
+    {
+      "date": "2026-08-11",
+      "hrv": 52.0,
+      "hrv_dev": 0.4,
+      "phase": "after_clean"
+    }
+  ],
+  "markers": [
+    {
+      "date": "2026-07-06",
+      "label": "Experiment begins"
+    },
+    {
+      "date": "2026-07-20",
+      "label": "Experiment ends"
+    }
+  ]
+}

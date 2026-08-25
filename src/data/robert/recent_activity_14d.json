@@ -1,0 +1,22 @@
+{
+  "window": { "start": "2026-08-11", "end": "2026-08-24" },
+  "daily": [
+    { "date": "2026-08-11", "hrv_dev": 1.2, "active_cal": 320 },
+    { "date": "2026-08-12", "hrv_dev": -2.1, "active_cal": 280 },
+    { "date": "2026-08-13", "hrv_dev": 0.8, "active_cal": 410 },
+    { "date": "2026-08-14", "hrv_dev": -3.4, "active_cal": 190 },
+    { "date": "2026-08-15", "hrv_dev": -1.8, "active_cal": 240 },
+    { "date": "2026-08-16", "hrv_dev": -4.2, "active_cal": 160 },
+    { "date": "2026-08-17", "hrv_dev": -2.9, "active_cal": 220 },
+    { "date": "2026-08-18", "hrv_dev": 0.4, "active_cal": 380 },
+    { "date": "2026-08-19", "hrv_dev": -3.1, "active_cal": 200 },
+    { "date": "2026-08-20", "hrv_dev": -4.8, "active_cal": 170 },
+    { "date": "2026-08-21", "hrv_dev": -2.2, "active_cal": 210 },
+    { "date": "2026-08-22", "hrv_dev": -1.6, "active_cal": 350 },
+    { "date": "2026-08-23", "hrv_dev": -3.3, "active_cal": 190 },
+    { "date": "2026-08-24", "hrv_dev": -2.7, "active_cal": 230 }
+  ],
+  "baseline_active_cal": 380,
+  "structure_detected": "unstructured",
+  "structure_note": "Active cal consistently below structured-week average. HRV running below baseline."
+}

@@ -1,7 +1,7 @@
 import { Scene, Beat } from '../../Scene'
 import { useIsNarrow } from '../../useIsNarrow'
 import { Lead, Line, BigNumber, CountUp, InfoNote, VerificationPrompt } from '../../primitives'
-import MetricTooltip from '../../../../components/MetricTooltip'
+import { InlineMetricTooltip } from '../../../../components/MetricTooltip'
 
 const QUIET = 'var(--color-quiet, #888780)'
 
@@ -55,7 +55,7 @@ export default function Scene02Heart({ beat, isActive, story, response, onRespon
           </Beat>
 
           <Beat at={2} delay={0.25}>
-            <MetricTooltip metric="rhr" marker="＊" />
+            <InlineMetricTooltip metric="rhr" marker="＊" />
           </Beat>
 
           <Beat at={3}>
@@ -65,7 +65,7 @@ export default function Scene02Heart({ beat, isActive, story, response, onRespon
                 HRV: {hrv.from}ms → {hrv.to}ms.{' '}
                 <span style={{ color: QUIET }}>{hrv.pctLabel} more regulated.</span>
               </Line>
-              <MetricTooltip metric="hrv" marker="＊" />
+               <InlineMetricTooltip metric="hrv" marker="＊" />
             </div>
           </Beat>
 

@@ -1,0 +1,7122 @@
+{
+  "quantity": {
+    "weekly_trend": [
+      {
+        "week": "2025-08-31",
+        "hours": 6.78
+      },
+      {
+        "week": "2025-09-07",
+        "hours": 7.37
+      },
+      {
+        "week": "2025-09-14",
+        "hours": 7.34
+      },
+      {
+        "week": "2025-09-21",
+        "hours": 7.94
+      },
+      {
+        "week": "2025-09-28",
+        "hours": 7.13
+      },
+      {
+        "week": "2025-10-05",
+        "hours": 6.31
+      },
+      {
+        "week": "2025-10-12",
+        "hours": 6.48
+      },
+      {
+        "week": "2025-10-19",
+        "hours": 7.68
+      },
+      {
+        "week": "2025-10-26",
+        "hours": 8.02
+      },
+      {
+        "week": "2025-11-02",
+        "hours": 8.03
+      },
+      {
+        "week": "2025-11-09",
+        "hours": 6.75
+      },
+      {
+        "week": "2025-11-16",
+        "hours": 6.96
+      },
+      {
+        "week": "2025-11-23",
+        "hours": 6.49
+      },
+      {
+        "week": "2025-11-30",
+        "hours": 7.23
+      },
+      {
+        "week": "2025-12-07",
+        "hours": 7.14
+      },
+      {
+        "week": "2025-12-14",
+        "hours": 6.61
+      },
+      {
+        "week": "2025-12-21",
+        "hours": 7.05
+      },
+      {
+        "week": "2025-12-28",
+        "hours": 7.01
+      },
+      {
+        "week": "2026-01-04",
+        "hours": 6.25
+      },
+      {
+        "week": "2026-01-11",
+        "hours": 7.13
+      },
+      {
+        "week": "2026-01-18",
+        "hours": 6.93
+      },
+      {
+        "week": "2026-01-25",
+        "hours": 7.55
+      },
+      {
+        "week": "2026-02-01",
+        "hours": 7.02
+      },
+      {
+        "week": "2026-02-08",
+        "hours": 7.49
+      },
+      {
+        "week": "2026-02-15",
+        "hours": 7.28
+      },
+      {
+        "week": "2026-02-22",
+        "hours": 7.31
+      },
+      {
+        "week": "2026-03-01",
+        "hours": 5.73
+      },
+      {
+        "week": "2026-03-08",
+        "hours": 6.95
+      },
+      {
+        "week": "2026-03-15",
+        "hours": 7.6
+      },
+      {
+        "week": "2026-03-22",
+        "hours": 7.23
+      },
+      {
+        "week": "2026-03-29",
+        "hours": 7.24
+      },
+      {
+        "week": "2026-04-05",
+        "hours": 6.35
+      },
+      {
+        "week": "2026-04-12",
+        "hours": 7.3
+      },
+      {
+        "week": "2026-04-19",
+        "hours": 7.51
+      },
+      {
+        "week": "2026-04-26",
+        "hours": 6.12
+      },
+      {
+        "week": "2026-05-03",
+        "hours": 7.58
+      },
+      {
+        "week": "2026-05-10",
+        "hours": 7.14
+      },
+      {
+        "week": "2026-05-17",
+        "hours": 7.06
+      },
+      {
+        "week": "2026-05-24",
+        "hours": 6.65
+      },
+      {
+        "week": "2026-05-31",
+        "hours": 7.3
+      },
+      {
+        "week": "2026-06-07",
+        "hours": 7.05
+      },
+      {
+        "week": "2026-06-14",
+        "hours": 7.22
+      },
+      {
+        "week": "2026-06-21",
+        "hours": 7.16
+      },
+      {
+        "week": "2026-06-28",
+        "hours": 6.78
+      },
+      {
+        "week": "2026-07-05",
+        "hours": 6.2
+      },
+      {
+        "week": "2026-07-12",
+        "hours": 7.28
+      },
+      {
+        "week": "2026-07-19",
+        "hours": 7.43
+      },
+      {
+        "week": "2026-07-26",
+        "hours": 6.87
+      },
+      {
+        "week": "2026-08-02",
+        "hours": 6.92
+      },
+      {
+        "week": "2026-08-09",
+        "hours": 7.47
+      },
+      {
+        "week": "2026-08-16",
+        "hours": 6.4
+      }
+    ],
+    "mean_hr": 7.1,
+    "std_hr": 1.3,
+    "nights": 346
+  },
+  "quality": {
+    "nightly": [
+      {
+        "date": "2025-08-26",
+        "efficiency": 95.7,
+        "total_hr": 3.1,
+        "awake_min": 8.0
+      },
+      {
+        "date": "2025-08-27",
+        "efficiency": 98.0,
+        "total_hr": 8.3,
+        "awake_min": 10.0
+      },
+      {
+        "date": "2025-08-28",
+        "efficiency": 95.4,
+        "total_hr": 7.7,
+        "awake_min": 21.0
+      },
+      {
+        "date": "2025-08-29",
+        "efficiency": 95.9,
+        "total_hr": 8.2,
+        "awake_min": 20.0
+      },
+      {
+        "date": "2025-08-30",
+        "efficiency": 92.5,
+        "total_hr": 8.0,
+        "awake_min": 36.0
+      },
+      {
+        "date": "2025-08-31",
+        "efficiency": 98.8,
+        "total_hr": 5.5,
+        "awake_min": 4.0
+      },
+      {
+        "date": "2025-09-01",
+        "efficiency": 97.5,
+        "total_hr": 6.7,
+        "awake_min": 10.0
+      },
+      {
+        "date": "2025-09-02",
+        "efficiency": 96.3,
+        "total_hr": 9.0,
+        "awake_min": 20.0
+      },
+      {
+        "date": "2025-09-03",
+        "efficiency": 94.5,
+        "total_hr": 7.8,
+        "awake_min": 26.0
+      },
+      {
+        "date": "2025-09-04",
+        "efficiency": 97.0,
+        "total_hr": 7.8,
+        "awake_min": 14.0
+      },
+      {
+        "date": "2025-09-05",
+        "efficiency": 92.4,
+        "total_hr": 7.5,
+        "awake_min": 34.0
+      },
+      {
+        "date": "2025-09-06",
+        "efficiency": 96.2,
+        "total_hr": 5.3,
+        "awake_min": 12.0
+      },
+      {
+        "date": "2025-09-07",
+        "efficiency": 96.7,
+        "total_hr": 7.6,
+        "awake_min": 15.0
+      },
+      {
+        "date": "2025-09-08",
+        "efficiency": 96.2,
+        "total_hr": 7.8,
+        "awake_min": 18.0
+      },
+      {
+        "date": "2025-09-09",
+        "efficiency": 95.0,
+        "total_hr": 8.6,
+        "awake_min": 26.0
+      },
+      {
+        "date": "2025-09-10",
+        "efficiency": 96.1,
+        "total_hr": 7.6,
+        "awake_min": 18.0
+      },
+      {
+        "date": "2025-09-11",
+        "efficiency": 88.6,
+        "total_hr": 7.3,
+        "awake_min": 50.0
+      },
+      {
+        "date": "2025-09-12",
+        "efficiency": 87.9,
+        "total_hr": 6.2,
+        "awake_min": 45.0
+      },
+      {
+        "date": "2025-09-13",
+        "efficiency": 98.9,
+        "total_hr": 6.0,
+        "awake_min": 4.0
+      },
+      {
+        "date": "2025-09-14",
+        "efficiency": 99.1,
+        "total_hr": 7.8,
+        "awake_min": 4.0
+      },
+      {
+        "date": "2025-09-15",
+        "efficiency": 98.0,
+        "total_hr": 9.8,
+        "awake_min": 12.0
+      },
+      {
+        "date": "2025-09-16",
+        "efficiency": 94.9,
+        "total_hr": 6.8,
+        "awake_min": 21.0
+      },
+      {
+        "date": "2025-09-17",
+        "efficiency": 94.4,
+        "total_hr": 7.7,
+        "awake_min": 26.0
+      },
+      {
+        "date": "2025-09-18",
+        "efficiency": 94.9,
+        "total_hr": 6.9,
+        "awake_min": 21.0
+      },
+      {
+        "date": "2025-09-19",
+        "efficiency": 96.5,
+        "total_hr": 9.5,
+        "awake_min": 20.0
+      },
+      {
+        "date": "2025-09-20",
+        "efficiency": 88.2,
+        "total_hr": 5.1,
+        "awake_min": 36.0
+      },
+      {
+        "date": "2025-09-21",
+        "efficiency": 92.0,
+        "total_hr": 9.6,
+        "awake_min": 46.0
+      },
+      {
+        "date": "2025-09-22",
+        "efficiency": 89.6,
+        "total_hr": 7.7,
+        "awake_min": 48.0
+      },
+      {
+        "date": "2025-09-23",
+        "efficiency": 96.2,
+        "total_hr": 7.8,
+        "awake_min": 18.0
+      },
+      {
+        "date": "2025-09-24",
+        "efficiency": 94.5,
+        "total_hr": 7.9,
+        "awake_min": 26.0
+      },
+      {
+        "date": "2025-09-25",
+        "efficiency": 90.5,
+        "total_hr": 7.4,
+        "awake_min": 42.0
+      },
+      {
+        "date": "2025-09-26",
+        "efficiency": 96.2,
+        "total_hr": 5.3,
+        "awake_min": 12.0
+      },
+      {
+        "date": "2025-09-27",
+        "efficiency": 95.7,
+        "total_hr": 4.7,
+        "awake_min": 12.0
+      },
+      {
+        "date": "2025-09-28",
+        "efficiency": 95.6,
+        "total_hr": 9.1,
+        "awake_min": 24.0
+      },
+      {
+        "date": "2025-09-29",
+        "efficiency": 97.3,
+        "total_hr": 8.6,
+        "awake_min": 14.0
+      },
+      {
+        "date": "2025-09-30",
+        "efficiency": 97.4,
+        "total_hr": 7.7,
+        "awake_min": 12.0
+      },
+      {
+        "date": "2025-10-01",
+        "efficiency": 96.1,
+        "total_hr": 5.1,
+        "awake_min": 12.0
+      },
+      {
+        "date": "2025-10-02",
+        "efficiency": 97.1,
+        "total_hr": 5.7,
+        "awake_min": 10.0
+      },
+      {
+        "date": "2025-10-04",
+        "efficiency": 93.3,
+        "total_hr": 1.5,
+        "awake_min": 6.0
+      },
+      {
+        "date": "2025-10-05",
+        "efficiency": 96.8,
+        "total_hr": 9.2,
+        "awake_min": 18.0
+      },
+      {
+        "date": "2025-10-06",
+        "efficiency": 94.3,
+        "total_hr": 5.8,
+        "awake_min": 20.0
+      },
+      {
+        "date": "2025-10-07",
+        "efficiency": 88.1,
+        "total_hr": 6.7,
+        "awake_min": 48.0
+      },
+      {
+        "date": "2025-10-08",
+        "efficiency": 93.3,
+        "total_hr": 9.3,
+        "awake_min": 37.0
+      },
+      {
+        "date": "2025-10-09",
+        "efficiency": 90.0,
+        "total_hr": 8.0,
+        "awake_min": 48.0
+      },
+      {
+        "date": "2025-10-10",
+        "efficiency": 91.6,
+        "total_hr": 7.9,
+        "awake_min": 40.0
+      },
+      {
+        "date": "2025-10-11",
+        "efficiency": 96.5,
+        "total_hr": 5.7,
+        "awake_min": 12.0
+      },
+      {
+        "date": "2025-10-12",
+        "efficiency": 96.6,
+        "total_hr": 1.9,
+        "awake_min": 4.0
+      },
+      {
+        "date": "2025-10-13",
+        "efficiency": 87.2,
+        "total_hr": 6.5,
+        "awake_min": 50.0
+      },
+      {
+        "date": "2025-10-14",
+        "efficiency": 96.8,
+        "total_hr": 9.3,
+        "awake_min": 18.0
+      },
+      {
+        "date": "2025-10-15",
+        "efficiency": 96.3,
+        "total_hr": 8.5,
+        "awake_min": 19.0
+      },
+      {
+        "date": "2025-10-16",
+        "efficiency": 99.7,
+        "total_hr": 6.0,
+        "awake_min": 1.0
+      },
+      {
+        "date": "2025-10-17",
+        "efficiency": 98.2,
+        "total_hr": 7.5,
+        "awake_min": 8.0
+      },
+      {
+        "date": "2025-10-18",
+        "efficiency": 98.2,
+        "total_hr": 8.3,
+        "awake_min": 9.0
+      },
+      {
+        "date": "2025-10-20",
+        "efficiency": 91.2,
+        "total_hr": 7.6,
+        "awake_min": 40.0
+      },
+      {
+        "date": "2025-10-21",
+        "efficiency": 95.3,
+        "total_hr": 6.4,
+        "awake_min": 18.0
+      },
+      {
+        "date": "2025-10-22",
+        "efficiency": 96.3,
+        "total_hr": 8.5,
+        "awake_min": 19.0
+      },
+      {
+        "date": "2025-10-23",
+        "efficiency": 93.6,
+        "total_hr": 8.4,
+        "awake_min": 32.0
+      },
+      {
+        "date": "2025-10-24",
+        "efficiency": 80.4,
+        "total_hr": 9.3,
+        "awake_min": 109.0
+      },
+      {
+        "date": "2025-10-25",
+        "efficiency": 94.7,
+        "total_hr": 7.5,
+        "awake_min": 24.0
+      },
+      {
+        "date": "2025-10-26",
+        "efficiency": 97.4,
+        "total_hr": 8.4,
+        "awake_min": 13.0
+      },
+      {
+        "date": "2025-10-27",
+        "efficiency": 95.8,
+        "total_hr": 8.0,
+        "awake_min": 20.0
+      },
+      {
+        "date": "2025-10-28",
+        "efficiency": 92.0,
+        "total_hr": 6.7,
+        "awake_min": 32.0
+      },
+      {
+        "date": "2025-10-29",
+        "efficiency": 91.8,
+        "total_hr": 8.6,
+        "awake_min": 42.0
+      },
+      {
+        "date": "2025-10-30",
+        "efficiency": 97.3,
+        "total_hr": 8.1,
+        "awake_min": 13.0
+      },
+      {
+        "date": "2025-10-31",
+        "efficiency": 97.7,
+        "total_hr": 8.6,
+        "awake_min": 12.0
+      },
+      {
+        "date": "2025-11-01",
+        "efficiency": 93.8,
+        "total_hr": 8.1,
+        "awake_min": 30.0
+      },
+      {
+        "date": "2025-11-02",
+        "efficiency": 76.5,
+        "total_hr": 8.2,
+        "awake_min": 116.0
+      },
+      {
+        "date": "2025-11-03",
+        "efficiency": 93.2,
+        "total_hr": 8.3,
+        "awake_min": 34.0
+      },
+      {
+        "date": "2025-11-04",
+        "efficiency": 90.4,
+        "total_hr": 7.3,
+        "awake_min": 42.0
+      },
+      {
+        "date": "2025-11-05",
+        "efficiency": 90.9,
+        "total_hr": 7.7,
+        "awake_min": 42.0
+      },
+      {
+        "date": "2025-11-06",
+        "efficiency": 91.2,
+        "total_hr": 7.6,
+        "awake_min": 40.0
+      },
+      {
+        "date": "2025-11-07",
+        "efficiency": 91.5,
+        "total_hr": 7.5,
+        "awake_min": 38.0
+      },
+      {
+        "date": "2025-11-08",
+        "efficiency": 97.0,
+        "total_hr": 6.6,
+        "awake_min": 12.0
+      },
+      {
+        "date": "2025-11-09",
+        "efficiency": 97.0,
+        "total_hr": 2.2,
+        "awake_min": 4.0
+      },
+      {
+        "date": "2025-11-10",
+        "efficiency": 98.2,
+        "total_hr": 7.6,
+        "awake_min": 8.0
+      },
+      {
+        "date": "2025-11-11",
+        "efficiency": 94.7,
+        "total_hr": 8.2,
+        "awake_min": 26.0
+      },
+      {
+        "date": "2025-11-12",
+        "efficiency": 95.7,
+        "total_hr": 7.7,
+        "awake_min": 20.0
+      },
+      {
+        "date": "2025-11-13",
+        "efficiency": 96.9,
+        "total_hr": 8.6,
+        "awake_min": 16.0
+      },
+      {
+        "date": "2025-11-14",
+        "efficiency": 96.6,
+        "total_hr": 6.3,
+        "awake_min": 13.0
+      },
+      {
+        "date": "2025-11-15",
+        "efficiency": 88.1,
+        "total_hr": 1.1,
+        "awake_min": 8.0
+      },
+      {
+        "date": "2025-11-16",
+        "efficiency": 92.8,
+        "total_hr": 9.3,
+        "awake_min": 40.0
+      },
+      {
+        "date": "2025-11-17",
+        "efficiency": 92.5,
+        "total_hr": 8.5,
+        "awake_min": 38.0
+      },
+      {
+        "date": "2025-11-18",
+        "efficiency": 97.1,
+        "total_hr": 8.1,
+        "awake_min": 14.0
+      },
+      {
+        "date": "2025-11-19",
+        "efficiency": 88.6,
+        "total_hr": 6.7,
+        "awake_min": 46.0
+      },
+      {
+        "date": "2025-11-20",
+        "efficiency": 94.3,
+        "total_hr": 6.5,
+        "awake_min": 22.0
+      },
+      {
+        "date": "2025-11-21",
+        "efficiency": 98.0,
+        "total_hr": 5.9,
+        "awake_min": 7.0
+      },
+      {
+        "date": "2025-11-22",
+        "efficiency": 96.8,
+        "total_hr": 2.1,
+        "awake_min": 4.0
+      },
+      {
+        "date": "2025-11-23",
+        "efficiency": 93.5,
+        "total_hr": 7.7,
+        "awake_min": 30.0
+      },
+      {
+        "date": "2025-11-24",
+        "efficiency": 96.6,
+        "total_hr": 7.8,
+        "awake_min": 16.0
+      },
+      {
+        "date": "2025-11-25",
+        "efficiency": 96.4,
+        "total_hr": 7.8,
+        "awake_min": 17.0
+      },
+      {
+        "date": "2025-11-26",
+        "efficiency": 97.2,
+        "total_hr": 8.2,
+        "awake_min": 14.0
+      },
+      {
+        "date": "2025-11-27",
+        "efficiency": 95.5,
+        "total_hr": 6.2,
+        "awake_min": 17.0
+      },
+      {
+        "date": "2025-11-28",
+        "efficiency": 95.1,
+        "total_hr": 6.8,
+        "awake_min": 20.0
+      },
+      {
+        "date": "2025-11-29",
+        "efficiency": 99.4,
+        "total_hr": 5.7,
+        "awake_min": 2.0
+      },
+      {
+        "date": "2025-11-30",
+        "efficiency": 91.6,
+        "total_hr": 8.0,
+        "awake_min": 40.0
+      },
+      {
+        "date": "2025-12-01",
+        "efficiency": 95.6,
+        "total_hr": 5.2,
+        "awake_min": 14.0
+      },
+      {
+        "date": "2025-12-02",
+        "efficiency": 97.0,
+        "total_hr": 7.1,
+        "awake_min": 13.0
+      },
+      {
+        "date": "2025-12-03",
+        "efficiency": 93.5,
+        "total_hr": 4.4,
+        "awake_min": 17.0
+      },
+      {
+        "date": "2025-12-04",
+        "efficiency": 92.2,
+        "total_hr": 7.7,
+        "awake_min": 36.0
+      },
+      {
+        "date": "2025-12-05",
+        "efficiency": 95.5,
+        "total_hr": 8.1,
+        "awake_min": 22.0
+      },
+      {
+        "date": "2025-12-06",
+        "efficiency": 97.8,
+        "total_hr": 9.0,
+        "awake_min": 12.0
+      },
+      {
+        "date": "2025-12-07",
+        "efficiency": 98.0,
+        "total_hr": 8.5,
+        "awake_min": 10.0
+      },
+      {
+        "date": "2025-12-08",
+        "efficiency": 73.5,
+        "total_hr": 1.6,
+        "awake_min": 26.0
+      },
+      {
+        "date": "2025-12-09",
+        "efficiency": 97.3,
+        "total_hr": 7.4,
+        "awake_min": 12.0
+      },
+      {
+        "date": "2025-12-10",
+        "efficiency": 98.1,
+        "total_hr": 7.0,
+        "awake_min": 8.0
+      },
+      {
+        "date": "2025-12-11",
+        "efficiency": 97.1,
+        "total_hr": 7.9,
+        "awake_min": 14.0
+      },
+      {
+        "date": "2025-12-12",
+        "efficiency": 83.4,
+        "total_hr": 8.0,
+        "awake_min": 80.0
+      },
+      {
+        "date": "2025-12-13",
+        "efficiency": 71.5,
+        "total_hr": 6.5,
+        "awake_min": 111.0
+      },
+      {
+        "date": "2025-12-14",
+        "efficiency": 90.0,
+        "total_hr": 7.7,
+        "awake_min": 46.0
+      },
+      {
+        "date": "2025-12-15",
+        "efficiency": 95.6,
+        "total_hr": 9.4,
+        "awake_min": 25.0
+      },
+      {
+        "date": "2025-12-16",
+        "efficiency": 95.9,
+        "total_hr": 8.1,
+        "awake_min": 20.0
+      },
+      {
+        "date": "2025-12-17",
+        "efficiency": 94.2,
+        "total_hr": 8.4,
+        "awake_min": 29.0
+      },
+      {
+        "date": "2025-12-18",
+        "efficiency": 93.4,
+        "total_hr": 7.9,
+        "awake_min": 31.0
+      },
+      {
+        "date": "2025-12-19",
+        "efficiency": 84.4,
+        "total_hr": 5.4,
+        "awake_min": 51.0
+      },
+      {
+        "date": "2025-12-20",
+        "efficiency": 94.4,
+        "total_hr": 3.6,
+        "awake_min": 12.0
+      },
+      {
+        "date": "2025-12-21",
+        "efficiency": 92.4,
+        "total_hr": 6.5,
+        "awake_min": 30.0
+      },
+      {
+        "date": "2025-12-22",
+        "efficiency": 94.7,
+        "total_hr": 6.9,
+        "awake_min": 22.0
+      },
+      {
+        "date": "2025-12-23",
+        "efficiency": 89.2,
+        "total_hr": 7.6,
+        "awake_min": 49.0
+      },
+      {
+        "date": "2025-12-24",
+        "efficiency": 95.8,
+        "total_hr": 7.9,
+        "awake_min": 20.0
+      },
+      {
+        "date": "2025-12-25",
+        "efficiency": 95.7,
+        "total_hr": 7.3,
+        "awake_min": 19.0
+      },
+      {
+        "date": "2025-12-26",
+        "efficiency": 86.3,
+        "total_hr": 6.7,
+        "awake_min": 55.0
+      },
+      {
+        "date": "2025-12-27",
+        "efficiency": 88.3,
+        "total_hr": 4.8,
+        "awake_min": 34.0
+      },
+      {
+        "date": "2025-12-28",
+        "efficiency": 94.2,
+        "total_hr": 7.8,
+        "awake_min": 27.0
+      },
+      {
+        "date": "2025-12-29",
+        "efficiency": 95.9,
+        "total_hr": 7.7,
+        "awake_min": 19.0
+      },
+      {
+        "date": "2025-12-30",
+        "efficiency": 87.7,
+        "total_hr": 4.6,
+        "awake_min": 34.0
+      },
+      {
+        "date": "2025-12-31",
+        "efficiency": 87.8,
+        "total_hr": 7.4,
+        "awake_min": 54.0
+      },
+      {
+        "date": "2026-01-01",
+        "efficiency": 91.9,
+        "total_hr": 1.4,
+        "awake_min": 7.0
+      },
+      {
+        "date": "2026-01-02",
+        "efficiency": 98.5,
+        "total_hr": 8.8,
+        "awake_min": 8.0
+      },
+      {
+        "date": "2026-01-03",
+        "efficiency": 87.2,
+        "total_hr": 7.2,
+        "awake_min": 55.0
+      },
+      {
+        "date": "2026-01-04",
+        "efficiency": 89.5,
+        "total_hr": 6.7,
+        "awake_min": 42.0
+      },
+      {
+        "date": "2026-01-05",
+        "efficiency": 82.0,
+        "total_hr": 7.7,
+        "awake_min": 83.0
+      },
+      {
+        "date": "2026-01-06",
+        "efficiency": 92.3,
+        "total_hr": 7.1,
+        "awake_min": 33.0
+      },
+      {
+        "date": "2026-01-07",
+        "efficiency": 90.8,
+        "total_hr": 5.6,
+        "awake_min": 31.0
+      },
+      {
+        "date": "2026-01-08",
+        "efficiency": 86.1,
+        "total_hr": 7.4,
+        "awake_min": 62.0
+      },
+      {
+        "date": "2026-01-09",
+        "efficiency": 96.4,
+        "total_hr": 7.4,
+        "awake_min": 16.0
+      },
+      {
+        "date": "2026-01-10",
+        "efficiency": 95.6,
+        "total_hr": 7.2,
+        "awake_min": 19.0
+      },
+      {
+        "date": "2026-01-11",
+        "efficiency": 90.2,
+        "total_hr": 7.5,
+        "awake_min": 44.0
+      },
+      {
+        "date": "2026-01-12",
+        "efficiency": 89.1,
+        "total_hr": 6.6,
+        "awake_min": 43.0
+      },
+      {
+        "date": "2026-01-13",
+        "efficiency": 96.9,
+        "total_hr": 5.8,
+        "awake_min": 11.0
+      },
+      {
+        "date": "2026-01-14",
+        "efficiency": 84.7,
+        "total_hr": 6.8,
+        "awake_min": 62.0
+      },
+      {
+        "date": "2026-01-15",
+        "efficiency": 89.6,
+        "total_hr": 6.7,
+        "awake_min": 42.0
+      },
+      {
+        "date": "2026-01-16",
+        "efficiency": 93.1,
+        "total_hr": 8.4,
+        "awake_min": 35.0
+      },
+      {
+        "date": "2026-01-17",
+        "efficiency": 83.0,
+        "total_hr": 7.8,
+        "awake_min": 80.0
+      },
+      {
+        "date": "2026-01-18",
+        "efficiency": 87.4,
+        "total_hr": 6.3,
+        "awake_min": 48.0
+      },
+      {
+        "date": "2026-01-19",
+        "efficiency": 92.6,
+        "total_hr": 8.8,
+        "awake_min": 39.0
+      },
+      {
+        "date": "2026-01-20",
+        "efficiency": 86.5,
+        "total_hr": 7.7,
+        "awake_min": 62.0
+      },
+      {
+        "date": "2026-01-21",
+        "efficiency": 95.4,
+        "total_hr": 7.7,
+        "awake_min": 21.0
+      },
+      {
+        "date": "2026-01-22",
+        "efficiency": 88.5,
+        "total_hr": 7.7,
+        "awake_min": 53.0
+      },
+      {
+        "date": "2026-01-23",
+        "efficiency": 92.7,
+        "total_hr": 7.3,
+        "awake_min": 32.0
+      },
+      {
+        "date": "2026-01-24",
+        "efficiency": 93.8,
+        "total_hr": 7.5,
+        "awake_min": 28.0
+      },
+      {
+        "date": "2026-01-25",
+        "efficiency": 81.8,
+        "total_hr": 6.3,
+        "awake_min": 69.0
+      },
+      {
+        "date": "2026-01-26",
+        "efficiency": 91.5,
+        "total_hr": 6.9,
+        "awake_min": 35.0
+      },
+      {
+        "date": "2026-01-27",
+        "efficiency": 90.5,
+        "total_hr": 7.7,
+        "awake_min": 44.0
+      },
+      {
+        "date": "2026-01-28",
+        "efficiency": 88.4,
+        "total_hr": 7.8,
+        "awake_min": 54.0
+      },
+      {
+        "date": "2026-01-29",
+        "efficiency": 86.8,
+        "total_hr": 7.7,
+        "awake_min": 61.0
+      },
+      {
+        "date": "2026-01-30",
+        "efficiency": 90.1,
+        "total_hr": 7.8,
+        "awake_min": 46.0
+      },
+      {
+        "date": "2026-01-31",
+        "efficiency": 52.1,
+        "total_hr": 4.9,
+        "awake_min": 140.0
+      },
+      {
+        "date": "2026-02-01",
+        "efficiency": 95.1,
+        "total_hr": 6.5,
+        "awake_min": 19.0
+      },
+      {
+        "date": "2026-02-02",
+        "efficiency": 91.8,
+        "total_hr": 8.1,
+        "awake_min": 40.0
+      },
+      {
+        "date": "2026-02-03",
+        "efficiency": 94.9,
+        "total_hr": 7.9,
+        "awake_min": 24.0
+      },
+      {
+        "date": "2026-02-04",
+        "efficiency": 93.5,
+        "total_hr": 8.2,
+        "awake_min": 32.0
+      },
+      {
+        "date": "2026-02-05",
+        "efficiency": 89.6,
+        "total_hr": 7.9,
+        "awake_min": 49.0
+      },
+      {
+        "date": "2026-02-06",
+        "efficiency": 94.9,
+        "total_hr": 7.9,
+        "awake_min": 24.0
+      },
+      {
+        "date": "2026-02-07",
+        "efficiency": 78.6,
+        "total_hr": 5.9,
+        "awake_min": 76.0
+      },
+      {
+        "date": "2026-02-08",
+        "efficiency": 91.3,
+        "total_hr": 6.5,
+        "awake_min": 34.0
+      },
+      {
+        "date": "2026-02-09",
+        "efficiency": 92.4,
+        "total_hr": 7.9,
+        "awake_min": 36.0
+      },
+      {
+        "date": "2026-02-10",
+        "efficiency": 92.9,
+        "total_hr": 7.8,
+        "awake_min": 33.0
+      },
+      {
+        "date": "2026-02-11",
+        "efficiency": 88.8,
+        "total_hr": 8.0,
+        "awake_min": 54.0
+      },
+      {
+        "date": "2026-02-12",
+        "efficiency": 94.3,
+        "total_hr": 7.3,
+        "awake_min": 25.0
+      },
+      {
+        "date": "2026-02-13",
+        "efficiency": 86.5,
+        "total_hr": 7.3,
+        "awake_min": 59.0
+      },
+      {
+        "date": "2026-02-14",
+        "efficiency": 77.8,
+        "total_hr": 5.3,
+        "awake_min": 71.0
+      },
+      {
+        "date": "2026-02-16",
+        "efficiency": 93.2,
+        "total_hr": 7.4,
+        "awake_min": 30.0
+      },
+      {
+        "date": "2026-02-17",
+        "efficiency": 92.8,
+        "total_hr": 6.3,
+        "awake_min": 27.0
+      },
+      {
+        "date": "2026-02-18",
+        "efficiency": 93.5,
+        "total_hr": 7.2,
+        "awake_min": 28.0
+      },
+      {
+        "date": "2026-02-19",
+        "efficiency": 88.3,
+        "total_hr": 8.1,
+        "awake_min": 57.0
+      },
+      {
+        "date": "2026-02-21",
+        "efficiency": 88.3,
+        "total_hr": 8.3,
+        "awake_min": 58.0
+      },
+      {
+        "date": "2026-02-22",
+        "efficiency": 91.2,
+        "total_hr": 6.6,
+        "awake_min": 35.0
+      },
+      {
+        "date": "2026-02-24",
+        "efficiency": 77.2,
+        "total_hr": 6.3,
+        "awake_min": 86.0
+      },
+      {
+        "date": "2026-02-25",
+        "efficiency": 76.4,
+        "total_hr": 4.7,
+        "awake_min": 67.0
+      },
+      {
+        "date": "2026-02-26",
+        "efficiency": 47.2,
+        "total_hr": 3.5,
+        "awake_min": 112.0
+      },
+      {
+        "date": "2026-02-27",
+        "efficiency": 89.7,
+        "total_hr": 5.8,
+        "awake_min": 36.0
+      },
+      {
+        "date": "2026-02-28",
+        "efficiency": 89.6,
+        "total_hr": 6.6,
+        "awake_min": 41.0
+      },
+      {
+        "date": "2026-03-01",
+        "efficiency": 94.0,
+        "total_hr": 7.5,
+        "awake_min": 27.0
+      },
+      {
+        "date": "2026-03-02",
+        "efficiency": 95.7,
+        "total_hr": 6.3,
+        "awake_min": 16.0
+      },
+      {
+        "date": "2026-03-04",
+        "efficiency": 79.4,
+        "total_hr": 5.4,
+        "awake_min": 67.0
+      },
+      {
+        "date": "2026-03-05",
+        "efficiency": 82.2,
+        "total_hr": 6.4,
+        "awake_min": 68.0
+      },
+      {
+        "date": "2026-03-06",
+        "efficiency": 87.0,
+        "total_hr": 7.7,
+        "awake_min": 60.0
+      },
+      {
+        "date": "2026-03-07",
+        "efficiency": 87.5,
+        "total_hr": 7.2,
+        "awake_min": 54.0
+      },
+      {
+        "date": "2026-03-08",
+        "efficiency": 95.6,
+        "total_hr": 8.8,
+        "awake_min": 23.0
+      },
+      {
+        "date": "2026-03-09",
+        "efficiency": 96.5,
+        "total_hr": 8.0,
+        "awake_min": 17.0
+      },
+      {
+        "date": "2026-03-10",
+        "efficiency": 93.0,
+        "total_hr": 7.3,
+        "awake_min": 31.0
+      },
+      {
+        "date": "2026-03-11",
+        "efficiency": 92.5,
+        "total_hr": 8.0,
+        "awake_min": 36.0
+      },
+      {
+        "date": "2026-03-12",
+        "efficiency": 92.3,
+        "total_hr": 7.3,
+        "awake_min": 34.0
+      },
+      {
+        "date": "2026-03-13",
+        "efficiency": 92.0,
+        "total_hr": 7.5,
+        "awake_min": 36.0
+      },
+      {
+        "date": "2026-03-14",
+        "efficiency": 91.6,
+        "total_hr": 8.3,
+        "awake_min": 42.0
+      },
+      {
+        "date": "2026-03-15",
+        "efficiency": 81.8,
+        "total_hr": 6.7,
+        "awake_min": 73.0
+      },
+      {
+        "date": "2026-03-16",
+        "efficiency": 78.0,
+        "total_hr": 6.8,
+        "awake_min": 90.0
+      },
+      {
+        "date": "2026-03-17",
+        "efficiency": 89.6,
+        "total_hr": 5.9,
+        "awake_min": 37.0
+      },
+      {
+        "date": "2026-03-18",
+        "efficiency": 85.4,
+        "total_hr": 8.0,
+        "awake_min": 70.0
+      },
+      {
+        "date": "2026-03-19",
+        "efficiency": 82.6,
+        "total_hr": 5.5,
+        "awake_min": 57.0
+      },
+      {
+        "date": "2026-03-20",
+        "efficiency": 94.5,
+        "total_hr": 8.2,
+        "awake_min": 27.0
+      },
+      {
+        "date": "2026-03-21",
+        "efficiency": 92.8,
+        "total_hr": 7.8,
+        "awake_min": 34.0
+      },
+      {
+        "date": "2026-03-22",
+        "efficiency": 95.4,
+        "total_hr": 8.4,
+        "awake_min": 23.0
+      },
+      {
+        "date": "2026-03-23",
+        "efficiency": 86.6,
+        "total_hr": 7.3,
+        "awake_min": 59.0
+      },
+      {
+        "date": "2026-03-24",
+        "efficiency": 95.0,
+        "total_hr": 8.4,
+        "awake_min": 25.0
+      },
+      {
+        "date": "2026-03-25",
+        "efficiency": 86.8,
+        "total_hr": 7.3,
+        "awake_min": 58.0
+      },
+      {
+        "date": "2026-03-26",
+        "efficiency": 87.0,
+        "total_hr": 7.7,
+        "awake_min": 60.0
+      },
+      {
+        "date": "2026-03-27",
+        "efficiency": 87.6,
+        "total_hr": 6.2,
+        "awake_min": 46.0
+      },
+      {
+        "date": "2026-03-28",
+        "efficiency": 92.5,
+        "total_hr": 6.2,
+        "awake_min": 28.0
+      },
+      {
+        "date": "2026-03-29",
+        "efficiency": 96.3,
+        "total_hr": 7.6,
+        "awake_min": 17.0
+      },
+      {
+        "date": "2026-03-30",
+        "efficiency": 71.9,
+        "total_hr": 6.2,
+        "awake_min": 104.0
+      },
+      {
+        "date": "2026-03-31",
+        "efficiency": 97.7,
+        "total_hr": 8.0,
+        "awake_min": 11.0
+      },
+      {
+        "date": "2026-04-01",
+        "efficiency": 91.3,
+        "total_hr": 6.5,
+        "awake_min": 34.0
+      },
+      {
+        "date": "2026-04-02",
+        "efficiency": 81.8,
+        "total_hr": 5.1,
+        "awake_min": 56.0
+      },
+      {
+        "date": "2026-04-03",
+        "efficiency": 89.7,
+        "total_hr": 5.3,
+        "awake_min": 33.0
+      },
+      {
+        "date": "2026-04-04",
+        "efficiency": 81.0,
+        "total_hr": 5.5,
+        "awake_min": 62.0
+      },
+      {
+        "date": "2026-04-05",
+        "efficiency": 93.6,
+        "total_hr": 7.8,
+        "awake_min": 30.0
+      },
+      {
+        "date": "2026-04-06",
+        "efficiency": 91.7,
+        "total_hr": 7.8,
+        "awake_min": 39.0
+      },
+      {
+        "date": "2026-04-07",
+        "efficiency": 97.3,
+        "total_hr": 6.9,
+        "awake_min": 11.0
+      },
+      {
+        "date": "2026-04-08",
+        "efficiency": 84.2,
+        "total_hr": 6.8,
+        "awake_min": 65.0
+      },
+      {
+        "date": "2026-04-09",
+        "efficiency": 92.9,
+        "total_hr": 7.5,
+        "awake_min": 32.0
+      },
+      {
+        "date": "2026-04-10",
+        "efficiency": 83.6,
+        "total_hr": 6.3,
+        "awake_min": 62.0
+      },
+      {
+        "date": "2026-04-11",
+        "efficiency": 98.0,
+        "total_hr": 8.1,
+        "awake_min": 10.0
+      },
+      {
+        "date": "2026-04-12",
+        "efficiency": 86.9,
+        "total_hr": 7.6,
+        "awake_min": 60.0
+      },
+      {
+        "date": "2026-04-13",
+        "efficiency": 94.7,
+        "total_hr": 7.8,
+        "awake_min": 25.0
+      },
+      {
+        "date": "2026-04-14",
+        "efficiency": 88.6,
+        "total_hr": 7.3,
+        "awake_min": 50.0
+      },
+      {
+        "date": "2026-04-15",
+        "efficiency": 86.4,
+        "total_hr": 7.6,
+        "awake_min": 62.0
+      },
+      {
+        "date": "2026-04-16",
+        "efficiency": 91.6,
+        "total_hr": 8.6,
+        "awake_min": 43.0
+      },
+      {
+        "date": "2026-04-17",
+        "efficiency": 90.5,
+        "total_hr": 7.5,
+        "awake_min": 43.0
+      },
+      {
+        "date": "2026-04-18",
+        "efficiency": 91.9,
+        "total_hr": 6.6,
+        "awake_min": 32.0
+      },
+      {
+        "date": "2026-04-19",
+        "efficiency": 85.5,
+        "total_hr": 7.2,
+        "awake_min": 62.0
+      },
+      {
+        "date": "2026-04-20",
+        "efficiency": 88.6,
+        "total_hr": 7.5,
+        "awake_min": 51.0
+      },
+      {
+        "date": "2026-04-21",
+        "efficiency": 92.3,
+        "total_hr": 6.9,
+        "awake_min": 32.0
+      },
+      {
+        "date": "2026-04-22",
+        "efficiency": 90.7,
+        "total_hr": 5.5,
+        "awake_min": 31.0
+      },
+      {
+        "date": "2026-04-23",
+        "efficiency": 80.9,
+        "total_hr": 6.9,
+        "awake_min": 79.0
+      },
+      {
+        "date": "2026-04-24",
+        "efficiency": 91.6,
+        "total_hr": 7.1,
+        "awake_min": 36.0
+      },
+      {
+        "date": "2026-04-25",
+        "efficiency": 90.9,
+        "total_hr": 5.3,
+        "awake_min": 29.0
+      },
+      {
+        "date": "2026-04-26",
+        "efficiency": 30.7,
+        "total_hr": 3.6,
+        "awake_min": 149.0
+      },
+      {
+        "date": "2026-04-27",
+        "efficiency": 92.5,
+        "total_hr": 8.2,
+        "awake_min": 37.0
+      },
+      {
+        "date": "2026-04-28",
+        "efficiency": 96.9,
+        "total_hr": 7.5,
+        "awake_min": 14.0
+      },
+      {
+        "date": "2026-04-29",
+        "efficiency": 97.2,
+        "total_hr": 6.5,
+        "awake_min": 11.0
+      },
+      {
+        "date": "2026-04-30",
+        "efficiency": 85.2,
+        "total_hr": 6.7,
+        "awake_min": 59.0
+      },
+      {
+        "date": "2026-05-01",
+        "efficiency": 91.4,
+        "total_hr": 7.7,
+        "awake_min": 40.0
+      },
+      {
+        "date": "2026-05-02",
+        "efficiency": 96.0,
+        "total_hr": 8.8,
+        "awake_min": 21.0
+      },
+      {
+        "date": "2026-05-03",
+        "efficiency": 88.2,
+        "total_hr": 7.7,
+        "awake_min": 54.0
+      },
+      {
+        "date": "2026-05-04",
+        "efficiency": 77.7,
+        "total_hr": 6.8,
+        "awake_min": 91.0
+      },
+      {
+        "date": "2026-05-05",
+        "efficiency": 89.4,
+        "total_hr": 7.2,
+        "awake_min": 46.0
+      },
+      {
+        "date": "2026-05-06",
+        "efficiency": 87.4,
+        "total_hr": 7.6,
+        "awake_min": 57.0
+      },
+      {
+        "date": "2026-05-07",
+        "efficiency": 78.9,
+        "total_hr": 7.0,
+        "awake_min": 89.0
+      },
+      {
+        "date": "2026-05-08",
+        "efficiency": 91.3,
+        "total_hr": 6.7,
+        "awake_min": 35.0
+      },
+      {
+        "date": "2026-05-09",
+        "efficiency": 89.4,
+        "total_hr": 7.4,
+        "awake_min": 47.0
+      },
+      {
+        "date": "2026-05-10",
+        "efficiency": 81.9,
+        "total_hr": 7.3,
+        "awake_min": 80.0
+      },
+      {
+        "date": "2026-05-11",
+        "efficiency": 92.7,
+        "total_hr": 7.7,
+        "awake_min": 34.0
+      },
+      {
+        "date": "2026-05-12",
+        "efficiency": 93.4,
+        "total_hr": 7.8,
+        "awake_min": 31.0
+      },
+      {
+        "date": "2026-05-13",
+        "efficiency": 90.5,
+        "total_hr": 6.5,
+        "awake_min": 37.0
+      },
+      {
+        "date": "2026-05-14",
+        "efficiency": 90.0,
+        "total_hr": 7.2,
+        "awake_min": 43.0
+      },
+      {
+        "date": "2026-05-15",
+        "efficiency": 86.2,
+        "total_hr": 7.3,
+        "awake_min": 60.0
+      },
+      {
+        "date": "2026-05-16",
+        "efficiency": 94.0,
+        "total_hr": 5.3,
+        "awake_min": 19.0
+      },
+      {
+        "date": "2026-05-17",
+        "efficiency": 91.3,
+        "total_hr": 7.7,
+        "awake_min": 40.0
+      },
+      {
+        "date": "2026-05-18",
+        "efficiency": 91.2,
+        "total_hr": 6.7,
+        "awake_min": 35.0
+      },
+      {
+        "date": "2026-05-19",
+        "efficiency": 92.0,
+        "total_hr": 7.1,
+        "awake_min": 34.0
+      },
+      {
+        "date": "2026-05-20",
+        "efficiency": 88.9,
+        "total_hr": 7.3,
+        "awake_min": 49.0
+      },
+      {
+        "date": "2026-05-21",
+        "efficiency": 92.2,
+        "total_hr": 6.2,
+        "awake_min": 29.0
+      },
+      {
+        "date": "2026-05-22",
+        "efficiency": 96.9,
+        "total_hr": 6.4,
+        "awake_min": 12.0
+      },
+      {
+        "date": "2026-05-23",
+        "efficiency": 90.5,
+        "total_hr": 6.5,
+        "awake_min": 37.0
+      },
+      {
+        "date": "2026-05-24",
+        "efficiency": 91.1,
+        "total_hr": 6.4,
+        "awake_min": 34.0
+      },
+      {
+        "date": "2026-05-25",
+        "efficiency": 85.8,
+        "total_hr": 6.4,
+        "awake_min": 55.0
+      },
+      {
+        "date": "2026-05-26",
+        "efficiency": 89.2,
+        "total_hr": 7.0,
+        "awake_min": 45.0
+      },
+      {
+        "date": "2026-05-27",
+        "efficiency": 94.2,
+        "total_hr": 7.4,
+        "awake_min": 26.0
+      },
+      {
+        "date": "2026-05-28",
+        "efficiency": 84.4,
+        "total_hr": 6.8,
+        "awake_min": 64.0
+      },
+      {
+        "date": "2026-05-29",
+        "efficiency": 96.2,
+        "total_hr": 7.9,
+        "awake_min": 18.0
+      },
+      {
+        "date": "2026-05-30",
+        "efficiency": 96.6,
+        "total_hr": 8.0,
+        "awake_min": 16.0
+      },
+      {
+        "date": "2026-05-31",
+        "efficiency": 89.8,
+        "total_hr": 7.7,
+        "awake_min": 47.0
+      },
+      {
+        "date": "2026-06-01",
+        "efficiency": 96.1,
+        "total_hr": 7.2,
+        "awake_min": 17.0
+      },
+      {
+        "date": "2026-06-02",
+        "efficiency": 85.3,
+        "total_hr": 6.8,
+        "awake_min": 60.0
+      },
+      {
+        "date": "2026-06-03",
+        "efficiency": 92.2,
+        "total_hr": 7.0,
+        "awake_min": 33.0
+      },
+      {
+        "date": "2026-06-04",
+        "efficiency": 91.4,
+        "total_hr": 7.5,
+        "awake_min": 39.0
+      },
+      {
+        "date": "2026-06-05",
+        "efficiency": 94.3,
+        "total_hr": 5.3,
+        "awake_min": 18.0
+      },
+      {
+        "date": "2026-06-06",
+        "efficiency": 90.0,
+        "total_hr": 8.5,
+        "awake_min": 51.0
+      },
+      {
+        "date": "2026-06-07",
+        "efficiency": 98.3,
+        "total_hr": 7.0,
+        "awake_min": 7.0
+      },
+      {
+        "date": "2026-06-08",
+        "efficiency": 92.2,
+        "total_hr": 7.7,
+        "awake_min": 36.0
+      },
+      {
+        "date": "2026-06-09",
+        "efficiency": 85.7,
+        "total_hr": 6.4,
+        "awake_min": 55.0
+      },
+      {
+        "date": "2026-06-10",
+        "efficiency": 86.0,
+        "total_hr": 7.1,
+        "awake_min": 60.0
+      },
+      {
+        "date": "2026-06-11",
+        "efficiency": 94.4,
+        "total_hr": 7.7,
+        "awake_min": 26.0
+      },
+      {
+        "date": "2026-06-12",
+        "efficiency": 89.5,
+        "total_hr": 5.4,
+        "awake_min": 34.0
+      },
+      {
+        "date": "2026-06-13",
+        "efficiency": 94.3,
+        "total_hr": 7.6,
+        "awake_min": 26.0
+      },
+      {
+        "date": "2026-06-14",
+        "efficiency": 94.6,
+        "total_hr": 8.6,
+        "awake_min": 28.0
+      },
+      {
+        "date": "2026-06-15",
+        "efficiency": 93.9,
+        "total_hr": 7.7,
+        "awake_min": 28.0
+      },
+      {
+        "date": "2026-06-16",
+        "efficiency": 96.2,
+        "total_hr": 7.5,
+        "awake_min": 17.0
+      },
+      {
+        "date": "2026-06-17",
+        "efficiency": 92.4,
+        "total_hr": 7.5,
+        "awake_min": 34.0
+      },
+      {
+        "date": "2026-06-18",
+        "efficiency": 88.7,
+        "total_hr": 5.2,
+        "awake_min": 35.0
+      },
+      {
+        "date": "2026-06-19",
+        "efficiency": 90.4,
+        "total_hr": 8.2,
+        "awake_min": 47.0
+      },
+      {
+        "date": "2026-06-20",
+        "efficiency": 94.5,
+        "total_hr": 6.3,
+        "awake_min": 21.0
+      },
+      {
+        "date": "2026-06-21",
+        "efficiency": 87.9,
+        "total_hr": 7.7,
+        "awake_min": 56.0
+      },
+      {
+        "date": "2026-06-22",
+        "efficiency": 98.6,
+        "total_hr": 7.2,
+        "awake_min": 6.0
+      },
+      {
+        "date": "2026-06-23",
+        "efficiency": 96.2,
+        "total_hr": 7.5,
+        "awake_min": 17.0
+      },
+      {
+        "date": "2026-06-24",
+        "efficiency": 93.3,
+        "total_hr": 4.7,
+        "awake_min": 19.0
+      },
+      {
+        "date": "2026-06-25",
+        "efficiency": 98.1,
+        "total_hr": 7.1,
+        "awake_min": 8.0
+      },
+      {
+        "date": "2026-06-26",
+        "efficiency": 93.3,
+        "total_hr": 7.8,
+        "awake_min": 31.0
+      },
+      {
+        "date": "2026-06-27",
+        "efficiency": 97.7,
+        "total_hr": 7.1,
+        "awake_min": 10.0
+      },
+      {
+        "date": "2026-06-28",
+        "efficiency": 95.1,
+        "total_hr": 6.2,
+        "awake_min": 18.0
+      },
+      {
+        "date": "2026-06-29",
+        "efficiency": 97.6,
+        "total_hr": 6.8,
+        "awake_min": 10.0
+      },
+      {
+        "date": "2026-06-30",
+        "efficiency": 94.2,
+        "total_hr": 6.6,
+        "awake_min": 23.0
+      },
+      {
+        "date": "2026-07-01",
+        "efficiency": 93.9,
+        "total_hr": 7.1,
+        "awake_min": 26.0
+      },
+      {
+        "date": "2026-07-02",
+        "efficiency": 98.3,
+        "total_hr": 6.8,
+        "awake_min": 7.0
+      },
+      {
+        "date": "2026-07-03",
+        "efficiency": 95.2,
+        "total_hr": 5.6,
+        "awake_min": 16.0
+      },
+      {
+        "date": "2026-07-04",
+        "efficiency": 97.5,
+        "total_hr": 5.2,
+        "awake_min": 8.0
+      },
+      {
+        "date": "2026-07-05",
+        "efficiency": 76.1,
+        "total_hr": 5.3,
+        "awake_min": 76.0
+      },
+      {
+        "date": "2026-07-06",
+        "efficiency": 88.9,
+        "total_hr": 6.4,
+        "awake_min": 43.0
+      },
+      {
+        "date": "2026-07-07",
+        "efficiency": 85.3,
+        "total_hr": 7.2,
+        "awake_min": 64.0
+      },
+      {
+        "date": "2026-07-08",
+        "efficiency": 77.9,
+        "total_hr": 6.7,
+        "awake_min": 89.0
+      },
+      {
+        "date": "2026-07-09",
+        "efficiency": 97.9,
+        "total_hr": 8.6,
+        "awake_min": 11.0
+      },
+      {
+        "date": "2026-07-10",
+        "efficiency": 89.7,
+        "total_hr": 7.5,
+        "awake_min": 46.0
+      },
+      {
+        "date": "2026-07-11",
+        "efficiency": 97.4,
+        "total_hr": 7.6,
+        "awake_min": 12.0
+      },
+      {
+        "date": "2026-07-12",
+        "efficiency": 83.5,
+        "total_hr": 7.0,
+        "awake_min": 69.0
+      },
+      {
+        "date": "2026-07-13",
+        "efficiency": 95.1,
+        "total_hr": 7.8,
+        "awake_min": 23.0
+      },
+      {
+        "date": "2026-07-14",
+        "efficiency": 78.0,
+        "total_hr": 6.5,
+        "awake_min": 86.0
+      },
+      {
+        "date": "2026-07-15",
+        "efficiency": 89.2,
+        "total_hr": 7.4,
+        "awake_min": 48.0
+      },
+      {
+        "date": "2026-07-16",
+        "efficiency": 92.8,
+        "total_hr": 7.7,
+        "awake_min": 33.0
+      },
+      {
+        "date": "2026-07-17",
+        "efficiency": 96.3,
+        "total_hr": 7.6,
+        "awake_min": 17.0
+      },
+      {
+        "date": "2026-07-18",
+        "efficiency": 94.4,
+        "total_hr": 6.5,
+        "awake_min": 22.0
+      },
+      {
+        "date": "2026-07-19",
+        "efficiency": 96.5,
+        "total_hr": 8.5,
+        "awake_min": 18.0
+      },
+      {
+        "date": "2026-07-20",
+        "efficiency": 98.4,
+        "total_hr": 8.1,
+        "awake_min": 8.0
+      },
+      {
+        "date": "2026-07-21",
+        "efficiency": 81.2,
+        "total_hr": 6.5,
+        "awake_min": 73.0
+      },
+      {
+        "date": "2026-07-22",
+        "efficiency": 91.7,
+        "total_hr": 5.8,
+        "awake_min": 29.0
+      },
+      {
+        "date": "2026-07-23",
+        "efficiency": 95.8,
+        "total_hr": 7.1,
+        "awake_min": 18.0
+      },
+      {
+        "date": "2026-07-24",
+        "efficiency": 89.7,
+        "total_hr": 6.7,
+        "awake_min": 41.0
+      },
+      {
+        "date": "2026-07-25",
+        "efficiency": 96.1,
+        "total_hr": 6.4,
+        "awake_min": 15.0
+      },
+      {
+        "date": "2026-07-26",
+        "efficiency": 92.3,
+        "total_hr": 7.5,
+        "awake_min": 35.0
+      },
+      {
+        "date": "2026-07-27",
+        "efficiency": 93.7,
+        "total_hr": 7.7,
+        "awake_min": 29.0
+      },
+      {
+        "date": "2026-07-28",
+        "efficiency": 91.4,
+        "total_hr": 7.2,
+        "awake_min": 37.0
+      },
+      {
+        "date": "2026-07-29",
+        "efficiency": 91.7,
+        "total_hr": 6.8,
+        "awake_min": 34.0
+      },
+      {
+        "date": "2026-07-30",
+        "efficiency": 88.4,
+        "total_hr": 7.3,
+        "awake_min": 51.0
+      },
+      {
+        "date": "2026-07-31",
+        "efficiency": 88.4,
+        "total_hr": 7.3,
+        "awake_min": 51.0
+      },
+      {
+        "date": "2026-08-01",
+        "efficiency": 94.6,
+        "total_hr": 5.2,
+        "awake_min": 17.0
+      },
+      {
+        "date": "2026-08-02",
+        "efficiency": 86.6,
+        "total_hr": 6.8,
+        "awake_min": 55.0
+      },
+      {
+        "date": "2026-08-03",
+        "efficiency": 94.6,
+        "total_hr": 8.0,
+        "awake_min": 26.0
+      },
+      {
+        "date": "2026-08-04",
+        "efficiency": 93.3,
+        "total_hr": 7.7,
+        "awake_min": 31.0
+      },
+      {
+        "date": "2026-08-05",
+        "efficiency": 90.5,
+        "total_hr": 7.4,
+        "awake_min": 42.0
+      },
+      {
+        "date": "2026-08-06",
+        "efficiency": 96.1,
+        "total_hr": 7.7,
+        "awake_min": 18.0
+      },
+      {
+        "date": "2026-08-07",
+        "efficiency": 90.7,
+        "total_hr": 7.3,
+        "awake_min": 41.0
+      },
+      {
+        "date": "2026-08-08",
+        "efficiency": 56.6,
+        "total_hr": 5.9,
+        "awake_min": 154.0
+      },
+      {
+        "date": "2026-08-09",
+        "efficiency": 96.2,
+        "total_hr": 8.3,
+        "awake_min": 19.0
+      },
+      {
+        "date": "2026-08-10",
+        "efficiency": 89.7,
+        "total_hr": 7.2,
+        "awake_min": 44.0
+      },
+      {
+        "date": "2026-08-11",
+        "efficiency": 83.5,
+        "total_hr": 6.8,
+        "awake_min": 68.0
+      },
+      {
+        "date": "2026-08-12",
+        "efficiency": 92.3,
+        "total_hr": 5.2,
+        "awake_min": 24.0
+      }
+    ],
+    "mean_pct": 91.2,
+    "pct_above_85": 89.0
+  },
+  "regularity": {
+    "scatter": [
+      {
+        "date": "2022-01-03",
+        "bedtime": 23.58,
+        "waketime": 8.08,
+        "bedtime_label": "23:35",
+        "wake_label": "8:05"
+      },
+      {
+        "date": "2022-01-04",
+        "bedtime": 23.95,
+        "waketime": 8.08,
+        "bedtime_label": "23:57",
+        "wake_label": "8:05"
+      },
+      {
+        "date": "2022-01-05",
+        "bedtime": 23.58,
+        "waketime": 8.12,
+        "bedtime_label": "23:35",
+        "wake_label": "8:07"
+      },
+      {
+        "date": "2022-01-06",
+        "bedtime": 24.05,
+        "waketime": 7.48,
+        "bedtime_label": "0:03",
+        "wake_label": "7:29"
+      },
+      {
+        "date": "2022-01-07",
+        "bedtime": 25.1,
+        "waketime": 8.08,
+        "bedtime_label": "1:06",
+        "wake_label": "8:05"
+      },
+      {
+        "date": "2022-01-10",
+        "bedtime": 23.58,
+        "waketime": 7.33,
+        "bedtime_label": "23:35",
+        "wake_label": "7:20"
+      },
+      {
+        "date": "2022-01-11",
+        "bedtime": 23.58,
+        "waketime": 7.33,
+        "bedtime_label": "23:35",
+        "wake_label": "7:20"
+      },
+      {
+        "date": "2022-01-12",
+        "bedtime": 23.7,
+        "waketime": 5.72,
+        "bedtime_label": "23:42",
+        "wake_label": "5:43"
+      },
+      {
+        "date": "2022-01-13",
+        "bedtime": 23.58,
+        "waketime": 8.08,
+        "bedtime_label": "23:35",
+        "wake_label": "8:05"
+      },
+      {
+        "date": "2022-01-14",
+        "bedtime": 24.42,
+        "waketime": 8.08,
+        "bedtime_label": "0:25",
+        "wake_label": "8:05"
+      },
+      {
+        "date": "2022-01-17",
+        "bedtime": 23.58,
+        "waketime": 8.12,
+        "bedtime_label": "23:35",
+        "wake_label": "8:07"
+      },
+      {
+        "date": "2022-01-18",
+        "bedtime": 23.58,
+        "waketime": 8.08,
+        "bedtime_label": "23:35",
+        "wake_label": "8:05"
+      },
+      {
+        "date": "2022-01-19",
+        "bedtime": 24.07,
+        "waketime": 8.08,
+        "bedtime_label": "0:04",
+        "wake_label": "8:05"
+      },
+      {
+        "date": "2022-01-20",
+        "bedtime": 22.63,
+        "waketime": 6.98,
+        "bedtime_label": "22:38",
+        "wake_label": "6:59"
+      },
+      {
+        "date": "2022-01-21",
+        "bedtime": 22.03,
+        "waketime": 6.08,
+        "bedtime_label": "22:02",
+        "wake_label": "6:05"
+      },
+      {
+        "date": "2022-01-24",
+        "bedtime": 25.83,
+        "waketime": 8.42,
+        "bedtime_label": "1:50",
+        "wake_label": "8:25"
+      },
+      {
+        "date": "2022-01-25",
+        "bedtime": 23.92,
+        "waketime": 8.03,
+        "bedtime_label": "23:55",
+        "wake_label": "8:02"
+      },
+      {
+        "date": "2022-01-26",
+        "bedtime": 23.93,
+        "waketime": 8.42,
+        "bedtime_label": "23:56",
+        "wake_label": "8:25"
+      },
+      {
+        "date": "2022-01-27",
+        "bedtime": 25.17,
+        "waketime": 8.42,
+        "bedtime_label": "1:10",
+        "wake_label": "8:25"
+      },
+      {
+        "date": "2022-01-28",
+        "bedtime": 24.17,
+        "waketime": 8.42,
+        "bedtime_label": "0:10",
+        "wake_label": "8:25"
+      },
+      {
+        "date": "2022-01-31",
+        "bedtime": 23.92,
+        "waketime": 8.42,
+        "bedtime_label": "23:55",
+        "wake_label": "8:25"
+      },
+      {
+        "date": "2022-02-01",
+        "bedtime": 26.48,
+        "waketime": 8.42,
+        "bedtime_label": "2:29",
+        "wake_label": "8:25"
+      },
+      {
+        "date": "2022-02-02",
+        "bedtime": 24.07,
+        "waketime": 8.37,
+        "bedtime_label": "0:04",
+        "wake_label": "8:22"
+      },
+      {
+        "date": "2022-02-03",
+        "bedtime": 24.48,
+        "waketime": 8.42,
+        "bedtime_label": "0:29",
+        "wake_label": "8:25"
+      },
+      {
+        "date": "2022-02-04",
+        "bedtime": 27.7,
+        "waketime": 8.42,
+        "bedtime_label": "3:42",
+        "wake_label": "8:25"
+      },
+      {
+        "date": "2022-02-07",
+        "bedtime": 25.88,
+        "waketime": 8.53,
+        "bedtime_label": "1:53",
+        "wake_label": "8:32"
+      },
+      {
+        "date": "2022-02-08",
+        "bedtime": 24.08,
+        "waketime": 8.42,
+        "bedtime_label": "0:05",
+        "wake_label": "8:25"
+      },
+      {
+        "date": "2022-02-09",
+        "bedtime": 24.08,
+        "waketime": 8.33,
+        "bedtime_label": "0:05",
+        "wake_label": "8:20"
+      },
+      {
+        "date": "2022-02-10",
+        "bedtime": 24.18,
+        "waketime": 7.75,
+        "bedtime_label": "0:11",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-02-11",
+        "bedtime": 23.92,
+        "waketime": 8.28,
+        "bedtime_label": "23:55",
+        "wake_label": "8:17"
+      },
+      {
+        "date": "2022-02-14",
+        "bedtime": 24.15,
+        "waketime": 8.33,
+        "bedtime_label": "0:09",
+        "wake_label": "8:20"
+      },
+      {
+        "date": "2022-02-15",
+        "bedtime": 24.07,
+        "waketime": 8.0,
+        "bedtime_label": "0:04",
+        "wake_label": "8:00"
+      },
+      {
+        "date": "2022-02-16",
+        "bedtime": 23.98,
+        "waketime": 8.42,
+        "bedtime_label": "23:59",
+        "wake_label": "8:25"
+      },
+      {
+        "date": "2022-02-17",
+        "bedtime": 26.38,
+        "waketime": 8.48,
+        "bedtime_label": "2:23",
+        "wake_label": "8:29"
+      },
+      {
+        "date": "2022-02-18",
+        "bedtime": 23.92,
+        "waketime": 8.35,
+        "bedtime_label": "23:55",
+        "wake_label": "8:21"
+      },
+      {
+        "date": "2022-02-21",
+        "bedtime": 23.92,
+        "waketime": 5.95,
+        "bedtime_label": "23:55",
+        "wake_label": "5:57"
+      },
+      {
+        "date": "2022-02-22",
+        "bedtime": 23.92,
+        "waketime": 7.95,
+        "bedtime_label": "23:55",
+        "wake_label": "7:57"
+      },
+      {
+        "date": "2022-02-23",
+        "bedtime": 24.0,
+        "waketime": 7.72,
+        "bedtime_label": "0:00",
+        "wake_label": "7:43"
+      },
+      {
+        "date": "2022-02-24",
+        "bedtime": 23.93,
+        "waketime": 8.27,
+        "bedtime_label": "23:56",
+        "wake_label": "8:16"
+      },
+      {
+        "date": "2022-02-25",
+        "bedtime": 23.92,
+        "waketime": 8.07,
+        "bedtime_label": "23:55",
+        "wake_label": "8:04"
+      },
+      {
+        "date": "2022-02-28",
+        "bedtime": 24.07,
+        "waketime": 8.37,
+        "bedtime_label": "0:04",
+        "wake_label": "8:22"
+      },
+      {
+        "date": "2022-03-01",
+        "bedtime": 23.92,
+        "waketime": 8.42,
+        "bedtime_label": "23:55",
+        "wake_label": "8:25"
+      },
+      {
+        "date": "2022-03-02",
+        "bedtime": 24.23,
+        "waketime": 8.15,
+        "bedtime_label": "0:14",
+        "wake_label": "8:09"
+      },
+      {
+        "date": "2022-03-03",
+        "bedtime": 24.5,
+        "waketime": 8.27,
+        "bedtime_label": "0:30",
+        "wake_label": "8:16"
+      },
+      {
+        "date": "2022-03-04",
+        "bedtime": 27.43,
+        "waketime": 8.42,
+        "bedtime_label": "3:26",
+        "wake_label": "8:25"
+      },
+      {
+        "date": "2022-03-07",
+        "bedtime": 24.35,
+        "waketime": 8.42,
+        "bedtime_label": "0:21",
+        "wake_label": "8:25"
+      },
+      {
+        "date": "2022-03-08",
+        "bedtime": 24.4,
+        "waketime": 8.42,
+        "bedtime_label": "0:24",
+        "wake_label": "8:25"
+      },
+      {
+        "date": "2022-03-09",
+        "bedtime": 24.2,
+        "waketime": 8.42,
+        "bedtime_label": "0:12",
+        "wake_label": "8:25"
+      },
+      {
+        "date": "2022-03-10",
+        "bedtime": 24.43,
+        "waketime": 8.5,
+        "bedtime_label": "0:26",
+        "wake_label": "8:30"
+      },
+      {
+        "date": "2022-03-11",
+        "bedtime": 24.77,
+        "waketime": 8.42,
+        "bedtime_label": "0:46",
+        "wake_label": "8:25"
+      },
+      {
+        "date": "2022-03-14",
+        "bedtime": 23.07,
+        "waketime": 7.42,
+        "bedtime_label": "23:04",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-03-15",
+        "bedtime": 24.07,
+        "waketime": 7.42,
+        "bedtime_label": "0:04",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-03-16",
+        "bedtime": 22.95,
+        "waketime": 7.42,
+        "bedtime_label": "22:57",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-03-17",
+        "bedtime": 22.92,
+        "waketime": 7.0,
+        "bedtime_label": "22:55",
+        "wake_label": "7:00"
+      },
+      {
+        "date": "2022-03-18",
+        "bedtime": 26.75,
+        "waketime": 7.52,
+        "bedtime_label": "2:45",
+        "wake_label": "7:31"
+      },
+      {
+        "date": "2022-03-21",
+        "bedtime": 23.27,
+        "waketime": 7.43,
+        "bedtime_label": "23:16",
+        "wake_label": "7:26"
+      },
+      {
+        "date": "2022-03-22",
+        "bedtime": 24.05,
+        "waketime": 7.45,
+        "bedtime_label": "0:03",
+        "wake_label": "7:27"
+      },
+      {
+        "date": "2022-03-23",
+        "bedtime": 24.13,
+        "waketime": 7.52,
+        "bedtime_label": "0:08",
+        "wake_label": "7:31"
+      },
+      {
+        "date": "2022-03-24",
+        "bedtime": 23.87,
+        "waketime": 7.42,
+        "bedtime_label": "23:52",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-03-25",
+        "bedtime": 24.1,
+        "waketime": 7.42,
+        "bedtime_label": "0:06",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-03-28",
+        "bedtime": 23.68,
+        "waketime": 7.42,
+        "bedtime_label": "23:41",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-03-29",
+        "bedtime": 23.57,
+        "waketime": 7.42,
+        "bedtime_label": "23:34",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-03-30",
+        "bedtime": 23.32,
+        "waketime": 7.5,
+        "bedtime_label": "23:19",
+        "wake_label": "7:30"
+      },
+      {
+        "date": "2022-03-31",
+        "bedtime": 23.17,
+        "waketime": 7.42,
+        "bedtime_label": "23:10",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-04-01",
+        "bedtime": 23.47,
+        "waketime": 7.42,
+        "bedtime_label": "23:28",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-04-04",
+        "bedtime": 22.92,
+        "waketime": 7.42,
+        "bedtime_label": "22:55",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-04-05",
+        "bedtime": 23.53,
+        "waketime": 7.42,
+        "bedtime_label": "23:32",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-04-06",
+        "bedtime": 23.48,
+        "waketime": 7.42,
+        "bedtime_label": "23:29",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-04-07",
+        "bedtime": 22.8,
+        "waketime": 5.27,
+        "bedtime_label": "22:48",
+        "wake_label": "5:16"
+      },
+      {
+        "date": "2022-04-08",
+        "bedtime": 21.22,
+        "waketime": 5.43,
+        "bedtime_label": "21:13",
+        "wake_label": "5:26"
+      },
+      {
+        "date": "2022-04-11",
+        "bedtime": 23.0,
+        "waketime": 5.42,
+        "bedtime_label": "23:00",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2022-04-12",
+        "bedtime": 22.3,
+        "waketime": 5.42,
+        "bedtime_label": "22:18",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2022-04-13",
+        "bedtime": 26.07,
+        "waketime": 7.42,
+        "bedtime_label": "2:04",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-04-14",
+        "bedtime": 24.17,
+        "waketime": 7.42,
+        "bedtime_label": "0:10",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-04-18",
+        "bedtime": 21.68,
+        "waketime": 4.42,
+        "bedtime_label": "21:41",
+        "wake_label": "4:25"
+      },
+      {
+        "date": "2022-04-19",
+        "bedtime": 21.8,
+        "waketime": 5.62,
+        "bedtime_label": "21:48",
+        "wake_label": "5:37"
+      },
+      {
+        "date": "2022-04-20",
+        "bedtime": 26.85,
+        "waketime": 8.28,
+        "bedtime_label": "2:51",
+        "wake_label": "8:17"
+      },
+      {
+        "date": "2022-04-21",
+        "bedtime": 23.85,
+        "waketime": 7.42,
+        "bedtime_label": "23:51",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-04-22",
+        "bedtime": 23.13,
+        "waketime": 7.42,
+        "bedtime_label": "23:08",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-04-25",
+        "bedtime": 23.73,
+        "waketime": 7.42,
+        "bedtime_label": "23:44",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-04-26",
+        "bedtime": 23.0,
+        "waketime": 7.42,
+        "bedtime_label": "23:00",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-04-27",
+        "bedtime": 24.02,
+        "waketime": 7.42,
+        "bedtime_label": "0:01",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-04-28",
+        "bedtime": 23.83,
+        "waketime": 7.42,
+        "bedtime_label": "23:50",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-04-29",
+        "bedtime": 22.92,
+        "waketime": 7.42,
+        "bedtime_label": "22:55",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-05-02",
+        "bedtime": 23.98,
+        "waketime": 7.42,
+        "bedtime_label": "23:59",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-05-03",
+        "bedtime": 22.92,
+        "waketime": 7.42,
+        "bedtime_label": "22:55",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-05-04",
+        "bedtime": 22.92,
+        "waketime": 7.42,
+        "bedtime_label": "22:55",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-05-05",
+        "bedtime": 23.43,
+        "waketime": 7.42,
+        "bedtime_label": "23:26",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-05-06",
+        "bedtime": 23.33,
+        "waketime": 7.42,
+        "bedtime_label": "23:20",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-05-09",
+        "bedtime": 23.33,
+        "waketime": 7.42,
+        "bedtime_label": "23:20",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-05-10",
+        "bedtime": 23.25,
+        "waketime": 7.42,
+        "bedtime_label": "23:15",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-05-11",
+        "bedtime": 23.57,
+        "waketime": 7.42,
+        "bedtime_label": "23:34",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-05-12",
+        "bedtime": 22.92,
+        "waketime": 7.42,
+        "bedtime_label": "22:55",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-05-13",
+        "bedtime": 23.6,
+        "waketime": 7.42,
+        "bedtime_label": "23:36",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-05-16",
+        "bedtime": 23.78,
+        "waketime": 7.45,
+        "bedtime_label": "23:47",
+        "wake_label": "7:27"
+      },
+      {
+        "date": "2022-05-17",
+        "bedtime": 23.3,
+        "waketime": 7.42,
+        "bedtime_label": "23:18",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-05-18",
+        "bedtime": 23.45,
+        "waketime": 7.42,
+        "bedtime_label": "23:27",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-05-19",
+        "bedtime": 23.35,
+        "waketime": 7.42,
+        "bedtime_label": "23:21",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-05-20",
+        "bedtime": 23.78,
+        "waketime": 7.42,
+        "bedtime_label": "23:47",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-05-23",
+        "bedtime": 23.32,
+        "waketime": 7.42,
+        "bedtime_label": "23:19",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2022-05-24",
+        "bedtime": 23.52,
+        "waketime": 7.75,
+        "bedtime_label": "23:31",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-05-25",
+        "bedtime": 23.77,
+        "waketime": 7.75,
+        "bedtime_label": "23:46",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-05-26",
+        "bedtime": 24.28,
+        "waketime": 7.77,
+        "bedtime_label": "0:17",
+        "wake_label": "7:46"
+      },
+      {
+        "date": "2022-05-27",
+        "bedtime": 24.0,
+        "waketime": 7.75,
+        "bedtime_label": "0:00",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-05-30",
+        "bedtime": 23.25,
+        "waketime": 7.75,
+        "bedtime_label": "23:15",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-05-31",
+        "bedtime": 23.47,
+        "waketime": 7.75,
+        "bedtime_label": "23:28",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-06-01",
+        "bedtime": 23.77,
+        "waketime": 7.67,
+        "bedtime_label": "23:46",
+        "wake_label": "7:40"
+      },
+      {
+        "date": "2022-06-02",
+        "bedtime": 23.78,
+        "waketime": 7.75,
+        "bedtime_label": "23:47",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-06-03",
+        "bedtime": 23.45,
+        "waketime": 7.75,
+        "bedtime_label": "23:27",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-06-06",
+        "bedtime": 24.08,
+        "waketime": 7.75,
+        "bedtime_label": "0:05",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-06-07",
+        "bedtime": 23.25,
+        "waketime": 7.75,
+        "bedtime_label": "23:15",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-06-08",
+        "bedtime": 23.6,
+        "waketime": 7.75,
+        "bedtime_label": "23:36",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-06-09",
+        "bedtime": 23.42,
+        "waketime": 7.7,
+        "bedtime_label": "23:25",
+        "wake_label": "7:42"
+      },
+      {
+        "date": "2022-06-10",
+        "bedtime": 23.92,
+        "waketime": 7.75,
+        "bedtime_label": "23:55",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-06-13",
+        "bedtime": 23.33,
+        "waketime": 7.75,
+        "bedtime_label": "23:20",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-06-14",
+        "bedtime": 23.42,
+        "waketime": 7.67,
+        "bedtime_label": "23:25",
+        "wake_label": "7:40"
+      },
+      {
+        "date": "2022-06-15",
+        "bedtime": 23.37,
+        "waketime": 7.75,
+        "bedtime_label": "23:22",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-06-16",
+        "bedtime": 23.53,
+        "waketime": 7.75,
+        "bedtime_label": "23:32",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-06-17",
+        "bedtime": 23.25,
+        "waketime": 7.75,
+        "bedtime_label": "23:15",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-06-20",
+        "bedtime": 23.25,
+        "waketime": 7.75,
+        "bedtime_label": "23:15",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-06-21",
+        "bedtime": 23.47,
+        "waketime": 7.75,
+        "bedtime_label": "23:28",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-06-22",
+        "bedtime": 23.62,
+        "waketime": 7.75,
+        "bedtime_label": "23:37",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-06-23",
+        "bedtime": 23.25,
+        "waketime": 7.35,
+        "bedtime_label": "23:15",
+        "wake_label": "7:21"
+      },
+      {
+        "date": "2022-06-24",
+        "bedtime": 22.77,
+        "waketime": 5.27,
+        "bedtime_label": "22:46",
+        "wake_label": "5:16"
+      },
+      {
+        "date": "2022-06-27",
+        "bedtime": 22.02,
+        "waketime": 5.75,
+        "bedtime_label": "22:01",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-06-28",
+        "bedtime": 22.18,
+        "waketime": 5.67,
+        "bedtime_label": "22:11",
+        "wake_label": "5:40"
+      },
+      {
+        "date": "2022-06-29",
+        "bedtime": 22.53,
+        "waketime": 5.75,
+        "bedtime_label": "22:32",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-06-30",
+        "bedtime": 24.88,
+        "waketime": 5.77,
+        "bedtime_label": "0:53",
+        "wake_label": "5:46"
+      },
+      {
+        "date": "2022-07-01",
+        "bedtime": 23.6,
+        "waketime": 5.9,
+        "bedtime_label": "23:36",
+        "wake_label": "5:54"
+      },
+      {
+        "date": "2022-07-04",
+        "bedtime": 22.57,
+        "waketime": 5.75,
+        "bedtime_label": "22:34",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-07-05",
+        "bedtime": 22.45,
+        "waketime": 6.15,
+        "bedtime_label": "22:27",
+        "wake_label": "6:09"
+      },
+      {
+        "date": "2022-07-06",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-07-07",
+        "bedtime": 23.67,
+        "waketime": 5.78,
+        "bedtime_label": "23:40",
+        "wake_label": "5:47"
+      },
+      {
+        "date": "2022-07-08",
+        "bedtime": 21.97,
+        "waketime": 5.75,
+        "bedtime_label": "21:58",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-07-11",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-07-12",
+        "bedtime": 21.92,
+        "waketime": 5.75,
+        "bedtime_label": "21:55",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-07-13",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-07-14",
+        "bedtime": 23.57,
+        "waketime": 5.77,
+        "bedtime_label": "23:34",
+        "wake_label": "5:46"
+      },
+      {
+        "date": "2022-07-15",
+        "bedtime": 21.6,
+        "waketime": 6.42,
+        "bedtime_label": "21:36",
+        "wake_label": "6:25"
+      },
+      {
+        "date": "2022-07-18",
+        "bedtime": 22.2,
+        "waketime": 5.75,
+        "bedtime_label": "22:12",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-07-19",
+        "bedtime": 21.0,
+        "waketime": 5.32,
+        "bedtime_label": "21:00",
+        "wake_label": "5:19"
+      },
+      {
+        "date": "2022-07-20",
+        "bedtime": 21.17,
+        "waketime": 5.35,
+        "bedtime_label": "21:10",
+        "wake_label": "5:21"
+      },
+      {
+        "date": "2022-07-21",
+        "bedtime": 21.17,
+        "waketime": 5.6,
+        "bedtime_label": "21:10",
+        "wake_label": "5:36"
+      },
+      {
+        "date": "2022-07-22",
+        "bedtime": 22.93,
+        "waketime": 5.7,
+        "bedtime_label": "22:56",
+        "wake_label": "5:42"
+      },
+      {
+        "date": "2022-07-25",
+        "bedtime": 21.25,
+        "waketime": 5.63,
+        "bedtime_label": "21:15",
+        "wake_label": "5:38"
+      },
+      {
+        "date": "2022-07-26",
+        "bedtime": 20.75,
+        "waketime": 5.25,
+        "bedtime_label": "20:45",
+        "wake_label": "5:15"
+      },
+      {
+        "date": "2022-07-27",
+        "bedtime": 21.48,
+        "waketime": 5.75,
+        "bedtime_label": "21:29",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-07-28",
+        "bedtime": 23.2,
+        "waketime": 5.67,
+        "bedtime_label": "23:12",
+        "wake_label": "5:40"
+      },
+      {
+        "date": "2022-07-29",
+        "bedtime": 21.85,
+        "waketime": 5.7,
+        "bedtime_label": "21:51",
+        "wake_label": "5:42"
+      },
+      {
+        "date": "2022-08-01",
+        "bedtime": 22.08,
+        "waketime": 5.67,
+        "bedtime_label": "22:05",
+        "wake_label": "5:40"
+      },
+      {
+        "date": "2022-08-02",
+        "bedtime": 21.77,
+        "waketime": 5.68,
+        "bedtime_label": "21:46",
+        "wake_label": "5:41"
+      },
+      {
+        "date": "2022-09-01",
+        "bedtime": 25.25,
+        "waketime": 5.57,
+        "bedtime_label": "1:15",
+        "wake_label": "5:34"
+      },
+      {
+        "date": "2022-09-02",
+        "bedtime": 23.63,
+        "waketime": 5.75,
+        "bedtime_label": "23:38",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-09-05",
+        "bedtime": 21.93,
+        "waketime": 5.25,
+        "bedtime_label": "21:56",
+        "wake_label": "5:15"
+      },
+      {
+        "date": "2022-09-06",
+        "bedtime": 21.25,
+        "waketime": 5.78,
+        "bedtime_label": "21:15",
+        "wake_label": "5:47"
+      },
+      {
+        "date": "2022-09-07",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-09-08",
+        "bedtime": 22.87,
+        "waketime": 5.75,
+        "bedtime_label": "22:52",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-09-09",
+        "bedtime": 25.65,
+        "waketime": 7.48,
+        "bedtime_label": "1:39",
+        "wake_label": "7:29"
+      },
+      {
+        "date": "2022-09-12",
+        "bedtime": 24.22,
+        "waketime": 6.58,
+        "bedtime_label": "0:13",
+        "wake_label": "6:35"
+      },
+      {
+        "date": "2022-09-13",
+        "bedtime": 24.22,
+        "waketime": 7.75,
+        "bedtime_label": "0:13",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-09-14",
+        "bedtime": 23.52,
+        "waketime": 7.75,
+        "bedtime_label": "23:31",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2022-09-15",
+        "bedtime": 22.68,
+        "waketime": 6.82,
+        "bedtime_label": "22:41",
+        "wake_label": "6:49"
+      },
+      {
+        "date": "2022-09-16",
+        "bedtime": 23.25,
+        "waketime": 8.55,
+        "bedtime_label": "23:15",
+        "wake_label": "8:33"
+      },
+      {
+        "date": "2022-09-19",
+        "bedtime": 22.38,
+        "waketime": 5.75,
+        "bedtime_label": "22:23",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-09-20",
+        "bedtime": 21.18,
+        "waketime": 5.42,
+        "bedtime_label": "21:11",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2022-09-21",
+        "bedtime": 22.72,
+        "waketime": 5.42,
+        "bedtime_label": "22:43",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2022-09-22",
+        "bedtime": 21.37,
+        "waketime": 5.45,
+        "bedtime_label": "21:22",
+        "wake_label": "5:27"
+      },
+      {
+        "date": "2022-09-23",
+        "bedtime": 20.92,
+        "waketime": 5.58,
+        "bedtime_label": "20:55",
+        "wake_label": "5:35"
+      },
+      {
+        "date": "2022-09-26",
+        "bedtime": 20.92,
+        "waketime": 5.53,
+        "bedtime_label": "20:55",
+        "wake_label": "5:32"
+      },
+      {
+        "date": "2022-09-27",
+        "bedtime": 21.15,
+        "waketime": 5.42,
+        "bedtime_label": "21:09",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2022-09-28",
+        "bedtime": 23.28,
+        "waketime": 5.42,
+        "bedtime_label": "23:17",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2022-09-29",
+        "bedtime": 20.92,
+        "waketime": 6.6,
+        "bedtime_label": "20:55",
+        "wake_label": "6:36"
+      },
+      {
+        "date": "2022-09-30",
+        "bedtime": 20.92,
+        "waketime": 5.42,
+        "bedtime_label": "20:55",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2022-10-03",
+        "bedtime": 20.75,
+        "waketime": 5.27,
+        "bedtime_label": "20:45",
+        "wake_label": "5:16"
+      },
+      {
+        "date": "2022-10-04",
+        "bedtime": 22.08,
+        "waketime": 5.42,
+        "bedtime_label": "22:05",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2022-10-05",
+        "bedtime": 21.95,
+        "waketime": 5.42,
+        "bedtime_label": "21:57",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2022-10-06",
+        "bedtime": 20.92,
+        "waketime": 5.43,
+        "bedtime_label": "20:55",
+        "wake_label": "5:26"
+      },
+      {
+        "date": "2022-10-07",
+        "bedtime": 22.67,
+        "waketime": 6.13,
+        "bedtime_label": "22:40",
+        "wake_label": "6:08"
+      },
+      {
+        "date": "2022-10-10",
+        "bedtime": 20.97,
+        "waketime": 5.42,
+        "bedtime_label": "20:58",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2022-10-11",
+        "bedtime": 20.92,
+        "waketime": 5.42,
+        "bedtime_label": "20:55",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2022-10-12",
+        "bedtime": 21.58,
+        "waketime": 5.73,
+        "bedtime_label": "21:35",
+        "wake_label": "5:44"
+      },
+      {
+        "date": "2022-10-14",
+        "bedtime": 21.95,
+        "waketime": 6.0,
+        "bedtime_label": "21:57",
+        "wake_label": "6:00"
+      },
+      {
+        "date": "2022-10-15",
+        "bedtime": 24.48,
+        "waketime": 6.0,
+        "bedtime_label": "0:29",
+        "wake_label": "6:00"
+      },
+      {
+        "date": "2022-10-17",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-10-18",
+        "bedtime": 21.25,
+        "waketime": 5.82,
+        "bedtime_label": "21:15",
+        "wake_label": "5:49"
+      },
+      {
+        "date": "2022-10-19",
+        "bedtime": 21.25,
+        "waketime": 5.77,
+        "bedtime_label": "21:15",
+        "wake_label": "5:46"
+      },
+      {
+        "date": "2022-10-20",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-10-21",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-10-24",
+        "bedtime": 21.25,
+        "waketime": 5.77,
+        "bedtime_label": "21:15",
+        "wake_label": "5:46"
+      },
+      {
+        "date": "2022-10-25",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-10-26",
+        "bedtime": 21.25,
+        "waketime": 5.58,
+        "bedtime_label": "21:15",
+        "wake_label": "5:35"
+      },
+      {
+        "date": "2022-10-27",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-10-28",
+        "bedtime": 22.82,
+        "waketime": 5.75,
+        "bedtime_label": "22:49",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-10-31",
+        "bedtime": 21.45,
+        "waketime": 5.75,
+        "bedtime_label": "21:27",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-11-01",
+        "bedtime": 21.25,
+        "waketime": 5.77,
+        "bedtime_label": "21:15",
+        "wake_label": "5:46"
+      },
+      {
+        "date": "2022-11-02",
+        "bedtime": 21.25,
+        "waketime": 6.93,
+        "bedtime_label": "21:15",
+        "wake_label": "6:56"
+      },
+      {
+        "date": "2022-11-03",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2022-11-04",
+        "bedtime": 21.32,
+        "waketime": 5.77,
+        "bedtime_label": "21:19",
+        "wake_label": "5:46"
+      },
+      {
+        "date": "2022-11-07",
+        "bedtime": 22.25,
+        "waketime": 6.75,
+        "bedtime_label": "22:15",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2022-11-08",
+        "bedtime": 22.25,
+        "waketime": 6.77,
+        "bedtime_label": "22:15",
+        "wake_label": "6:46"
+      },
+      {
+        "date": "2022-11-09",
+        "bedtime": 22.27,
+        "waketime": 6.75,
+        "bedtime_label": "22:16",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2022-11-10",
+        "bedtime": 22.25,
+        "waketime": 6.75,
+        "bedtime_label": "22:15",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2022-11-11",
+        "bedtime": 22.75,
+        "waketime": 7.25,
+        "bedtime_label": "22:45",
+        "wake_label": "7:15"
+      },
+      {
+        "date": "2022-11-15",
+        "bedtime": 22.28,
+        "waketime": 6.75,
+        "bedtime_label": "22:17",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2022-11-16",
+        "bedtime": 22.25,
+        "waketime": 6.75,
+        "bedtime_label": "22:15",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2022-11-17",
+        "bedtime": 22.48,
+        "waketime": 6.75,
+        "bedtime_label": "22:29",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2022-11-18",
+        "bedtime": 22.25,
+        "waketime": 6.75,
+        "bedtime_label": "22:15",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2022-11-21",
+        "bedtime": 21.9,
+        "waketime": 6.02,
+        "bedtime_label": "21:54",
+        "wake_label": "6:01"
+      },
+      {
+        "date": "2022-11-22",
+        "bedtime": 21.53,
+        "waketime": 6.0,
+        "bedtime_label": "21:32",
+        "wake_label": "6:00"
+      },
+      {
+        "date": "2022-11-23",
+        "bedtime": 22.23,
+        "waketime": 6.0,
+        "bedtime_label": "22:14",
+        "wake_label": "6:00"
+      },
+      {
+        "date": "2022-11-24",
+        "bedtime": 22.63,
+        "waketime": 6.0,
+        "bedtime_label": "22:38",
+        "wake_label": "6:00"
+      },
+      {
+        "date": "2022-11-25",
+        "bedtime": 22.37,
+        "waketime": 6.0,
+        "bedtime_label": "22:22",
+        "wake_label": "6:00"
+      },
+      {
+        "date": "2022-11-28",
+        "bedtime": 24.05,
+        "waketime": 6.0,
+        "bedtime_label": "0:03",
+        "wake_label": "6:00"
+      },
+      {
+        "date": "2022-11-29",
+        "bedtime": 22.33,
+        "waketime": 6.0,
+        "bedtime_label": "22:20",
+        "wake_label": "6:00"
+      },
+      {
+        "date": "2022-11-30",
+        "bedtime": 23.3,
+        "waketime": 7.0,
+        "bedtime_label": "23:18",
+        "wake_label": "7:00"
+      },
+      {
+        "date": "2022-12-01",
+        "bedtime": 22.5,
+        "waketime": 7.0,
+        "bedtime_label": "22:30",
+        "wake_label": "7:00"
+      },
+      {
+        "date": "2022-12-02",
+        "bedtime": 22.68,
+        "waketime": 7.0,
+        "bedtime_label": "22:41",
+        "wake_label": "7:00"
+      },
+      {
+        "date": "2022-12-05",
+        "bedtime": 22.5,
+        "waketime": 7.0,
+        "bedtime_label": "22:30",
+        "wake_label": "7:00"
+      },
+      {
+        "date": "2022-12-06",
+        "bedtime": 22.25,
+        "waketime": 6.78,
+        "bedtime_label": "22:15",
+        "wake_label": "6:47"
+      },
+      {
+        "date": "2022-12-07",
+        "bedtime": 22.7,
+        "waketime": 7.17,
+        "bedtime_label": "22:42",
+        "wake_label": "7:10"
+      },
+      {
+        "date": "2022-12-08",
+        "bedtime": 24.0,
+        "waketime": 6.75,
+        "bedtime_label": "0:00",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2022-12-09",
+        "bedtime": 22.92,
+        "waketime": 6.77,
+        "bedtime_label": "22:55",
+        "wake_label": "6:46"
+      },
+      {
+        "date": "2022-12-12",
+        "bedtime": 22.25,
+        "waketime": 6.75,
+        "bedtime_label": "22:15",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2022-12-13",
+        "bedtime": 22.25,
+        "waketime": 6.75,
+        "bedtime_label": "22:15",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2022-12-14",
+        "bedtime": 23.33,
+        "waketime": 7.25,
+        "bedtime_label": "23:20",
+        "wake_label": "7:15"
+      },
+      {
+        "date": "2022-12-15",
+        "bedtime": 22.25,
+        "waketime": 6.75,
+        "bedtime_label": "22:15",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2022-12-16",
+        "bedtime": 23.38,
+        "waketime": 7.25,
+        "bedtime_label": "23:23",
+        "wake_label": "7:15"
+      },
+      {
+        "date": "2022-12-19",
+        "bedtime": 25.97,
+        "waketime": 5.35,
+        "bedtime_label": "1:58",
+        "wake_label": "5:21"
+      },
+      {
+        "date": "2022-12-20",
+        "bedtime": 24.27,
+        "waketime": 8.75,
+        "bedtime_label": "0:16",
+        "wake_label": "8:45"
+      },
+      {
+        "date": "2022-12-21",
+        "bedtime": 24.92,
+        "waketime": 8.73,
+        "bedtime_label": "0:55",
+        "wake_label": "8:44"
+      },
+      {
+        "date": "2022-12-22",
+        "bedtime": 25.47,
+        "waketime": 9.42,
+        "bedtime_label": "1:28",
+        "wake_label": "9:25"
+      },
+      {
+        "date": "2022-12-23",
+        "bedtime": 25.27,
+        "waketime": 9.37,
+        "bedtime_label": "1:16",
+        "wake_label": "9:22"
+      },
+      {
+        "date": "2022-12-26",
+        "bedtime": 24.92,
+        "waketime": 9.42,
+        "bedtime_label": "0:55",
+        "wake_label": "9:25"
+      },
+      {
+        "date": "2022-12-27",
+        "bedtime": 24.92,
+        "waketime": 9.57,
+        "bedtime_label": "0:55",
+        "wake_label": "9:34"
+      },
+      {
+        "date": "2022-12-28",
+        "bedtime": 24.92,
+        "waketime": 8.45,
+        "bedtime_label": "0:55",
+        "wake_label": "8:27"
+      },
+      {
+        "date": "2022-12-29",
+        "bedtime": 24.92,
+        "waketime": 8.88,
+        "bedtime_label": "0:55",
+        "wake_label": "8:53"
+      },
+      {
+        "date": "2022-12-30",
+        "bedtime": 24.92,
+        "waketime": 9.42,
+        "bedtime_label": "0:55",
+        "wake_label": "9:25"
+      },
+      {
+        "date": "2023-01-02",
+        "bedtime": 24.6,
+        "waketime": 7.42,
+        "bedtime_label": "0:36",
+        "wake_label": "7:25"
+      },
+      {
+        "date": "2023-01-03",
+        "bedtime": 22.25,
+        "waketime": 6.75,
+        "bedtime_label": "22:15",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2023-01-04",
+        "bedtime": 22.8,
+        "waketime": 6.75,
+        "bedtime_label": "22:48",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2023-01-05",
+        "bedtime": 23.07,
+        "waketime": 6.75,
+        "bedtime_label": "23:04",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2023-01-06",
+        "bedtime": 22.3,
+        "waketime": 6.75,
+        "bedtime_label": "22:18",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2023-01-09",
+        "bedtime": 22.42,
+        "waketime": 6.77,
+        "bedtime_label": "22:25",
+        "wake_label": "6:46"
+      },
+      {
+        "date": "2023-01-10",
+        "bedtime": 22.25,
+        "waketime": 6.75,
+        "bedtime_label": "22:15",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2023-01-11",
+        "bedtime": 22.68,
+        "waketime": 6.75,
+        "bedtime_label": "22:41",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2023-01-12",
+        "bedtime": 22.25,
+        "waketime": 6.75,
+        "bedtime_label": "22:15",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2023-01-13",
+        "bedtime": 22.25,
+        "waketime": 6.75,
+        "bedtime_label": "22:15",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2023-01-16",
+        "bedtime": 25.57,
+        "waketime": 6.75,
+        "bedtime_label": "1:34",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2023-01-17",
+        "bedtime": 22.75,
+        "waketime": 7.25,
+        "bedtime_label": "22:45",
+        "wake_label": "7:15"
+      },
+      {
+        "date": "2023-01-18",
+        "bedtime": 25.27,
+        "waketime": 7.25,
+        "bedtime_label": "1:16",
+        "wake_label": "7:15"
+      },
+      {
+        "date": "2023-02-25",
+        "bedtime": 23.05,
+        "waketime": 5.85,
+        "bedtime_label": "23:03",
+        "wake_label": "5:51"
+      },
+      {
+        "date": "2023-02-27",
+        "bedtime": 23.15,
+        "waketime": 7.58,
+        "bedtime_label": "23:09",
+        "wake_label": "7:35"
+      },
+      {
+        "date": "2023-02-28",
+        "bedtime": 25.7,
+        "waketime": 6.75,
+        "bedtime_label": "1:42",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2023-03-01",
+        "bedtime": 25.13,
+        "waketime": 6.08,
+        "bedtime_label": "1:08",
+        "wake_label": "6:05"
+      },
+      {
+        "date": "2023-03-02",
+        "bedtime": 22.92,
+        "waketime": 7.25,
+        "bedtime_label": "22:55",
+        "wake_label": "7:15"
+      },
+      {
+        "date": "2023-03-03",
+        "bedtime": 22.25,
+        "waketime": 6.75,
+        "bedtime_label": "22:15",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2023-03-06",
+        "bedtime": 22.25,
+        "waketime": 6.75,
+        "bedtime_label": "22:15",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2023-03-07",
+        "bedtime": 22.25,
+        "waketime": 6.75,
+        "bedtime_label": "22:15",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2023-03-08",
+        "bedtime": 22.25,
+        "waketime": 6.75,
+        "bedtime_label": "22:15",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2023-03-09",
+        "bedtime": 22.25,
+        "waketime": 6.75,
+        "bedtime_label": "22:15",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2023-03-10",
+        "bedtime": 22.38,
+        "waketime": 6.75,
+        "bedtime_label": "22:23",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2023-03-13",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-03-14",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-03-15",
+        "bedtime": 21.7,
+        "waketime": 6.17,
+        "bedtime_label": "21:42",
+        "wake_label": "6:10"
+      },
+      {
+        "date": "2023-03-16",
+        "bedtime": 22.78,
+        "waketime": 4.23,
+        "bedtime_label": "22:47",
+        "wake_label": "4:14"
+      },
+      {
+        "date": "2023-03-17",
+        "bedtime": 22.0,
+        "waketime": 5.72,
+        "bedtime_label": "22:00",
+        "wake_label": "5:43"
+      },
+      {
+        "date": "2023-03-20",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-03-21",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-03-22",
+        "bedtime": 23.05,
+        "waketime": 5.75,
+        "bedtime_label": "23:03",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-03-23",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-03-24",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-03-27",
+        "bedtime": 21.4,
+        "waketime": 5.75,
+        "bedtime_label": "21:24",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-03-28",
+        "bedtime": 23.3,
+        "waketime": 6.75,
+        "bedtime_label": "23:18",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2023-03-29",
+        "bedtime": 21.28,
+        "waketime": 5.75,
+        "bedtime_label": "21:17",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-03-30",
+        "bedtime": 23.53,
+        "waketime": 5.75,
+        "bedtime_label": "23:32",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-04-03",
+        "bedtime": 24.25,
+        "waketime": 8.75,
+        "bedtime_label": "0:15",
+        "wake_label": "8:45"
+      },
+      {
+        "date": "2023-04-04",
+        "bedtime": 25.1,
+        "waketime": 8.45,
+        "bedtime_label": "1:06",
+        "wake_label": "8:27"
+      },
+      {
+        "date": "2023-04-05",
+        "bedtime": 25.0,
+        "waketime": 7.75,
+        "bedtime_label": "1:00",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2023-04-06",
+        "bedtime": 25.37,
+        "waketime": 7.75,
+        "bedtime_label": "1:22",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2023-04-07",
+        "bedtime": 23.33,
+        "waketime": 7.75,
+        "bedtime_label": "23:20",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2023-04-10",
+        "bedtime": 24.85,
+        "waketime": 8.18,
+        "bedtime_label": "0:51",
+        "wake_label": "8:11"
+      },
+      {
+        "date": "2023-04-11",
+        "bedtime": 24.15,
+        "waketime": 7.23,
+        "bedtime_label": "0:09",
+        "wake_label": "7:14"
+      },
+      {
+        "date": "2023-04-12",
+        "bedtime": 27.83,
+        "waketime": 7.15,
+        "bedtime_label": "3:50",
+        "wake_label": "7:09"
+      },
+      {
+        "date": "2023-04-13",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-04-14",
+        "bedtime": 23.08,
+        "waketime": 5.53,
+        "bedtime_label": "23:05",
+        "wake_label": "5:32"
+      },
+      {
+        "date": "2023-04-17",
+        "bedtime": 23.27,
+        "waketime": 6.42,
+        "bedtime_label": "23:16",
+        "wake_label": "6:25"
+      },
+      {
+        "date": "2023-04-18",
+        "bedtime": 21.8,
+        "waketime": 5.75,
+        "bedtime_label": "21:48",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-04-19",
+        "bedtime": 21.5,
+        "waketime": 6.0,
+        "bedtime_label": "21:30",
+        "wake_label": "6:00"
+      },
+      {
+        "date": "2023-04-20",
+        "bedtime": 21.37,
+        "waketime": 5.75,
+        "bedtime_label": "21:22",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-04-21",
+        "bedtime": 21.65,
+        "waketime": 5.8,
+        "bedtime_label": "21:39",
+        "wake_label": "5:48"
+      },
+      {
+        "date": "2023-04-24",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-04-25",
+        "bedtime": 21.92,
+        "waketime": 6.02,
+        "bedtime_label": "21:55",
+        "wake_label": "6:01"
+      },
+      {
+        "date": "2023-04-26",
+        "bedtime": 21.43,
+        "waketime": 5.75,
+        "bedtime_label": "21:26",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-04-27",
+        "bedtime": 22.08,
+        "waketime": 5.95,
+        "bedtime_label": "22:05",
+        "wake_label": "5:57"
+      },
+      {
+        "date": "2023-04-28",
+        "bedtime": 23.85,
+        "waketime": 6.1,
+        "bedtime_label": "23:51",
+        "wake_label": "6:06"
+      },
+      {
+        "date": "2023-05-01",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-05-02",
+        "bedtime": 21.25,
+        "waketime": 5.65,
+        "bedtime_label": "21:15",
+        "wake_label": "5:39"
+      },
+      {
+        "date": "2023-05-03",
+        "bedtime": 21.27,
+        "waketime": 5.42,
+        "bedtime_label": "21:16",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2023-05-04",
+        "bedtime": 25.25,
+        "waketime": 5.62,
+        "bedtime_label": "1:15",
+        "wake_label": "5:37"
+      },
+      {
+        "date": "2023-05-05",
+        "bedtime": 23.0,
+        "waketime": 5.92,
+        "bedtime_label": "23:00",
+        "wake_label": "5:55"
+      },
+      {
+        "date": "2023-05-08",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-05-09",
+        "bedtime": 21.38,
+        "waketime": 5.75,
+        "bedtime_label": "21:23",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-05-10",
+        "bedtime": 21.25,
+        "waketime": 5.73,
+        "bedtime_label": "21:15",
+        "wake_label": "5:44"
+      },
+      {
+        "date": "2023-05-11",
+        "bedtime": 23.97,
+        "waketime": 5.78,
+        "bedtime_label": "23:58",
+        "wake_label": "5:47"
+      },
+      {
+        "date": "2023-05-12",
+        "bedtime": 21.83,
+        "waketime": 5.75,
+        "bedtime_label": "21:50",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-05-15",
+        "bedtime": 21.73,
+        "waketime": 5.73,
+        "bedtime_label": "21:44",
+        "wake_label": "5:44"
+      },
+      {
+        "date": "2023-05-16",
+        "bedtime": 22.98,
+        "waketime": 5.93,
+        "bedtime_label": "22:59",
+        "wake_label": "5:56"
+      },
+      {
+        "date": "2023-05-17",
+        "bedtime": 21.75,
+        "waketime": 5.62,
+        "bedtime_label": "21:45",
+        "wake_label": "5:37"
+      },
+      {
+        "date": "2023-05-18",
+        "bedtime": 21.92,
+        "waketime": 6.17,
+        "bedtime_label": "21:55",
+        "wake_label": "6:10"
+      },
+      {
+        "date": "2023-05-19",
+        "bedtime": 22.47,
+        "waketime": 5.83,
+        "bedtime_label": "22:28",
+        "wake_label": "5:50"
+      },
+      {
+        "date": "2023-05-22",
+        "bedtime": 21.52,
+        "waketime": 5.93,
+        "bedtime_label": "21:31",
+        "wake_label": "5:56"
+      },
+      {
+        "date": "2023-05-23",
+        "bedtime": 25.42,
+        "waketime": 5.85,
+        "bedtime_label": "1:25",
+        "wake_label": "5:51"
+      },
+      {
+        "date": "2023-05-24",
+        "bedtime": 25.25,
+        "waketime": 5.63,
+        "bedtime_label": "1:15",
+        "wake_label": "5:38"
+      },
+      {
+        "date": "2023-05-25",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-05-26",
+        "bedtime": 21.98,
+        "waketime": 6.08,
+        "bedtime_label": "21:59",
+        "wake_label": "6:05"
+      },
+      {
+        "date": "2023-05-29",
+        "bedtime": 21.62,
+        "waketime": 5.32,
+        "bedtime_label": "21:37",
+        "wake_label": "5:19"
+      },
+      {
+        "date": "2023-05-30",
+        "bedtime": 22.95,
+        "waketime": 5.7,
+        "bedtime_label": "22:57",
+        "wake_label": "5:42"
+      },
+      {
+        "date": "2023-05-31",
+        "bedtime": 22.18,
+        "waketime": 5.5,
+        "bedtime_label": "22:11",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2023-06-01",
+        "bedtime": 21.33,
+        "waketime": 5.42,
+        "bedtime_label": "21:20",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2023-06-02",
+        "bedtime": 24.65,
+        "waketime": 5.42,
+        "bedtime_label": "0:39",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2023-06-05",
+        "bedtime": 21.0,
+        "waketime": 5.45,
+        "bedtime_label": "21:00",
+        "wake_label": "5:27"
+      },
+      {
+        "date": "2023-06-06",
+        "bedtime": 22.2,
+        "waketime": 6.1,
+        "bedtime_label": "22:12",
+        "wake_label": "6:06"
+      },
+      {
+        "date": "2023-06-07",
+        "bedtime": 21.4,
+        "waketime": 5.5,
+        "bedtime_label": "21:24",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2023-06-08",
+        "bedtime": 22.77,
+        "waketime": 5.75,
+        "bedtime_label": "22:46",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-06-09",
+        "bedtime": 21.55,
+        "waketime": 5.75,
+        "bedtime_label": "21:33",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-06-12",
+        "bedtime": 21.07,
+        "waketime": 5.5,
+        "bedtime_label": "21:04",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2023-06-13",
+        "bedtime": 22.65,
+        "waketime": 5.82,
+        "bedtime_label": "22:39",
+        "wake_label": "5:49"
+      },
+      {
+        "date": "2023-06-14",
+        "bedtime": 21.08,
+        "waketime": 5.5,
+        "bedtime_label": "21:05",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2023-06-15",
+        "bedtime": 21.67,
+        "waketime": 5.5,
+        "bedtime_label": "21:40",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2023-06-16",
+        "bedtime": 21.72,
+        "waketime": 5.5,
+        "bedtime_label": "21:43",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2023-06-19",
+        "bedtime": 24.9,
+        "waketime": 5.5,
+        "bedtime_label": "0:54",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2023-06-20",
+        "bedtime": 21.42,
+        "waketime": 5.53,
+        "bedtime_label": "21:25",
+        "wake_label": "5:32"
+      },
+      {
+        "date": "2023-06-21",
+        "bedtime": 22.47,
+        "waketime": 6.42,
+        "bedtime_label": "22:28",
+        "wake_label": "6:25"
+      },
+      {
+        "date": "2023-06-22",
+        "bedtime": 22.7,
+        "waketime": 5.53,
+        "bedtime_label": "22:42",
+        "wake_label": "5:32"
+      },
+      {
+        "date": "2023-06-23",
+        "bedtime": 22.68,
+        "waketime": 6.3,
+        "bedtime_label": "22:41",
+        "wake_label": "6:18"
+      },
+      {
+        "date": "2023-06-26",
+        "bedtime": 21.23,
+        "waketime": 5.5,
+        "bedtime_label": "21:14",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2023-06-27",
+        "bedtime": 21.02,
+        "waketime": 5.5,
+        "bedtime_label": "21:01",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2023-06-28",
+        "bedtime": 21.12,
+        "waketime": 5.4,
+        "bedtime_label": "21:07",
+        "wake_label": "5:24"
+      },
+      {
+        "date": "2023-06-29",
+        "bedtime": 21.25,
+        "waketime": 5.63,
+        "bedtime_label": "21:15",
+        "wake_label": "5:38"
+      },
+      {
+        "date": "2023-06-30",
+        "bedtime": 21.2,
+        "waketime": 5.43,
+        "bedtime_label": "21:12",
+        "wake_label": "5:26"
+      },
+      {
+        "date": "2023-07-03",
+        "bedtime": 21.87,
+        "waketime": 5.5,
+        "bedtime_label": "21:52",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2023-07-04",
+        "bedtime": 21.0,
+        "waketime": 5.53,
+        "bedtime_label": "21:00",
+        "wake_label": "5:32"
+      },
+      {
+        "date": "2023-07-05",
+        "bedtime": 21.23,
+        "waketime": 4.9,
+        "bedtime_label": "21:14",
+        "wake_label": "4:54"
+      },
+      {
+        "date": "2023-07-06",
+        "bedtime": 21.0,
+        "waketime": 5.25,
+        "bedtime_label": "21:00",
+        "wake_label": "5:15"
+      },
+      {
+        "date": "2023-07-07",
+        "bedtime": 22.02,
+        "waketime": 5.37,
+        "bedtime_label": "22:01",
+        "wake_label": "5:22"
+      },
+      {
+        "date": "2023-07-10",
+        "bedtime": 21.17,
+        "waketime": 5.48,
+        "bedtime_label": "21:10",
+        "wake_label": "5:29"
+      },
+      {
+        "date": "2023-07-11",
+        "bedtime": 21.92,
+        "waketime": 5.83,
+        "bedtime_label": "21:55",
+        "wake_label": "5:50"
+      },
+      {
+        "date": "2023-07-12",
+        "bedtime": 21.43,
+        "waketime": 5.5,
+        "bedtime_label": "21:26",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2023-07-13",
+        "bedtime": 21.5,
+        "waketime": 5.53,
+        "bedtime_label": "21:30",
+        "wake_label": "5:32"
+      },
+      {
+        "date": "2023-07-14",
+        "bedtime": 21.5,
+        "waketime": 5.75,
+        "bedtime_label": "21:30",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-07-17",
+        "bedtime": 21.0,
+        "waketime": 5.4,
+        "bedtime_label": "21:00",
+        "wake_label": "5:24"
+      },
+      {
+        "date": "2023-07-18",
+        "bedtime": 21.58,
+        "waketime": 5.4,
+        "bedtime_label": "21:35",
+        "wake_label": "5:24"
+      },
+      {
+        "date": "2023-07-19",
+        "bedtime": 21.98,
+        "waketime": 5.5,
+        "bedtime_label": "21:59",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2023-07-20",
+        "bedtime": 25.25,
+        "waketime": 5.97,
+        "bedtime_label": "1:15",
+        "wake_label": "5:58"
+      },
+      {
+        "date": "2023-07-21",
+        "bedtime": 22.0,
+        "waketime": 5.53,
+        "bedtime_label": "22:00",
+        "wake_label": "5:32"
+      },
+      {
+        "date": "2023-07-24",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2023-07-25",
+        "bedtime": 23.1,
+        "waketime": 5.5,
+        "bedtime_label": "23:06",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2023-07-26",
+        "bedtime": 22.78,
+        "waketime": 5.5,
+        "bedtime_label": "22:47",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2023-07-27",
+        "bedtime": 22.83,
+        "waketime": 5.53,
+        "bedtime_label": "22:50",
+        "wake_label": "5:32"
+      },
+      {
+        "date": "2023-07-28",
+        "bedtime": 24.4,
+        "waketime": 5.67,
+        "bedtime_label": "0:24",
+        "wake_label": "5:40"
+      },
+      {
+        "date": "2023-08-03",
+        "bedtime": 21.53,
+        "waketime": 4.7,
+        "bedtime_label": "21:32",
+        "wake_label": "4:42"
+      },
+      {
+        "date": "2023-08-04",
+        "bedtime": 21.0,
+        "waketime": 2.92,
+        "bedtime_label": "21:00",
+        "wake_label": "2:55"
+      },
+      {
+        "date": "2023-08-07",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2023-08-08",
+        "bedtime": 21.25,
+        "waketime": 5.57,
+        "bedtime_label": "21:15",
+        "wake_label": "5:34"
+      },
+      {
+        "date": "2023-08-09",
+        "bedtime": 21.2,
+        "waketime": 5.43,
+        "bedtime_label": "21:12",
+        "wake_label": "5:26"
+      },
+      {
+        "date": "2023-08-10",
+        "bedtime": 22.68,
+        "waketime": 6.25,
+        "bedtime_label": "22:41",
+        "wake_label": "6:15"
+      },
+      {
+        "date": "2023-08-11",
+        "bedtime": 22.0,
+        "waketime": 5.27,
+        "bedtime_label": "22:00",
+        "wake_label": "5:16"
+      },
+      {
+        "date": "2023-08-14",
+        "bedtime": 23.25,
+        "waketime": 7.57,
+        "bedtime_label": "23:15",
+        "wake_label": "7:34"
+      },
+      {
+        "date": "2023-08-15",
+        "bedtime": 23.6,
+        "waketime": 4.53,
+        "bedtime_label": "23:36",
+        "wake_label": "4:32"
+      },
+      {
+        "date": "2023-08-16",
+        "bedtime": 23.33,
+        "waketime": 6.0,
+        "bedtime_label": "23:20",
+        "wake_label": "6:00"
+      },
+      {
+        "date": "2023-08-17",
+        "bedtime": 21.5,
+        "waketime": 6.0,
+        "bedtime_label": "21:30",
+        "wake_label": "6:00"
+      },
+      {
+        "date": "2023-08-18",
+        "bedtime": 22.13,
+        "waketime": 6.5,
+        "bedtime_label": "22:08",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-08-21",
+        "bedtime": 23.75,
+        "waketime": 8.0,
+        "bedtime_label": "23:45",
+        "wake_label": "8:00"
+      },
+      {
+        "date": "2023-08-22",
+        "bedtime": 23.73,
+        "waketime": 7.57,
+        "bedtime_label": "23:44",
+        "wake_label": "7:34"
+      },
+      {
+        "date": "2023-08-23",
+        "bedtime": 23.5,
+        "waketime": 7.5,
+        "bedtime_label": "23:30",
+        "wake_label": "7:30"
+      },
+      {
+        "date": "2023-08-24",
+        "bedtime": 23.03,
+        "waketime": 5.87,
+        "bedtime_label": "23:02",
+        "wake_label": "5:52"
+      },
+      {
+        "date": "2023-08-25",
+        "bedtime": 23.75,
+        "waketime": 7.5,
+        "bedtime_label": "23:45",
+        "wake_label": "7:30"
+      },
+      {
+        "date": "2023-08-28",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2023-08-29",
+        "bedtime": 22.27,
+        "waketime": 5.75,
+        "bedtime_label": "22:16",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-08-30",
+        "bedtime": 21.48,
+        "waketime": 5.75,
+        "bedtime_label": "21:29",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-08-31",
+        "bedtime": 24.1,
+        "waketime": 6.25,
+        "bedtime_label": "0:06",
+        "wake_label": "6:15"
+      },
+      {
+        "date": "2023-09-01",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-09-04",
+        "bedtime": 23.38,
+        "waketime": 6.58,
+        "bedtime_label": "23:23",
+        "wake_label": "6:35"
+      },
+      {
+        "date": "2023-09-05",
+        "bedtime": 22.68,
+        "waketime": 6.25,
+        "bedtime_label": "22:41",
+        "wake_label": "6:15"
+      },
+      {
+        "date": "2023-09-06",
+        "bedtime": 21.33,
+        "waketime": 5.83,
+        "bedtime_label": "21:20",
+        "wake_label": "5:50"
+      },
+      {
+        "date": "2023-09-07",
+        "bedtime": 21.52,
+        "waketime": 5.83,
+        "bedtime_label": "21:31",
+        "wake_label": "5:50"
+      },
+      {
+        "date": "2023-09-08",
+        "bedtime": 22.47,
+        "waketime": 5.93,
+        "bedtime_label": "22:28",
+        "wake_label": "5:56"
+      },
+      {
+        "date": "2023-09-11",
+        "bedtime": 21.5,
+        "waketime": 6.0,
+        "bedtime_label": "21:30",
+        "wake_label": "6:00"
+      },
+      {
+        "date": "2023-09-12",
+        "bedtime": 21.32,
+        "waketime": 5.75,
+        "bedtime_label": "21:19",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-09-13",
+        "bedtime": 21.53,
+        "waketime": 5.75,
+        "bedtime_label": "21:32",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-09-14",
+        "bedtime": 22.3,
+        "waketime": 6.03,
+        "bedtime_label": "22:18",
+        "wake_label": "6:02"
+      },
+      {
+        "date": "2023-09-15",
+        "bedtime": 21.75,
+        "waketime": 6.1,
+        "bedtime_label": "21:45",
+        "wake_label": "6:06"
+      },
+      {
+        "date": "2023-09-18",
+        "bedtime": 22.87,
+        "waketime": 5.75,
+        "bedtime_label": "22:52",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-09-19",
+        "bedtime": 21.77,
+        "waketime": 5.75,
+        "bedtime_label": "21:46",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-09-20",
+        "bedtime": 21.68,
+        "waketime": 5.75,
+        "bedtime_label": "21:41",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-09-21",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-09-22",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-09-25",
+        "bedtime": 21.75,
+        "waketime": 5.75,
+        "bedtime_label": "21:45",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-09-26",
+        "bedtime": 21.43,
+        "waketime": 5.75,
+        "bedtime_label": "21:26",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-09-27",
+        "bedtime": 21.6,
+        "waketime": 5.75,
+        "bedtime_label": "21:36",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-09-28",
+        "bedtime": 21.98,
+        "waketime": 5.75,
+        "bedtime_label": "21:59",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-09-29",
+        "bedtime": 22.05,
+        "waketime": 5.75,
+        "bedtime_label": "22:03",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-10-02",
+        "bedtime": 21.25,
+        "waketime": 5.47,
+        "bedtime_label": "21:15",
+        "wake_label": "5:28"
+      },
+      {
+        "date": "2023-10-03",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-10-04",
+        "bedtime": 21.72,
+        "waketime": 5.75,
+        "bedtime_label": "21:43",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-10-05",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-10-06",
+        "bedtime": 22.08,
+        "waketime": 6.32,
+        "bedtime_label": "22:05",
+        "wake_label": "6:19"
+      },
+      {
+        "date": "2023-10-09",
+        "bedtime": 21.72,
+        "waketime": 5.75,
+        "bedtime_label": "21:43",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-10-10",
+        "bedtime": 21.87,
+        "waketime": 5.75,
+        "bedtime_label": "21:52",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-10-11",
+        "bedtime": 22.15,
+        "waketime": 5.75,
+        "bedtime_label": "22:09",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-10-12",
+        "bedtime": 22.43,
+        "waketime": 5.83,
+        "bedtime_label": "22:26",
+        "wake_label": "5:50"
+      },
+      {
+        "date": "2023-10-13",
+        "bedtime": 28.03,
+        "waketime": 7.55,
+        "bedtime_label": "4:02",
+        "wake_label": "7:33"
+      },
+      {
+        "date": "2023-10-16",
+        "bedtime": 21.72,
+        "waketime": 5.75,
+        "bedtime_label": "21:43",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-10-17",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-10-18",
+        "bedtime": 22.72,
+        "waketime": 5.75,
+        "bedtime_label": "22:43",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-10-19",
+        "bedtime": 21.77,
+        "waketime": 5.75,
+        "bedtime_label": "21:46",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-10-20",
+        "bedtime": 23.05,
+        "waketime": 2.33,
+        "bedtime_label": "23:03",
+        "wake_label": "2:20"
+      },
+      {
+        "date": "2023-10-23",
+        "bedtime": 25.4,
+        "waketime": 7.75,
+        "bedtime_label": "1:24",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2023-10-24",
+        "bedtime": 25.28,
+        "waketime": 5.25,
+        "bedtime_label": "1:17",
+        "wake_label": "5:15"
+      },
+      {
+        "date": "2023-10-25",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-10-26",
+        "bedtime": 21.52,
+        "waketime": 5.75,
+        "bedtime_label": "21:31",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-10-27",
+        "bedtime": 21.77,
+        "waketime": 5.75,
+        "bedtime_label": "21:46",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-10-30",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-10-31",
+        "bedtime": 21.5,
+        "waketime": 5.8,
+        "bedtime_label": "21:30",
+        "wake_label": "5:48"
+      },
+      {
+        "date": "2023-11-01",
+        "bedtime": 21.43,
+        "waketime": 5.75,
+        "bedtime_label": "21:26",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-11-02",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2023-11-03",
+        "bedtime": 23.83,
+        "waketime": 6.62,
+        "bedtime_label": "23:50",
+        "wake_label": "6:37"
+      },
+      {
+        "date": "2023-11-06",
+        "bedtime": 22.25,
+        "waketime": 6.75,
+        "bedtime_label": "22:15",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2023-11-07",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-11-08",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-11-09",
+        "bedtime": 22.0,
+        "waketime": 6.42,
+        "bedtime_label": "22:00",
+        "wake_label": "6:25"
+      },
+      {
+        "date": "2023-11-10",
+        "bedtime": 22.5,
+        "waketime": 6.25,
+        "bedtime_label": "22:30",
+        "wake_label": "6:15"
+      },
+      {
+        "date": "2023-11-13",
+        "bedtime": 22.7,
+        "waketime": 6.42,
+        "bedtime_label": "22:42",
+        "wake_label": "6:25"
+      },
+      {
+        "date": "2023-11-14",
+        "bedtime": 21.87,
+        "waketime": 5.5,
+        "bedtime_label": "21:52",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2023-11-15",
+        "bedtime": 23.37,
+        "waketime": 6.5,
+        "bedtime_label": "23:22",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-11-16",
+        "bedtime": 22.35,
+        "waketime": 6.5,
+        "bedtime_label": "22:21",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-11-17",
+        "bedtime": 23.28,
+        "waketime": 6.5,
+        "bedtime_label": "23:17",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-11-20",
+        "bedtime": 22.0,
+        "waketime": 6.12,
+        "bedtime_label": "22:00",
+        "wake_label": "6:07"
+      },
+      {
+        "date": "2023-11-21",
+        "bedtime": 24.62,
+        "waketime": 6.25,
+        "bedtime_label": "0:37",
+        "wake_label": "6:15"
+      },
+      {
+        "date": "2023-11-22",
+        "bedtime": 22.72,
+        "waketime": 6.73,
+        "bedtime_label": "22:43",
+        "wake_label": "6:44"
+      },
+      {
+        "date": "2023-11-23",
+        "bedtime": 23.8,
+        "waketime": 7.13,
+        "bedtime_label": "23:48",
+        "wake_label": "7:08"
+      },
+      {
+        "date": "2023-11-24",
+        "bedtime": 23.32,
+        "waketime": 6.88,
+        "bedtime_label": "23:19",
+        "wake_label": "6:53"
+      },
+      {
+        "date": "2023-11-27",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-11-28",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-11-29",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-11-30",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-12-01",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-12-04",
+        "bedtime": 22.92,
+        "waketime": 6.5,
+        "bedtime_label": "22:55",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-12-05",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-12-06",
+        "bedtime": 22.0,
+        "waketime": 6.27,
+        "bedtime_label": "22:00",
+        "wake_label": "6:16"
+      },
+      {
+        "date": "2023-12-07",
+        "bedtime": 23.13,
+        "waketime": 6.5,
+        "bedtime_label": "23:08",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-12-08",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-12-11",
+        "bedtime": 22.32,
+        "waketime": 6.5,
+        "bedtime_label": "22:19",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-12-12",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-12-13",
+        "bedtime": 23.2,
+        "waketime": 6.5,
+        "bedtime_label": "23:12",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-12-14",
+        "bedtime": 22.97,
+        "waketime": 6.35,
+        "bedtime_label": "22:58",
+        "wake_label": "6:21"
+      },
+      {
+        "date": "2023-12-15",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-12-18",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-12-19",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-12-20",
+        "bedtime": 23.3,
+        "waketime": 7.53,
+        "bedtime_label": "23:18",
+        "wake_label": "7:32"
+      },
+      {
+        "date": "2023-12-21",
+        "bedtime": 22.97,
+        "waketime": 7.12,
+        "bedtime_label": "22:58",
+        "wake_label": "7:07"
+      },
+      {
+        "date": "2023-12-22",
+        "bedtime": 22.58,
+        "waketime": 6.5,
+        "bedtime_label": "22:35",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2023-12-25",
+        "bedtime": 21.55,
+        "waketime": 5.0,
+        "bedtime_label": "21:33",
+        "wake_label": "5:00"
+      },
+      {
+        "date": "2023-12-26",
+        "bedtime": 23.5,
+        "waketime": 7.65,
+        "bedtime_label": "23:30",
+        "wake_label": "7:39"
+      },
+      {
+        "date": "2023-12-27",
+        "bedtime": 23.92,
+        "waketime": 7.12,
+        "bedtime_label": "23:55",
+        "wake_label": "7:07"
+      },
+      {
+        "date": "2023-12-28",
+        "bedtime": 23.92,
+        "waketime": 7.17,
+        "bedtime_label": "23:55",
+        "wake_label": "7:10"
+      },
+      {
+        "date": "2023-12-29",
+        "bedtime": 26.27,
+        "waketime": 9.23,
+        "bedtime_label": "2:16",
+        "wake_label": "9:14"
+      },
+      {
+        "date": "2024-01-01",
+        "bedtime": 25.57,
+        "waketime": 8.5,
+        "bedtime_label": "1:34",
+        "wake_label": "8:30"
+      },
+      {
+        "date": "2024-01-02",
+        "bedtime": 24.23,
+        "waketime": 3.72,
+        "bedtime_label": "0:14",
+        "wake_label": "3:43"
+      },
+      {
+        "date": "2024-01-02",
+        "bedtime": 27.72,
+        "waketime": 8.5,
+        "bedtime_label": "3:43",
+        "wake_label": "8:30"
+      },
+      {
+        "date": "2024-01-03",
+        "bedtime": 24.92,
+        "waketime": 9.2,
+        "bedtime_label": "0:55",
+        "wake_label": "9:12"
+      },
+      {
+        "date": "2024-01-04",
+        "bedtime": 24.42,
+        "waketime": 8.92,
+        "bedtime_label": "0:25",
+        "wake_label": "8:55"
+      },
+      {
+        "date": "2024-01-05",
+        "bedtime": 26.48,
+        "waketime": 9.05,
+        "bedtime_label": "2:29",
+        "wake_label": "9:03"
+      },
+      {
+        "date": "2024-01-08",
+        "bedtime": 24.93,
+        "waketime": 9.0,
+        "bedtime_label": "0:56",
+        "wake_label": "9:00"
+      },
+      {
+        "date": "2024-01-09",
+        "bedtime": 24.88,
+        "waketime": 9.0,
+        "bedtime_label": "0:53",
+        "wake_label": "9:00"
+      },
+      {
+        "date": "2024-01-10",
+        "bedtime": 24.83,
+        "waketime": 9.08,
+        "bedtime_label": "0:50",
+        "wake_label": "9:05"
+      },
+      {
+        "date": "2024-01-11",
+        "bedtime": 24.52,
+        "waketime": 8.5,
+        "bedtime_label": "0:31",
+        "wake_label": "8:30"
+      },
+      {
+        "date": "2024-01-12",
+        "bedtime": 24.85,
+        "waketime": 9.18,
+        "bedtime_label": "0:51",
+        "wake_label": "9:11"
+      },
+      {
+        "date": "2024-01-15",
+        "bedtime": 24.75,
+        "waketime": 9.25,
+        "bedtime_label": "0:45",
+        "wake_label": "9:15"
+      },
+      {
+        "date": "2024-01-16",
+        "bedtime": 24.75,
+        "waketime": 9.25,
+        "bedtime_label": "0:45",
+        "wake_label": "9:15"
+      },
+      {
+        "date": "2024-01-17",
+        "bedtime": 24.4,
+        "waketime": 7.25,
+        "bedtime_label": "0:24",
+        "wake_label": "7:15"
+      },
+      {
+        "date": "2024-01-18",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-01-19",
+        "bedtime": 22.12,
+        "waketime": 6.5,
+        "bedtime_label": "22:07",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-01-22",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-01-23",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-01-24",
+        "bedtime": 22.18,
+        "waketime": 6.5,
+        "bedtime_label": "22:11",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-01-25",
+        "bedtime": 23.78,
+        "waketime": 6.5,
+        "bedtime_label": "23:47",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-01-26",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-01-29",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-01-30",
+        "bedtime": 22.07,
+        "waketime": 6.5,
+        "bedtime_label": "22:04",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-01-31",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-02-01",
+        "bedtime": 23.82,
+        "waketime": 6.5,
+        "bedtime_label": "23:49",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-02-02",
+        "bedtime": 22.82,
+        "waketime": 7.0,
+        "bedtime_label": "22:49",
+        "wake_label": "7:00"
+      },
+      {
+        "date": "2024-02-05",
+        "bedtime": 22.0,
+        "waketime": 6.23,
+        "bedtime_label": "22:00",
+        "wake_label": "6:14"
+      },
+      {
+        "date": "2024-02-06",
+        "bedtime": 27.1,
+        "waketime": 6.1,
+        "bedtime_label": "3:06",
+        "wake_label": "6:06"
+      },
+      {
+        "date": "2024-02-27",
+        "bedtime": 23.73,
+        "waketime": 3.78,
+        "bedtime_label": "23:44",
+        "wake_label": "3:47"
+      },
+      {
+        "date": "2024-02-28",
+        "bedtime": 24.33,
+        "waketime": 3.97,
+        "bedtime_label": "0:20",
+        "wake_label": "3:58"
+      },
+      {
+        "date": "2024-02-29",
+        "bedtime": 22.4,
+        "waketime": 6.5,
+        "bedtime_label": "22:24",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-03-01",
+        "bedtime": 24.72,
+        "waketime": 6.5,
+        "bedtime_label": "0:43",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-03-04",
+        "bedtime": 22.15,
+        "waketime": 6.5,
+        "bedtime_label": "22:09",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-03-05",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-03-06",
+        "bedtime": 22.0,
+        "waketime": 6.5,
+        "bedtime_label": "22:00",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-03-07",
+        "bedtime": 22.12,
+        "waketime": 6.5,
+        "bedtime_label": "22:07",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-03-08",
+        "bedtime": 22.62,
+        "waketime": 6.5,
+        "bedtime_label": "22:37",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-03-11",
+        "bedtime": 21.43,
+        "waketime": 5.5,
+        "bedtime_label": "21:26",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-03-12",
+        "bedtime": 21.55,
+        "waketime": 5.5,
+        "bedtime_label": "21:33",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-03-13",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-03-14",
+        "bedtime": 22.23,
+        "waketime": 5.5,
+        "bedtime_label": "22:14",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-03-15",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-03-18",
+        "bedtime": 21.22,
+        "waketime": 5.65,
+        "bedtime_label": "21:13",
+        "wake_label": "5:39"
+      },
+      {
+        "date": "2024-03-19",
+        "bedtime": 23.18,
+        "waketime": 5.5,
+        "bedtime_label": "23:11",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-03-20",
+        "bedtime": 22.35,
+        "waketime": 5.5,
+        "bedtime_label": "22:21",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-03-21",
+        "bedtime": 23.18,
+        "waketime": 3.67,
+        "bedtime_label": "23:11",
+        "wake_label": "3:40"
+      },
+      {
+        "date": "2024-03-22",
+        "bedtime": 24.92,
+        "waketime": 7.77,
+        "bedtime_label": "0:55",
+        "wake_label": "7:46"
+      },
+      {
+        "date": "2024-03-25",
+        "bedtime": 25.58,
+        "waketime": 7.0,
+        "bedtime_label": "1:35",
+        "wake_label": "7:00"
+      },
+      {
+        "date": "2024-03-26",
+        "bedtime": 21.57,
+        "waketime": 5.5,
+        "bedtime_label": "21:34",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-03-27",
+        "bedtime": 21.5,
+        "waketime": 5.57,
+        "bedtime_label": "21:30",
+        "wake_label": "5:34"
+      },
+      {
+        "date": "2024-03-28",
+        "bedtime": 21.15,
+        "waketime": 5.5,
+        "bedtime_label": "21:09",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-03-29",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-04-01",
+        "bedtime": 21.07,
+        "waketime": 5.43,
+        "bedtime_label": "21:04",
+        "wake_label": "5:26"
+      },
+      {
+        "date": "2024-04-02",
+        "bedtime": 21.13,
+        "waketime": 5.5,
+        "bedtime_label": "21:08",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-04-03",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-04-04",
+        "bedtime": 21.27,
+        "waketime": 5.5,
+        "bedtime_label": "21:16",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-04-05",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-04-08",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-04-09",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-04-10",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-04-11",
+        "bedtime": 21.65,
+        "waketime": 5.5,
+        "bedtime_label": "21:39",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-04-12",
+        "bedtime": 21.42,
+        "waketime": 5.5,
+        "bedtime_label": "21:25",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-04-15",
+        "bedtime": 21.75,
+        "waketime": 5.73,
+        "bedtime_label": "21:45",
+        "wake_label": "5:44"
+      },
+      {
+        "date": "2024-04-16",
+        "bedtime": 21.25,
+        "waketime": 5.42,
+        "bedtime_label": "21:15",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2024-04-17",
+        "bedtime": 21.45,
+        "waketime": 5.5,
+        "bedtime_label": "21:27",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-04-18",
+        "bedtime": 21.2,
+        "waketime": 5.5,
+        "bedtime_label": "21:12",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-04-19",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-04-22",
+        "bedtime": 22.38,
+        "waketime": 5.42,
+        "bedtime_label": "22:23",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2024-04-23",
+        "bedtime": 21.88,
+        "waketime": 5.5,
+        "bedtime_label": "21:53",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-04-24",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-04-25",
+        "bedtime": 21.0,
+        "waketime": 5.52,
+        "bedtime_label": "21:00",
+        "wake_label": "5:31"
+      },
+      {
+        "date": "2024-04-26",
+        "bedtime": 22.57,
+        "waketime": 4.17,
+        "bedtime_label": "22:34",
+        "wake_label": "4:10"
+      },
+      {
+        "date": "2024-04-29",
+        "bedtime": 20.93,
+        "waketime": 5.25,
+        "bedtime_label": "20:56",
+        "wake_label": "5:15"
+      },
+      {
+        "date": "2024-04-30",
+        "bedtime": 20.75,
+        "waketime": 5.25,
+        "bedtime_label": "20:45",
+        "wake_label": "5:15"
+      },
+      {
+        "date": "2024-05-01",
+        "bedtime": 21.55,
+        "waketime": 4.15,
+        "bedtime_label": "21:33",
+        "wake_label": "4:09"
+      },
+      {
+        "date": "2024-05-02",
+        "bedtime": 21.17,
+        "waketime": 5.67,
+        "bedtime_label": "21:10",
+        "wake_label": "5:40"
+      },
+      {
+        "date": "2024-05-03",
+        "bedtime": 26.05,
+        "waketime": 5.98,
+        "bedtime_label": "2:03",
+        "wake_label": "5:59"
+      },
+      {
+        "date": "2024-05-06",
+        "bedtime": 22.95,
+        "waketime": 6.3,
+        "bedtime_label": "22:57",
+        "wake_label": "6:18"
+      },
+      {
+        "date": "2024-05-07",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-05-08",
+        "bedtime": 21.0,
+        "waketime": 5.43,
+        "bedtime_label": "21:00",
+        "wake_label": "5:26"
+      },
+      {
+        "date": "2024-05-09",
+        "bedtime": 23.68,
+        "waketime": 5.45,
+        "bedtime_label": "23:41",
+        "wake_label": "5:27"
+      },
+      {
+        "date": "2024-05-10",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-05-13",
+        "bedtime": 22.48,
+        "waketime": 6.1,
+        "bedtime_label": "22:29",
+        "wake_label": "6:06"
+      },
+      {
+        "date": "2024-05-14",
+        "bedtime": 21.13,
+        "waketime": 5.5,
+        "bedtime_label": "21:08",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-05-15",
+        "bedtime": 23.0,
+        "waketime": 5.38,
+        "bedtime_label": "23:00",
+        "wake_label": "5:23"
+      },
+      {
+        "date": "2024-05-16",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-05-17",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-05-20",
+        "bedtime": 21.0,
+        "waketime": 5.48,
+        "bedtime_label": "21:00",
+        "wake_label": "5:29"
+      },
+      {
+        "date": "2024-05-21",
+        "bedtime": 21.0,
+        "waketime": 5.32,
+        "bedtime_label": "21:00",
+        "wake_label": "5:19"
+      },
+      {
+        "date": "2024-05-22",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-05-23",
+        "bedtime": 21.1,
+        "waketime": 5.33,
+        "bedtime_label": "21:06",
+        "wake_label": "5:20"
+      },
+      {
+        "date": "2024-05-24",
+        "bedtime": 22.98,
+        "waketime": 5.33,
+        "bedtime_label": "22:59",
+        "wake_label": "5:20"
+      },
+      {
+        "date": "2024-05-27",
+        "bedtime": 21.88,
+        "waketime": 6.0,
+        "bedtime_label": "21:53",
+        "wake_label": "6:00"
+      },
+      {
+        "date": "2024-05-28",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-05-29",
+        "bedtime": 21.0,
+        "waketime": 5.35,
+        "bedtime_label": "21:00",
+        "wake_label": "5:21"
+      },
+      {
+        "date": "2024-05-30",
+        "bedtime": 21.35,
+        "waketime": 5.33,
+        "bedtime_label": "21:21",
+        "wake_label": "5:20"
+      },
+      {
+        "date": "2024-05-31",
+        "bedtime": 22.75,
+        "waketime": 5.37,
+        "bedtime_label": "22:45",
+        "wake_label": "5:22"
+      },
+      {
+        "date": "2024-06-03",
+        "bedtime": 21.23,
+        "waketime": 5.33,
+        "bedtime_label": "21:14",
+        "wake_label": "5:20"
+      },
+      {
+        "date": "2024-06-04",
+        "bedtime": 21.0,
+        "waketime": 5.27,
+        "bedtime_label": "21:00",
+        "wake_label": "5:16"
+      },
+      {
+        "date": "2024-06-05",
+        "bedtime": 21.0,
+        "waketime": 5.1,
+        "bedtime_label": "21:00",
+        "wake_label": "5:06"
+      },
+      {
+        "date": "2024-06-06",
+        "bedtime": 21.22,
+        "waketime": 5.12,
+        "bedtime_label": "21:13",
+        "wake_label": "5:07"
+      },
+      {
+        "date": "2024-06-07",
+        "bedtime": 21.0,
+        "waketime": 5.33,
+        "bedtime_label": "21:00",
+        "wake_label": "5:20"
+      },
+      {
+        "date": "2024-06-10",
+        "bedtime": 21.0,
+        "waketime": 5.48,
+        "bedtime_label": "21:00",
+        "wake_label": "5:29"
+      },
+      {
+        "date": "2024-06-11",
+        "bedtime": 21.02,
+        "waketime": 5.38,
+        "bedtime_label": "21:01",
+        "wake_label": "5:23"
+      },
+      {
+        "date": "2024-06-12",
+        "bedtime": 21.18,
+        "waketime": 5.1,
+        "bedtime_label": "21:11",
+        "wake_label": "5:06"
+      },
+      {
+        "date": "2024-06-13",
+        "bedtime": 23.12,
+        "waketime": 5.12,
+        "bedtime_label": "23:07",
+        "wake_label": "5:07"
+      },
+      {
+        "date": "2024-06-14",
+        "bedtime": 22.78,
+        "waketime": 5.17,
+        "bedtime_label": "22:47",
+        "wake_label": "5:10"
+      },
+      {
+        "date": "2024-06-17",
+        "bedtime": 22.33,
+        "waketime": 5.32,
+        "bedtime_label": "22:20",
+        "wake_label": "5:19"
+      },
+      {
+        "date": "2024-06-18",
+        "bedtime": 21.43,
+        "waketime": 5.5,
+        "bedtime_label": "21:26",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-06-19",
+        "bedtime": 21.0,
+        "waketime": 4.97,
+        "bedtime_label": "21:00",
+        "wake_label": "4:58"
+      },
+      {
+        "date": "2024-06-20",
+        "bedtime": 21.32,
+        "waketime": 5.18,
+        "bedtime_label": "21:19",
+        "wake_label": "5:11"
+      },
+      {
+        "date": "2024-06-21",
+        "bedtime": 21.07,
+        "waketime": 5.5,
+        "bedtime_label": "21:04",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-06-24",
+        "bedtime": 21.0,
+        "waketime": 5.45,
+        "bedtime_label": "21:00",
+        "wake_label": "5:27"
+      },
+      {
+        "date": "2024-06-25",
+        "bedtime": 25.15,
+        "waketime": 6.5,
+        "bedtime_label": "1:09",
+        "wake_label": "6:30"
+      },
+      {
+        "date": "2024-06-26",
+        "bedtime": 21.0,
+        "waketime": 5.23,
+        "bedtime_label": "21:00",
+        "wake_label": "5:14"
+      },
+      {
+        "date": "2024-06-27",
+        "bedtime": 21.0,
+        "waketime": 4.93,
+        "bedtime_label": "21:00",
+        "wake_label": "4:56"
+      },
+      {
+        "date": "2024-06-28",
+        "bedtime": 21.03,
+        "waketime": 5.07,
+        "bedtime_label": "21:02",
+        "wake_label": "5:04"
+      },
+      {
+        "date": "2024-07-01",
+        "bedtime": 21.0,
+        "waketime": 5.27,
+        "bedtime_label": "21:00",
+        "wake_label": "5:16"
+      },
+      {
+        "date": "2024-07-02",
+        "bedtime": 21.0,
+        "waketime": 5.28,
+        "bedtime_label": "21:00",
+        "wake_label": "5:17"
+      },
+      {
+        "date": "2024-07-03",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-07-04",
+        "bedtime": 21.0,
+        "waketime": 5.17,
+        "bedtime_label": "21:00",
+        "wake_label": "5:10"
+      },
+      {
+        "date": "2024-07-05",
+        "bedtime": 21.03,
+        "waketime": 4.9,
+        "bedtime_label": "21:02",
+        "wake_label": "4:54"
+      },
+      {
+        "date": "2024-07-08",
+        "bedtime": 21.0,
+        "waketime": 5.35,
+        "bedtime_label": "21:00",
+        "wake_label": "5:21"
+      },
+      {
+        "date": "2024-07-09",
+        "bedtime": 21.0,
+        "waketime": 5.43,
+        "bedtime_label": "21:00",
+        "wake_label": "5:26"
+      },
+      {
+        "date": "2024-07-10",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-07-11",
+        "bedtime": 21.33,
+        "waketime": 5.15,
+        "bedtime_label": "21:20",
+        "wake_label": "5:09"
+      },
+      {
+        "date": "2024-07-12",
+        "bedtime": 21.03,
+        "waketime": 5.22,
+        "bedtime_label": "21:02",
+        "wake_label": "5:13"
+      },
+      {
+        "date": "2024-07-15",
+        "bedtime": 21.0,
+        "waketime": 5.4,
+        "bedtime_label": "21:00",
+        "wake_label": "5:24"
+      },
+      {
+        "date": "2024-07-16",
+        "bedtime": 20.72,
+        "waketime": 5.08,
+        "bedtime_label": "20:43",
+        "wake_label": "5:05"
+      },
+      {
+        "date": "2024-07-17",
+        "bedtime": 22.68,
+        "waketime": 4.17,
+        "bedtime_label": "22:41",
+        "wake_label": "4:10"
+      },
+      {
+        "date": "2024-07-18",
+        "bedtime": 21.87,
+        "waketime": 4.5,
+        "bedtime_label": "21:52",
+        "wake_label": "4:30"
+      },
+      {
+        "date": "2024-07-19",
+        "bedtime": 24.18,
+        "waketime": 5.27,
+        "bedtime_label": "0:11",
+        "wake_label": "5:16"
+      },
+      {
+        "date": "2024-07-22",
+        "bedtime": 21.02,
+        "waketime": 5.45,
+        "bedtime_label": "21:01",
+        "wake_label": "5:27"
+      },
+      {
+        "date": "2024-07-23",
+        "bedtime": 21.0,
+        "waketime": 5.33,
+        "bedtime_label": "21:00",
+        "wake_label": "5:20"
+      },
+      {
+        "date": "2024-07-24",
+        "bedtime": 21.05,
+        "waketime": 5.48,
+        "bedtime_label": "21:03",
+        "wake_label": "5:29"
+      },
+      {
+        "date": "2024-07-25",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-07-26",
+        "bedtime": 22.1,
+        "waketime": 5.5,
+        "bedtime_label": "22:06",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-07-29",
+        "bedtime": 20.75,
+        "waketime": 5.25,
+        "bedtime_label": "20:45",
+        "wake_label": "5:15"
+      },
+      {
+        "date": "2024-07-30",
+        "bedtime": 20.92,
+        "waketime": 5.42,
+        "bedtime_label": "20:55",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2024-07-31",
+        "bedtime": 23.87,
+        "waketime": 5.42,
+        "bedtime_label": "23:52",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2024-08-01",
+        "bedtime": 20.92,
+        "waketime": 5.42,
+        "bedtime_label": "20:55",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2024-08-02",
+        "bedtime": 20.92,
+        "waketime": 5.42,
+        "bedtime_label": "20:55",
+        "wake_label": "5:25"
+      },
+      {
+        "date": "2024-08-05",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-08-06",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-08-07",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-08-08",
+        "bedtime": 21.03,
+        "waketime": 5.5,
+        "bedtime_label": "21:02",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-08-09",
+        "bedtime": 21.62,
+        "waketime": 5.7,
+        "bedtime_label": "21:37",
+        "wake_label": "5:42"
+      },
+      {
+        "date": "2024-08-12",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-08-13",
+        "bedtime": 21.43,
+        "waketime": 5.75,
+        "bedtime_label": "21:26",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-08-14",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-08-15",
+        "bedtime": 21.77,
+        "waketime": 5.75,
+        "bedtime_label": "21:46",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-08-16",
+        "bedtime": 21.65,
+        "waketime": 5.75,
+        "bedtime_label": "21:39",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-08-19",
+        "bedtime": 21.0,
+        "waketime": 5.5,
+        "bedtime_label": "21:00",
+        "wake_label": "5:30"
+      },
+      {
+        "date": "2024-08-20",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-08-21",
+        "bedtime": 21.28,
+        "waketime": 5.75,
+        "bedtime_label": "21:17",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-08-22",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-08-23",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-08-26",
+        "bedtime": 21.53,
+        "waketime": 5.75,
+        "bedtime_label": "21:32",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-08-27",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-08-28",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-08-29",
+        "bedtime": 23.4,
+        "waketime": 5.75,
+        "bedtime_label": "23:24",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-08-30",
+        "bedtime": 21.6,
+        "waketime": 5.92,
+        "bedtime_label": "21:36",
+        "wake_label": "5:55"
+      },
+      {
+        "date": "2024-09-02",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-09-03",
+        "bedtime": 23.63,
+        "waketime": 5.75,
+        "bedtime_label": "23:38",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-09-04",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-09-05",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-09-06",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-09-09",
+        "bedtime": 23.82,
+        "waketime": 6.75,
+        "bedtime_label": "23:49",
+        "wake_label": "6:45"
+      },
+      {
+        "date": "2024-09-10",
+        "bedtime": 22.83,
+        "waketime": 5.92,
+        "bedtime_label": "22:50",
+        "wake_label": "5:55"
+      },
+      {
+        "date": "2024-09-11",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-09-12",
+        "bedtime": 22.72,
+        "waketime": 5.75,
+        "bedtime_label": "22:43",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-09-13",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-09-16",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-09-17",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-09-18",
+        "bedtime": 25.33,
+        "waketime": 6.8,
+        "bedtime_label": "1:20",
+        "wake_label": "6:48"
+      },
+      {
+        "date": "2024-09-19",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-09-20",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-09-23",
+        "bedtime": 21.25,
+        "waketime": 5.58,
+        "bedtime_label": "21:15",
+        "wake_label": "5:35"
+      },
+      {
+        "date": "2024-09-24",
+        "bedtime": 24.75,
+        "waketime": 5.77,
+        "bedtime_label": "0:45",
+        "wake_label": "5:46"
+      },
+      {
+        "date": "2024-09-25",
+        "bedtime": 23.58,
+        "waketime": 8.05,
+        "bedtime_label": "23:35",
+        "wake_label": "8:03"
+      },
+      {
+        "date": "2024-09-26",
+        "bedtime": 22.42,
+        "waketime": 6.92,
+        "bedtime_label": "22:25",
+        "wake_label": "6:55"
+      },
+      {
+        "date": "2024-09-27",
+        "bedtime": 23.25,
+        "waketime": 7.75,
+        "bedtime_label": "23:15",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2024-09-30",
+        "bedtime": 23.25,
+        "waketime": 7.75,
+        "bedtime_label": "23:15",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2024-10-01",
+        "bedtime": 23.25,
+        "waketime": 7.43,
+        "bedtime_label": "23:15",
+        "wake_label": "7:26"
+      },
+      {
+        "date": "2024-10-02",
+        "bedtime": 24.25,
+        "waketime": 7.62,
+        "bedtime_label": "0:15",
+        "wake_label": "7:37"
+      },
+      {
+        "date": "2024-10-03",
+        "bedtime": 24.08,
+        "waketime": 7.7,
+        "bedtime_label": "0:05",
+        "wake_label": "7:42"
+      },
+      {
+        "date": "2024-10-04",
+        "bedtime": 23.4,
+        "waketime": 7.58,
+        "bedtime_label": "23:24",
+        "wake_label": "7:35"
+      },
+      {
+        "date": "2024-10-07",
+        "bedtime": 23.5,
+        "waketime": 7.73,
+        "bedtime_label": "23:30",
+        "wake_label": "7:44"
+      },
+      {
+        "date": "2024-10-08",
+        "bedtime": 23.88,
+        "waketime": 7.75,
+        "bedtime_label": "23:53",
+        "wake_label": "7:45"
+      },
+      {
+        "date": "2024-10-09",
+        "bedtime": 24.1,
+        "waketime": 6.27,
+        "bedtime_label": "0:06",
+        "wake_label": "6:16"
+      },
+      {
+        "date": "2024-10-10",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-10-11",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-10-15",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-10-16",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-10-17",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-10-18",
+        "bedtime": 23.65,
+        "waketime": 6.83,
+        "bedtime_label": "23:39",
+        "wake_label": "6:50"
+      },
+      {
+        "date": "2024-10-21",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-10-22",
+        "bedtime": 22.65,
+        "waketime": 5.75,
+        "bedtime_label": "22:39",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-10-23",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-10-24",
+        "bedtime": 22.47,
+        "waketime": 6.1,
+        "bedtime_label": "22:28",
+        "wake_label": "6:06"
+      },
+      {
+        "date": "2024-10-25",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-10-28",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-10-29",
+        "bedtime": 21.88,
+        "waketime": 5.75,
+        "bedtime_label": "21:53",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-10-30",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-10-31",
+        "bedtime": 21.25,
+        "waketime": 5.75,
+        "bedtime_label": "21:15",
+        "wake_label": "5:45"
+      },
+      {
+        "date": "2024-11-01",
+        "bedtime": 22.55,
+        "waketime": 7.03,
+        "bedtime_label": "22:33",
+        "wake_label": "7:02"
+      },
+      {
+        "date": "2024-11-04",
+        "bedtime": 22.45,
+        "waketime": 6.42,
+        "bedtime_label": "22:27",
+        "wake_label": "6:25"
+      },
+      {
+        "date": "2024-11-05",
+        "bedtime": 24.62,
+        "waketime": 6.42,
+        "bedtime_label": "0:37",
+        "wake_label": "6:25"
+      },
+      {
+        "date": "2024-11-06",
+        "bedtime": 21.92,
+        "waketime": 5.18,
+        "bedtime_label": "21:55",
+        "wake_label": "5:11"
+      },
+      {
+        "date": "2024-11-07",
+        "bedtime": 22.83,
+        "waketime": 6.42,
+        "bedtime_label": "22:50",
+        "wake_label": "6:25"
+      },
+      {
+        "date": "2024-11-08",
+        "bedtime": 23.53,
+        "waketime": 6.35,
+        "bedtime_label": "23:32",
+        "wake_label": "6:21"
+      },
+      {
+        "date": "2024-11-11",
+        "bedtime": 23.27,
+        "waketime": 6.42,
+        "bedtime_label": "23:16",
+        "wake_label": "6:25"
+      },
+      {
+        "date": "2024-11-12",
+        "bedtime": 21.92,
+        "waketime": 6.42,
+        "bedtime_label": "21:55",
+        "wake_label": "6:25"
+      },
+      {
+        "date": "2024-11-13",
+        "bedtime": 21.92,
+        "waketime": 6.42,
+        "bedtime_label": "21:55",
+        "wake_label": "6:25"
+      },
+      {
+        "date": "2024-11-14",
+        "bedtime": 21.92,
+        "waketime": 6.42,
+        "bedtime_label": "21:55",
+        "wake_label": "6:25"
+      },
+      {
+        "date": "2024-11-15",
+        "bedtime": 21.97,
+        "waketime": 6.42,
+        "bedtime_label": "21:58",
+        "wake_label": "6:25"
+      },
+      {
+        "date": "2024-11-18",
+        "bedtime": 21.92,
+        "waketime": 6.42,
+        "bedtime_label": "21:55",
+        "wake_label": "6:25"
+      },
+      {
+        "date": "2024-11-19",
+        "bedtime": 22.37,
+        "waketime": 6.42,
+        "bedtime_label": "22:22",
+        "wake_label": "6:25"
+      },
+      {
+        "date": "2024-11-20",
+        "bedtime": 21.92,
+        "waketime": 6.42,
+        "bedtime_label": "21:55",
+        "wake_label": "6:25"
+      },
+      {
+        "date": "2024-11-21",
+        "bedtime": 21.92,
+        "waketime": 6.42,
+        "bedtime_label": "21:55",
+        "wake_label": "6:25"
+      },
+      {
+        "date": "2024-11-22",
+        "bedtime": 21.92,
+        "waketime": 6.42,
+        "bedtime_label": "21:55",
+        "wake_label": "6:25"
+      }
+    ],
+    "avg_bedtime": 22.59,
+    "avg_waketime": 6.36,
+    "bedtime_std_min": 84.0,
+    "waketime_std_min": 65.0,
+    "avg_bedtime_label": "10:35pm",
+    "avg_waketime_label": "6:21am",
+    "nights": 688
+  }
+}

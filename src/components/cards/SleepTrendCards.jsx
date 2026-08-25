@@ -1,23 +1,26 @@
 import { motion } from 'framer-motion'
+import MetricTooltip from '../MetricTooltip'
 
+// metric key attached per row — keeps the tooltip locked to the right
+// definition even if stages are reordered or relabeled later
 const TREND_DATA = {
   yvonne: [
-    { stage: 'Deep Sleep',  current: 59, prev: 47, unit: 'min', dir: 'up',   note: 'Physical repair — improving' },
-    { stage: 'REM Sleep',   current: 91, prev: 79, unit: 'min', dir: 'up',   note: 'Cognitive recovery — improving' },
-    { stage: 'Awake Time',  current: 31, prev: 43, unit: 'min', dir: 'down', note: 'Sleep continuity — improving' },
-    { stage: 'Efficiency',  current: 92, prev: 87, unit: '%',   dir: 'up',   note: 'Time in bed well used' },
+    { stage: 'Deep Sleep',  metric: 'deep_sleep',       current: 59, prev: 47, unit: 'min', dir: 'up',   note: 'Physical repair — improving' },
+    { stage: 'REM Sleep',   metric: 'rem',               current: 91, prev: 79, unit: 'min', dir: 'up',   note: 'Cognitive recovery — improving' },
+    { stage: 'Awake Time',  metric: 'awake_time',        current: 31, prev: 43, unit: 'min', dir: 'down', note: 'Sleep continuity — improving' },
+    { stage: 'Efficiency',  metric: 'sleep_efficiency',  current: 92, prev: 87, unit: '%',   dir: 'up',   note: 'Time in bed well used' },
   ],
   jamie: [
-    { stage: 'Deep Sleep',  current: 49, prev: 44, unit: 'min', dir: 'up',   note: 'Gradually improving' },
-    { stage: 'REM Sleep',   current: 78, prev: 74, unit: 'min', dir: 'up',   note: 'Stable' },
-    { stage: 'Awake Time',  current: 32, prev: 38, unit: 'min', dir: 'down', note: 'Improving' },
-    { stage: 'Efficiency',  current: 88, prev: 85, unit: '%',   dir: 'up',   note: 'Above 85% threshold' },
+    { stage: 'Deep Sleep',  metric: 'deep_sleep',       current: 49, prev: 44, unit: 'min', dir: 'up',   note: 'Gradually improving' },
+    { stage: 'REM Sleep',   metric: 'rem',               current: 78, prev: 74, unit: 'min', dir: 'up',   note: 'Stable' },
+    { stage: 'Awake Time',  metric: 'awake_time',        current: 32, prev: 38, unit: 'min', dir: 'down', note: 'Improving' },
+    { stage: 'Efficiency',  metric: 'sleep_efficiency',  current: 88, prev: 85, unit: '%',   dir: 'up',   note: 'Above 85% threshold' },
   ],
   robert: [
-    { stage: 'Deep Sleep',  current: 53, prev: 48, unit: 'min', dir: 'up',   note: 'Better since retirement' },
-    { stage: 'REM Sleep',   current: 71, prev: 68, unit: 'min', dir: 'up',   note: 'Consistent' },
-    { stage: 'Awake Time',  current: 26, prev: 42, unit: 'min', dir: 'down', note: 'Significantly improved' },
-    { stage: 'Efficiency',  current: 88, prev: 82, unit: '%',   dir: 'up',   note: 'Retirement improved sleep' },
+    { stage: 'Deep Sleep',  metric: 'deep_sleep',       current: 53, prev: 48, unit: 'min', dir: 'up',   note: 'Better since retirement' },
+    { stage: 'REM Sleep',   metric: 'rem',               current: 71, prev: 68, unit: 'min', dir: 'up',   note: 'Consistent' },
+    { stage: 'Awake Time',  metric: 'awake_time',        current: 26, prev: 42, unit: 'min', dir: 'down', note: 'Significantly improved' },
+    { stage: 'Efficiency',  metric: 'sleep_efficiency',  current: 88, prev: 82, unit: '%',   dir: 'up',   note: 'Retirement improved sleep' },
   ],
 }
 
@@ -49,15 +52,18 @@ export default function SleepTrendCards({ persona = 'yvonne' }) {
               border: '1px solid rgba(255,255,255,0.06)',
             }}
           >
-            <p style={{
-              fontSize: 10,
-              color: 'rgba(255,255,255,0.3)',
-              letterSpacing: '0.04em',
-              textTransform: 'uppercase',
-              marginBottom: 8,
-            }}>
-              {item.stage}
-            </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 5, marginBottom: 8 }}>
+              <p style={{
+                fontSize: 10,
+                color: 'rgba(255,255,255,0.3)',
+                letterSpacing: '0.04em',
+                textTransform: 'uppercase',
+                margin: 0,
+              }}>
+                {item.stage}
+              </p>
+              {item.metric && <MetricTooltip metric={item.metric} />}
+            </div>
             <p style={{
               fontSize: 22, fontWeight: 700,
               lineHeight: 1, marginBottom: 4,

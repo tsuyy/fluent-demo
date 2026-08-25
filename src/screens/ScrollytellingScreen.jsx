@@ -3,11 +3,14 @@ import { Scrollama, Step } from 'react-scrollama'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 
 import SceneIndicator  from '../components/scrolly/SceneIndicator'
-import Scene01Opening  from '../components/scrolly/scenes/yvonne/Scene01Opening'
-import Scene02Heart    from '../components/scrolly/scenes/yvonne/Scene02Heart'
-import Scene03Movement from '../components/scrolly/scenes/yvonne/Scene03Movement'
-import Scene04Sports   from '../components/scrolly/scenes/yvonne/Scene04Sports'
-import Scene05Sleep    from '../components/scrolly/scenes/yvonne/Scene05Sleep'
+import Scene01Opening    from '../components/scrolly/scenes/yvonne/Scene01Opening'
+import Scene02Heart      from '../components/scrolly/scenes/yvonne/Scene02Heart'
+import Scene03Movement   from '../components/scrolly/scenes/yvonne/Scene03Movement'
+import Scene04Sports     from '../components/scrolly/scenes/yvonne/Scene04Sports'
+import Scene05Sleep      from '../components/scrolly/scenes/yvonne/Scene05Sleep'
+import Scene06Reflection from '../components/scrolly/scenes/yvonne/Scene06Reflection'
+import Scene07CannotSee  from '../components/scrolly/scenes/yvonne/Scene07CannotSee'
+import Scene08Closing    from '../components/scrolly/scenes/yvonne/Scene08Closing'
 
 /* ── WIRING ─────────────────────────────────────────────────────────
    The one place charts and data are bound. If chart prop names
@@ -27,19 +30,16 @@ const charts = {
 /* ── STORY NUMBERS ──────────────────────────────────────────────────
    Copy-critical figures live here, not inside scene components.    */
 const YVONNE_STORY = {
-  startDate: 'March 3, 2022', // TODO confirm real first-tracked date
-  heartbeats: 643000,         // TODO verify — see INTEGRATION.md note on this figure
-  workouts: 1652,
-  sportsWord: 'nine',
-  sleepYears: '4+',
+  startDate: 'January 7, 2022',
+  heartbeats: 147246480,
+  workouts: 1733,
+  sleepHours: '2,445',
   pivotQuarter: 'Q4 2022',
   heart: {
     rhr: { from: 66, to: 59, perDay: 10080, perYear: '3.7 million' },
     hrv: { from: 33, to: 45, pctLabel: '37%' },
   },
-  tennis: {
-    sessions: 22,             // sessions tracked since 2025
-  },
+  tennis: { sessions: 22 },
 }
 
 /* ── SCENE REGISTRY ─────────────────────────────────────────────────
@@ -50,41 +50,28 @@ const YVONNE_STORY = {
    Robert set slot in here as they're built.                        */
 const SCENES = {
   yvonne: [
-    {
-      id: 'opening',
-      label: 'The beginning',
-      beats: 5,
-      render: (props) => <Scene01Opening {...props} story={YVONNE_STORY} />,
-    },
-    {
-      id: 'heart',
-      label: 'Your heart',
-      beats: 5,
+    { id: 'opening',    label: 'The beginning',          beats: 5,
+      render: (props) => <Scene01Opening {...props} story={YVONNE_STORY} /> },
+    { id: 'heart',      label: 'Your heart',             beats: 5,
+      render: (props) => <Scene02Heart {...props} story={YVONNE_STORY} renderChart={charts.quarterlyArc} /> },
+    { id: 'movement',   label: 'How you moved',          beats: 5,
+      render: (props) => <Scene03Movement {...props} story={YVONNE_STORY} calendarData={calendarData} /> },
+    { id: 'sports',     label: 'What the data noticed',  beats: 6,
+      render: (props) => <Scene04Sports {...props} story={YVONNE_STORY} /> },
+    { id: 'sleep',      label: 'How you slept',          beats: 7,
+      render: (props) => <Scene05Sleep {...props} /> },
+    { id: 'reflection', label: 'What stands out',        beats: 5,
+      render: (props) => <Scene06Reflection {...props} /> },
+    { id: 'cannotsee',  label: "What the data can't see", beats: 3,
+      render: (props) => <Scene07CannotSee {...props} /> },
+    { id: 'closing',    label: "What's yours",            beats: 4,
       render: (props) => (
-        <Scene02Heart {...props} story={YVONNE_STORY} renderChart={charts.quarterlyArc} />
-      ),
-    },
-    {
-      id: 'movement',
-      label: 'How you moved',
-      beats: 5,  // 0 intro · 1 calendar · 2 fall · 3 Oct/Feb · 4 verification
-      render: (props) => (
-        <Scene03Movement {...props} story={YVONNE_STORY} calendarData={calendarData} />
-      ),
-    },
-    {
-      id: 'sports',
-      label: 'What the data noticed',
-      beats: 6,  // 0 intro · 1 skiing · 2 other sports · 3 tennis · 4 agency · 5 verification
-      render: (props) => <Scene04Sports {...props} story={YVONNE_STORY} />,
-    },
-    {
-      id: 'sleep',
-      label: 'How you slept',
-      beats: 7,  // 0 intro · 1 arch bars · 2 QQRT · 3 deep sleep copy · 4 weekly rhythm · 5 Mon/Sat copy · 6 verification
-      render: (props) => <Scene05Sleep {...props} />,
-    },
-    // Scene06 (philosophical pause) and Scene07 (closing) → week 3
+        <Scene08Closing
+          {...props}
+          onComplete={() => props.onNavigate?.('home')}
+          onRestart={() => props.onNavigate?.('thesis')}
+        />
+      ) },
   ],
   robert: [],
   // Jamie and Alex scrollytelling → not specced yet
@@ -92,10 +79,10 @@ const SCENES = {
 
 /* Where in a scene's scroll track the beats play out. The head and
    tail holds give the first and last line room to breathe. */
-const HOLD_IN = 0.05       // very short hold before first beat fires
-const HOLD_OUT = 0.08      // short tail after last beat
-const SCROLL_OFFSET = 0.85 // trigger near bottom of viewport — beat fires as step enters view
-const VH_PER_BEAT = 22     // tighter pacing
+const HOLD_IN = 0.04
+const HOLD_OUT = 0.06
+const SCROLL_OFFSET = 0.9  // trigger at 90% down viewport — fires beat as soon as scene enters
+const VH_PER_BEAT = 18     // 18vh per beat — each scroll gesture advances one beat
 
 function beatFromProgress(progress, beats) {
   const span = 1 - HOLD_IN - HOLD_OUT
@@ -105,8 +92,15 @@ function beatFromProgress(progress, beats) {
   return Math.min(beats - 1, Math.floor(t * beats))
 }
 
-export default function ScrollytellingScreen({ persona, onComplete, onBack }) {
+export default function ScrollytellingScreen({ persona, onComplete, onBack, onNavigate: onNavigateProp }) {
   const scenes = useMemo(() => SCENES[persona] ?? [], [persona])
+
+  // onNavigate for scene CTAs — 'home' → onComplete, 'thesis' → onBack, else → prop
+  const onNavigate = useCallback((target) => {
+    if (target === 'home')   { onComplete?.(); return }
+    if (target === 'thesis') { onBack?.();     return }
+    onNavigateProp?.(target)
+  }, [onComplete, onBack, onNavigateProp])
   const reduced = useReducedMotion()
 
   const [current, setCurrent] = useState(0)
@@ -241,6 +235,7 @@ export default function ScrollytellingScreen({ persona, onComplete, onBack }) {
                   response: responses[scene.id],
                   onRespond: (value) =>
                     setResponses((prev) => ({ ...prev, [scene.id]: value })),
+                  onNavigate,
                 })}
               </div>
             </div>
@@ -249,35 +244,7 @@ export default function ScrollytellingScreen({ persona, onComplete, onBack }) {
       </Scrollama>
       )}
 
-      <AnimatePresence>
-        {current >= 1 && (
-          <motion.button
-            type="button"
-            className="scrolly-focus"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            onClick={() => onComplete?.(responses)}
-            style={{
-              position: 'fixed',
-              bottom: 28,
-              right: 28,
-              zIndex: 40,
-              background: 'transparent',
-              border: '1px solid rgba(255,255,255,0.15)',
-              borderRadius: 8,
-              padding: '10px 18px',
-              color: 'var(--color-quiet, #888780)',
-              fontFamily: 'inherit',
-              fontSize: 13,
-              cursor: 'pointer',
-            }}
-          >
-            skip to explore →
-          </motion.button>
-        )}
-      </AnimatePresence>
+
     </div>
   )
 }

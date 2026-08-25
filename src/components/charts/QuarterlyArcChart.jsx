@@ -1,7 +1,11 @@
 import { ResponsiveLine } from '@nivo/line'
 import { CHART_THEME } from '../../data/chartTheme'
 
-// Real data from Yvonne's quarterly.json
+// Default/fallback dataset — used only if no data prop is passed.
+// The timeframe selector on HowIveChangedScreen passes a filtered
+// slice of this same data via the `data` prop; previously this
+// component ignored that prop entirely and always rendered the full
+// set below, which is why the selector had no visible effect.
 const QUARTERLY_DATA = [
   { quarter: '2022 Q1', rhr: 62.8, hrv: 36.2 },
   { quarter: '2022 Q2', rhr: 62.1, hrv: 37.8 },
@@ -29,7 +33,18 @@ const ANNOTATIONS = [
   { quarter: '2026 Q2', label: 'Race day' },
 ]
 
-export default function QuarterlyArcChart({ height = 320 }) {
+export default function QuarterlyArcChart({ height = 320, data = QUARTERLY_DATA }) {
+  // Only show annotation markers whose quarter still exists in the
+  // current (possibly filtered) data — an annotation for a quarter
+  // outside a shorter timeframe selection would otherwise reference
+  // an x-value Nivo can't place.
+  const visibleAnnotations = ANNOTATIONS.filter(a => data.some(d => d.quarter === a.quarter))
+
+  // Thin out x-axis tick labels for readability, but never show fewer
+  // than ~4 ticks even on a short (e.g. 3-month) slice.
+  const tickEvery = data.length > 8 ? 3 : 1
+  const tickValues = data.filter((_, i) => i % tickEvery === 0).map(d => d.quarter)
+
   return (
     <div style={{ height }}>
       <ResponsiveLine
@@ -37,16 +52,12 @@ export default function QuarterlyArcChart({ height = 320 }) {
           {
             id: 'RHR',
             color: '#E8504A',
-            data: QUARTERLY_DATA.map(d => ({
-              x: d.quarter, y: d.rhr
-            })),
+            data: data.map(d => ({ x: d.quarter, y: d.rhr })),
           },
           {
             id: 'HRV',
             color: '#27C48A',
-            data: QUARTERLY_DATA.map(d => ({
-              x: d.quarter, y: d.hrv
-            })),
+            data: data.map(d => ({ x: d.quarter, y: d.hrv })),
           },
         ]}
         margin={{ top: 20, right: 24, bottom: 60, left: 40 }}
@@ -71,15 +82,13 @@ export default function QuarterlyArcChart({ height = 320 }) {
           tickSize: 0,
           tickPadding: 8,
           tickRotation: -35,
-          tickValues: QUARTERLY_DATA
-            .filter((_, i) => i % 3 === 0)
-            .map(d => d.quarter),
+          tickValues,
         }}
         theme={CHART_THEME}
         useMesh={true}
         enableCrosshair={true}
         crosshairType="x"
-        markers={ANNOTATIONS.map(a => ({
+        markers={visibleAnnotations.map(a => ({
           axis: 'x',
           value: a.quarter,
           lineStyle: {

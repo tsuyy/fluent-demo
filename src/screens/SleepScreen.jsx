@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion'
-import FloatingNav from '../components/nav/FloatingNav'
+import FloatingNav        from '../components/nav/FloatingNav'
 import SleepArchitectureChart from '../components/charts/SleepArchitectureChart'
-import SleepHRVChart from '../components/charts/SleepHRVChart'
-import QQRTCard from '../components/cards/QQRTCard'
-import SleepTrendCards from '../components/cards/SleepTrendCards'
-import PageContainer from '../components/layout/PageContainer'
+import SleepHRVChart      from '../components/charts/SleepHRVChart'
+import SleepTrendCards    from '../components/cards/SleepTrendCards'
+import SleepQQRTSection   from '../components/sleep/SleepQQRTSection'
+import PageContainer      from '../components/layout/PageContainer'
+import sleepQQRT from '../data/yvonne/sleep_qqrt.json'
 
 const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex' }
 
@@ -29,19 +30,12 @@ function ChartCard({ title, subtitle, children, delay = 0, fullWidth = false }) 
       }}
     >
       {title && (
-        <p style={{
-          fontSize: 13, fontWeight: 600,
-          marginBottom: subtitle ? 4 : 16,
-          lineHeight: 1.3,
-        }}>
+        <p style={{ fontSize: 13, fontWeight: 600, marginBottom: subtitle ? 4 : 16, lineHeight: 1.3 }}>
           {title}
         </p>
       )}
       {subtitle && (
-        <p style={{
-          fontSize: 11, color: 'var(--color-text-tertiary)',
-          marginBottom: 16, lineHeight: 1.4,
-        }}>
+        <p style={{ fontSize: 11, color: 'var(--color-text-tertiary)', marginBottom: 16, lineHeight: 1.4 }}>
           {subtitle}
         </p>
       )}
@@ -52,7 +46,8 @@ function ChartCard({ title, subtitle, children, delay = 0, fullWidth = false }) 
 
 export default function SleepScreen({ persona, onNavigate, onBack }) {
   const gradient = GRADIENTS[persona] || GRADIENTS.yvonne
-  const isAlex = persona === 'alex'
+  const isAlex   = persona === 'alex'
+  const isYvonne = persona === 'yvonne'
 
   return (
     <div style={{
@@ -61,174 +56,144 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
       position: 'relative', overflow: 'hidden',
       display: 'flex', flexDirection: 'column',
       flex: 1, overflowY: 'auto',
-      padding: '48px',
-      zIndex: 1,
+      padding: '48px', zIndex: 1,
     }}>
       <PageContainer>
-      <div style={{
-        position: 'fixed', inset: 0,
-        height: '100%',
-        background: gradient, pointerEvents: 'none',
-      }} />
+        <div style={{ position: 'fixed', inset: 0, height: '100%', background: gradient, pointerEvents: 'none' }} />
 
-      {/* Nav */}
-      <div style={{
-        position: 'fixed', top: 32, left: 48, right: 48,
-        display: 'flex', justifyContent: 'space-between',
-        alignItems: 'center', zIndex: 20,
-      }}>
-        <motion.span
-          whileHover={{ opacity: 0.7 }}
-          onClick={onBack}
-          style={{ fontSize: 16, fontWeight: 500, cursor: 'pointer' }}
-        >
-          fluent
-        </motion.span>
-        <motion.span
-          whileHover={{ opacity: 0.7 }}
-          onClick={() => onNavigate('picker')}
-          style={{
-            fontSize: 14,
-            color: 'var(--color-text-secondary)',
-            cursor: 'pointer',
-            flexShrink: 0, whiteSpace: 'nowrap',
-            background: 'rgba(255,255,255,0.06)',
-            border: '1px solid rgba(255,255,255,0.1)',
-            borderRadius: 20, padding: '4px 12px',
-          }}
-        >
-          {PERSONA_LABELS[persona] || persona}
-        </motion.span>
-      </div>
-      {/* Content */}
-      <div style={{
-        flex: 1, overflowY: 'auto',
-        padding: '48px',
-        position: 'relative', zIndex: 1,
-      }}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          style={{ marginBottom: 32 }}
-        >
-          <h1 style={{
-            fontSize: 'clamp(24px, 3vw, 40px)',
-            fontWeight: 700, marginBottom: 6,
-          }}>
-            Sleep
-          </h1>
-          <p style={{
-            color: 'var(--color-text-secondary)', fontSize: 15,
-          }}>
-            How your body and mind recover overnight
-          </p>
-        </motion.div>
-
-        {/* Alex — capability gap */}
-        {isAlex && (
-          <div style={{
-            padding: 32, borderRadius: 16,
-            background: 'rgba(255,255,255,0.04)',
-            border: '1px solid rgba(255,255,255,0.08)',
-          }}>
-            <p style={{ fontSize: 16, marginBottom: 12, lineHeight: 1.5 }}>
-              Sleep staging requires a wearable worn overnight.
-            </p>
-            <p style={{
-              color: 'var(--color-text-tertiary)',
-              fontSize: 14, lineHeight: 1.6, marginBottom: 20,
+        {/* Nav */}
+        <div style={{
+          position: 'fixed', top: 32, left: 48, right: 48,
+          display: 'flex', justifyContent: 'space-between', alignItems: 'center', zIndex: 20,
+        }}>
+          <motion.span whileHover={{ opacity: 0.7 }} onClick={onBack}
+            style={{ fontSize: 16, fontWeight: 500, cursor: 'pointer' }}>
+            fluent
+          </motion.span>
+          <motion.span whileHover={{ opacity: 0.7 }} onClick={() => onNavigate('picker')}
+            style={{
+              fontSize: 14, color: 'var(--color-text-secondary)', cursor: 'pointer',
+              flexShrink: 0, whiteSpace: 'nowrap',
+              background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)',
+              borderRadius: 20, padding: '4px 12px',
             }}>
-              Deep sleep, REM, and overnight HRV are all captured
-              during sleep — the most valuable window for understanding
-              how your body recovers.
+            {PERSONA_LABELS[persona] || persona}
+          </motion.span>
+        </div>
+
+        {/* Content */}
+        <div style={{ flex: 1, overflowY: 'auto', padding: '48px', position: 'relative', zIndex: 1 }}>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} style={{ marginBottom: 32 }}>
+            <h1 style={{ fontSize: 'clamp(24px, 3vw, 40px)', fontWeight: 700, marginBottom: 6 }}>
+              Sleep
+            </h1>
+            <p style={{ color: 'var(--color-text-secondary)', fontSize: 15 }}>
+              How your body and mind recover overnight
             </p>
-            <p
-              onClick={() => onNavigate('changed')}
-              style={{
-                color: 'var(--color-accent)',
-                fontSize: 14, cursor: 'pointer',
-              }}
-            >
-              See what Yvonne's sleep data shows →
-            </p>
-          </div>
-        )}
+          </motion.div>
 
-        {/* Wearable personas */}
-        {!isAlex && (
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: 20,
-          }}>
+          {/* Alex — capability gap */}
+          {isAlex && (
+            <div style={{
+              padding: 32, borderRadius: 16,
+              background: 'rgba(255,255,255,0.04)',
+              border: '1px solid rgba(255,255,255,0.08)',
+            }}>
+              <p style={{ fontSize: 16, marginBottom: 12, lineHeight: 1.5 }}>
+                Sleep staging requires a wearable worn overnight.
+              </p>
+              <p style={{ color: 'var(--color-text-tertiary)', fontSize: 14, lineHeight: 1.6, marginBottom: 20 }}>
+                Deep sleep, REM, and overnight HRV are all captured during sleep — the most
+                valuable window for understanding how your body recovers.
+              </p>
+              <p onClick={() => onNavigate('changed')}
+                style={{ color: 'var(--color-accent)', fontSize: 14, cursor: 'pointer' }}>
+                See what Yvonne's sleep data shows →
+              </p>
+            </div>
+          )}
 
-            {/* Sleep architecture — full width */}
-            <ChartCard
-              title="Sleep architecture — this week"
-              subtitle="Deep · REM · Core · Awake"
-              delay={0.1}
-              fullWidth
-            >
-              <SleepArchitectureChart
-                persona={persona}
-                height={200}
-              />
-            </ChartCard>
+          {/* Wearable personas */}
+          {!isAlex && (
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
 
-            {/* QQRT pillars — full width */}
-            <ChartCard
-              title="The four pillars"
-              subtitle="Quantity · Quality · Regularity · Timing"
-              delay={0.2}
-              fullWidth
-            >
-              <QQRTCard persona={persona} />
-            </ChartCard>
+              {/* ── Yvonne: QQRT with real charts ── */}
+              {isYvonne && (
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 }}
+                  style={{ gridColumn: '1 / -1' }}
+                >
+                  <SleepQQRTSection data={sleepQQRT} />
+                </motion.div>
+              )}
 
-            {/* Trend direction cards — full width */}
-            <ChartCard
-              title="How your sleep has changed"
-              subtitle="This quarter vs last quarter"
-              delay={0.3}
-              fullWidth
-            >
-              <SleepTrendCards persona={persona} />
-            </ChartCard>
+              {/* ── Non-Yvonne: sleep architecture first ── */}
+              {!isYvonne && (
+                <ChartCard
+                  title="Sleep architecture — this week"
+                  subtitle="Deep · REM · Core · Awake"
+                  delay={0.1}
+                  fullWidth
+                >
+                  <SleepArchitectureChart persona={persona} height={200} />
+                </ChartCard>
+              )}
 
-            {/* Sleep × HRV quadrant — Yvonne only */}
-            {persona === 'yvonne' && (
+              {/* Trend direction cards — all wearable personas */}
               <ChartCard
-                title="Sleep efficiency × next-day HRV"
-                subtitle="When these two signals disagree — that's the finding"
-                delay={0.4}
+                title="How your sleep has changed"
+                subtitle="This quarter vs last quarter"
+                delay={0.2}
                 fullWidth
               >
-                <SleepHRVChart height={220} />
+                <SleepTrendCards persona={persona} />
               </ChartCard>
-            )}
 
-            {/* Epistemic qualifier */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              style={{
-                fontSize: 11,
-                color: 'rgba(255,255,255,0.2)',
-                lineHeight: 1.6,
-                gridColumn: '1 / -1',
-                padding: '0 4px',
-              }}
-            >
-              Sleep data is directional guidance — not a score to optimize.
-              Apple Watch sleep staging is directionally accurate.
-              Trends matter more than any single night's reading.
-            </motion.p>
-          </div>
-        )}
-      </div>
+              {/* Sleep × HRV — Yvonne only, below QQRT */}
+              {isYvonne && (
+                <ChartCard
+                  title="Sleep efficiency × next-day HRV"
+                  subtitle="When these two signals disagree — that's the finding"
+                  delay={0.3}
+                  fullWidth
+                >
+                  <SleepHRVChart height={220} legendPosition="left" />
+                </ChartCard>
+              )}
 
-      <FloatingNav active="sleep" onNavigate={onNavigate} />
+              {/* Sleep architecture for Yvonne — secondary, below HRV */}
+              {isYvonne && (
+                <ChartCard
+                  title="Sleep architecture — this week"
+                  subtitle="Deep · REM · Core · Awake · hover each bar for breakdown"
+                  delay={0.4}
+                  fullWidth
+                >
+                  <SleepArchitectureChart persona={persona} height={180} />
+                </ChartCard>
+              )}
+
+              {/* Epistemic qualifier */}
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6 }}
+                style={{
+                  fontSize: 11, color: 'rgba(255,255,255,0.2)',
+                  lineHeight: 1.6, gridColumn: '1 / -1', padding: '0 4px',
+                }}
+              >
+                Sleep data is directional guidance — not a score to optimize.
+                Apple Watch sleep staging is directionally accurate.
+                Trends matter more than any single night's reading.
+              </motion.p>
+            </div>
+          )}
+        </div>
+
+        <FloatingNav active="sleep" onNavigate={onNavigate} />
       </PageContainer>
     </div>
   )

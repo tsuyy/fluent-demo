@@ -1,0 +1,22 @@
+{
+  "window": { "start": "2026-08-11", "end": "2026-08-24" },
+  "daily": [
+    { "date": "2026-08-11", "hrv_dev": -3.2, "active_cal": 820 },
+    { "date": "2026-08-12", "hrv_dev": -5.1, "active_cal": 890 },
+    { "date": "2026-08-13", "hrv_dev": -4.8, "active_cal": 760 },
+    { "date": "2026-08-14", "hrv_dev": -6.3, "active_cal": 910 },
+    { "date": "2026-08-15", "hrv_dev": -2.1, "active_cal": 480 },
+    { "date": "2026-08-16", "hrv_dev": -5.9, "active_cal": 850 },
+    { "date": "2026-08-17", "hrv_dev": -7.2, "active_cal": 920 },
+    { "date": "2026-08-18", "hrv_dev": -4.4, "active_cal": 870 },
+    { "date": "2026-08-19", "hrv_dev": -6.8, "active_cal": 780 },
+    { "date": "2026-08-20", "hrv_dev": null, "active_cal": null },
+    { "date": "2026-08-21", "hrv_dev": -5.5, "active_cal": 830 },
+    { "date": "2026-08-22", "hrv_dev": -8.1, "active_cal": 960 },
+    { "date": "2026-08-23", "hrv_dev": -6.7, "active_cal": 880 },
+    { "date": "2026-08-24", "hrv_dev": -5.3, "active_cal": 790 }
+  ],
+  "baseline_active_cal": 650,
+  "overtraining_detected": true,
+  "overtraining_note": "Active cal avg 832 (+28% above 650 baseline). HRV suppressed 12 of 13 tracked days."
+}

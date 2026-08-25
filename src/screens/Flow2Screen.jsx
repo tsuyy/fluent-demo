@@ -2,17 +2,19 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import WeeklyRhythmFullChart from '../components/charts/WeeklyRhythmFullChart'
 import SleepHRVChart         from '../components/charts/SleepHRVChart'
-import RHRTrendChart         from '../components/charts/RHRTrendChart'
-import SportHRVChart         from '../components/charts/SportHRVChart'
 import RetirementArcChart    from '../components/charts/RetirementArcChart'
 import SeasonalStepsChart    from '../components/charts/SeasonalStepsChart'
+import IllnessArcChart      from '../components/charts/IllnessArcChart'
+import SoberExperimentChart from '../components/charts/SoberExperimentChart'
+import illnessArcData        from '../data/yvonne/illness_arc.json'
+import soberData              from '../data/yvonne/sober_experiment.json'
  
 // ── Insight sequence per persona ─────────────────────────────────────────────
 // "next insight" advances within the persona's sequence.
 // Last card → button becomes "explore other topics →" → home.
 const SEQUENCES = {
   jamie:  ['monday',     'sleep_hrv'],
-  yvonne: ['rhr_shift',  'tennis'],
+  yvonne: ['illness_arc', 'sober_experiment'],
   robert: ['retirement', 'silence'],
   alex:   ['seasonal',   'capability'],
 }
@@ -56,36 +58,63 @@ const CARDS = {
     chart: 'sleep_hrv_quadrant',
   },
  
-  rhr_shift: {
+  illness_arc: {
     persona: 'yvonne',
-    headline: 'Your RHR has quietly shifted',
-    subtitle: "Your resting heart rate has been lower than usual for the past two weeks. Fluent noticed — but doesn't know why yet.",
-    observation: "Your resting heart rate has been below your personal baseline for the past two weeks — consistently, not just a one-day fluctuation.",
-    interpretation: "A sustained shift like this is often associated with a change in routine, training load, or recovery quality — but it can also reflect cooler temperatures, less life stress, or something else entirely. Fluent can't say which from the data alone.",
-    dataNote: 'Compared against your personal baseline — not a population average.',
-    question: 'Does anything come to mind about the past two weeks?',
-    questionType: 'annotation',
-    chips: ['Travel', 'Cooler weather', 'Less training', 'More rest', 'Life change', 'Something else'],
+    headline: 'Two signals. Twelve days before you felt it.',
+    subtitle: "Your body was already working on something — the data just couldn't tell you yet.",
+    observation: "In early February, two sensors deviated from your personal baseline within the same three-day window. February 11th: HRV dropped 10ms below baseline. Wrist temperature elevated above threshold. Neither alone would stand out — together they form a pattern Fluent looks for. February 12th: HRV −16ms, wrist temperature +1.55°. The signal strengthened. Then it appeared to resolve — HRV recovered, wrist temperature returned to baseline, February 14th through 18th looked normal. February 20th: resting heart rate spiked 18 bpm above baseline, HRV dropped again. February 23rd was the peak — RHR +33 bpm, HRV at near personal low.",
+    interpretation: "This sequence — two signals converging, apparent recovery, then a harder second wave — is consistent with an immune response that began before symptoms appeared. The body often starts working on something 10–14 days before you feel it. The wrist temperature elevation on February 11th may reflect that early activation. The apparent recovery in between was real — your body was managing it. The second wave wasn't. This is not a diagnosis. It's a pattern. Whether it matches what you experienced is something only you can add.",
+    dataNote: 'HRV −10ms · Wrist temp +1.09° · Feb 11  |  RHR +33 · HRV −28.6ms · Feb 23',
+    question: 'Does this match what you remember about that period?',
+    questionType: 'felt',
+    chips: [
+      'I was traveling',
+      'I felt off but pushed through',
+      'I had no idea until I got sick',
+      'I was around sick people',
+      'Something else',
+      'Skip',
+    ],
     contextQuestion: null,
     contextChips: [],
-    acknowledgment: "That makes sense. Fluent saved this to your timeline — you can see what it looks like in Moments that shaped my health.",
-    chart: 'rhr_trend',
+    // Optional freetext — appears after any non-Skip chip is chosen.
+    // General-purpose field: any Flow 2 card can opt into this by
+    // setting freetextPrompt; cards that don't set it get no field.
+    freetextPrompt: {
+      label: 'Anything specific worth adding?',
+      placeholder: 'e.g. a trip, a hard week...',
+    },
+    acknowledgment: "That's worth knowing either way — this is one of the stronger early-warning patterns in your data.",
+    acknowledgmentOverrides: {
+      'I was traveling': "Travel adds load the data can't fully see — disrupted sleep, different rhythms, more exposure. That context changes how this signal reads.",
+      'I felt off but pushed through': "That's worth knowing. The data was showing strain before you registered it consciously. What you did with the information you had was reasonable — you didn't have this view.",
+      'I had no idea until I got sick': "That's the most common response. The signals were there — HRV, wrist temperature — but without something connecting them to how you felt, they were invisible.",
+      'I was around sick people': "That tracks with the timing. The February 11th signal appearing 12 days before peak is consistent with initial exposure. Your body registered contact before symptoms did.",
+    },
+    chart: 'illness_arc',
   },
  
-  tennis: {
+ 
+  sober_experiment: {
     persona: 'yvonne',
-    headline: 'Tennis might be your best recovery tool',
-    subtitle: 'Out of everything you do, tennis produces the strongest recovery response — more than any other activity in your data.',
-    observation: "Out of everything in your data, tennis produces the strongest recovery response — your HRV is consistently higher in the day or two after a session than after any other activity. Cycling and running show modest positive effects. Skiing costs recovery for several days.",
-    interpretation: "Tennis may be doing something different for your nervous system — leaving it more regulated rather than more depleted. Fluent can't say exactly why from the data alone, but the pattern is consistent across 22 sessions.",
-    dataNote: 'Based on 22 tennis sessions tracked since 2025.',
-    question: null,
-    questionType: null,
-    chips: [],
-    contextQuestion: null,
-    contextChips: [],
-    acknowledgment: null,
-    chart: 'sport_hrv',
+    headline: "Alcohol-free experiment · Jul 6\u201320",
+    subtitle: "Here's what your data showed.",
+    observation: "In July 2026, you went alcohol-free for fourteen days. Training, sleep schedule, and diet stayed the same. Fluent tracked the period as it unfolded. Your HRV rose 10.8ms within the first week — a 24% increase above your two-week baseline before the experiment. Deep sleep added nearly 13 minutes per night on average. Respiratory rate dropped slightly. Your resting heart rate barely changed — +0.4 bpm, effectively flat. Your nervous system regulation changed significantly. These are different signals, and alcohol appears to affect one more than the other.",
+    interpretation: "HRV reflects parasympathetic nervous system regulation — the system's ability to recover and adapt. RHR reflects baseline cardiovascular demand. Alcohol suppresses HRV more than it elevates RHR. Your data shows this distinction clearly. After the experiment ended, the days you didn't drink held close to the experiment levels — HRV averaging 53ms, +7.6ms above where you started. The days you did drink averaged 44.7ms, back near baseline. The same pattern playing out in real time, after the experiment was over.",
+    dataNote: 'HRV +10.8ms (+24%) · Deep sleep +13min · RHR unchanged (+0.4bpm) · Jul 6–20 2026  |  Clean after days: HRV 53.1ms (n=14) · Substance days: HRV 44.7ms (n=8)',
+    question: 'Did this match what you noticed during that period?',
+    questionType: 'felt',
+    chips: [
+      'Yes — I felt different',
+      'I noticed some things',
+      'Not really',
+      "I wasn't paying attention to it",
+      'Skip',
+    ],
+    contextQuestion: 'What did you notice?',
+    contextChips: ['Slept better', 'More energy', 'Felt clearer', 'Less anxious', 'Nothing obvious', 'Something else'],
+    acknowledgment: "The body often shifts before the felt experience catches up — or the changes are gradual enough to be invisible day to day. The data can sometimes see what daily life makes hard to notice. Your heart rate barely moved. Your nervous system regulation did. That distinction is worth knowing.",
+    chart: 'sober_experiment',
   },
  
   retirement: {
@@ -158,8 +187,8 @@ function Flow2Chart({ type, metric }) {
   if (!type) return null
   if (type === 'weekly_rhythm')     return <WeeklyRhythmFullChart height={200} metric={metric} />
   if (type === 'sleep_hrv_quadrant') return <SleepHRVChart height={200} />
-  if (type === 'rhr_trend')          return <RHRTrendChart height={180} />
-  if (type === 'sport_hrv')          return <SportHRVChart height={200} />
+  if (type === 'illness_arc')      return <IllnessArcChart data={illnessArcData} height={220} />
+  if (type === 'sober_experiment') return <SoberExperimentChart data={soberData} height={240} />
   if (type === 'retirement_arc')     return <RetirementArcChart height={180} />
   if (type === 'seasonal_steps')     return <SeasonalStepsChart height={180} />
   if (type === 'capability_gap') return (
@@ -207,14 +236,18 @@ export default function Flow2Screen({ cardId, persona, onBack, onNavigate }) {
   const isLast    = nextCardId === null
  
   const displayAcknowledgment =
-    feltAnswer === 'Not really' || feltAnswer === 'It felt different than that'
+    content.acknowledgmentOverrides?.[feltAnswer] ??
+    (feltAnswer === 'Not really' || feltAnswer === 'It felt different than that'
       ? "Fair enough — the pattern is consistent in your data. That doesn't mean it has to match how you feel. There may be something going on that Fluent can't see from the numbers alone."
-      : content.acknowledgment
+      : content.acknowledgment)
  
-  function handleFelt(chip) {
+function handleFelt(chip) {
     setFeltAnswer(chip)
-    if (chip === 'Skip') setStep('ack')
-    else setStep('context')
+    if (chip === 'Skip' || !content.contextQuestion) {
+      setStep('ack')
+    } else {
+      setStep('context')
+    }
   }
  
   function toggleContext(chip) {

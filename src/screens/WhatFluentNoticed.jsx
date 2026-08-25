@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion'
 import WeeklyRhythmChart  from '../components/charts/WeeklyRhythmChart'
-import SportHRVChart      from '../components/charts/SportHRVChart'
-import RHRTrendChart      from '../components/charts/RHRTrendChart'
 import SleepHRVChart      from '../components/charts/SleepHRVChart'
 import RetirementArcChart from '../components/charts/RetirementArcChart'
 import SeasonalStepsChart from '../components/charts/SeasonalStepsChart'
 import PageContainer      from '../components/layout/PageContainer'
+import IllnessArcChart      from '../components/charts/IllnessArcChart'
+import SoberExperimentChart from '../components/charts/SoberExperimentChart'
+ import illnessArcData  from '../data/yvonne/illness_arc.json'
+ import soberData        from '../data/yvonne/sober_experiment.json'
  
 const CARDS = {
   jamie: [
@@ -13,8 +15,18 @@ const CARDS = {
     { id: 'sleep_hrv', headline: 'Your sleep looked fine — your HRV says otherwise', subtitle: 'Some weeks your sleep tracked normally, but your HRV tells a different story.', viz: 'sleep_hrv_quadrant' },
   ],
   yvonne: [
-    { id: 'rhr_shift', headline: 'Your RHR has quietly shifted',                  subtitle: "Your resting heart rate has been lower than usual for the past two weeks. Fluent noticed — but doesn't know why yet.", viz: 'rhr_trend' },
-    { id: 'tennis',    headline: 'Tennis might be your best recovery tool',        subtitle: 'Out of everything you do, tennis produces the strongest recovery response — more than any other activity in your data.', viz: 'sport_hrv' },
+    {
+      id: 'illness_arc',
+      headline: 'Two signals. Twelve days before you felt it',
+      subtitle: 'Your body was already working on something — the data just couldn\'t tell you yet',
+      viz: 'illness_arc',
+    },
+    {
+      id: 'sober_experiment',
+      headline: "Alcohol-free experiment · Jul 6\u201320",
+      subtitle: "Here's what your data showed",
+      viz: 'sober_experiment',
+    },
   ],
   robert: [
     { id: 'retirement', headline: 'Retirement left a mark on your heart rate',    subtitle: 'Your resting heart rate settled into a new, healthier pattern after you retired.', viz: 'retirement_arc' },
@@ -38,8 +50,10 @@ const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', ale
 function VizPlaceholder({ type, persona }) {
   if (type === 'weekly_rhythm' && persona === 'jamie') return <WeeklyRhythmChart />
   if (type === 'sleep_hrv_quadrant') return <SleepHRVChart height={160} />
-  if (type === 'sport_hrv')          return <SportHRVChart height={160} />
-  if (type === 'rhr_trend')          return <RHRTrendChart height={140} />
+  if (type === 'illness_arc')
+    return <IllnessArcChart data={illnessArcData} height={130} compact={true} />
+  if (type === 'sober_experiment')
+    return <SoberExperimentChart data={soberData} height={130} compact />  
   if (type === 'retirement_arc')     return <RetirementArcChart height={160} />
   if (type === 'seasonal_steps')     return <SeasonalStepsChart height={160} />
   if (!type) return null

@@ -211,6 +211,7 @@ export default function App() {
         }
       }}
       onBack={() => setScreen('home')}
+      onFlow2={(cardId) => { setFlow2Card(cardId); setScreen('flow2')}}
     />
   )
  

@@ -7,14 +7,18 @@ import IconActivity  from '../components/nav/icons/IconActivity'
 import IconCardio    from '../components/nav/icons/IconCardio'
 import IconSleep     from '../components/nav/icons/IconSleep'
 import IconMoments   from '../components/nav/icons/IconMoments'
+import AnimatedMeshBackground from '../components/backgrounds/AnimatedMeshBackground'
  
 const CATEGORIES = [
-  { id: 'different', label: 'Something feels different lately',    description: 'A pattern shifted in your data',                               Icon: IconDifferent },
+  { id: 'different',
+    label: 'Something feels different lately',
+    description: 'You bring the feeling. Fluent checks the data.',
+    Icon: IconDifferent, },  
   { id: 'changed',   label: "How I've changed over time",          description: 'How your body has shifted over months and years',                       Icon: IconChanged   },
   { id: 'activity',  label: 'Movement & Recovery',                 description: 'What you do, what it costs, and how your body responds',        Icon: IconActivity  },
   { id: 'cardio',    label: 'Heart & Nervous System',              description: 'Your cardiovascular health over time',                          Icon: IconCardio    },
   { id: 'sleep',     label: 'Sleep',                               description: 'How your body and mind recover overnight',                             Icon: IconSleep     },
-  { id: 'moments',   label: 'Moments that shaped my health',       description: 'When life showed up in your data',                              Icon: IconMoments   },
+  { id: 'moments',   label: 'Moments that shaped my health',       description: 'Where data and life intersect',                              Icon: IconMoments   },
 ]
  
 const GRADIENTS = {
@@ -54,11 +58,12 @@ export default function HomeScreen({ persona, onNavigate, onBack, onPersonaSwitc
       padding: '48px',
     }}>
  
-      <motion.div
+      {/* <motion.div
         animate={{ opacity: [0.7, 1, 0.7] }}
         transition={{ duration: 10, repeat: Infinity }}
         style={{ position: 'absolute', inset: 0, background: gradient, pointerEvents: 'none' }}
-      />
+      /> */}
+      <AnimatedMeshBackground opacity={0.7} />
  
       {/* Top nav — fixed */}
       <div style={{
@@ -118,7 +123,7 @@ export default function HomeScreen({ persona, onNavigate, onBack, onPersonaSwitc
                   animate={{ opacity: isOther ? 0.3 : 1, x: isHovered ? 4 : 0 }}
                   transition={{ duration: 0.15 }}
                   style={{
-                    fontSize: 'clamp(15px, 1.6vw, 22px)',
+                    fontSize: 'clamp(24px, 1.6vw, 22px)',
                     cursor: 'pointer', padding: '10px 0',
                     lineHeight: 1.3, userSelect: 'none',
                     fontWeight: isHovered ? 500 : 400,
@@ -149,18 +154,18 @@ export default function HomeScreen({ persona, onNavigate, onBack, onPersonaSwitc
                 position: 'fixed',
                 left: Math.min(mousePos.x + 20, window.innerWidth - 280),
                 top: Math.max(mousePos.y - 20, 10),
-                background: 'rgba(20,20,18,0.92)',
+                background: 'rgba(20, 20, 18, 0.2)',
                 border: '1px solid rgba(255,255,255,0.1)',
                 borderRadius: 10, padding: '10px 14px',
                 display: 'flex', alignItems: 'center', gap: 10,
                 whiteSpace: 'nowrap', zIndex: 1000,
-                backdropFilter: 'blur(12px)',
+                backdropFilter: 'blur(20px)',
                 pointerEvents: 'none',
                 boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
               }}
             >
-              <cat.Icon size={18} color="rgba(255,255,255,0.7)" />
-              <span style={{ fontSize: 13, color: 'var(--color-text-secondary)' }}>
+              <cat.Icon size={32} color="rgba(255,255,255,1)" />
+              <span style={{ fontSize: 22, color: 'rgba(255,255,255,1)' }}>
                 {cat.description}
               </span>
             </motion.div>
