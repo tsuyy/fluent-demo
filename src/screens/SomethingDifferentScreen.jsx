@@ -8,7 +8,9 @@ import IconEnergy   from '../components/nav/icons/IconEnergy'
 import IconPhysical from '../components/nav/icons/IconPhysical'
 import IconUnsure   from '../components/nav/icons/IconUnsure'
 import SignalRankingMini from '../components/charts/SignalRankingMini'
-
+import { useIsNarrow } from '../components/scrolly/useIsNarrow'
+import CurrentSnapshotCards from '../components/cards/CurrentSnapshotCards'
+import currentSnapshot from '../data/yvonne/current_snapshot.json'
 
 import RecentActivityChart from '../components/charts/RecentActivityChart'
 import RecentRecoveryChart from '../components/charts/RecentRecoveryChart'
@@ -133,6 +135,13 @@ const JAMIE_ROUTES = {
   },
 }
 
+const JAMIE_SNAPSHOT = [
+    { label: 'HRV', unit: 'ms', value: 31.4, baseline: 37.2, deviation: -5.8, isGood: false, displayDev: '-5.8ms' },
+    { label: 'RHR', unit: 'bpm', value: 74.2, baseline: 70.3, deviation: 3.9, isGood: false, displayDev: '+3.9bpm' },
+    { label: 'Deep sleep', unit: 'min', value: 52.1, baseline: 56.3, deviation: -4.2, isGood: false, displayDev: '-4.2min' },
+    { label: 'Active cal', unit: 'cal', value: 832, baseline: 650, deviation: 182, isGood: false, displayDev: '+182cal' },
+  ]
+
 // ─────────────────────────────────────────────────────────────────
 // ROBERT — energy & recovery both fire the structure-dependency
 // signature. Physical is Mode 3, but the illness-convergence check
@@ -188,6 +197,13 @@ const ROBERT_ROUTES = {
   },
 }
 
+ const ROBERT_SNAPSHOT = [
+    { label: 'HRV', unit: 'ms', value: 27.8, baseline: 30.9, deviation: -3.1, isGood: false, displayDev: '-3.1ms' },
+    { label: 'RHR', unit: 'bpm', value: 61.4, baseline: 58.6, deviation: 2.8, isGood: false, displayDev: '+2.8bpm' },
+    { label: 'Deep sleep', unit: 'min', value: 44.2, baseline: 42.4, deviation: 1.8, isGood: true, displayDev: '+1.8min' },
+    { label: 'Active cal', unit: 'cal', value: 245, baseline: 380, deviation: -135, isGood: false, displayDev: '-135cal' },
+  ]
+  
 // ─────────────────────────────────────────────────────────────────
 // ALEX — unchanged, old route shape (all five → Mode 3, no wearable)
 // ─────────────────────────────────────────────────────────────────
@@ -456,8 +472,17 @@ export default function SomethingDifferentScreen({
   persona, onNavigate, onBack, onFlow2
 }) {
   const [selected, setSelected] = useState(null)
-
+  const narrow = useIsNarrow()
   const routes = SIGNAL_ROUTES[persona] || SIGNAL_ROUTES.jamie
+  const SNAPSHOT_LABELS = ['HRV', 'RHR', 'Deep sleep', 'Active cal']
+ 
+  const snapshotMetrics =
+    persona === 'yvonne'
+      ? SNAPSHOT_LABELS.map(label => currentSnapshot.metrics.find(m => m.label === label)).filter(Boolean)
+      : persona === 'jamie' ? JAMIE_SNAPSHOT
+      : persona === 'robert' ? ROBERT_SNAPSHOT
+      : null
+ 
 
   function handleSelect(id) {
     setSelected(prev => prev === id ? null : id)
@@ -502,26 +527,32 @@ export default function SomethingDifferentScreen({
       </div>
 
       <div style={{
-        flex: 1, overflowY: 'auto',
-        padding: '100px 24px 120px',
-        position: 'relative', zIndex: 1,
-        display: 'flex', alignItems: 'center',
-      }}>
+          flex: 1, overflowY: 'auto',
+          padding: '100px 24px 120px',
+          position: 'relative', zIndex: 1,
+        }}>
+      
         <PageContainer>
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            style={{ marginBottom: 40 }}
-          >
-            <h1 style={{ fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: 700, marginBottom: 12, lineHeight: 1.15 }}>
-              Something feels different lately.
-            </h1>
-            <p style={{ color: 'var(--color-text-secondary)', fontSize: 16, lineHeight: 1.6 }}>
-              You bring the feeling. Fluent checks the data.
-            </p>
-          </motion.div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 20, }}>
+             <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                style={{ marginBottom: 40 }}
+              >
+                <h1 style={{ fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: 700, marginBottom: 12, lineHeight: 1.15 }}>
+                  Something feels different lately.
+                </h1>
+                <p style={{ color: 'var(--color-text-secondary)', fontSize: 16, lineHeight: 1.6 }}>
+                  You bring the feeling. Fluent checks the data.
+                </p>
+              </motion.div>
+             {persona === 'alex' ? (
+              <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.3)', marginBottom: 28 }}>
+                Based on your step data from the past two weeks.
+              </p>
+            ) : (
+              <CurrentSnapshotCards metrics={snapshotMetrics} />
+            )}
+              <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1fr 1fr', gap: 12, marginBottom: 20 }}>
             {SIGNALS.map((signal, i) => {
               const isSelected = selected === signal.id
               const { Icon } = signal

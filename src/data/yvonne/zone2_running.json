@@ -1,0 +1,190 @@
+{
+  "sessions": [
+    {
+      "date": "2024-03-02",
+      "year": 2024,
+      "hr_avg": 147.1,
+      "pace": 15.67,
+      "distance": 3.2,
+      "duration": 50.0
+    },
+    {
+      "date": "2024-03-06",
+      "year": 2024,
+      "hr_avg": 144.8,
+      "pace": 15.53,
+      "distance": 3.2,
+      "duration": 50.0
+    },
+    {
+      "date": "2024-03-09",
+      "year": 2024,
+      "hr_avg": 145.3,
+      "pace": 14.27,
+      "distance": 3.5,
+      "duration": 50.0
+    },
+    {
+      "date": "2024-06-20",
+      "year": 2024,
+      "hr_avg": 138.3,
+      "pace": 15.53,
+      "distance": 3.8,
+      "duration": 59.0
+    },
+    {
+      "date": "2024-06-24",
+      "year": 2024,
+      "hr_avg": 142.6,
+      "pace": 14.8,
+      "distance": 4.2,
+      "duration": 63.0
+    },
+    {
+      "date": "2024-08-23",
+      "year": 2024,
+      "hr_avg": 146.2,
+      "pace": 14.09,
+      "distance": 4.1,
+      "duration": 58.0
+    },
+    {
+      "date": "2025-02-21",
+      "year": 2025,
+      "hr_avg": 140.4,
+      "pace": 14.76,
+      "distance": 3.8,
+      "duration": 56.0
+    },
+    {
+      "date": "2025-05-20",
+      "year": 2025,
+      "hr_avg": 145.5,
+      "pace": 12.69,
+      "distance": 4.5,
+      "duration": 57.0
+    },
+    {
+      "date": "2025-05-24",
+      "year": 2025,
+      "hr_avg": 145.9,
+      "pace": 13.24,
+      "distance": 2.8,
+      "duration": 36.0
+    },
+    {
+      "date": "2025-06-09",
+      "year": 2025,
+      "hr_avg": 146.8,
+      "pace": 14.95,
+      "distance": 3.0,
+      "duration": 45.0
+    },
+    {
+      "date": "2025-06-21",
+      "year": 2025,
+      "hr_avg": 144.1,
+      "pace": 13.34,
+      "distance": 3.9,
+      "duration": 52.0
+    },
+    {
+      "date": "2025-08-04",
+      "year": 2025,
+      "hr_avg": 147.8,
+      "pace": 15.32,
+      "distance": 4.4,
+      "duration": 68.0
+    },
+    {
+      "date": "2026-06-23",
+      "year": 2026,
+      "hr_avg": 144.6,
+      "pace": 13.67,
+      "distance": 3.5,
+      "duration": 47.0
+    },
+    {
+      "date": "2026-06-27",
+      "year": 2026,
+      "hr_avg": 136.7,
+      "pace": 16.41,
+      "distance": 3.3,
+      "duration": 54.0
+    },
+    {
+      "date": "2026-07-03",
+      "year": 2026,
+      "hr_avg": 141.7,
+      "pace": 13.4,
+      "distance": 3.2,
+      "duration": 43.0
+    },
+    {
+      "date": "2026-07-05",
+      "year": 2026,
+      "hr_avg": 137.4,
+      "pace": 13.12,
+      "distance": 3.6,
+      "duration": 48.0
+    },
+    {
+      "date": "2026-07-10",
+      "year": 2026,
+      "hr_avg": 139.4,
+      "pace": 14.17,
+      "distance": 5.5,
+      "duration": 78.0
+    },
+    {
+      "date": "2026-07-22",
+      "year": 2026,
+      "hr_avg": 134.6,
+      "pace": 13.53,
+      "distance": 3.8,
+      "duration": 52.0
+    },
+    {
+      "date": "2026-07-26",
+      "year": 2026,
+      "hr_avg": 137.3,
+      "pace": 13.65,
+      "distance": 3.0,
+      "duration": 41.0
+    },
+    {
+      "date": "2026-07-31",
+      "year": 2026,
+      "hr_avg": 138.0,
+      "pace": 13.93,
+      "distance": 6.6,
+      "duration": 92.0
+    },
+    {
+      "date": "2026-08-10",
+      "year": 2026,
+      "hr_avg": 136.8,
+      "pace": 13.78,
+      "distance": 3.9,
+      "duration": 53.0
+    },
+    {
+      "date": "2026-08-18",
+      "year": 2026,
+      "hr_avg": 134.9,
+      "pace": 13.24,
+      "distance": 5.1,
+      "duration": 68.0
+    },
+    {
+      "date": "2026-08-24",
+      "year": 2026,
+      "hr_avg": 134.5,
+      "pace": 13.48,
+      "distance": 3.5,
+      "duration": 47.0
+    }
+  ],
+  "n": 23,
+  "note": "Zone 2 = HR 130-148bpm. Easy runs only. Progressive/intervals excluded."
+}

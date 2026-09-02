@@ -1,79 +1,79 @@
 {
   "window": {
-    "start": "2026-07-30",
-    "end": "2026-08-12"
+    "start": "2026-08-18",
+    "end": "2026-08-31"
   },
   "daily": [
     {
-      "date": "2026-07-30",
-      "hrv_dev": 9.3,
-      "active_cal": 624.0
+      "date": "2026-08-18",
+      "hrv_dev": 2.3,
+      "active_cal": 646.0
     },
     {
-      "date": "2026-07-31",
-      "hrv_dev": -3.4,
-      "active_cal": 870.0
+      "date": "2026-08-19",
+      "hrv_dev": 3.5,
+      "active_cal": 583.0
     },
     {
-      "date": "2026-08-01",
-      "hrv_dev": -7.3,
-      "active_cal": 620.0
+      "date": "2026-08-20",
+      "hrv_dev": -7.4,
+      "active_cal": 767.0
     },
     {
-      "date": "2026-08-02",
-      "hrv_dev": 4.6,
-      "active_cal": 362.0
+      "date": "2026-08-21",
+      "hrv_dev": -2.1,
+      "active_cal": 693.0
     },
     {
-      "date": "2026-08-03",
-      "hrv_dev": 15.7,
-      "active_cal": 546.0
+      "date": "2026-08-22",
+      "hrv_dev": 3.2,
+      "active_cal": 796.0
     },
     {
-      "date": "2026-08-04",
-      "hrv_dev": -5.6,
-      "active_cal": 799.0
+      "date": "2026-08-23",
+      "hrv_dev": -4.5,
+      "active_cal": 962.0
     },
     {
-      "date": "2026-08-05",
-      "hrv_dev": 14.4,
-      "active_cal": 582.0
+      "date": "2026-08-24",
+      "hrv_dev": 2.9,
+      "active_cal": 780.0
     },
     {
-      "date": "2026-08-06",
-      "hrv_dev": -7.1,
-      "active_cal": 968.0
+      "date": "2026-08-25",
+      "hrv_dev": 3.4,
+      "active_cal": 811.0
     },
     {
-      "date": "2026-08-07",
-      "hrv_dev": -8.6,
-      "active_cal": 479.0
+      "date": "2026-08-26",
+      "hrv_dev": 12.8,
+      "active_cal": 806.0
     },
     {
-      "date": "2026-08-08",
-      "hrv_dev": -9.4,
-      "active_cal": 1085.0
+      "date": "2026-08-27",
+      "hrv_dev": -2.7,
+      "active_cal": 1016.0
     },
     {
-      "date": "2026-08-09",
-      "hrv_dev": -0.7,
-      "active_cal": 960.0
+      "date": "2026-08-28",
+      "hrv_dev": 17.4,
+      "active_cal": 746.0
     },
     {
-      "date": "2026-08-10",
-      "hrv_dev": 2.4,
-      "active_cal": 667.0
+      "date": "2026-08-29",
+      "hrv_dev": 11.5,
+      "active_cal": 969.0
     },
     {
-      "date": "2026-08-11",
-      "hrv_dev": 0.4,
-      "active_cal": 775.0
+      "date": "2026-08-30",
+      "hrv_dev": 0.9,
+      "active_cal": 1055.0
     },
     {
-      "date": "2026-08-12",
+      "date": "2026-08-31",
       "hrv_dev": 4.2,
-      "active_cal": 89.0
+      "active_cal": 108.0
     }
   ],
-  "baseline_active_cal": 748.0
+  "baseline_active_cal": 741.0
 }

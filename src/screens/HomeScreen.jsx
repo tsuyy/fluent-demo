@@ -8,66 +8,45 @@ import IconCardio    from '../components/nav/icons/IconCardio'
 import IconSleep     from '../components/nav/icons/IconSleep'
 import IconMoments   from '../components/nav/icons/IconMoments'
 import AnimatedMeshBackground from '../components/backgrounds/AnimatedMeshBackground'
- 
+import { useIsNarrow } from '../components/scrolly/useIsNarrow'
+
 const CATEGORIES = [
-  { id: 'different',
-    label: 'Something feels different lately',
-    description: 'You bring the feeling. Fluent checks the data.',
-    Icon: IconDifferent, },  
-  { id: 'changed',   label: "How I've changed over time",          description: 'How your body has shifted over months and years',                       Icon: IconChanged   },
-  { id: 'activity',  label: 'Movement & Recovery',                 description: 'What you do, what it costs, and how your body responds',        Icon: IconActivity  },
-  { id: 'cardio',    label: 'Heart & Nervous System',              description: 'Your cardiovascular health over time',                          Icon: IconCardio    },
-  { id: 'sleep',     label: 'Sleep',                               description: 'How your body and mind recover overnight',                             Icon: IconSleep     },
-  { id: 'moments',   label: 'Moments that shaped my health',       description: 'Where data and life intersect',                              Icon: IconMoments   },
+  { id: 'different', label: 'Something feels different lately', description: 'You bring the feeling. Fluent checks the data.', Icon: IconDifferent },
+  { id: 'changed',   label: "How I've changed over time",       description: 'How your body has shifted over months and years', Icon: IconChanged },
+  { id: 'activity',  label: 'Movement & Recovery',               description: 'What you do, what it costs, and how your body responds', Icon: IconActivity },
+  { id: 'cardio',    label: 'Heart & Nervous System',             description: 'Your cardiovascular health over time', Icon: IconCardio },
+  { id: 'sleep',     label: 'Sleep',                              description: 'How your body and mind recover overnight', Icon: IconSleep },
+  { id: 'moments',   label: 'Moments that shaped my health',      description: 'Where data and life intersect', Icon: IconMoments },
 ]
- 
-const GRADIENTS = {
-  jamie:  'radial-gradient(ellipse at 15% 70%, rgba(180,60,60,0.25) 0%, transparent 55%)',
-  yvonne: 'radial-gradient(ellipse at 80% 20%, rgba(6,129,252,0.2) 0%, rgba(39,196,138,0.1) 40%, transparent 65%)',
-  robert: 'radial-gradient(ellipse at 20% 60%, rgba(39,196,138,0.2) 0%, transparent 55%)',
-  alex:   'radial-gradient(ellipse at 60% 30%, rgba(39,196,138,0.12) 0%, transparent 55%)',
-}
- 
-const PERSONA_LABELS = {
-  jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex',
-}
- 
-// onNavigate(cat)   — category screens
-// onNavigate('secondary') — persona switcher link
-// onBack            — back to noticed screen
-// onPersonaSwitch   — persona chip tap → picker
+
+const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex' }
+
 export default function HomeScreen({ persona, onNavigate, onBack, onPersonaSwitch }) {
   const [hovered,  setHovered]  = useState(null)
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
- 
+  const narrow = useIsNarrow()
+
   useEffect(() => {
     const move = (e) => setMousePos({ x: e.clientX, y: e.clientY })
     window.addEventListener('mousemove', move)
     return () => window.removeEventListener('mousemove', move)
   }, [])
- 
-  const gradient     = GRADIENTS[persona]      || GRADIENTS.yvonne
+
   const personaLabel = PERSONA_LABELS[persona] || persona
- 
+
   return (
     <div style={{
       width: '100%', height: '100%',
       background: 'var(--color-base)',
       position: 'relative', overflow: 'hidden',
       display: 'flex', flexDirection: 'column', justifyContent: 'center',
-      padding: '48px',
+      padding: narrow ? '24px' : '48px',
+      boxSizing: 'border-box',
     }}>
- 
-      {/* <motion.div
-        animate={{ opacity: [0.7, 1, 0.7] }}
-        transition={{ duration: 10, repeat: Infinity }}
-        style={{ position: 'absolute', inset: 0, background: gradient, pointerEvents: 'none' }}
-      /> */}
-      <AnimatedMeshBackground opacity={0.7} />
- 
-      {/* Top nav — fixed */}
+      <AnimatedMeshBackground animated opacity={0.9} />
+
       <div style={{
-        position: 'fixed', top: 32, left: 48, right: 48,
+        position: 'fixed', top: 32, left: narrow ? 24 : 48, right: narrow ? 24 : 48,
         display: 'flex', justifyContent: 'space-between', alignItems: 'center',
         zIndex: 20,
       }}>
@@ -86,24 +65,27 @@ export default function HomeScreen({ persona, onNavigate, onBack, onPersonaSwitc
           {personaLabel}
         </motion.span>
       </div>
- 
+
       <PageContainer>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           style={{
-            fontSize: 'clamp(36px, 5vw, 72px)',
-            fontWeight: 700, marginBottom: 56, lineHeight: 1.1,
+            fontSize: narrow ? 'clamp(28px, 8vw, 48px)' : 'clamp(36px, 5vw, 72px)',
+            fontWeight: 700, marginBottom: narrow ? 32 : 56, lineHeight: 1.1,
             position: 'relative', zIndex: 1,
           }}
         >
-          What are you curious<br />about today?
+          {narrow
+            ? 'What are you curious about today?'  // no forced <br> — wraps naturally at any width
+            : <>What are you curious<br />about today?</>}
         </motion.h1>
- 
+
         <div style={{
-          display: 'grid', gridTemplateColumns: '1fr 1fr',
-          columnGap: 80, rowGap: 4,
+          display: 'grid',
+          gridTemplateColumns: narrow ? '1fr' : '1fr 1fr',
+          columnGap: 80, rowGap: narrow ? 20 : 4,
           position: 'relative', zIndex: 1, maxWidth: 900,
         }}>
           {CATEGORIES.map((cat, i) => {
@@ -123,7 +105,7 @@ export default function HomeScreen({ persona, onNavigate, onBack, onPersonaSwitc
                   animate={{ opacity: isOther ? 0.3 : 1, x: isHovered ? 4 : 0 }}
                   transition={{ duration: 0.15 }}
                   style={{
-                    fontSize: 'clamp(24px, 1.6vw, 22px)',
+                    fontSize: narrow ? 18 : 'clamp(24px, 1.6vw, 22px)',
                     cursor: 'pointer', padding: '10px 0',
                     lineHeight: 1.3, userSelect: 'none',
                     fontWeight: isHovered ? 500 : 400,
@@ -135,12 +117,10 @@ export default function HomeScreen({ persona, onNavigate, onBack, onPersonaSwitc
             )
           })}
         </div>
- 
       </PageContainer>
- 
-      {/* Cursor tooltip */}
+
       <AnimatePresence>
-        {hovered && (() => {
+        {hovered && !narrow && (() => {
           const cat = CATEGORIES.find(c => c.id === hovered)
           if (!cat) return null
           return (
@@ -165,22 +145,19 @@ export default function HomeScreen({ persona, onNavigate, onBack, onPersonaSwitc
               }}
             >
               <cat.Icon size={32} color="rgba(255,255,255,1)" />
-              <span style={{ fontSize: 22, color: 'rgba(255,255,255,1)' }}>
-                {cat.description}
-              </span>
+              <span style={{ fontSize: 22, color: 'rgba(255,255,255,1)' }}>{cat.description}</span>
             </motion.div>
           )
         })()}
       </AnimatePresence>
- 
-      {/* Bottom-left back — goes to noticed, not picker */}
+
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
         onClick={onBack}
         style={{
-          position: 'fixed', bottom: 36, left: 48,
+          position: 'fixed', bottom: 36, left: narrow ? 24 : 48,
           color: 'var(--color-text-tertiary)',
           fontSize: 14, cursor: 'pointer', zIndex: 10,
         }}
@@ -190,4 +167,3 @@ export default function HomeScreen({ persona, onNavigate, onBack, onPersonaSwitc
     </div>
   )
 }
- 

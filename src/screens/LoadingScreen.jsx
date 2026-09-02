@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useIsNarrow } from '../components/scrolly/useIsNarrow'
 
 const COPY = {
   jamie: {
@@ -47,23 +48,18 @@ const COPY = {
 export default function LoadingScreen({ persona, isRepeatVisit, onComplete }) {
   const [visibleLines, setVisibleLines] = useState(0)
   const copy = COPY[persona] || COPY.yvonne
+  const narrow = useIsNarrow()
 
   useEffect(() => {
     setVisibleLines(0)
-
     if (isRepeatVisit) {
       const timer = setTimeout(onComplete, 800)
       return () => clearTimeout(timer)
     }
-
-    // Normal full sequence
     const timers = copy.lines.map((_, i) =>
-      setTimeout(() => setVisibleLines(v => Math.max(v, i + 1)),
-        600 + i * 700)
+      setTimeout(() => setVisibleLines(v => Math.max(v, i + 1)), 600 + i * 700)
     )
-    const done = setTimeout(onComplete,
-      600 + copy.lines.length * 700 + 1000)
-
+    const done = setTimeout(onComplete, 600 + copy.lines.length * 700 + 1000)
     return () => {
       timers.forEach(clearTimeout)
       clearTimeout(done)
@@ -76,50 +72,43 @@ export default function LoadingScreen({ persona, isRepeatVisit, onComplete }) {
       background: 'var(--color-base)',
       position: 'relative', overflow: 'hidden',
       display: 'flex', alignItems: 'center',
-      padding: '48px',
+      padding: narrow ? '24px' : '48px',
+      boxSizing: 'border-box',
     }}>
 
-      {/* Animated gradient */}
       <motion.div
         key={persona}
         initial={{ opacity: 0 }}
         animate={{ opacity: [0.7, 1, 0.7] }}
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-        style={{
-          position: 'absolute', inset: 0,
-          background: copy.gradient,
-          pointerEvents: 'none',
-        }}
+        style={{ position: 'absolute', inset: 0, background: copy.gradient, pointerEvents: 'none' }}
       />
 
-      {/* Nav */}
-      <div style={{
-        position: 'absolute', top: 32, left: 48, right: 48,
-        display: 'flex', justifyContent: 'space-between',
-      }}>
+      <div style={{ position: 'absolute', top: 32, left: narrow ? 24 : 48, right: narrow ? 24 : 48, display: 'flex', justifyContent: 'space-between' }}>
         <span style={{ fontSize: 16, fontWeight: 500 }}>fluent</span>
       </div>
 
-      {/* Content */}
-      <div style={{ position: 'relative', zIndex: 1, maxWidth: 640 }}>
+      {/* width:100% forces this to actually fill/shrink to the parent's
+          available width (capped at maxWidth) instead of sizing to its
+          own content — without it, text was overflowing the viewport
+          on narrow screens rather than wrapping. */}
+      <div style={{ position: 'relative', zIndex: 1, width: '100%', maxWidth: 640, boxSizing: 'border-box' }}>
         <motion.h1
           key={`headline-${persona}`}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           style={{
-            fontSize: 'clamp(36px, 5vw, 64px)',
+            fontSize: narrow ? 'clamp(26px, 7vw, 64px)' : 'clamp(36px, 5vw, 64px)',
             fontWeight: 700,
-            marginBottom: 40,
+            marginBottom: narrow ? 28 : 40,
             lineHeight: 1.15,
           }}
         >
           {copy.headline}
         </motion.h1>
 
-        <div style={{
-          display: 'flex', flexDirection: 'column', gap: 20,
-        }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: narrow ? 16 : 20 }}>
           <AnimatePresence>
             {copy.lines.slice(0, visibleLines).map((line, i) => (
               <motion.p
@@ -128,7 +117,7 @@ export default function LoadingScreen({ persona, isRepeatVisit, onComplete }) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 style={{
-                  fontSize: i === 2 ? 18 : 15,
+                  fontSize: narrow ? (i === 2 ? 16 : 13) : (i === 2 ? 18 : 15),
                   fontStyle: i === 2 ? 'italic' : 'normal',
                   color: i === copy.lines.length - 1
                     ? 'var(--color-text-tertiary)'

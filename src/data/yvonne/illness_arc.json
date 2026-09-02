@@ -4,37 +4,37 @@
       "date": "2026-02-01",
       "hrv_dev": -12.9,
       "rhr_dev": 4.2,
-      "wrist_dev": -0.26
+      "wrist_dev": -0.22
     },
     {
       "date": "2026-02-02",
       "hrv_dev": 4.4,
       "rhr_dev": -4.5,
-      "wrist_dev": 0.7
+      "wrist_dev": 0.74
     },
     {
       "date": "2026-02-03",
       "hrv_dev": -3.6,
       "rhr_dev": 2.5,
-      "wrist_dev": 0.31
+      "wrist_dev": 0.36
     },
     {
       "date": "2026-02-04",
       "hrv_dev": -1.7,
       "rhr_dev": 0.5,
-      "wrist_dev": 0.1
+      "wrist_dev": 0.15
     },
     {
       "date": "2026-02-05",
       "hrv_dev": -2.0,
       "rhr_dev": -0.5,
-      "wrist_dev": 0.62
+      "wrist_dev": 0.67
     },
     {
       "date": "2026-02-06",
       "hrv_dev": -9.1,
       "rhr_dev": -0.4,
-      "wrist_dev": 0.37
+      "wrist_dev": 0.42
     },
     {
       "date": "2026-02-07",
@@ -46,37 +46,37 @@
       "date": "2026-02-08",
       "hrv_dev": -13.3,
       "rhr_dev": 4.1,
-      "wrist_dev": 0.42
+      "wrist_dev": 0.47
     },
     {
       "date": "2026-02-09",
       "hrv_dev": -3.3,
       "rhr_dev": -2.1,
-      "wrist_dev": 0.3
+      "wrist_dev": 0.35
     },
     {
       "date": "2026-02-10",
       "hrv_dev": -7.9,
       "rhr_dev": 1.1,
-      "wrist_dev": 0.41
+      "wrist_dev": 0.46
     },
     {
       "date": "2026-02-11",
       "hrv_dev": -10.3,
       "rhr_dev": -1.9,
-      "wrist_dev": 1.09
+      "wrist_dev": 1.13
     },
     {
       "date": "2026-02-12",
       "hrv_dev": -16.1,
       "rhr_dev": 0.9,
-      "wrist_dev": 1.55
+      "wrist_dev": 1.6
     },
     {
       "date": "2026-02-13",
       "hrv_dev": -17.0,
       "rhr_dev": -1.0,
-      "wrist_dev": 0.03
+      "wrist_dev": 0.07
     },
     {
       "date": "2026-02-14",
@@ -94,25 +94,25 @@
       "date": "2026-02-16",
       "hrv_dev": 6.6,
       "rhr_dev": -5.2,
-      "wrist_dev": 0.05
+      "wrist_dev": 0.1
     },
     {
       "date": "2026-02-17",
       "hrv_dev": 19.0,
       "rhr_dev": -4.9,
-      "wrist_dev": 0.21
+      "wrist_dev": 0.26
     },
     {
       "date": "2026-02-18",
       "hrv_dev": 7.2,
       "rhr_dev": -7.6,
-      "wrist_dev": 0.09
+      "wrist_dev": 0.14
     },
     {
       "date": "2026-02-19",
       "hrv_dev": -6.1,
       "rhr_dev": -2.6,
-      "wrist_dev": 0.74
+      "wrist_dev": 0.79
     },
     {
       "date": "2026-02-20",
@@ -124,13 +124,13 @@
       "date": "2026-02-21",
       "hrv_dev": -1.9,
       "rhr_dev": -6.1,
-      "wrist_dev": 0.21
+      "wrist_dev": 0.26
     },
     {
       "date": "2026-02-22",
       "hrv_dev": 6.3,
       "rhr_dev": 21.1,
-      "wrist_dev": -0.21
+      "wrist_dev": -0.16
     },
     {
       "date": "2026-02-23",
@@ -142,7 +142,7 @@
       "date": "2026-02-24",
       "hrv_dev": -28.9,
       "rhr_dev": 21.1,
-      "wrist_dev": 2.72
+      "wrist_dev": 2.77
     },
     {
       "date": "2026-02-25",
@@ -154,37 +154,37 @@
       "date": "2026-02-26",
       "hrv_dev": -9.7,
       "rhr_dev": -1.6,
-      "wrist_dev": 0.19
+      "wrist_dev": 0.24
     },
     {
       "date": "2026-02-27",
       "hrv_dev": -5.6,
       "rhr_dev": 5.0,
-      "wrist_dev": 0.15
+      "wrist_dev": 0.2
     },
     {
       "date": "2026-02-28",
       "hrv_dev": 13.0,
       "rhr_dev": 0.8,
-      "wrist_dev": -0.3
+      "wrist_dev": -0.25
     },
     {
       "date": "2026-03-01",
       "hrv_dev": -5.3,
       "rhr_dev": -3.3,
-      "wrist_dev": 0.23
+      "wrist_dev": 0.28
     }
   ],
   "markers": [
     {
-      "date": "2026-02-11",
-      "label": "Two signals converge",
-      "note": "HRV -10.3 + wrist +1.09\u00b0"
+      "date": "2026-02-08",
+      "label": "First convergence",
+      "note": "HRV -13.3 + RHR +4.1"
     },
     {
-      "date": "2026-02-12",
-      "label": "Signal strengthens",
-      "note": "HRV -16.1 + wrist +1.55\u00b0"
+      "date": "2026-02-11",
+      "label": "Two signals together",
+      "note": "HRV -10.3 + wrist +1.09\u00b0"
     },
     {
       "date": "2026-02-20",

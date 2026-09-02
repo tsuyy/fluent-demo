@@ -1,0 +1,1600 @@
+{
+  "year_summary": [
+    {
+      "year": 2023,
+      "hr": 147.6,
+      "speed": 11.9,
+      "dist": 21.9,
+      "n": 76
+    },
+    {
+      "year": 2024,
+      "hr": 146.1,
+      "speed": 11.8,
+      "dist": 26.0,
+      "n": 38
+    },
+    {
+      "year": 2025,
+      "hr": 141.2,
+      "speed": 10.9,
+      "dist": 22.5,
+      "n": 23
+    },
+    {
+      "year": 2026,
+      "hr": 145.7,
+      "speed": 12.7,
+      "dist": 18.2,
+      "n": 16
+    }
+  ],
+  "zone_controlled": [
+    {
+      "year": 2023,
+      "hr": 147.6,
+      "speed": 11.1,
+      "dist": 23.9,
+      "n": 43
+    },
+    {
+      "year": 2024,
+      "hr": 148.8,
+      "speed": 12.2,
+      "dist": 30.1,
+      "n": 23
+    },
+    {
+      "year": 2025,
+      "hr": 150.2,
+      "speed": 11.9,
+      "dist": 22.5,
+      "n": 13
+    },
+    {
+      "year": 2026,
+      "hr": 147.6,
+      "speed": 12.8,
+      "dist": 17.6,
+      "n": 12
+    }
+  ],
+  "sessions": [
+    {
+      "date": "2023-03-23",
+      "year": 2023,
+      "hr_avg": 159.5,
+      "speed_mph": 17.2,
+      "distance": 12.9,
+      "duration": 45.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-03-28",
+      "year": 2023,
+      "hr_avg": 163.1,
+      "speed_mph": 17.3,
+      "distance": 14.4,
+      "duration": 50.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-04-15",
+      "year": 2023,
+      "hr_avg": 159.9,
+      "speed_mph": 17.2,
+      "distance": 17.2,
+      "duration": 60.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-04-17",
+      "year": 2023,
+      "hr_avg": 165.6,
+      "speed_mph": 17.0,
+      "distance": 12.8,
+      "duration": 45.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-04-20",
+      "year": 2023,
+      "hr_avg": 160.5,
+      "speed_mph": 17.6,
+      "distance": 13.3,
+      "duration": 45.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-04-24",
+      "year": 2023,
+      "hr_avg": 159.5,
+      "speed_mph": 17.1,
+      "distance": 13.1,
+      "duration": 46.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-04-26",
+      "year": 2023,
+      "hr_avg": 157.4,
+      "speed_mph": 17.5,
+      "distance": 13.2,
+      "duration": 45.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-04-28",
+      "year": 2023,
+      "hr_avg": 162.0,
+      "speed_mph": 17.2,
+      "distance": 13.0,
+      "duration": 45.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-05-01",
+      "year": 2023,
+      "hr_avg": 155.6,
+      "speed_mph": 17.2,
+      "distance": 13.0,
+      "duration": 45.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-05-03",
+      "year": 2023,
+      "hr_avg": 169.4,
+      "speed_mph": 17.4,
+      "distance": 13.1,
+      "duration": 45.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-05-07",
+      "year": 2023,
+      "hr_avg": 151.4,
+      "speed_mph": 9.6,
+      "distance": 22.8,
+      "duration": 142.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-05-13",
+      "year": 2023,
+      "hr_avg": 146.9,
+      "speed_mph": 8.7,
+      "distance": 14.9,
+      "duration": 103.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-05-14",
+      "year": 2023,
+      "hr_avg": 134.6,
+      "speed_mph": 9.0,
+      "distance": 10.4,
+      "duration": 70.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2023-05-15",
+      "year": 2023,
+      "hr_avg": 159.0,
+      "speed_mph": 17.4,
+      "distance": 13.1,
+      "duration": 45.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-05-16",
+      "year": 2023,
+      "hr_avg": 140.9,
+      "speed_mph": 9.4,
+      "distance": 16.8,
+      "duration": 107.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-05-17",
+      "year": 2023,
+      "hr_avg": 142.9,
+      "speed_mph": 8.8,
+      "distance": 10.3,
+      "duration": 71.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-05-20",
+      "year": 2023,
+      "hr_avg": 143.8,
+      "speed_mph": 9.6,
+      "distance": 15.1,
+      "duration": 95.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-05-22",
+      "year": 2023,
+      "hr_avg": 146.9,
+      "speed_mph": 11.3,
+      "distance": 23.4,
+      "duration": 124.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-05-23",
+      "year": 2023,
+      "hr_avg": 128.8,
+      "speed_mph": 9.8,
+      "distance": 11.4,
+      "duration": 70.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2023-05-26",
+      "year": 2023,
+      "hr_avg": 148.2,
+      "speed_mph": 11.3,
+      "distance": 22.2,
+      "duration": 118.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-05-27",
+      "year": 2023,
+      "hr_avg": 133.4,
+      "speed_mph": 9.4,
+      "distance": 14.2,
+      "duration": 90.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2023-05-28",
+      "year": 2023,
+      "hr_avg": 132.1,
+      "speed_mph": 8.9,
+      "distance": 35.7,
+      "duration": 239.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2023-05-29",
+      "year": 2023,
+      "hr_avg": 138.3,
+      "speed_mph": 11.5,
+      "distance": 25.5,
+      "duration": 133.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-05-30",
+      "year": 2023,
+      "hr_avg": 145.2,
+      "speed_mph": 9.2,
+      "distance": 11.5,
+      "duration": 75.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-05-31",
+      "year": 2023,
+      "hr_avg": 149.7,
+      "speed_mph": 11.4,
+      "distance": 20.4,
+      "duration": 108.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-06-03",
+      "year": 2023,
+      "hr_avg": 142.1,
+      "speed_mph": 11.9,
+      "distance": 22.3,
+      "duration": 113.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-06-04",
+      "year": 2023,
+      "hr_avg": 140.7,
+      "speed_mph": 10.0,
+      "distance": 25.6,
+      "duration": 154.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-06-05",
+      "year": 2023,
+      "hr_avg": 145.0,
+      "speed_mph": 10.2,
+      "distance": 26.7,
+      "duration": 157.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-06-09",
+      "year": 2023,
+      "hr_avg": 156.5,
+      "speed_mph": 11.3,
+      "distance": 15.2,
+      "duration": 81.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-06-10",
+      "year": 2023,
+      "hr_avg": 153.7,
+      "speed_mph": 10.7,
+      "distance": 39.2,
+      "duration": 219.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-06-12",
+      "year": 2023,
+      "hr_avg": 145.2,
+      "speed_mph": 10.9,
+      "distance": 29.4,
+      "duration": 163.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-06-14",
+      "year": 2023,
+      "hr_avg": 149.3,
+      "speed_mph": 10.3,
+      "distance": 14.2,
+      "duration": 83.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-06-16",
+      "year": 2023,
+      "hr_avg": 150.4,
+      "speed_mph": 9.7,
+      "distance": 10.8,
+      "duration": 66.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-06-17",
+      "year": 2023,
+      "hr_avg": 147.2,
+      "speed_mph": 9.8,
+      "distance": 36.9,
+      "duration": 226.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-06-23",
+      "year": 2023,
+      "hr_avg": 150.3,
+      "speed_mph": 11.8,
+      "distance": 21.1,
+      "duration": 107.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-06-24",
+      "year": 2023,
+      "hr_avg": 134.2,
+      "speed_mph": 10.5,
+      "distance": 10.1,
+      "duration": 58.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2023-06-26",
+      "year": 2023,
+      "hr_avg": 152.1,
+      "speed_mph": 17.0,
+      "distance": 12.8,
+      "duration": 45.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-06-30",
+      "year": 2023,
+      "hr_avg": 164.8,
+      "speed_mph": 17.4,
+      "distance": 13.1,
+      "duration": 45.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-07-01",
+      "year": 2023,
+      "hr_avg": 153.9,
+      "speed_mph": 11.8,
+      "distance": 25.0,
+      "duration": 128.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-07-03",
+      "year": 2023,
+      "hr_avg": 137.5,
+      "speed_mph": 10.6,
+      "distance": 19.8,
+      "duration": 112.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-07-04",
+      "year": 2023,
+      "hr_avg": 144.4,
+      "speed_mph": 10.7,
+      "distance": 18.1,
+      "duration": 102.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-07-06",
+      "year": 2023,
+      "hr_avg": 142.0,
+      "speed_mph": 10.0,
+      "distance": 26.1,
+      "duration": 156.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-07-07",
+      "year": 2023,
+      "hr_avg": 144.2,
+      "speed_mph": 10.8,
+      "distance": 22.6,
+      "duration": 126.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-07-08",
+      "year": 2023,
+      "hr_avg": 130.8,
+      "speed_mph": 8.1,
+      "distance": 29.9,
+      "duration": 222.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2023-07-11",
+      "year": 2023,
+      "hr_avg": 152.1,
+      "speed_mph": 17.2,
+      "distance": 12.9,
+      "duration": 45.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-07-14",
+      "year": 2023,
+      "hr_avg": 151.0,
+      "speed_mph": 10.7,
+      "distance": 25.1,
+      "duration": 140.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-07-22",
+      "year": 2023,
+      "hr_avg": 156.2,
+      "speed_mph": 11.7,
+      "distance": 48.6,
+      "duration": 249.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-07-29",
+      "year": 2023,
+      "hr_avg": 136.8,
+      "speed_mph": 10.3,
+      "distance": 12.0,
+      "duration": 70.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-08-05",
+      "year": 2023,
+      "hr_avg": 145.4,
+      "speed_mph": 10.8,
+      "distance": 31.9,
+      "duration": 178.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-08-11",
+      "year": 2023,
+      "hr_avg": 144.5,
+      "speed_mph": 9.7,
+      "distance": 24.5,
+      "duration": 151.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-08-12",
+      "year": 2023,
+      "hr_avg": 139.1,
+      "speed_mph": 10.7,
+      "distance": 28.2,
+      "duration": 158.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-08-23",
+      "year": 2023,
+      "hr_avg": 157.2,
+      "speed_mph": 13.3,
+      "distance": 48.0,
+      "duration": 216.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-08-27",
+      "year": 2023,
+      "hr_avg": 139.2,
+      "speed_mph": 10.8,
+      "distance": 12.6,
+      "duration": 70.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-08-27",
+      "year": 2023,
+      "hr_avg": 136.6,
+      "speed_mph": 9.4,
+      "distance": 17.7,
+      "duration": 113.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-09-01",
+      "year": 2023,
+      "hr_avg": 148.7,
+      "speed_mph": 10.9,
+      "distance": 25.2,
+      "duration": 139.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-09-02",
+      "year": 2023,
+      "hr_avg": 153.1,
+      "speed_mph": 10.9,
+      "distance": 44.8,
+      "duration": 246.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-09-15",
+      "year": 2023,
+      "hr_avg": 154.3,
+      "speed_mph": 10.8,
+      "distance": 32.6,
+      "duration": 181.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-09-16",
+      "year": 2023,
+      "hr_avg": 140.9,
+      "speed_mph": 10.6,
+      "distance": 21.1,
+      "duration": 119.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-09-18",
+      "year": 2023,
+      "hr_avg": 131.9,
+      "speed_mph": 9.6,
+      "distance": 21.9,
+      "duration": 136.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2023-09-22",
+      "year": 2023,
+      "hr_avg": 139.0,
+      "speed_mph": 9.3,
+      "distance": 21.2,
+      "duration": 136.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-09-23",
+      "year": 2023,
+      "hr_avg": 146.2,
+      "speed_mph": 11.8,
+      "distance": 48.6,
+      "duration": 248.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-09-24",
+      "year": 2023,
+      "hr_avg": 120.2,
+      "speed_mph": 8.1,
+      "distance": 12.5,
+      "duration": 92.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2023-10-01",
+      "year": 2023,
+      "hr_avg": 144.4,
+      "speed_mph": 12.6,
+      "distance": 47.1,
+      "duration": 225.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-10-07",
+      "year": 2023,
+      "hr_avg": 138.5,
+      "speed_mph": 11.1,
+      "distance": 21.5,
+      "duration": 117.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-10-08",
+      "year": 2023,
+      "hr_avg": 140.7,
+      "speed_mph": 12.0,
+      "distance": 34.9,
+      "duration": 174.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-10-28",
+      "year": 2023,
+      "hr_avg": 148.4,
+      "speed_mph": 11.3,
+      "distance": 21.9,
+      "duration": 116.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-10-30",
+      "year": 2023,
+      "hr_avg": 150.5,
+      "speed_mph": 11.0,
+      "distance": 20.9,
+      "duration": 114.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-11-04",
+      "year": 2023,
+      "hr_avg": 156.1,
+      "speed_mph": 11.9,
+      "distance": 34.1,
+      "duration": 172.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-11-05",
+      "year": 2023,
+      "hr_avg": 151.6,
+      "speed_mph": 12.2,
+      "distance": 11.8,
+      "duration": 58.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-11-17",
+      "year": 2023,
+      "hr_avg": 151.0,
+      "speed_mph": 11.6,
+      "distance": 13.0,
+      "duration": 67.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-11-18",
+      "year": 2023,
+      "hr_avg": 150.3,
+      "speed_mph": 11.1,
+      "distance": 22.8,
+      "duration": 123.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-11-19",
+      "year": 2023,
+      "hr_avg": 148.4,
+      "speed_mph": 11.6,
+      "distance": 27.7,
+      "duration": 144.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2023-11-25",
+      "year": 2023,
+      "hr_avg": 150.2,
+      "speed_mph": 12.0,
+      "distance": 15.0,
+      "duration": 75.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-12-10",
+      "year": 2023,
+      "hr_avg": 150.6,
+      "speed_mph": 11.7,
+      "distance": 21.6,
+      "duration": 110.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-12-17",
+      "year": 2023,
+      "hr_avg": 155.5,
+      "speed_mph": 11.7,
+      "distance": 22.7,
+      "duration": 116.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2023-12-23",
+      "year": 2023,
+      "hr_avg": 148.8,
+      "speed_mph": 11.9,
+      "distance": 35.2,
+      "duration": 178.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-01-14",
+      "year": 2024,
+      "hr_avg": 160.7,
+      "speed_mph": 14.4,
+      "distance": 29.2,
+      "duration": 121.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2024-01-27",
+      "year": 2024,
+      "hr_avg": 146.7,
+      "speed_mph": 10.3,
+      "distance": 22.0,
+      "duration": 128.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-02-03",
+      "year": 2024,
+      "hr_avg": 154.9,
+      "speed_mph": 11.9,
+      "distance": 22.7,
+      "duration": 115.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2024-02-19",
+      "year": 2024,
+      "hr_avg": 131.6,
+      "speed_mph": 8.7,
+      "distance": 10.9,
+      "duration": 75.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2024-03-02",
+      "year": 2024,
+      "hr_avg": 133.9,
+      "speed_mph": 8.9,
+      "distance": 15.0,
+      "duration": 101.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2024-03-15",
+      "year": 2024,
+      "hr_avg": 153.3,
+      "speed_mph": 10.7,
+      "distance": 22.5,
+      "duration": 126.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2024-03-29",
+      "year": 2024,
+      "hr_avg": 147.3,
+      "speed_mph": 11.3,
+      "distance": 22.9,
+      "duration": 122.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-03-31",
+      "year": 2024,
+      "hr_avg": 148.4,
+      "speed_mph": 11.2,
+      "distance": 56.1,
+      "duration": 301.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-04-06",
+      "year": 2024,
+      "hr_avg": 139.5,
+      "speed_mph": 11.4,
+      "distance": 22.7,
+      "duration": 119.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-04-13",
+      "year": 2024,
+      "hr_avg": 149.1,
+      "speed_mph": 12.1,
+      "distance": 29.4,
+      "duration": 146.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-04-21",
+      "year": 2024,
+      "hr_avg": 154.2,
+      "speed_mph": 11.9,
+      "distance": 31.7,
+      "duration": 159.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2024-04-29",
+      "year": 2024,
+      "hr_avg": 148.5,
+      "speed_mph": 9.9,
+      "distance": 13.8,
+      "duration": 84.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-05-04",
+      "year": 2024,
+      "hr_avg": 151.4,
+      "speed_mph": 12.4,
+      "distance": 34.5,
+      "duration": 166.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2024-05-17",
+      "year": 2024,
+      "hr_avg": 157.0,
+      "speed_mph": 12.2,
+      "distance": 22.7,
+      "duration": 112.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2024-05-18",
+      "year": 2024,
+      "hr_avg": 141.6,
+      "speed_mph": 11.8,
+      "distance": 16.1,
+      "duration": 82.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-05-24",
+      "year": 2024,
+      "hr_avg": 122.9,
+      "speed_mph": 9.0,
+      "distance": 12.1,
+      "duration": 81.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2024-05-25",
+      "year": 2024,
+      "hr_avg": 130.6,
+      "speed_mph": 9.9,
+      "distance": 23.3,
+      "duration": 141.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2024-05-31",
+      "year": 2024,
+      "hr_avg": 151.5,
+      "speed_mph": 12.0,
+      "distance": 22.7,
+      "duration": 114.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2024-06-02",
+      "year": 2024,
+      "hr_avg": 138.6,
+      "speed_mph": 12.7,
+      "distance": 22.5,
+      "duration": 107.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-06-07",
+      "year": 2024,
+      "hr_avg": 139.6,
+      "speed_mph": 10.2,
+      "distance": 24.8,
+      "duration": 146.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-06-08",
+      "year": 2024,
+      "hr_avg": 150.0,
+      "speed_mph": 12.9,
+      "distance": 35.0,
+      "duration": 163.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-06-14",
+      "year": 2024,
+      "hr_avg": 160.4,
+      "speed_mph": 12.3,
+      "distance": 21.7,
+      "duration": 106.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2024-06-15",
+      "year": 2024,
+      "hr_avg": 148.7,
+      "speed_mph": 12.7,
+      "distance": 39.6,
+      "duration": 186.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-07-04",
+      "year": 2024,
+      "hr_avg": 145.8,
+      "speed_mph": 13.5,
+      "distance": 22.9,
+      "duration": 101.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-07-13",
+      "year": 2024,
+      "hr_avg": 149.0,
+      "speed_mph": 12.8,
+      "distance": 35.1,
+      "duration": 164.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-07-21",
+      "year": 2024,
+      "hr_avg": 147.5,
+      "speed_mph": 13.8,
+      "distance": 33.4,
+      "duration": 145.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-08-04",
+      "year": 2024,
+      "hr_avg": 147.5,
+      "speed_mph": 13.7,
+      "distance": 22.7,
+      "duration": 100.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-08-12",
+      "year": 2024,
+      "hr_avg": 141.5,
+      "speed_mph": 11.4,
+      "distance": 31.3,
+      "duration": 164.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-08-31",
+      "year": 2024,
+      "hr_avg": 136.0,
+      "speed_mph": 10.1,
+      "distance": 24.4,
+      "duration": 146.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-09-02",
+      "year": 2024,
+      "hr_avg": 151.7,
+      "speed_mph": 13.7,
+      "distance": 35.0,
+      "duration": 153.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2024-09-09",
+      "year": 2024,
+      "hr_avg": 125.0,
+      "speed_mph": 10.1,
+      "distance": 20.7,
+      "duration": 123.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2024-09-14",
+      "year": 2024,
+      "hr_avg": 153.1,
+      "speed_mph": 12.5,
+      "distance": 25.9,
+      "duration": 124.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2024-09-20",
+      "year": 2024,
+      "hr_avg": 159.1,
+      "speed_mph": 11.9,
+      "distance": 10.7,
+      "duration": 54.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2024-10-08",
+      "year": 2024,
+      "hr_avg": 138.8,
+      "speed_mph": 13.3,
+      "distance": 18.6,
+      "duration": 84.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-10-19",
+      "year": 2024,
+      "hr_avg": 150.4,
+      "speed_mph": 12.7,
+      "distance": 34.6,
+      "duration": 164.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2024-10-21",
+      "year": 2024,
+      "hr_avg": 144.4,
+      "speed_mph": 12.9,
+      "distance": 36.8,
+      "duration": 171.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-11-02",
+      "year": 2024,
+      "hr_avg": 144.7,
+      "speed_mph": 12.1,
+      "distance": 46.0,
+      "duration": 229.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2024-12-08",
+      "year": 2024,
+      "hr_avg": 155.7,
+      "speed_mph": 12.2,
+      "distance": 14.7,
+      "duration": 72.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2025-03-02",
+      "year": 2025,
+      "hr_avg": 151.8,
+      "speed_mph": 11.7,
+      "distance": 22.5,
+      "duration": 115.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2025-04-03",
+      "year": 2025,
+      "hr_avg": 136.4,
+      "speed_mph": 9.6,
+      "distance": 10.4,
+      "duration": 65.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2025-04-12",
+      "year": 2025,
+      "hr_avg": 152.8,
+      "speed_mph": 12.0,
+      "distance": 22.5,
+      "duration": 112.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2025-04-19",
+      "year": 2025,
+      "hr_avg": 155.0,
+      "speed_mph": 11.5,
+      "distance": 22.0,
+      "duration": 114.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2025-04-27",
+      "year": 2025,
+      "hr_avg": 129.4,
+      "speed_mph": 10.5,
+      "distance": 20.3,
+      "duration": 116.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2025-05-05",
+      "year": 2025,
+      "hr_avg": 132.2,
+      "speed_mph": 8.9,
+      "distance": 12.3,
+      "duration": 84.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2025-05-09",
+      "year": 2025,
+      "hr_avg": 139.6,
+      "speed_mph": 11.2,
+      "distance": 27.5,
+      "duration": 147.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2025-05-11",
+      "year": 2025,
+      "hr_avg": 108.4,
+      "speed_mph": 8.1,
+      "distance": 20.5,
+      "duration": 152.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2025-05-31",
+      "year": 2025,
+      "hr_avg": 115.7,
+      "speed_mph": 8.9,
+      "distance": 22.6,
+      "duration": 152.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2025-06-28",
+      "year": 2025,
+      "hr_avg": 145.2,
+      "speed_mph": 11.2,
+      "distance": 29.9,
+      "duration": 160.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2025-07-27",
+      "year": 2025,
+      "hr_avg": 153.6,
+      "speed_mph": 10.0,
+      "distance": 11.2,
+      "duration": 67.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2025-08-16",
+      "year": 2025,
+      "hr_avg": 149.8,
+      "speed_mph": 10.7,
+      "distance": 23.0,
+      "duration": 130.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2025-08-22",
+      "year": 2025,
+      "hr_avg": 150.2,
+      "speed_mph": 13.3,
+      "distance": 23.5,
+      "duration": 106.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2025-08-30",
+      "year": 2025,
+      "hr_avg": 133.6,
+      "speed_mph": 11.2,
+      "distance": 34.5,
+      "duration": 185.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2025-09-12",
+      "year": 2025,
+      "hr_avg": 154.7,
+      "speed_mph": 14.3,
+      "distance": 30.2,
+      "duration": 127.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2025-09-28",
+      "year": 2025,
+      "hr_avg": 146.0,
+      "speed_mph": 12.9,
+      "distance": 21.1,
+      "duration": 98.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2025-10-03",
+      "year": 2025,
+      "hr_avg": 121.2,
+      "speed_mph": 6.5,
+      "distance": 14.1,
+      "duration": 130.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2025-10-11",
+      "year": 2025,
+      "hr_avg": 146.8,
+      "speed_mph": 12.6,
+      "distance": 21.8,
+      "duration": 104.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2025-10-24",
+      "year": 2025,
+      "hr_avg": 158.1,
+      "speed_mph": 11.6,
+      "distance": 22.4,
+      "duration": 116.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2025-10-25",
+      "year": 2025,
+      "hr_avg": 144.8,
+      "speed_mph": 10.9,
+      "distance": 12.2,
+      "duration": 67.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2025-11-01",
+      "year": 2025,
+      "hr_avg": 119.7,
+      "speed_mph": 9.4,
+      "distance": 40.2,
+      "duration": 258.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2025-11-08",
+      "year": 2025,
+      "hr_avg": 154.2,
+      "speed_mph": 11.6,
+      "distance": 22.0,
+      "duration": 114.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2025-11-23",
+      "year": 2025,
+      "hr_avg": 148.0,
+      "speed_mph": 11.7,
+      "distance": 31.3,
+      "duration": 161.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2026-01-05",
+      "year": 2026,
+      "hr_avg": 146.1,
+      "speed_mph": 11.9,
+      "distance": 13.1,
+      "duration": 66.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2026-03-08",
+      "year": 2026,
+      "hr_avg": 147.6,
+      "speed_mph": 11.7,
+      "distance": 15.4,
+      "duration": 79.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2026-03-14",
+      "year": 2026,
+      "hr_avg": 151.1,
+      "speed_mph": 11.4,
+      "distance": 19.9,
+      "duration": 104.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2026-03-21",
+      "year": 2026,
+      "hr_avg": 155.6,
+      "speed_mph": 13.0,
+      "distance": 22.8,
+      "duration": 105.0,
+      "in_zone": false,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2026-05-02",
+      "year": 2026,
+      "hr_avg": 138.3,
+      "speed_mph": 12.2,
+      "distance": 23.4,
+      "duration": 114.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2026-05-10",
+      "year": 2026,
+      "hr_avg": 147.1,
+      "speed_mph": 13.0,
+      "distance": 14.2,
+      "duration": 66.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2026-05-10",
+      "year": 2026,
+      "hr_avg": 153.1,
+      "speed_mph": 12.8,
+      "distance": 14.6,
+      "duration": 68.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2026-05-25",
+      "year": 2026,
+      "hr_avg": 154.4,
+      "speed_mph": 14.4,
+      "distance": 25.4,
+      "duration": 106.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2026-06-01",
+      "year": 2026,
+      "hr_avg": 129.4,
+      "speed_mph": 11.4,
+      "distance": 19.6,
+      "duration": 103.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2026-06-13",
+      "year": 2026,
+      "hr_avg": 147.2,
+      "speed_mph": 13.0,
+      "distance": 10.3,
+      "duration": 48.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2026-06-21",
+      "year": 2026,
+      "hr_avg": 145.9,
+      "speed_mph": 13.8,
+      "distance": 22.5,
+      "duration": 97.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2026-07-12",
+      "year": 2026,
+      "hr_avg": 151.1,
+      "speed_mph": 13.7,
+      "distance": 22.4,
+      "duration": 98.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2026-07-23",
+      "year": 2026,
+      "hr_avg": 136.4,
+      "speed_mph": 11.8,
+      "distance": 14.8,
+      "duration": 75.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2026-07-25",
+      "year": 2026,
+      "hr_avg": 143.0,
+      "speed_mph": 13.8,
+      "distance": 21.8,
+      "duration": 94.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2026-08-27",
+      "year": 2026,
+      "hr_avg": 141.4,
+      "speed_mph": 12.2,
+      "distance": 18.7,
+      "duration": 92.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2026-08-28",
+      "year": 2026,
+      "hr_avg": 143.7,
+      "speed_mph": 12.2,
+      "distance": 12.9,
+      "duration": 63.0,
+      "in_zone": true,
+      "hr_bucket": "mid"
+    }
+  ],
+  "meta": {
+    "criteria": ">45min AND >10mi. Outdoor 2023+.",
+    "zone": "HR 140-155 for zone_controlled",
+    "n_sessions": 153,
+    "headline": "+15% faster at same HR (2023\u21922026)"
+  }
+}

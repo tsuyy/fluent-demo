@@ -6,8 +6,9 @@ import SeasonalStepsChart from '../components/charts/SeasonalStepsChart'
 import PageContainer      from '../components/layout/PageContainer'
 import IllnessArcChart      from '../components/charts/IllnessArcChart'
 import SoberExperimentChart from '../components/charts/SoberExperimentChart'
- import illnessArcData  from '../data/yvonne/illness_arc.json'
- import soberData        from '../data/yvonne/sober_experiment.json'
+import illnessArcData  from '../data/yvonne/illness_arc.json'
+import soberData        from '../data/yvonne/sober_experiment.json'
+import { useIsNarrow } from '../components/scrolly/useIsNarrow'
  
 const CARDS = {
   jamie: [
@@ -72,14 +73,22 @@ export default function WhatFluentNoticed({ persona, onExplore, onSwitch, onHome
   const cards    = CARDS[persona]     || CARDS.yvonne
   const gradient = GRADIENTS[persona] || GRADIENTS.yvonne
   const label    = PERSONA_LABELS[persona] || persona
+  const narrow = useIsNarrow()
  
   return (
-    <div style={{ width: '100%', height: '100%', background: 'var(--color-base)', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '48px' }}>
+    <div style={{
+     width: '100%', height: '100%',
+     background: 'var(--color-base)',
+     position: 'relative', overflow: 'hidden',
+     overflowX: 'hidden',
+     display: 'flex', flexDirection: 'column',
+     boxSizing: 'border-box',
+   }}>
  
       <div style={{ position: 'absolute', inset: 0, background: gradient, pointerEvents: 'none' }} />
  
       {/* Top nav — fluent routes back to thesis, persona chip opens picker */}
-      <div style={{ position: 'fixed', top: 32, left: 48, right: 48, display: 'flex', justifyContent: 'space-between', alignItems: 'center', zIndex: 20 }}>
+      <div style={{ position: 'fixed', top: 32, left: narrow ? 16 : 48, right: narrow ? 16 : 48, display: 'flex', justifyContent: 'space-between', alignItems: 'center', zIndex: 20 }}>
         <motion.span
           whileHover={{ opacity: 0.7 }}
           onClick={onHome}
@@ -95,7 +104,11 @@ export default function WhatFluentNoticed({ persona, onExplore, onSwitch, onHome
           {label}
         </motion.span>
       </div>
- 
+      <div style={{
+      flex: 1, overflowY: 'auto',
+      padding: narrow ? '90px 20px 130px' : '90px 48px 130px',
+      position: 'relative', zIndex: 1,
+    }}>
       <PageContainer>
         <motion.h1
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
@@ -104,8 +117,8 @@ export default function WhatFluentNoticed({ persona, onExplore, onSwitch, onHome
           Here's what Fluent noticed
         </motion.h1>
  
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, alignItems: 'start', position: 'relative', zIndex: 1 }}>
-          {cards.map((card, i) => (
+        <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1fr 1fr', gap: 24, alignItems: 'start', position: 'relative', zIndex: 1 }}>
+            {cards.map((card, i) => (
             <motion.div
               key={card.id}
               initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 + i * 0.15 }}
@@ -120,7 +133,7 @@ export default function WhatFluentNoticed({ persona, onExplore, onSwitch, onHome
           ))}
         </div>
       </PageContainer>
- 
+    </div>
       {/* Bottom nav — single CTA, no back button */}
       <div style={{ position: 'fixed', bottom: 32, left: 48, right: 48, display: 'flex', justifyContent: 'flex-end', zIndex: 100, pointerEvents: 'none' }}>
         <span

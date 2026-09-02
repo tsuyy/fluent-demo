@@ -1,76 +1,76 @@
 {
   "window": {
-    "start": "2026-07-30",
-    "end": "2026-08-12"
+    "start": "2026-08-18",
+    "end": "2026-08-31"
   },
   "daily": [
     {
-      "date": "2026-07-30",
-      "hrv_dev": 9.3,
-      "wrist_dev": -0.53
-    },
-    {
-      "date": "2026-07-31",
-      "hrv_dev": -3.4,
-      "wrist_dev": -0.5
-    },
-    {
-      "date": "2026-08-01",
-      "hrv_dev": -7.3,
-      "wrist_dev": null
-    },
-    {
-      "date": "2026-08-02",
-      "hrv_dev": 4.6,
-      "wrist_dev": null
-    },
-    {
-      "date": "2026-08-03",
-      "hrv_dev": 15.7,
-      "wrist_dev": -0.66
-    },
-    {
-      "date": "2026-08-04",
-      "hrv_dev": -5.6,
-      "wrist_dev": -0.83
-    },
-    {
-      "date": "2026-08-05",
-      "hrv_dev": 14.4,
-      "wrist_dev": -0.17
-    },
-    {
-      "date": "2026-08-06",
-      "hrv_dev": -7.1,
+      "date": "2026-08-18",
+      "hrv_dev": 2.3,
       "wrist_dev": -0.42
     },
     {
-      "date": "2026-08-07",
-      "hrv_dev": -8.6,
-      "wrist_dev": -0.84
+      "date": "2026-08-19",
+      "hrv_dev": 3.5,
+      "wrist_dev": -0.58
     },
     {
-      "date": "2026-08-08",
-      "hrv_dev": -9.4,
-      "wrist_dev": -0.21
+      "date": "2026-08-20",
+      "hrv_dev": -7.4,
+      "wrist_dev": -0.01
     },
     {
-      "date": "2026-08-09",
-      "hrv_dev": -0.7,
-      "wrist_dev": -0.3
+      "date": "2026-08-21",
+      "hrv_dev": -2.1,
+      "wrist_dev": -0.66
     },
     {
-      "date": "2026-08-10",
-      "hrv_dev": 2.4,
-      "wrist_dev": -0.18
+      "date": "2026-08-22",
+      "hrv_dev": 3.2,
+      "wrist_dev": -0.35
     },
     {
-      "date": "2026-08-11",
-      "hrv_dev": 0.4,
-      "wrist_dev": -0.47
+      "date": "2026-08-23",
+      "hrv_dev": -4.5,
+      "wrist_dev": -0.48
     },
     {
-      "date": "2026-08-12",
+      "date": "2026-08-24",
+      "hrv_dev": 2.9,
+      "wrist_dev": -0.39
+    },
+    {
+      "date": "2026-08-25",
+      "hrv_dev": 3.4,
+      "wrist_dev": -0.37
+    },
+    {
+      "date": "2026-08-26",
+      "hrv_dev": 12.8,
+      "wrist_dev": -0.39
+    },
+    {
+      "date": "2026-08-27",
+      "hrv_dev": -2.7,
+      "wrist_dev": -0.42
+    },
+    {
+      "date": "2026-08-28",
+      "hrv_dev": 17.4,
+      "wrist_dev": -0.58
+    },
+    {
+      "date": "2026-08-29",
+      "hrv_dev": 11.5,
+      "wrist_dev": -0.39
+    },
+    {
+      "date": "2026-08-30",
+      "hrv_dev": 0.9,
+      "wrist_dev": -0.67
+    },
+    {
+      "date": "2026-08-31",
       "hrv_dev": 4.2,
       "wrist_dev": null
     }
@@ -79,7 +79,6 @@
   "convergence_days": [],
   "thresholds": {
     "hrv_dev_alert": -8.0,
-    "wrist_dev_alert": 0.8,
-    "note": "Illness signature requires 2+ signals in same 3-day window"
+    "wrist_dev_alert": 0.8
   }
 }

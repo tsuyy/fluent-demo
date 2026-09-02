@@ -1,0 +1,124 @@
+{
+  "buckets": [
+    {
+      "label": "8:00pm",
+      "hour": 20.0,
+      "count": 0,
+      "pct": 0.0,
+      "is_anchor": false,
+      "is_late": false
+    },
+    {
+      "label": "8:30pm",
+      "hour": 20.5,
+      "count": 16,
+      "pct": 2.3,
+      "is_anchor": false,
+      "is_late": false
+    },
+    {
+      "label": "9:00pm",
+      "hour": 21.0,
+      "count": 187,
+      "pct": 27.2,
+      "is_anchor": true,
+      "is_late": false
+    },
+    {
+      "label": "9:30pm",
+      "hour": 21.5,
+      "count": 79,
+      "pct": 11.5,
+      "is_anchor": true,
+      "is_late": false
+    },
+    {
+      "label": "10:00pm",
+      "hour": 22.0,
+      "count": 97,
+      "pct": 14.1,
+      "is_anchor": true,
+      "is_late": false
+    },
+    {
+      "label": "10:30pm",
+      "hour": 22.5,
+      "count": 62,
+      "pct": 9.0,
+      "is_anchor": true,
+      "is_late": false
+    },
+    {
+      "label": "11:00pm",
+      "hour": 23.0,
+      "count": 66,
+      "pct": 9.6,
+      "is_anchor": false,
+      "is_late": false
+    },
+    {
+      "label": "11:30pm",
+      "hour": 23.5,
+      "count": 70,
+      "pct": 10.2,
+      "is_anchor": false,
+      "is_late": false
+    },
+    {
+      "label": "0:00am",
+      "hour": 24.0,
+      "count": 45,
+      "pct": 6.5,
+      "is_anchor": false,
+      "is_late": true
+    },
+    {
+      "label": "0:30am",
+      "hour": 24.5,
+      "count": 26,
+      "pct": 3.8,
+      "is_anchor": false,
+      "is_late": true
+    },
+    {
+      "label": "1:00am",
+      "hour": 25.0,
+      "count": 18,
+      "pct": 2.6,
+      "is_anchor": false,
+      "is_late": true
+    },
+    {
+      "label": "1:30am",
+      "hour": 25.5,
+      "count": 8,
+      "pct": 1.2,
+      "is_anchor": false,
+      "is_late": true
+    },
+    {
+      "label": "2:00am",
+      "hour": 26.0,
+      "count": 6,
+      "pct": 0.9,
+      "is_anchor": false,
+      "is_late": true
+    },
+    {
+      "label": "2:30am",
+      "hour": 26.5,
+      "count": 2,
+      "pct": 0.3,
+      "is_anchor": false,
+      "is_late": true
+    }
+  ],
+  "total_nights": 688,
+  "anchor_pct": 61.8,
+  "late_pct": 15.3,
+  "avg_bedtime": 22.59,
+  "std_bedtime_hr": 1.4,
+  "std_bedtime_min": 84.0,
+  "weekday_anchor": "22:30",
+  "weekday_spread_min": 19
+}

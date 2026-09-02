@@ -4,6 +4,14 @@ import QuarterlyArcChart from '../components/charts/QuarterlyArcChart'
 import RHRTrendChart from '../components/charts/RHRTrendChart'
 import HRRecoveryChart from '../components/charts/HRRecoveryChart'
 import PageContainer from '../components/layout/PageContainer'
+import { useIsNarrow } from '../components/scrolly/useIsNarrow'
+import Zone2ProgressChart from '../components/charts/Zone2ProgressChart'
+import zone2Data          from '../data/yvonne/zone2_running.json'
+import CyclingAdaptationChart from '../components/charts/CyclingAdaptationChart'
+import cyclingData            from '../data/yvonne/cycling_efficiency.json'
+import quarterlyArc           from '../data/yvonne/quarterly_arc.json'
+import cyclingLongRides from '../data/yvonne/cycling_long_rides.json'  // NOT cycling_efficiency.json
+
 
 
 const GRADIENTS = {
@@ -15,7 +23,7 @@ const GRADIENTS = {
 
 const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex' }
 
-function ChartCard({ title, subtitle, children, delay = 0, fullWidth = false }) {
+function ChartCard({ title, subtitle, insight, children, delay = 0, fullWidth = false }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
@@ -29,124 +37,22 @@ function ChartCard({ title, subtitle, children, delay = 0, fullWidth = false }) 
         gridColumn: fullWidth ? '1 / -1' : undefined,
       }}
     >
-      <p style={{
-        fontSize: 13, fontWeight: 600,
-        marginBottom: 4, lineHeight: 1.3,
-      }}>
-        {title}
-      </p>
-      {subtitle && (
-        <p style={{
-          fontSize: 11,
-          color: 'var(--color-text-tertiary)',
-          marginBottom: 12, lineHeight: 1.4,
-        }}>
-          {subtitle}
-        </p>
-      )}
-      {children}
+      <p>{title}</p>
+        {subtitle && <p>{subtitle}</p>}
+        {children}
+        {insight && (
+          <p style={{
+            fontSize: 12, color: 'var(--color-text-tertiary)',
+            fontStyle: 'italic', lineHeight: 1.5,
+            marginTop: 10,
+          }}>
+            "{insight}"
+          </p>
+        )}
     </motion.div>
   )
 }
 
-// Respiratory rate trend — simple line
-function RespRateCard() {
-  return (
-    <div style={{ padding: '16px 0 8px' }}>
-      <div style={{
-        display: 'flex', justifyContent: 'space-between',
-        alignItems: 'flex-end', marginBottom: 16,
-      }}>
-        <div>
-          <p style={{ fontSize: 28, fontWeight: 700, lineHeight: 1 }}>
-            15.8
-          </p>
-          <p style={{
-            fontSize: 11, color: 'var(--color-text-tertiary)',
-            marginTop: 4,
-          }}>
-            breaths/min · today
-          </p>
-        </div>
-        <div style={{ textAlign: 'right' }}>
-          <p style={{
-            fontSize: 13, color: 'var(--color-recovery)',
-            fontWeight: 500,
-          }}>
-            ↓ from 20–22
-          </p>
-          <p style={{
-            fontSize: 11, color: 'var(--color-text-tertiary)',
-          }}>
-            when you started
-          </p>
-        </div>
-      </div>
-      <p style={{
-        fontSize: 12, color: 'var(--color-text-tertiary)',
-        lineHeight: 1.6,
-      }}>
-        The most underrated signal in your data. Correlates almost
-        perfectly with your HRV improvements (r = −0.879).
-      </p>
-    </div>
-  )
-}
-
-// Blood panel static card
-function BloodPanelCard() {
-  const markers = [
-    { label: 'hs-CRP (inflammation)', from: '0.6', to: '0.2', dir: 'down' },
-    { label: 'Triglycerides',         from: '116', to: '68',  dir: 'down' },
-    { label: 'HDL cholesterol',       from: '72',  to: '93',  dir: 'up'   },
-  ]
-  return (
-    <div style={{ padding: '8px 0' }}>
-      <div style={{
-        display: 'flex', flexDirection: 'column', gap: 12,
-      }}>
-        {markers.map(m => (
-          <div key={m.label} style={{
-            display: 'flex', justifyContent: 'space-between',
-            alignItems: 'center',
-            padding: '48px',
-            background: 'rgba(255,255,255,0.04)',
-            borderRadius: 8,
-          }}>
-            <span style={{
-              fontSize: 12, color: 'var(--color-text-secondary)',
-            }}>
-              {m.label}
-            </span>
-            <div style={{
-              display: 'flex', alignItems: 'center', gap: 8,
-            }}>
-              <span style={{
-                fontSize: 11, color: 'var(--color-text-tertiary)',
-              }}>
-                {m.from}
-              </span>
-              <span style={{
-                color: m.dir === 'down'
-                  ? 'var(--color-recovery)'
-                  : 'var(--color-accent)',
-                fontSize: 12,
-              }}>
-                → {m.to} {m.dir === 'down' ? '↓' : '↑'}
-              </span>
-            </div>
-          </div>
-        ))}
-      </div>
-      <p style={{
-        fontSize: 11, color: 'var(--color-text-tertiary)',
-        marginTop: 12, lineHeight: 1.5,
-      }}>
-        Directional trends only. Not clinical guidance.
-      </p>
-    </div>
-  )
-}
 
 export default function HeartNervousSystemScreen({ persona, onNavigate, onBack }) {
   const gradient = GRADIENTS[persona] || GRADIENTS.yvonne
@@ -154,13 +60,14 @@ export default function HeartNervousSystemScreen({ persona, onNavigate, onBack }
   const isRobert = persona === 'robert'
   const isJamie  = persona === 'jamie'
 
+  const narrow = useIsNarrow()
+
   return (
     <div style={{
       background: 'var(--color-base)',
       position: 'relative', overflow: 'hidden',
       display: 'flex', flexDirection: 'column',
       flex: 1, overflowY: 'auto',
-      padding: '48px',
       zIndex: 1,
     }}>
 
@@ -203,7 +110,7 @@ export default function HeartNervousSystemScreen({ persona, onNavigate, onBack }
       {/* Content */}
       <div style={{
         flex: 1, overflowY: 'auto',
-        padding: '48px',
+        padding: narrow ? '90px 24px 130px' : '90px 56px 130px',
         position: 'relative', zIndex: 1,
       }}>
         <motion.div
@@ -225,57 +132,53 @@ export default function HeartNervousSystemScreen({ persona, onNavigate, onBack }
         </motion.div>
 
         {/* Yvonne */}
-        {isYvonne && (
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: 20,
-          }}>
-            {/* Full width — quarterly arc */}
-            <ChartCard
-              title="Your cardiovascular arc — 18 quarters"
-              subtitle="RHR declining, HRV climbing. The two lines tell the same story."
-              delay={0.1}
-              fullWidth
-            >
-              <QuarterlyArcChart height={260} />
-            </ChartCard>
+         {isYvonne && (
+    <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1fr 1fr', gap: 20 }}>
+      {/* Section 1 — unchanged */}
+      <ChartCard
+        title="Your cardiovascular arc — 4 years"
+        subtitle="RHR declining, HRV climbing. The two lines tell the same story."
+        delay={0.1}
+        insight="Breathing rate dropping alongside HRV climbing isn't a coincidence — both track the same underlying shift in how hard your resting body is working."
+        fullWidth
+      >
+          <QuarterlyArcChart data={quarterlyArc} height={280} />
+      </ChartCard>
+      <ChartCard
+        title="Cycling efficiency"
+        subtitle="Long rides · same heart rate · higher speed"
+        delay={0.2}
+        insight="Same effort, meaningfully more speed — this is what getting fitter actually looks like in the data, not just feeling fitter."
+      >
+        <CyclingAdaptationChart data={cyclingLongRides} height={200} />
+      </ChartCard>
+      <ChartCard
+        title="Zone 2 running"
+        subtitle="HR 130–148 · 23 sessions · 2024–2026"
+        delay={0.3}
+        insight="The July 2026 run is the whole story in one point: more distance, lower heart rate, same 'easy' effort you'd have called hard two years ago."
+      >
+        <Zone2ProgressChart data={zone2Data} height={200} />
+      </ChartCard>
 
-            {/* HR recovery trend */}
-            <ChartCard
-              title="HR recovery by sport"
-              subtitle="How fast your heart resets — improving +57% year over year"
-              delay={0.2}
-            >
-              <HRRecoveryChart height={180} />
-            </ChartCard>
-
-            {/* Respiratory rate */}
-            <ChartCard
-              title="Breathing rate"
-              subtitle="Captured during sleep — your most underrated signal"
-              delay={0.3}
-            >
-              <RespRateCard />
-            </ChartCard>
-
-            {/* Blood panel — full width */}
-            <ChartCard
-              title="Blood panel context"
-              subtitle="Annual markers alongside 4 years of training data"
-              delay={0.4}
-              fullWidth
-            >
-              <BloodPanelCard />
-            </ChartCard>
-          </div>
-        )}
+      {/* Section 3 — unchanged, now full width on its own row */}
+      <ChartCard
+        title="How fast your heart recovers after effort"
+        subtitle="HR recovery by sport"
+        delay={0.4}
+        insight="Running clears the most heart-rate load in the extra 30 seconds — the other sports mostly finish recovering by the one-minute mark."
+        fullWidth
+      >
+        <HRRecoveryChart height={200} />
+      </ChartCard>
+    </div>
+  )}
 
         {/* Jamie */}
         {isJamie && (
           <div style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
+            gridTemplateColumns: narrow ? '1fr' : '1fr 1fr',
             gap: 20,
           }}>
             <ChartCard
@@ -312,7 +215,7 @@ export default function HeartNervousSystemScreen({ persona, onNavigate, onBack }
         {isRobert && (
           <div style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
+            gridTemplateColumns: narrow ? '1fr' : '1fr 1fr',
             gap: 20,
           }}>
             <ChartCard

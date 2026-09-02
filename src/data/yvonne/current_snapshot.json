@@ -1,0 +1,80 @@
+{
+  "window": {
+    "end": "2026-08-31",
+    "days_7d": 7,
+    "days_90d": 90
+  },
+  "metrics": [
+    {
+      "label": "HRV",
+      "unit": "ms",
+      "value_7d": 57.9,
+      "baseline_90d": 49.9,
+      "deviation": 8.0,
+      "deviation_pct": 16.1,
+      "direction": "up",
+      "is_good": true,
+      "display_dev": "+8.0ms"
+    },
+    {
+      "label": "RHR",
+      "unit": "bpm",
+      "value_7d": 56.3,
+      "baseline_90d": 58.1,
+      "deviation": -1.8,
+      "deviation_pct": -3.1,
+      "direction": "down",
+      "is_good": true,
+      "display_dev": "-1.8bpm"
+    },
+    {
+      "label": "Deep sleep",
+      "unit": "min",
+      "value_7d": 67.4,
+      "baseline_90d": 58.7,
+      "deviation": 8.7,
+      "deviation_pct": 14.9,
+      "direction": "up",
+      "is_good": true,
+      "display_dev": "+8.7min"
+    },
+    {
+      "label": "Active cal",
+      "unit": "cal",
+      "value_7d": 787.3,
+      "baseline_90d": 739.4,
+      "deviation": 47.9,
+      "deviation_pct": 6.5,
+      "direction": "up",
+      "is_good": true,
+      "display_dev": "+47.9cal"
+    },
+    {
+      "label": "Breathing",
+      "unit": "br/min",
+      "value_7d": 15.2,
+      "baseline_90d": 15.6,
+      "deviation": -0.5,
+      "deviation_pct": -3.1,
+      "direction": "down",
+      "is_good": true,
+      "display_dev": "-0.5br/min"
+    },
+    {
+      "label": "REM sleep",
+      "unit": "min",
+      "value_7d": 77.0,
+      "baseline_90d": 86.6,
+      "deviation": -9.6,
+      "deviation_pct": -11.1,
+      "direction": "down",
+      "is_good": false,
+      "display_dev": "-9.6min"
+    }
+  ],
+  "summary": {
+    "metrics_above_baseline": 5,
+    "total_metrics": 6,
+    "period_quality": "exceptional"
+  }
+}

@@ -8,6 +8,16 @@ import PageContainer from '../components/layout/PageContainer'
 import TimeframeSelector from '../components/controls/TimeframeSelector'
 import MetricTooltip from '../components/MetricTooltip'
 import { sliceQuarterly, usableTimeframes, DEFAULT_TIMEFRAME } from '../utils/timeframe'
+  import { useIsNarrow } from '../components/scrolly/useIsNarrow'
+  import IconCycling    from '../components/nav/icons/IconCycling'
+  import IconRunning    from '../components/nav/icons/IconRunning'
+  import IconTennis     from '../components/nav/icons/IconTennis'
+  import IconSkiing     from '../components/nav/icons/IconSkiing'
+  import IconHeartbeat  from '../components/nav/icons/IconHeartbeat'
+  import IconSleep      from '../components/nav/icons/IconSleep'
+  import IconGolf       from '../components/nav/icons/IconGolf'
+  import IconPhone      from '../components/nav/icons/IconPhone'
+  import IconTrendingUp from '../components/nav/icons/IconTrendingUp'
 
 const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex' }
 
@@ -20,11 +30,11 @@ const GRADIENTS = {
 
 // metric — key for MetricTooltip. null = no tooltip.
 const METRIC_CARDS = {
-  yvonne: [
-    { label: 'Resting Heart Rate', metric: 'rhr',       current: '59',     unit: 'bpm',       change: '-7',   direction: 'down_good', context: 'from 66 when you started',         insight: 'Your heart takes 10,080 fewer beats every day' },
-    { label: 'HRV',                metric: 'hrv',       current: '45.6',   unit: 'ms',        change: '+37%', direction: 'up_good',   context: 'above your personal low',           insight: 'Your nervous system is more than a third more regulated' },
-    { label: 'Breathing Rate',     metric: 'respiratory_rate', current: '15.8', unit: 'br/min', change: '-28%', direction: 'down_good', context: 'from 20–22 when you started',  insight: 'The most underrated signal in your data' },
-    { label: 'Active Hours',       metric: null,        current: '312',    unit: 'hr in 2025', change: '+58%', direction: 'up_good',   context: 'vs 198hr in 2022',                 insight: "That's 13 full days of motion more per year" },
+ yvonne: [
+    { label: 'Resting Heart Rate', metric: 'rhr', current: '59', unit: 'bpm', change: '-7', direction: 'down_good', context: 'from 66 when you started', insight: 'Your heart takes 10,080 fewer beats every day' },
+    { label: 'HRV', metric: 'hrv', current: '45.6', unit: 'ms', change: '+37%', direction: 'up_good', context: 'above your personal low', insight: 'Your nervous system is more than a third more regulated' },
+    { label: 'Breathing Rate', metric: 'respiratory_rate', current: '15.2', unit: 'br/min', change: '-28%', direction: 'down_good', context: 'from 20-22 when you started', insight: 'The most underrated signal in your data.' },
+    { label: 'Active Hours', metric: null, current: '312', unit: 'hr in 2025', change: '+58%', direction: 'up_good', context: 'vs 198hr in 2022', insight: "That's 13 full days of motion more per year" },
   ],
   jamie: [
     { label: 'Resting Heart Rate', metric: 'rhr',       current: '70.4',   unit: 'bpm',       change: '-2.7', direction: 'down_good', context: 'from 73.1 when you started',       insight: 'Gradually improving since you started tracking' },
@@ -45,22 +55,23 @@ const METRIC_CARDS = {
 
 const INTERESTING_FACTS = {
   yvonne: [
-    { emoji: '🚴', stat: '5,051 cycling miles',           context: 'Chicago to Tokyo' },
-    { emoji: '🏃', stat: '1,248 running miles',           context: 'Started Jan 2024. Just to see if you could.' },
-    { emoji: '🎾', stat: '+5.5ms HRV after tennis',       context: 'Your strongest recovery signal. More than any other sport.' },
-    { emoji: '⛷️', stat: '−10.4ms HRV from skiing',      context: "Costs the most. You ski anyway. That's not optimization — that's agency." },
-    { emoji: '❤️', stat: '10,080 fewer heartbeats/day',  context: 'Than when you started tracking.' },
-    { emoji: '😴', stat: 'You sleep most on Mondays',     context: '7.7 hr avg. Your body resets after the weekend.' },
+    { Icon: IconCycling, iconScale: { narrow: 1.3, wide: 1 },   stat: '5,051 cycling miles', context: 'Chicago to Tokyo' },
+    { Icon: IconRunning, stat: '1,248 running miles', context: 'Started Jan 2024. Just to see if you could.' },
+    { Icon: IconTennis,  iconScale: { narrow: 1.9, wide: 1.2 }, stat: '+5.5ms HRV after tennis', context: 'Your strongest recovery signal. More than any other sport.' },
+    { Icon: IconSkiing,  iconScale: { narrow: 2.0, wide: 1.3 }, stat: '−10.4ms HRV from skiing', context: "Costs the most. You ski anyway. That's not optimization — that's agency." },
+    { Icon: IconHeartbeat, stat: '10,080 fewer heartbeats/day', context: 'Than when you started tracking.' },
+    { Icon: IconSleep,     stat: 'You sleep most on Mondays',   context: '7.7 hr avg. Your body resets after the weekend.' },
   ],
   robert: [
-    { emoji: '❤️', stat: '3,600 fewer heartbeats/day',  context: 'Than before you retired.' },
-    { emoji: '🏌️', stat: 'Structured weeks: 57.9 bpm',  context: 'vs 62.0 on unstructured weeks. Structure is a health variable.' },
-    { emoji: '😴', stat: '36 more minutes of sleep',     context: 'Per night vs pre-retirement. Retirement gave it back.' },
+    { Icon: IconHeartbeat, stat: '3,600 fewer heartbeats/day',  context: 'Than before you retired.' },
+    { Icon: IconGolf,      stat: 'Structured weeks: 57.9 bpm',  context: 'vs 62.0 on unstructured weeks. Structure is a health variable.' },
+    { Icon: IconSleep,     stat: '36 more minutes of sleep',     context: 'Per night vs pre-retirement. Retirement gave it back.' },
   ],
   alex: [
-    { emoji: '📱', stat: '5 years of steps',             context: 'October peaks and February dips — every single year.' },
-    { emoji: '📈', stat: '+500 steps/day',               context: 'Gradual increase across 5 years.' },
+    { Icon: IconPhone,       stat: '5 years of steps',             context: 'October peaks and February dips — every single year.' },
+    { Icon: IconTrendingUp,  stat: '+500 steps/day',               context: 'Gradual increase across 5 years.' },
   ],
+ 
 }
 
 // Import at module level — sliceQuarterly handles empty arrays gracefully
@@ -113,7 +124,14 @@ function MetricCard({ card, delay }) {
   )
 }
 
+function resolveIconScale(iconScale, narrow) {
+    if (iconScale == null) return narrow ? 1.5 : 1          // current defaults, unchanged
+    if (typeof iconScale === 'number') return iconScale      // flat override, same on both
+    return narrow ? (iconScale.narrow ?? 1.5) : (iconScale.wide ?? 1)
+  }
+
 function FactCard({ fact, delay }) {
+   const narrow = useIsNarrow()
   return (
     <motion.div
       initial={{ opacity: 0, x: -8 }}
@@ -123,13 +141,16 @@ function FactCard({ fact, delay }) {
         background: 'rgba(255,255,255,0.03)',
         border: '1px solid rgba(255,255,255,0.06)',
         borderRadius: 10, padding: '14px 16px',
-        display: 'flex', gap: 14, alignItems: 'flex-start',
+        display: 'flex', gap: 14, alignItems: 'center',
       }}
     >
-      <span style={{ fontSize: 20 }}>{fact.emoji}</span>
-      <div>
-        <p style={{ fontSize: 14, fontWeight: 600, marginBottom: 3 }}>{fact.stat}</p>
-        <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)', lineHeight: 1.5 }}>{fact.context}</p>
+    <fact.Icon
+        size={36 * resolveIconScale(fact.iconScale, narrow)}
+        color="rgba(255,255,255,1)"
+      />      
+      <div style={{ marginLeft: 12 }}>
+        <p style={{ fontSize: 20, fontWeight: 600, marginBottom: 2 }}>{fact.stat}</p>
+        <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.35)', lineHeight: 1.5 }}>{fact.context}</p>
       </div>
     </motion.div>
   )
@@ -174,6 +195,7 @@ export default function HowIveChangedScreen({ persona, onNavigate, onBack }) {
   const isRobert    = persona === 'robert'
   const isAlex      = persona === 'alex'
   const hasStory    = isYvonne || isRobert
+  const narrow = useIsNarrow()
 
   // Timeframe filtering — only applies to Yvonne's quarterly chart for now
   const quarterlyData = isYvonne ? quarterlyDataRaw : []
@@ -218,7 +240,7 @@ export default function HowIveChangedScreen({ persona, onNavigate, onBack }) {
         {/* Scrollable content */}
         <div style={{
           flex: 1, overflowY: 'auto',
-          padding: '80px 64px 120px',
+          padding: narrow ? '90px 24px 130px' : '80px 56px 120px',          
           position: 'relative', zIndex: 1,
         }}>
 
@@ -242,7 +264,7 @@ export default function HowIveChangedScreen({ persona, onNavigate, onBack }) {
           {/* Metric trend cards */}
           <div style={{
             display: 'grid',
-            gridTemplateColumns: `repeat(${metricCards.length}, 1fr)`,
+            gridTemplateColumns: narrow ? '1fr' : `repeat(${metricCards.length}, 1fr)`,
             gap: 16, marginBottom: 32,
           }}>
             {metricCards.map((card, i) => (
@@ -318,7 +340,7 @@ export default function HowIveChangedScreen({ persona, onNavigate, onBack }) {
               <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', letterSpacing: '0.05em', textTransform: 'uppercase', marginBottom: 16 }}>
                 What the data found
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: isYvonne ? '1fr 1fr' : '1fr', gap: 12 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : (isYvonne ? '1fr 1fr' : '1fr'), gap: 12 }}>
                 {facts.map((fact, i) => (
                   <FactCard key={fact.stat} fact={fact} delay={0.5 + i * 0.05} />
                 ))}

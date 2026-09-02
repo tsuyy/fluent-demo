@@ -1,0 +1,60 @@
+{
+  "baseline": {
+    "deep": 48.8,
+    "rem": 80.0,
+    "awake": 35.9,
+    "total": 425.1,
+    "n": 365
+  },
+  "sports": [
+    {
+      "sport": "tennis",
+      "deep": 61.5,
+      "rem": 83.5,
+      "awake": 41.4,
+      "total": 445.4,
+      "n": 22
+    },
+    {
+      "sport": "strength",
+      "deep": 52.5,
+      "rem": 79.8,
+      "awake": 35.8,
+      "total": 426.8,
+      "n": 55
+    },
+    {
+      "sport": "running",
+      "deep": 49.7,
+      "rem": 81.0,
+      "awake": 38.0,
+      "total": 425.1,
+      "n": 93
+    },
+    {
+      "sport": "cycling",
+      "deep": 49.2,
+      "rem": 77.2,
+      "awake": 36.2,
+      "total": 415.7,
+      "n": 89
+    },
+    {
+      "sport": "pilates_yoga",
+      "deep": 44.7,
+      "rem": 79.9,
+      "awake": 33.7,
+      "total": 423.4,
+      "n": 39,
+      "note": "Heated classes Oct 2025+, illness excluded"
+    },
+    {
+      "sport": "skiing",
+      "deep": 37.7,
+      "rem": 78.5,
+      "awake": 46.1,
+      "total": 397.9,
+      "n": 16
+    }
+  ]
+}

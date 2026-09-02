@@ -5,7 +5,9 @@ import SleepHRVChart      from '../components/charts/SleepHRVChart'
 import SleepTrendCards    from '../components/cards/SleepTrendCards'
 import SleepQQRTSection   from '../components/sleep/SleepQQRTSection'
 import PageContainer      from '../components/layout/PageContainer'
-import sleepQQRT from '../data/yvonne/sleep_qqrt.json'
+import sleepQQRTData  from '../data/yvonne/sleep_qqrt.json'   // already exists
+import sleepTimesData from '../data/yvonne/sleep_times.json'  // ADD this
+import { useIsNarrow } from '../components/scrolly/useIsNarrow'
 
 const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex' }
 
@@ -16,7 +18,7 @@ const GRADIENTS = {
   alex:   'radial-gradient(ellipse at 60% 30%, rgba(39,196,138,0.1) 0%, transparent 55%)',
 }
 
-function ChartCard({ title, subtitle, children, delay = 0, fullWidth = false }) {
+function ChartCard({ title, subtitle, insight, children, delay = 0, fullWidth = false }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
@@ -40,6 +42,14 @@ function ChartCard({ title, subtitle, children, delay = 0, fullWidth = false }) 
         </p>
       )}
       {children}
+      {insight && (
+          <p style={{
+            fontSize: 12, color: 'var(--color-text-tertiary)',
+            fontStyle: 'italic', lineHeight: 1.5,
+            marginTop: 10,
+          }}>
+            "{insight}"
+          </p>)}
     </motion.div>
   )
 }
@@ -48,6 +58,7 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
   const gradient = GRADIENTS[persona] || GRADIENTS.yvonne
   const isAlex   = persona === 'alex'
   const isYvonne = persona === 'yvonne'
+  const narrow = useIsNarrow()
 
   return (
     <div style={{
@@ -56,7 +67,7 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
       position: 'relative', overflow: 'hidden',
       display: 'flex', flexDirection: 'column',
       flex: 1, overflowY: 'auto',
-      padding: '48px', zIndex: 1,
+      zIndex: 1, overflowX: 'hidden'
     }}>
       <PageContainer>
         <div style={{ position: 'fixed', inset: 0, height: '100%', background: gradient, pointerEvents: 'none' }} />
@@ -82,7 +93,7 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
         </div>
 
         {/* Content */}
-        <div style={{ flex: 1, overflowY: 'auto', padding: '48px', position: 'relative', zIndex: 1 }}>
+        <div style={{ flex: 1, overflowY: 'auto', padding: narrow ? '90px 24px 130px' : '90px 56px 130px', position: 'relative', zIndex: 1 }}>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} style={{ marginBottom: 32 }}>
             <h1 style={{ fontSize: 'clamp(24px, 3vw, 40px)', fontWeight: 700, marginBottom: 6 }}>
               Sleep
@@ -115,7 +126,7 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
 
           {/* Wearable personas */}
           {!isAlex && (
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1fr 1fr', gap: 20 }}>
 
               {/* ── Yvonne: QQRT with real charts ── */}
               {isYvonne && (
@@ -125,7 +136,7 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
                   transition={{ delay: 0.1 }}
                   style={{ gridColumn: '1 / -1' }}
                 >
-                  <SleepQQRTSection data={sleepQQRT} />
+                  <SleepQQRTSection data={sleepQQRTData} sleepTimes={sleepTimesData} />
                 </motion.div>
               )}
 
@@ -150,18 +161,6 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
               >
                 <SleepTrendCards persona={persona} />
               </ChartCard>
-
-              {/* Sleep × HRV — Yvonne only, below QQRT */}
-              {isYvonne && (
-                <ChartCard
-                  title="Sleep efficiency × next-day HRV"
-                  subtitle="When these two signals disagree — that's the finding"
-                  delay={0.3}
-                  fullWidth
-                >
-                  <SleepHRVChart height={220} legendPosition="left" />
-                </ChartCard>
-              )}
 
               {/* Sleep architecture for Yvonne — secondary, below HRV */}
               {isYvonne && (

@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import PageContainer from '../components/layout/PageContainer'
+import { useIsNarrow } from '../components/scrolly/useIsNarrow'
+
  
 const PERSONAS = [
   { id: 'jamie',  name: 'Jamie',  age: 'late 30s',    activity: 'Moderately active', dataProfile: '8 months · inconsistent · minimal annotations',       gradient: 'linear-gradient(135deg, rgba(180,60,60,0.6) 0%, rgba(120,40,140,0.4) 100%)' },
@@ -13,6 +15,7 @@ const PERSONAS = [
 // prevScreen     — where back button routes to
 export default function PersonaPicker({ onSelect, onBack, currentPersona }) {
   const [hovered, setHovered] = useState(null)
+  const narrow = useIsNarrow()
  
   return (
     <>
@@ -30,7 +33,7 @@ export default function PersonaPicker({ onSelect, onBack, currentPersona }) {
             </p>
           </motion.div>
  
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16, flex: 1 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : 'repeat(4, 1fr)', gap: 16, flex: 1 }}>
             {PERSONAS.map((p, i) => {
               const isHovered = hovered === p.id
               const isCurrent = p.id === currentPersona

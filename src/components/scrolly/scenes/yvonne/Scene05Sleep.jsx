@@ -299,24 +299,6 @@ export default function Scene05Sleep({ beat, isActive, response, onRespond }) {
         </div>
       </Beat>
 
-      {/* Beat 4 — copy LEFT, SleepHRV chart RIGHT, no card bg */}
-      <Beat at={4}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: narrow ? '1fr' : '1fr 1fr',
-          gap: narrow ? 20 : 32, alignItems: 'center',
-        }}>
-          <div style={{ display: 'grid', gap: 8 }}>
-            <Line style={{ textAlign: 'left', fontWeight: 500 }}>
-              Some nights your sleep looked normal. Your HRV told a different story.
-            </Line>
-            <Line tone="secondary" style={{ textAlign: 'left' }}>
-              The mismatch is where the real information lives.
-            </Line>
-          </div>
-          <SleepHRVChart height={narrow ? 160 : 200} legendPosition="left" />
-        </div>
-      </Beat>
     </Scene>
   )
 }

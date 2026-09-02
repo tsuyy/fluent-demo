@@ -2,13 +2,66 @@ import { useState, useCallback, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const SPORTS = [
-  { sport: 'Tennis',   deep: 60.0, rem: 83.8, awake: 40.7, n: 18, color: '#27C48A' },
-  { sport: 'Running',  deep: 48.5, rem: 80.7, awake: 38.2, n: 88, color: '#6B9EFF' },
-  { sport: 'Strength', deep: 50.0, rem: 79.6, awake: 35.4, n: 49, color: '#9B8AFF' },
-  { sport: 'Cycling',  deep: 47.5, rem: 76.2, awake: 35.2, n: 80, color: '#0681fc' },
-  { sport: 'Skiing',   deep: 37.7, rem: 78.5, awake: 46.1, n: 16, color: '#E8504A' },
+  {
+      "sport": "Tennis",
+      "deep": 61.5,
+      "rem": 83.5,
+      "awake": 41.4,
+      "total": 445.4,
+      "n": 22,
+      "color": '#27C48A'
+    },
+    {
+      "sport": "Strength",
+      "deep": 52.5,
+      "rem": 79.8,
+      "awake": 35.8,
+      "total": 426.8,
+      "n": 55,
+      "color": '#6B9EFF'
+    },
+    {
+      "sport": "Running",
+      "deep": 49.7,
+      "rem": 81.0,
+      "awake": 38.0,
+      "total": 425.1,
+      "n": 93,
+      "color": '#9B8AFF'
+    },
+    {
+      "sport": "Cycling",
+      "deep": 49.2,
+      "rem": 77.2,
+      "awake": 36.2,
+      "total": 415.7,
+      "n": 89,
+      "color": '#0681fc'
+    },
+    {
+      "sport": "Pilates/Yoga",
+      "deep": 44.7,
+      "rem": 79.9,
+      "awake": 33.7,
+      "total": 423.4,
+      "n": 39,
+      "color": '#c3e84a'
+    },
+    {
+      "sport": "Skiing",
+      "deep": 37.7,
+      "rem": 78.5,
+      "awake": 46.1,
+      "total": 397.9,
+      "n": 16,
+      "color": '#E8504A'
+    }
 ]
-const BASELINE = { deep: 47.9, rem: 79.7, awake: 35.7 }
+const BASELINE = { "deep": 48.8,
+    "rem": 80.0,
+    "awake": 35.9,
+    "total": 425.1,
+    "n": 365 }
 
 const AXES = [
   { key: 'deep',  label: 'Deep Sleep', unit: 'min', max: 75  },
@@ -99,13 +152,13 @@ export default function SportSleepChart({ size = 260 }) {
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14 }}>
 
       {/* Filter chips — sports + baseline toggle */}
-      <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', justifyContent: 'center' }}>
+      <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'center' }}>
         {/* Baseline chip */}
         <button
           type="button"
           onClick={() => setShowBaseline(v => !v)}
           style={{
-            display: 'flex', alignItems: 'center', gap: 5,
+            display: 'flex', alignItems: 'center', gap: 4,
             background: showBaseline ? 'rgba(255,255,255,0.08)' : 'transparent',
             border: `1px solid ${showBaseline ? 'rgba(255,255,255,0.35)' : 'rgba(255,255,255,0.1)'}`,
             borderRadius: 999, padding: '4px 10px',

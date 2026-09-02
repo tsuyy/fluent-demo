@@ -26,7 +26,7 @@ export default function SleepEfficiencyChart({ data, height = 160 }) {
     <div style={{ height }}>
       <ResponsiveScatterPlot
         data={scatterData}
-        margin={{ top: 8, right: 80, bottom: 32, left: 36 }}
+        margin={{ top: 8, right: 16, bottom: 46, left: 36 }}
         xScale={{ type: 'time', format: '%Y-%m-%d', precision: 'day' }}
         yScale={{ type: 'linear', min: 60, max: 100 }}
         axisBottom={{
@@ -59,14 +59,15 @@ export default function SleepEfficiencyChart({ data, height = 160 }) {
           textStyle: { fill: 'rgba(255,255,255,0.3)', fontSize: 9 },
         }]}
         legends={[{
-          anchor: 'right',
-          direction: 'column',
-          itemWidth: 70,
+          anchor: 'bottom',
+          direction: 'row',
+          itemWidth: 90,
           itemHeight: 16,
           itemTextColor: 'rgba(255,255,255,0.3)',
           symbolSize: 6,
           symbolShape: 'circle',
-          translateX: 78,
+          translateY: 40,
+          justify: false,
         }]}
         tooltip={({ node }) => (
           <div style={tooltipStyle}>

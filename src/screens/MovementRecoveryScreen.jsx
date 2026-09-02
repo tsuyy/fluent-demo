@@ -6,6 +6,8 @@ import SeasonalStepsChart from '../components/charts/SeasonalStepsChart'
 import HRRecoveryChart from '../components/charts/HRRecoveryChart'
 import SportMixChart from '../components/charts/SportMixChart'
 import PageContainer from '../components/layout/PageContainer'
+import { useIsNarrow } from '../components/scrolly/useIsNarrow'
+
 
 const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex' }
 
@@ -51,6 +53,7 @@ function ChartCard({ title, subtitle, children, delay = 0 }) {
 }
 
 export default function MovementRecoveryScreen({ persona, onNavigate, onBack }) {
+  const narrow = useIsNarrow()
   const gradient = GRADIENTS[persona] || GRADIENTS.yvonne
 
   const isYvonne = persona === 'yvonne'
@@ -64,7 +67,6 @@ export default function MovementRecoveryScreen({ persona, onNavigate, onBack }) 
       position: 'relative', overflow: 'hidden',
       display: 'flex', flexDirection: 'column',
       flex: 1, overflowY: 'auto',
-      padding: '48px',
       zIndex: 1,
     }}>
 
@@ -109,7 +111,7 @@ export default function MovementRecoveryScreen({ persona, onNavigate, onBack }) 
       {/* Content */}
       <div style={{
         flex: 1, overflowY: 'auto',
-        padding: '48px',
+        padding: narrow ? '90px 24px 130px' : '90px 56px 130px',
         position: 'relative', zIndex: 1,
       }}>
 
@@ -137,12 +139,8 @@ export default function MovementRecoveryScreen({ persona, onNavigate, onBack }) 
         {isYvonne && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
             {/* Top row — two charts */}
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: 20,
-            }}>
-              <ChartCard
+            <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1fr 1fr', gap: 20 }}>
+               <ChartCard
                 title="How each sport affects your recovery"
                 subtitle="HRV deviation from baseline, day-of through day+3"
                 delay={0.1}
