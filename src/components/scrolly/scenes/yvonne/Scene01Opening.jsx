@@ -1,107 +1,77 @@
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { Scene, Beat, useScene } from '../../Scene'
-import { useIsNarrow } from '../../useIsNarrow'
-import { Lead, Line, CountUp, PulseDot, ScrollCue } from '../../primitives'
+import { useIsNarrow } from '../../Scene'
+import { Lead, Line, BigNumber } from '../../primitives'
 
-const QUIET = 'var(--color-quiet, #888780)'
-const TEXT  = 'var(--color-text, rgba(255,255,255,0.92))'
-
-// Vertical stat row — number and label on the same line
-function StatRow({ display, label, value, countAt, beat, reduced, narrow }) {
-  const counts = typeof value === 'number' && countAt != null && !reduced
-  return (
-    <div style={{
-      display: 'flex',
-      alignItems: 'baseline',
-      gap: narrow ? 10 : 14,
-    }}>
-      <span style={{
-        fontFamily: 'var(--font-display, "DM Sans"), sans-serif',
-        fontSize: narrow ? 32 : 42,
-        fontWeight: 500,
-        letterSpacing: '-0.04em',
-        lineHeight: 1.1,
-        color: TEXT,
-        fontVariantNumeric: 'tabular-nums',
-        minWidth: narrow ? 160 : 220,
-      }}>
-        {counts
-          ? <CountUp from={0} to={value} active={beat >= countAt} duration={2000} />
-          : display}
-      </span>
-      <span style={{
-        fontSize: narrow ? 13 : 15,
-        color: QUIET,
-        letterSpacing: '0.01em',
-        whiteSpace: 'nowrap',
-      }}>
-        {label}
-      </span>
-    </div>
-  )
+/**
+ * Live-incrementing heartbeat counter — ticks up roughly once a
+ * second, cosmetically, for as long as this component is mounted.
+ */
+function LiveHeartbeatCounter({ startValue }) {
+  const [count, setCount] = useState(startValue)
+  useEffect(() => {
+    const interval = setInterval(() => setCount(c => c + 1), 850)
+    return () => clearInterval(interval)
+  }, [])
+  return <span style={{ fontVariantNumeric: 'tabular-nums' }}>{count.toLocaleString()}</span>
 }
 
-export default function Scene01Opening({ beat, isActive, story }) {
-  const narrow  = useIsNarrow()
-  const { reduced } = useScene()
+/**
+ * Scene 1 — Opening. Both columns now share the same structural
+ * rhythm (Lead caption above, big content below) so their content
+ * lines up left-to-right instead of the previous mismatched order
+ * (caption-then-date on the left, number-then-caption on the right).
+ * Combined with PuddingScene's text-step height fix, this should
+ * read as genuinely parallel rather than just visually close.
+ *
+ * Scene-navigation button grid removed — redundant with
+ * SceneIndicator, which already does the same job.
+ */
+export default function Scene01Opening({ story }) {
+  const narrow = useIsNarrow()
+
+  const stats = [
+    { label: 'heartbeats recorded', node: <LiveHeartbeatCounter startValue={story.heartbeats} /> },
+    { label: 'workouts logged', node: story.workouts.toLocaleString() },
+    { label: 'hr of sleep data', node: story.sleepHours },
+  ]
 
   return (
-    <Scene layout="text" beat={beat} isActive={isActive} label="The beginning" align="left" maxWidth={680}>
-
-      {/* Date — large, prominent, first thing */}
-      <Beat at={0}>
-        <p style={{
-          fontFamily: 'var(--font-display, "DM Sans"), sans-serif',
-          fontSize: narrow ? 28 : 38,
-          fontWeight: 400,
-          letterSpacing: '-0.02em',
-          color: TEXT,
-          margin: 0,
-        }}>You started tracking on<br />
-          {story.startDate}
-        </p>
-      </Beat>
-
-      {/* Heartbeat dot */}
-      <Beat at={0} delay={0.5} style={{ padding: '4px 0' }}>
-        <PulseDot size={12} />
-      </Beat>
-
-      {/* Stats — stacked vertically, 400ms stagger */}
-      <Beat at={1}>
-        <div style={{ display: 'grid', gap: narrow ? 14 : 18 }}>
-          <StatRow
-            display={story.heartbeats.toLocaleString()}
-            value={story.heartbeats}
-            countAt={1}
-            label="heartbeats recorded"
-            beat={beat} reduced={reduced} narrow={narrow}
-          />
-          <Beat at={2}>
-            <StatRow
-              display={story.workouts.toLocaleString()}
-              label="workouts logged"
-              beat={beat} reduced={reduced} narrow={narrow}
-            />
-          </Beat>
-          <Beat at={3}>
-            <StatRow
-              display={story.sleepHours}
-              label="hr of sleep data"
-              beat={beat} reduced={reduced} narrow={narrow}
-            />
-          </Beat>
+    <div style={{ display: narrow ? 'block' : 'flex', width: '100%' }}>
+      <div style={{
+        flex: narrow ? undefined : '0 0 45%',
+        position: narrow ? 'static' : 'sticky', top: 0,
+        height: narrow ? 'auto' : '100vh',
+        display: 'flex', alignItems: 'center',
+        padding: narrow ? '40px 32px' : '0 32px',
+      }}>
+        <div>
+          <Lead>You started tracking on</Lead>
+          <div style={{ marginTop: 16 }}>
+            <BigNumber>{story.startDate}</BigNumber>
+          </div>
         </div>
-      </Beat>
+      </div>
 
-      {/* Closing line */}
-      <Beat at={4} style={{ paddingTop: narrow ? 8 : 16 }}>
-        <Line tone="secondary" style={{ fontSize: narrow ? 17 : 20 }}>
-          Here's what Fluent sees.
-        </Line>
-      </Beat>
-
-      <ScrollCue visible={isActive && beat < 1} />
-    </Scene>
+      <div style={{ flex: narrow ? undefined : '0 0 55%', padding: '0 32px' }}>
+        {stats.map((stat) => (
+          <motion.div
+            key={stat.label}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.6 }}
+            transition={{ duration: 0.5 }}
+            style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}
+          >
+            <div>
+              <div style={{ marginTop: 16 }}>
+                <BigNumber>{stat.node}</BigNumber>
+              </div>
+                <Lead>{stat.label}</Lead>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
   )
 }

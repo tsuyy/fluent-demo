@@ -16,14 +16,21 @@ import Scene08Closing    from '../components/scrolly/scenes/yvonne/Scene08Closin
    The one place charts and data are bound. If chart prop names
    differ from the guesses below, this is the only file to touch.   */
 import QuarterlyArcChart from '../components/charts/QuarterlyArcChart'
-import quarterlyData     from '../data/yvonne/quarterly.json'
-// TODO: confirm the shape of calendar.json — each entry needs { day: 'YYYY-MM-DD', value: number }
-// `value` should be activity minutes or any continuous metric; Nivo auto-scales colours.
+// Switched from quarterly.json → quarterly_arc.json: the new file has
+// `resp` (breathing rate) and `has_sleep` fields that quarterly.json
+// doesn't, and Scene02Heart's new breathing-rate step needs `resp`.
+// This is the same file Heart & Nervous System screen already uses.
+import quarterlyArcData  from '../data/yvonne/quarterly_arc.json'
 import calendarData      from '../data/yvonne/calendar.json'
+import sleepMonthlyData from '../data/yvonne/sleep_monthly.json'
 
 const charts = {
-  // TODO confirm QuarterlyArcChart's prop names. `showHRV` is new.
-  quarterlyArc: ({ showHRV }) => <QuarterlyArcChart data={quarterlyData} showHRV={showHRV} />,
+  // highlightLine drives which line QuarterlyArcChart emphasizes;
+  // hideChrome drops the standalone-screen annotations/legend/stat
+  // callouts, which would just compete with the scrolling prose here.
+      quarterlyArc: ({ highlightLine }) => (
+      <QuarterlyArcChart data={quarterlyArcData} highlightLine={highlightLine} hideAnnotations height={420} />
+    ),
 }
 /* ──────────────────────────────────────────────────────────────── */
 
@@ -32,39 +39,43 @@ const charts = {
 const YVONNE_STORY = {
   startDate: 'January 7, 2022',
   heartbeats: 147246480,
-  workouts: 1733,
+  workouts: 1763,
   sleepHours: '2,445',
   pivotQuarter: 'Q4 2022',
   heart: {
-    rhr: { from: 66, to: 59, perDay: 10080, perYear: '3.7 million' },
-    hrv: { from: 33, to: 45, pctLabel: '37%' },
+    rhr: { from: 62.7, to: 57.6, perDay: 10080, perYear: '3.7 million' },
+    hrv: { from: 39.2, to: 51.9, pctLabel: '32%' },
+    // Added for Scene02's new breathing-rate step — previously
+    // missing from story data entirely, which is why the chart
+    // showed a resp line with no accompanying content.
+    resp: { from: 21.5, to: 15.4 },
   },
   tennis: { sessions: 22 },
 }
 
 /* ── SCENE REGISTRY ─────────────────────────────────────────────────
-   `beats` drives both the reveal sequence and the scroll track
-   length, so adding a line of copy means bumping the count.
-
-   Yvonne runs to 7 scenes and Robert to 4 — scenes 3–7 and the
-   Robert set slot in here as they're built.                        */
+   `beats` (fixed-height, discrete reveal) is the OLD architecture.
+   `migrated: true` scenes use PuddingScene instead — natural content
+   height, no beat prop, internal scroll-sync handled by the scene
+   itself. Both can coexist; only migrated scenes skip the height
+   formula and the beat-based opacity hiding below.                 */
 const SCENES = {
   yvonne: [
-    { id: 'opening',    label: 'The beginning',          beats: 5,
+    { id: 'opening', label: 'The beginning', migrated: true,
       render: (props) => <Scene01Opening {...props} story={YVONNE_STORY} /> },
-    { id: 'heart',      label: 'Your heart',             beats: 5,
+    { id: 'heart', label: 'Your heart', migrated: true,
       render: (props) => <Scene02Heart {...props} story={YVONNE_STORY} renderChart={charts.quarterlyArc} /> },
-    { id: 'movement',   label: 'How you moved',          beats: 5,
+    { id: 'movement', label: 'How you moved', migrated: true,
       render: (props) => <Scene03Movement {...props} story={YVONNE_STORY} calendarData={calendarData} /> },
-    { id: 'sports',     label: 'What the data noticed',  beats: 6,
+    { id: 'sports', label: 'What the data noticed', migrated: true,
       render: (props) => <Scene04Sports {...props} story={YVONNE_STORY} /> },
-    { id: 'sleep',      label: 'How you slept',          beats: 7,
-      render: (props) => <Scene05Sleep {...props} /> },
-    { id: 'reflection', label: 'What stands out',        beats: 5,
+     { id: 'sleep', label: 'How you slept', migrated: true,
+       render: (props) => <Scene05Sleep {...props} sleepMonthlyData={sleepMonthlyData} /> },
+    { id: 'reflection', label: 'What stands out', beats: 5,
       render: (props) => <Scene06Reflection {...props} /> },
-    { id: 'cannotsee',  label: "What the data can't see", beats: 3,
+    { id: 'cannotsee', label: "What the data can't see", beats: 3,
       render: (props) => <Scene07CannotSee {...props} /> },
-    { id: 'closing',    label: "What's yours",            beats: 4,
+    { id: 'closing', label: "What's yours", beats: 4,
       render: (props) => (
         <Scene08Closing
           {...props}
@@ -74,15 +85,12 @@ const SCENES = {
       ) },
   ],
   robert: [],
-  // Jamie and Alex scrollytelling → not specced yet
 }
 
-/* Where in a scene's scroll track the beats play out. The head and
-   tail holds give the first and last line room to breathe. */
 const HOLD_IN = 0.04
 const HOLD_OUT = 0.06
-const SCROLL_OFFSET = 0.9  // trigger at 90% down viewport — fires beat as soon as scene enters
-const VH_PER_BEAT = 18     // 18vh per beat — each scroll gesture advances one beat
+const SCROLL_OFFSET = 0.9
+const VH_PER_BEAT = 18
 
 function beatFromProgress(progress, beats) {
   const span = 1 - HOLD_IN - HOLD_OUT
@@ -95,7 +103,6 @@ function beatFromProgress(progress, beats) {
 export default function ScrollytellingScreen({ persona, onComplete, onBack, onNavigate: onNavigateProp }) {
   const scenes = useMemo(() => SCENES[persona] ?? [], [persona])
 
-  // onNavigate for scene CTAs — 'home' → onComplete, 'thesis' → onBack, else → prop
   const onNavigate = useCallback((target) => {
     if (target === 'home')   { onComplete?.(); return }
     if (target === 'thesis') { onBack?.();     return }
@@ -107,14 +114,10 @@ export default function ScrollytellingScreen({ persona, onComplete, onBack, onNa
   const [beats, setBeats] = useState({})
   const [responses, setResponses] = useState({})
 
-  /* Personas without a story fall back to the compilation view. */
   useEffect(() => {
     if (scenes.length === 0) onBack?.()
   }, [scenes.length, onBack])
 
-  // Scroll container ref — Scrollama watches this div, not the window.
-  // We store the node in state so Scrollama re-renders with the real element
-  // rather than the null ref value it would get on first render.
   const containerRef = useRef(null)
   const [scrollContainer, setScrollContainer] = useState(null)
 
@@ -131,8 +134,10 @@ export default function ScrollytellingScreen({ persona, onComplete, onBack, onNa
   const onStepEnter = useCallback(
     ({ data, direction }) => {
       setCurrent(data)
-      // Leave nothing half-revealed behind us.
-      if (direction === 'down' && data > 0) {
+      // Only non-migrated scenes use the beat-based "leave nothing
+      // half-revealed behind us" reset — migrated scenes manage their
+      // own internal reveal state via PuddingScene, nothing to reset here.
+      if (direction === 'down' && data > 0 && !scenes[data - 1].migrated) {
         setBeat(data - 1, scenes[data - 1].beats - 1)
       }
     },
@@ -140,7 +145,10 @@ export default function ScrollytellingScreen({ persona, onComplete, onBack, onNa
   )
 
   const onStepProgress = useCallback(
-    ({ data, progress }) => setBeat(data, beatFromProgress(progress, scenes[data].beats)),
+    ({ data, progress }) => {
+      if (scenes[data].migrated) return // no beat concept for these
+      setBeat(data, beatFromProgress(progress, scenes[data].beats))
+    },
     [scenes, setBeat]
   )
 
@@ -161,13 +169,9 @@ export default function ScrollytellingScreen({ persona, onComplete, onBack, onNa
     <div
       ref={containerCallbackRef}
       style={{
-        position: 'fixed',
-        inset: 0,
-        overflowY: 'scroll',
-        overflowX: 'hidden',
+        position: 'fixed', inset: 0,
+        overflowY: 'scroll', overflowX: 'hidden',
         background: 'var(--color-base, #0F0F0E)',
-        // Fixed+inset gives us a true viewport-sized scroll container.
-        // Scrollama watches this div via the root prop, not the window.
         WebkitOverflowScrolling: 'touch',
       }}
     >
@@ -184,22 +188,12 @@ export default function ScrollytellingScreen({ persona, onComplete, onBack, onNa
       `}</style>
 
       <button
-        type="button"
-        className="scrolly-focus"
-        onClick={onBack}
+        type="button" className="scrolly-focus" onClick={onBack}
         style={{
-          position: 'sticky',
-          top: 24,
-          marginLeft: 24,
-          zIndex: 40,
-          background: 'transparent',
-          border: 'none',
-          color: 'var(--color-quiet, #888780)',
-          fontFamily: 'inherit',
-          fontSize: 14,
-          cursor: 'pointer',
-          padding: 6,
-          display: 'block',
+          position: 'sticky', top: 24, marginLeft: 24, zIndex: 40,
+          background: 'transparent', border: 'none',
+          color: 'var(--color-quiet, #888780)', fontFamily: 'inherit',
+          fontSize: 14, cursor: 'pointer', padding: 6, display: 'block',
         }}
       >
         ← Back
@@ -208,43 +202,50 @@ export default function ScrollytellingScreen({ persona, onComplete, onBack, onNa
       <SceneIndicator labels={scenes.map((s) => s.label)} current={current} onJump={jumpTo} />
 
       {scrollContainer && (
-      <Scrollama
-        offset={SCROLL_OFFSET}
-        progress
-        threshold={24}
-        onStepEnter={onStepEnter}
-        onStepProgress={onStepProgress}
-        root={scrollContainer}
-      >
-        {scenes.map((scene, i) => (
-          <Step data={i} key={scene.id}>
-            <div
-              id={`fluent-scene-${i}`}
-              style={{ height: `${100 + scene.beats * VH_PER_BEAT}vh`, position: 'relative', minHeight: '100vh' }}
-            >
-              {/* Hide scenes that are fully scrolled past — prevents sticky
-                  frames from two adjacent scenes showing simultaneously */}
-              <div style={{
-                opacity: (current === i || current === i - 1) ? 1 : 0,
-                transition: 'opacity 0.3s ease',
-                height: '100%',
-              }}>
-                {scene.render({
-                  beat: beats[i] ?? (i === 0 ? 0 : -1),
-                  isActive: current === i,
-                  response: responses[scene.id],
-                  onRespond: (value) =>
-                    setResponses((prev) => ({ ...prev, [scene.id]: value })),
-                  onNavigate,
-                })}
-              </div>
-            </div>
-          </Step>
-        ))}
-      </Scrollama>
+        <Scrollama
+          offset={SCROLL_OFFSET} progress threshold={24}
+          onStepEnter={onStepEnter} onStepProgress={onStepProgress}
+          root={scrollContainer}
+        >
+          {scenes.map((scene, i) => (
+            <Step data={i} key={scene.id}>
+              {scene.migrated ? (
+                // Natural height — no beat formula, PuddingScene's own
+                // position:sticky is self-contained to this section,
+                // so no manual opacity-hiding hack is needed either.
+                <div id={`fluent-scene-${i}`} style={{ position: 'relative', minHeight: '100vh' }}>
+                  {scene.render({
+                    isActive: current === i,
+                    response: responses[scene.id],
+                    onRespond: (value) => setResponses((prev) => ({ ...prev, [scene.id]: value })),
+                    onNavigate,
+                    onJumpToScene: jumpTo,
+                  })}
+                </div>
+              ) : (
+                <div
+                  id={`fluent-scene-${i}`}
+                  style={{ height: `${100 + scene.beats * VH_PER_BEAT}vh`, position: 'relative', minHeight: '100vh' }}
+                >
+                  <div style={{
+                    opacity: (current === i || current === i - 1) ? 1 : 0,
+                    transition: 'opacity 0.3s ease',
+                    height: '100%',
+                  }}>
+                    {scene.render({
+                      beat: beats[i] ?? (i === 0 ? 0 : -1),
+                      isActive: current === i,
+                      response: responses[scene.id],
+                      onRespond: (value) => setResponses((prev) => ({ ...prev, [scene.id]: value })),
+                      onNavigate,
+                    })}
+                  </div>
+                </div>
+              )}
+            </Step>
+          ))}
+        </Scrollama>
       )}
-
-
     </div>
   )
 }

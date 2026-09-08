@@ -7,19 +7,11 @@ const RHR_COLOR  = '#E8504A'
 const HRV_COLOR  = '#27C48A'
 const RESP_COLOR = 'rgba(255,255,255,0.4)'
 
-// ⚠ Same placeholder caveat as before for RHR/HRV middle quarters.
-// Resp rate is even more placeholder — I only know the two endpoints
-// (~20-22 start, 15.4 end, drop occurring around 2025Q3) with NO real
-// per-quarter numbers in between. This interpolates smoothly between
-// those two known points purely so the line has something to draw —
-// treat every value except 2022Q1 and 2026Q3 as a rough guess, not
-// real data. Swap in the real quarterly_arc.json the moment you have
-// actual per-quarter resp figures.
 const PLACEHOLDER_DATA = [
   { quarter: '2022Q1', rhr: 62.7, hrv: 39.2, resp: 21.5 },
   { quarter: '2022Q2', rhr: 62.1, hrv: 37.8, resp: 21.3 },
   { quarter: '2022Q3', rhr: 63.4, hrv: 35.1, resp: 21.0 },
-  { quarter: '2022Q4', rhr: 66.8, hrv: 33.4, resp: 20.8 }, // locked — worst quarter
+  { quarter: '2022Q4', rhr: 66.8, hrv: 33.4, resp: 20.8 },
   { quarter: '2023Q1', rhr: 64.2, hrv: 36.8, resp: 20.5 },
   { quarter: '2023Q2', rhr: 61.8, hrv: 38.2, resp: 20.2 },
   { quarter: '2023Q3', rhr: 60.4, hrv: 38.9, resp: 19.9 },
@@ -30,11 +22,11 @@ const PLACEHOLDER_DATA = [
   { quarter: '2024Q4', rhr: 59.4, hrv: 41.8, resp: 18.0 },
   { quarter: '2025Q1', rhr: 60.2, hrv: 42.4, resp: 17.6 },
   { quarter: '2025Q2', rhr: 58.8, hrv: 44.1, resp: 17.1 },
-  { quarter: '2025Q3', rhr: 57.9, hrv: 46.8, resp: 16.5 }, // locked start of resp drop
+  { quarter: '2025Q3', rhr: 57.9, hrv: 46.8, resp: 16.5 },
   { quarter: '2025Q4', rhr: 58.4, hrv: 45.2, resp: 16.1 },
   { quarter: '2026Q1', rhr: 57.2, hrv: 46.4, resp: 15.8 },
   { quarter: '2026Q2', rhr: 55.8, hrv: 48.0, resp: 15.6 },
-  { quarter: '2026Q3', rhr: 57.6, hrv: 51.9, resp: 15.4 }, // locked — best quarter + resp endpoint
+  { quarter: '2026Q3', rhr: 57.6, hrv: 51.9, resp: 15.4 },
 ]
 
 const ANNOTATIONS = [
@@ -43,16 +35,22 @@ const ANNOTATIONS = [
   { quarter: '2026Q3', label: 'Best quarter', note: 'RHR 57.6 · HRV 51.9', position: 'above' },
 ]
 
-export default function QuarterlyArcChart({ height = 280, data: rawData = PLACEHOLDER_DATA }) {
-  // Real export likely wraps the array in a named key (matching every
-  // other file this round — sports/rides/sessions/buckets are all
-  // nested, not bare arrays). Try the likely key name, fall back to
-  // treating the prop as a bare array if it already is one.
+export default function QuarterlyArcChart({
+  height = 280,
+  data: rawData = PLACEHOLDER_DATA,
+  highlightLine = null,
+  hideAnnotations = false, // was hideChrome — annotations/stat-callouts hideable, legend now always shows
+}) {
   const data = Array.isArray(rawData) ? rawData : (rawData?.quarters ?? PLACEHOLDER_DATA)
 
   const [tip, setTip] = useState(null)
   const containerRef = useRef(null)
   const [width, setWidth] = useState(700)
+
+  const measureRef = useCallback((node) => {
+    containerRef.current = node
+    if (node) setWidth(node.getBoundingClientRect().width)
+  }, [])
 
   if (!Array.isArray(data) || data.length === 0) {
     return (
@@ -63,11 +61,6 @@ export default function QuarterlyArcChart({ height = 280, data: rawData = PLACEH
       </div>
     )
   }
-
-  const measureRef = useCallback((node) => {
-    containerRef.current = node
-    if (node) setWidth(node.getBoundingClientRect().width)
-  }, [])
 
   const margin = { top: 46, right: 44, bottom: 44, left: 40 }
   const plotW = width - margin.left - margin.right
@@ -115,7 +108,7 @@ export default function QuarterlyArcChart({ height = 280, data: rawData = PLACEH
         onMouseLeave={() => setTip(null)}
         style={{ cursor: 'crosshair', overflow: 'visible' }}
       >
-        {ANNOTATIONS.map(a => {
+        {!hideAnnotations && ANNOTATIONS.map(a => {
           const idx = data.findIndex(d => d.quarter === a.quarter)
           if (idx < 0) return null
           const x = xFor(idx)
@@ -130,9 +123,15 @@ export default function QuarterlyArcChart({ height = 280, data: rawData = PLACEH
           )
         })}
 
-        <path d={rhrPath} fill="none" stroke={RHR_COLOR} strokeWidth={2} />
-        <path d={hrvPath} fill="none" stroke={HRV_COLOR} strokeWidth={2} />
-        {respPath && <path d={respPath} fill="none" stroke={RESP_COLOR} strokeWidth={1.5} strokeDasharray="2 3" />}
+        <path d={rhrPath} fill="none" stroke={RHR_COLOR}
+          strokeWidth={highlightLine === 'rhr' ? 3 : 2}
+          opacity={highlightLine && highlightLine !== 'rhr' ? 0.15 : 1} />
+        <path d={hrvPath} fill="none" stroke={HRV_COLOR}
+          strokeWidth={highlightLine === 'hrv' ? 3 : 2}
+          opacity={highlightLine && highlightLine !== 'hrv' ? 0.15 : 1} />
+        {respPath && <path d={respPath} fill="none" stroke={RESP_COLOR}
+          strokeWidth={highlightLine === 'resp' ? 2.5 : 1.5} strokeDasharray="2 3"
+          opacity={highlightLine && highlightLine !== 'resp' ? 0.1 : 1} />}
 
         {tip && (
           <line x1={tip.x} y1={margin.top} x2={tip.x} y2={height - margin.bottom}
@@ -173,11 +172,13 @@ export default function QuarterlyArcChart({ height = 280, data: rawData = PLACEH
         <Legend color={RESP_COLOR} label="Breathing rate" dashed />
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10, marginTop: 16 }}>
-        <StatCallout value="−5.1 bpm" label="RHR since 2022" />
-        <StatCallout value="+12.7 ms" label="HRV since 2022" />
-        <StatCallout value="−5 br/min" label="Breathing rate since 2022" />
-      </div>
+      {!hideAnnotations && (
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10, marginTop: 16 }}>
+          <StatCallout value="−5.1 bpm" label="RHR since 2022" />
+          <StatCallout value="+12.7 ms" label="HRV since 2022" />
+          <StatCallout value="−5 br/min" label="Breathing rate since 2022" />
+        </div>
+      )}
     </div>
   )
 }

@@ -1,7 +1,7 @@
 {
   "buckets": [
     {
-      "label": "8:00pm",
+      "label": "8:00am",
       "hour": 20.0,
       "count": 0,
       "pct": 0.0,
@@ -9,7 +9,7 @@
       "is_late": false
     },
     {
-      "label": "8:30pm",
+      "label": "8:30am",
       "hour": 20.5,
       "count": 16,
       "pct": 2.3,
@@ -17,7 +17,7 @@
       "is_late": false
     },
     {
-      "label": "9:00pm",
+      "label": "9:00am",
       "hour": 21.0,
       "count": 187,
       "pct": 27.2,
@@ -25,7 +25,7 @@
       "is_late": false
     },
     {
-      "label": "9:30pm",
+      "label": "9:30am",
       "hour": 21.5,
       "count": 79,
       "pct": 11.5,
@@ -33,7 +33,7 @@
       "is_late": false
     },
     {
-      "label": "10:00pm",
+      "label": "10:00am",
       "hour": 22.0,
       "count": 97,
       "pct": 14.1,
@@ -41,7 +41,7 @@
       "is_late": false
     },
     {
-      "label": "10:30pm",
+      "label": "10:30am",
       "hour": 22.5,
       "count": 62,
       "pct": 9.0,
@@ -49,7 +49,7 @@
       "is_late": false
     },
     {
-      "label": "11:00pm",
+      "label": "11:00am",
       "hour": 23.0,
       "count": 66,
       "pct": 9.6,
@@ -57,7 +57,7 @@
       "is_late": false
     },
     {
-      "label": "11:30pm",
+      "label": "11:30am",
       "hour": 23.5,
       "count": 70,
       "pct": 10.2,

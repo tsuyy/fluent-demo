@@ -282,7 +282,7 @@ export function InfoNote({ marker = '①', label, body, caveat }) {
               <p
                 style={{
                   margin: 0,
-                  fontSize: 13,
+                  fontSize: 16,
                   lineHeight: 1.6,
                   color: QUIET,
                   borderTop: `1px solid ${HAIRLINE}`,
@@ -309,15 +309,14 @@ export function VerificationPrompt({ question, options, value, onChange, acknowl
   const { reduced } = useScene()
 
   return (
-    <div
-      style={{
-        display: 'grid',
-        gap: 12,
-        padding: '18px 0 0',
-        borderTop: `1px solid ${HAIRLINE}`,
-        maxWidth: 560,
-      }}
-    >
+
+  <div
+    style={{
+      display: 'grid',
+      gap: 12,
+      maxWidth: 560,
+    }}
+  >
       <p style={{ margin: 0, fontSize: 15, lineHeight: 1.5, color: SECONDARY }}>{question}</p>
 
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>

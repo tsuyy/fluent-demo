@@ -1,92 +1,81 @@
-import { Scene, Beat } from '../../Scene'
-import { useIsNarrow } from '../../useIsNarrow'
-import { Lead, Line, BigNumber, CountUp, InfoNote, VerificationPrompt } from '../../primitives'
+import PuddingScene from '../../PuddingScene'
+import { Lead, BigNumber, CountUp } from '../../primitives'
 import { InlineMetricTooltip } from '../../../../components/MetricTooltip'
 
-const QUIET = 'var(--color-quiet, #888780)'
+/**
+ * Scene 2 — Your Heart. Each metric now counts up from its start
+ * value to its end value when its own step becomes active, instead
+ * of showing both numbers stacked with an arrow between them.
+ */
+export default function Scene02Heart({ story, renderChart }) {
+  const { rhr, hrv, resp } = story.heart
 
-const ACK = {
-  'Yes, I know what this was':
-    'Then the quarter has a name. Fluent only found the shift — the meaning was already yours.',
-  'Not sure':
-    'That happens. Fluent can mark a shift without being able to explain it.',
-  Skip: null,
-}
-
-export default function Scene02Heart({ beat, isActive, story, response, onRespond, renderChart }) {
-  const narrow = useIsNarrow()
-  const { rhr, hrv } = story.heart
+  const steps = [
+    {
+      id: 'rhr',
+      content: (isActive) => (
+        <div>
+          <Lead>Let's start with the most fundamental signal.</Lead>
+          <div style={{ marginTop: 16 }}>
+            <BigNumber unit="bpm">
+              <CountUp from={rhr.from} to={rhr.to} active={isActive} duration={1800} format={(v) => v.toFixed(1)} />
+            </BigNumber>
+          </div>
+          <p style={{ fontSize: 20, color: 'var(--color-text-tertiary)', marginTop: 12, lineHeight: 1.6 }}>
+            {rhr.perDay.toLocaleString()} fewer beats every day. {rhr.perYear} fewer beats every year.
+          </p>
+          <InlineMetricTooltip metric="rhr" marker="＊" />
+        </div>
+      ),
+    },
+    {
+      id: 'hrv',
+      content: (isActive) => (
+        <div>
+          <Lead>Your nervous system recovered at the same time.</Lead>
+          <div style={{ marginTop: 16 }}>
+            <BigNumber unit="ms">
+              <CountUp from={hrv.from} to={hrv.to} active={isActive} duration={1800} format={(v) => v.toFixed(1)} />
+            </BigNumber>
+          </div>
+          <p style={{ fontSize: 20, color: 'var(--color-text-tertiary)', marginTop: 12, lineHeight: 1.6 }}>
+            <span style={{ color: 'var(--color-quiet, #888780)' }}>{hrv.pctLabel} more regulated.</span> RHR
+            falling while HRV climbs isn't two separate improvements — it's the
+            same shift, read two ways.
+          </p>
+          <InlineMetricTooltip metric="hrv" marker="＊" />
+        </div>
+      ),
+    },
+    {
+      id: 'resp',
+      content: (isActive) => (
+        <div>
+          <Lead>One signal that rarely gets attention.</Lead>
+          <div style={{ marginTop: 16 }}>
+            <BigNumber unit="br/min">
+              <CountUp from={resp.from} to={resp.to} active={isActive} duration={1800} format={(v) => v.toFixed(1)} />
+            </BigNumber>
+          </div>
+          <p style={{ fontSize: 20, color: 'var(--color-text-tertiary)', marginTop: 12, lineHeight: 1.6 }}>
+            Most of that drop arrived around the same quarter your HRV started
+            climbing fastest — three lines, one story: a resting body doing
+            less work to stay ready.
+          </p>
+        </div>
+      ),
+    },
+  ]
 
   return (
-    <Scene
-      layout="split"
-      beat={beat}
-      isActive={isActive}
+    <PuddingScene
       label="Your heart"
-      left={
-        <div style={{ display: 'grid', gap: narrow ? 14 : 20 }}>
-          <Beat at={0}>
-            <Lead>Let's start with the most fundamental signal.</Lead>
-          </Beat>
-
-          <Beat at={0} delay={0.3}>
-            <BigNumber unit="bpm">
-              <CountUp
-                from={rhr.from}
-                to={rhr.to}
-                active={beat >= 1}
-                duration={1800}
-                format={(v) => Math.round(v)}
-              />
-            </BigNumber>
-          </Beat>
-
-          <Beat at={1}>
-            <Line tone="secondary">
-              Your resting heart rate has been declining ever since.
-            </Line>
-          </Beat>
-
-          <Beat at={2}>
-            <div style={{ display: 'grid', gap: 4 }}>
-              <Line>{rhr.perDay.toLocaleString()} fewer beats every day.</Line>
-              <Line>{rhr.perYear} fewer beats every year.</Line>
-            </div>
-          </Beat>
-
-          <Beat at={2} delay={0.25}>
-            <InlineMetricTooltip metric="rhr" marker="＊" />
-          </Beat>
-
-          <Beat at={3}>
-            <div style={{ display: 'grid', gap: 4 }}>
-              <Line tone="secondary">Your nervous system recovered at the same time.</Line>
-              <Line>
-                HRV: {hrv.from}ms → {hrv.to}ms.{' '}
-                <span style={{ color: QUIET }}>{hrv.pctLabel} more regulated.</span>
-              </Line>
-               <InlineMetricTooltip metric="hrv" marker="＊" />
-            </div>
-          </Beat>
-
-          <Beat at={4}>
-            <VerificationPrompt
-              question={`Something significant happened in ${story.pivotQuarter}. Do you remember this period?`}
-              options={['Yes, I know what this was', 'Not sure', 'Skip']}
-              value={response}
-              onChange={onRespond}
-              acknowledgement={(v) => ACK[v]}
-            />
-          </Beat>
-        </div>
-      }
-      right={
-        <Beat at={0} delay={0.5}>
-          <div style={{ height: narrow ? 220 : 380, width: '100%' }}>
-            {renderChart({ showHRV: beat >= 3 })}
-          </div>
-        </Beat>
-      }
+      visualSide="left"
+      visualFlex={58}
+      textFlex={42}
+      maxWidth={1300}
+      steps={steps}
+      renderVisual={(activeStepId) => renderChart({ highlightLine: activeStepId })}
     />
   )
 }
