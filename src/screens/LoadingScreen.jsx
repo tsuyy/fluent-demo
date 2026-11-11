@@ -11,7 +11,7 @@ const COPY = {
       "Jamie's question: why do some weeks feel so much harder than others?",
       "This takes about 30 seconds.",
     ],
-    gradient: "radial-gradient(ellipse at 20% 60%, rgba(180,60,60,0.45) 0%, rgba(120,40,140,0.3) 45%, transparent 70%)",
+    gradient: "radial-gradient(ellipse at 20% 60%, rgba(196,80,232,0.2) 0%, rgba(6,129,252,0.1) 50%, transparent 70%)",
   },
   yvonne: {
     headline: "Loading Yvonne's data...",
@@ -21,7 +21,7 @@ const COPY = {
       "Yvonne's question: what's actually shaping how she feels?",
       "This takes about 30 seconds.",
     ],
-    gradient: "radial-gradient(ellipse at 70% 30%, rgba(6,129,252,0.35) 0%, rgba(39,196,138,0.2) 50%, transparent 70%)",
+    gradient: "radial-gradient(ellipse at 70% 30%, rgba(6,129,252,0.2) 0%, rgba(39,196,138,0.1) 50%, transparent 70%)",
   },
   robert: {
     headline: "Loading Robert's data...",
@@ -31,7 +31,7 @@ const COPY = {
       "Robert's question: what did retiring actually do to his body?",
       "This takes about 30 seconds.",
     ],
-    gradient: "radial-gradient(ellipse at 30% 70%, rgba(39,196,138,0.3) 0%, rgba(80,40,160,0.2) 50%, transparent 70%)",
+    gradient: "radial-gradient(ellipse at 30% 70%, rgba(39,196,138,0.2) 0%, rgba(6,129,252,0.1) 50%, transparent 70%)",
   },
   alex: {
     headline: "Loading Alex's data...",
@@ -41,7 +41,7 @@ const COPY = {
       "Alex's question: what does his phone already know about him?",
       "This takes about 30 seconds.",
     ],
-    gradient: "radial-gradient(ellipse at 60% 40%, rgba(39,196,138,0.2) 0%, rgba(100,100,140,0.2) 50%, transparent 70%)",
+    gradient: "radial-gradient(ellipse at 60% 40%, rgba(39,196,138,0.14) 0%, rgba(6,129,252,0.1) 50%, transparent 70%)",
   },
 }
 

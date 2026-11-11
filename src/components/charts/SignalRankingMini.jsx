@@ -84,8 +84,8 @@ function SignalSparkline({ sig, height }) {
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-        <span style={{ fontSize: 10, color: QUIET }}>{sig.label}</span>
-        <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.4)' }}>past 14 days</span>
+        <span style={{ fontSize: 12, color: QUIET }}>{sig.label}</span>
+        <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.62)' }}>past 14 days</span>
       </div>
       <div ref={measureRef} style={{ width: '100%', height, position: 'relative' }}>
         <svg
@@ -117,7 +117,7 @@ function SignalSparkline({ sig, height }) {
             left: Math.min(tip.x + 8, width - 80), top: 0,
             background: SURFACE, border: '1px solid rgba(255,255,255,0.12)',
             borderRadius: 6, padding: '4px 8px',
-            fontSize: 10, color: TEXT, pointerEvents: 'none',
+            fontSize: 12, color: TEXT, pointerEvents: 'none',
             boxShadow: '0 4px 12px rgba(0,0,0,0.4)',
           }}>
             {tip.value > 0 ? '+' : ''}{tip.value.toFixed(1)}{sig.unit}

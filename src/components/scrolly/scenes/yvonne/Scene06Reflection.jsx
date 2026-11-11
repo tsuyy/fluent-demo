@@ -60,7 +60,7 @@ export default function Scene06Reflection({ beat, isActive }) {
           color: TEXT,
           margin: 0,
         }}>
-          After four years, a few things are hard to ignore.
+          After nearly five years, a few things are hard to ignore.
         </p>
       </Beat>
 
@@ -76,7 +76,7 @@ export default function Scene06Reflection({ beat, isActive }) {
         <Insight beat={2}>
           Your cardiovascular trajectory has changed in ways that aren't obvious day to day.{' '}
           <span style={{ color: SECONDARY }}>
-            You had to look at four years to see it.
+            You had to look at nearly five years to see it.
           </span>
         </Insight>
       </Beat>

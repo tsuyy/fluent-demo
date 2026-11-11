@@ -3,7 +3,7 @@ import { ResponsiveScatterPlot } from '@nivo/scatterplot'
 import { CHART_THEME, tooltipStyle } from './chartTheme'
 
 export default function SleepEfficiencyChart({ data, height = 160 }) {
-  if (!data?.quality?.nightly?.length) return <div style={{ height, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)' }}>No data</span></div>
+  if (!data?.quality?.nightly?.length) return <div style={{ height, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)' }}>No data</span></div>
 
   const nightly = data?.quality?.nightly ?? []
 
@@ -56,7 +56,7 @@ export default function SleepEfficiencyChart({ data, height = 160 }) {
           },
           legend: '85% threshold',
           legendPosition: 'bottom-right',
-          textStyle: { fill: 'rgba(255,255,255,0.3)', fontSize: 9 },
+          textStyle: { fill: 'rgba(255,255,255,0.6)', fontSize: 13 },
         }]}
         legends={[{
           anchor: 'bottom',

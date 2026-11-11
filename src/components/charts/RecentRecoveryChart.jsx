@@ -5,7 +5,7 @@ const QUIET = 'var(--color-quiet, #888780)'
 const TEXT  = 'var(--color-text, rgba(255,255,255,0.92))'
 const SURFACE = '#1A1A18'
 const HRV_UP   = '#0681fc'
-const HRV_DOWN = '#6B9EFF'
+const HRV_DOWN = '#E8504A'
 const RHR_BAD  = '#E8504A'
 const RHR_GOOD = '#27C48A'
 
@@ -31,7 +31,7 @@ export default function RecentRecoveryChart({ data, height = 140, compact = fals
   if (!daily.length) {
     return (
       <div style={{ height, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <span style={{ fontSize: 12, color: QUIET }}>No data</span>
+        <span style={{ fontSize: 13, color: QUIET }}>No data</span>
       </div>
     )
   }
@@ -113,11 +113,11 @@ export default function RecentRecoveryChart({ data, height = 140, compact = fals
         <div style={{ display: 'flex', gap: 14, marginTop: 6, paddingLeft: margin.left }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
             <div style={{ width: 8, height: 8, background: HRV_UP, borderRadius: 1 }} />
-            <span style={{ fontSize: 10, color: QUIET }}>HRV</span>
+            <span style={{ fontSize: 12, color: QUIET }}>HRV</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
             <div style={{ width: 8, height: 8, background: RHR_BAD, borderRadius: 1 }} />
-            <span style={{ fontSize: 10, color: QUIET }}>RHR</span>
+            <span style={{ fontSize: 12, color: QUIET }}>RHR</span>
           </div>
         </div>
       )}
@@ -135,11 +135,11 @@ export default function RecentRecoveryChart({ data, height = 140, compact = fals
             zIndex: 100, pointerEvents: 'none', minWidth: 100,
             boxShadow: '0 4px 16px rgba(0,0,0,0.4)',
           }}>
-            <p style={{ fontSize: 10, fontWeight: 600, color: TEXT, marginBottom: 4 }}>{tip.point.date}</p>
-            <p style={{ fontSize: 10, color: tip.point.hrv_dev < 0 ? HRV_DOWN : HRV_UP, margin: 0 }}>
+            <p style={{ fontSize: 12, fontWeight: 600, color: TEXT, marginBottom: 4 }}>{tip.point.date}</p>
+            <p style={{ fontSize: 12, color: tip.point.hrv_dev < 0 ? HRV_DOWN : HRV_UP, margin: 0 }}>
               HRV {tip.point.hrv_dev != null ? `${tip.point.hrv_dev > 0 ? '+' : ''}${tip.point.hrv_dev}ms` : '—'}
             </p>
-            <p style={{ fontSize: 10, color: tip.point.rhr_dev > 0 ? RHR_BAD : RHR_GOOD, margin: 0 }}>
+            <p style={{ fontSize: 12, color: tip.point.rhr_dev > 0 ? RHR_BAD : RHR_GOOD, margin: 0 }}>
               RHR {tip.point.rhr_dev != null ? `${tip.point.rhr_dev > 0 ? '+' : ''}${tip.point.rhr_dev}bpm` : '—'}
             </p>
           </div>

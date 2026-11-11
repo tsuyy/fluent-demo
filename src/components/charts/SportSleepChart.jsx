@@ -1,15 +1,25 @@
 import { useState, useCallback, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const SPORTS = [
-  { sport: 'Tennis',       deep: 61.5, rem: 83.5, awake: 41.4, total: 445.4, n: 22, color: '#27C48A' },
-  { sport: 'Strength',     deep: 52.5, rem: 79.8, awake: 35.8, total: 426.8, n: 55, color: '#6B9EFF' },
-  { sport: 'Running',      deep: 49.7, rem: 81.0, awake: 38.0, total: 425.1, n: 93, color: '#9B8AFF' },
-  { sport: 'Cycling',      deep: 49.2, rem: 77.2, awake: 36.2, total: 415.7, n: 89, color: '#0681fc' },
-  { sport: 'Pilates/Yoga', deep: 44.7, rem: 79.9, awake: 33.7, total: 423.4, n: 39, color: '#c3e84a' },
-  { sport: 'Skiing',       deep: 37.7, rem: 78.5, awake: 46.1, total: 397.9, n: 16, color: '#E8504A' },
-]
-const BASELINE = { deep: 48.8, rem: 80.0, awake: 35.9, total: 425.1, n: 365 }
+import sportSleep from '../../data/yvonne/sport_sleep.json'
+
+// Display label + colour per sport id in sport_sleep.json. `mindfulness` is left out:
+// pilates_yoga is the heated-class subset, so showing both would double count.
+const SPORT_META = {
+  tennis:       { label: 'Tennis',       color: '#27C48A' },
+  strength:     { label: 'Strength',     color: '#6B9EFF' },
+  running:      { label: 'Running',      color: '#9B8AFF' },
+  cycling:      { label: 'Cycling',      color: '#0681fc' },
+  pilates_yoga: { label: 'Pilates/Yoga', color: '#c3e84a' },
+  skiing:       { label: 'Skiing',       color: '#E8504A' },
+}
+export const SPORTS = Object.entries(SPORT_META)
+  .map(([id, meta]) => {
+    const row = sportSleep.sports.find(s => s.sport === id)
+    return row ? { ...row, sport: meta.label, color: meta.color } : null
+  })
+  .filter(Boolean)
+export const BASELINE = sportSleep.baseline
 
 const AXES = [
   { key: 'deep',  label: 'Deep Sleep', unit: 'min', max: 75 },
@@ -111,7 +121,7 @@ export default function SportSleepChart({ size = 260, focusSport = null }) {
               background: showBaseline ? 'rgba(255,255,255,0.08)' : 'transparent',
               border: `1px solid ${showBaseline ? 'rgba(255,255,255,0.35)' : 'rgba(255,255,255,0.1)'}`,
               borderRadius: 999, padding: '4px 10px', cursor: 'pointer', fontFamily: 'inherit',
-              fontSize: 11, color: showBaseline ? 'rgba(255,255,255,0.7)' : QUIET, transition: 'all 0.15s',
+              fontSize: 13, color: showBaseline ? 'rgba(255,255,255,0.7)' : QUIET, transition: 'all 0.15s',
             }}
           >
             <div style={{ width: 14, height: 1.5, background: 'rgba(255,255,255,0.4)', borderTop: '1px dashed rgba(255,255,255,0.5)' }} />
@@ -127,7 +137,7 @@ export default function SportSleepChart({ size = 260, focusSport = null }) {
                 background: on ? `${s.color}18` : 'transparent',
                 border: `1px solid ${on ? s.color : 'rgba(255,255,255,0.1)'}`,
                 borderRadius: 999, padding: '4px 10px', cursor: 'pointer', fontFamily: 'inherit',
-                fontSize: 11, color: on ? s.color : QUIET, transition: 'all 0.15s',
+                fontSize: 13, color: on ? s.color : QUIET, transition: 'all 0.15s',
               }}
             >
               <div style={{ width: 7, height: 7, borderRadius: '50%', background: on ? s.color : QUIET }} />
@@ -171,7 +181,7 @@ export default function SportSleepChart({ size = 260, focusSport = null }) {
             return (
               <g key={axis.key}>
                 <line x1={cx} y1={cy} x2={end.x} y2={end.y} stroke="rgba(255,255,255,0.12)" strokeWidth={1} />
-                <text x={lbl.x} y={lbl.y} textAnchor="middle" dominantBaseline="middle" fill={QUIET} fontSize={10} style={{ userSelect: 'none' }}>
+                <text x={lbl.x} y={lbl.y} textAnchor="middle" dominantBaseline="middle" fill={QUIET} fontSize={12} style={{ userSelect: 'none' }}>
                   {axis.label}
                 </text>
               </g>
@@ -200,13 +210,13 @@ export default function SportSleepChart({ size = 260, focusSport = null }) {
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
               <div style={{ width: 8, height: 8, borderRadius: '50%', background: tip.sport.color }} />
-              <span style={{ fontSize: 12, fontWeight: 600, color: TEXT }}>{tip.sport.sport}</span>
-              <span style={{ fontSize: 11, color: QUIET, marginLeft: 'auto' }}>n={tip.sport.n}</span>
+              <span style={{ fontSize: 13, fontWeight: 600, color: TEXT }}>{tip.sport.sport}</span>
+              <span style={{ fontSize: 13, color: QUIET, marginLeft: 'auto' }}>n={tip.sport.n}</span>
             </div>
             {AXES.map(axis => (
               <div key={axis.key} style={{ display: 'flex', justifyContent: 'space-between', gap: 16, marginBottom: 3 }}>
-                <span style={{ fontSize: 11, color: QUIET }}>{axis.label}</span>
-                <span style={{ fontSize: 11, color: TEXT }}>{tip.sport[axis.key]} min</span>
+                <span style={{ fontSize: 13, color: QUIET }}>{axis.label}</span>
+                <span style={{ fontSize: 13, color: TEXT }}>{tip.sport[axis.key]} min</span>
               </div>
             ))}
           </div>
@@ -218,14 +228,14 @@ export default function SportSleepChart({ size = 260, focusSport = null }) {
             borderRadius: 8, padding: '8px 12px', zIndex: 200, pointerEvents: 'none', maxWidth: 200,
             boxShadow: '0 4px 16px rgba(0,0,0,0.4)',
           }}>
-            <p style={{ fontSize: 12, fontWeight: 600, color: TEXT, marginBottom: 4 }}>{axisTip.axis.label}</p>
-            <p style={{ fontSize: 11, color: QUIET, lineHeight: 1.5, margin: 0 }}>
+            <p style={{ fontSize: 13, fontWeight: 600, color: TEXT, marginBottom: 4 }}>{axisTip.axis.label}</p>
+            <p style={{ fontSize: 13, color: QUIET, lineHeight: 1.5, margin: 0 }}>
               Baseline: {BASELINE[axisTip.axis.key]} min{axisTip.axis.inverted ? ' · lower = better (axis inverted)' : ''}
             </p>
           </div>
         )}
       </div>
-      <p style={{ fontSize: 10, color: QUIET, textAlign: 'center', margin: 0, fontStyle: 'italic' }}>
+      <p style={{ fontSize: 12, color: QUIET, textAlign: 'center', margin: 0, fontStyle: 'italic' }}>
         Awake axis inverted — further from center = less awake time = better
       </p>
     </div>

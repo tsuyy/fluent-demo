@@ -62,7 +62,7 @@ export default function RetirementArcChart({ height = 160 }) {
             background: 'rgba(15,15,14,0.95)',
             border: '1px solid rgba(255,255,255,0.1)',
             borderRadius: 6, padding: '6px 10px',
-            fontSize: 11, color: '#fff',
+            fontSize: 13, color: '#fff',
         }}>
             <strong>{point.data.xFormatted}</strong>
             <br />
@@ -84,7 +84,7 @@ export default function RetirementArcChart({ height = 160 }) {
             legendPosition: 'top',
             textStyle: {
               fill: 'rgba(255,255,255,0.3)',
-              fontSize: 9,
+              fontSize: 12,
             },
           },
           {
@@ -99,7 +99,7 @@ export default function RetirementArcChart({ height = 160 }) {
             legendPosition: 'bottom-right',
             textStyle: {
               fill: 'rgba(255,255,255,0.2)',
-              fontSize: 9,
+              fontSize: 12,
             },
           },
         ]}

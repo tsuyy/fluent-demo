@@ -1,0 +1,79 @@
+{
+ "note": "Illustrative persona data for Robert (fictional): bedtime spread of about 31 min, consistent with his regularity figure.",
+ "eras": [
+  {
+   "id": "all",
+   "label": "Two years",
+   "span": "Jun 2023 \u2013 May 2025",
+   "total_nights": 728,
+   "buckets": [
+    {
+     "label": "8:30pm",
+     "hour": 20.5,
+     "count": 1,
+     "pct": 0.1,
+     "is_anchor": false,
+     "is_late": false
+    },
+    {
+     "label": "9:00pm",
+     "hour": 21.0,
+     "count": 18,
+     "pct": 2.5,
+     "is_anchor": true,
+     "is_late": false
+    },
+    {
+     "label": "9:30pm",
+     "hour": 21.5,
+     "count": 102,
+     "pct": 14.0,
+     "is_anchor": true,
+     "is_late": false
+    },
+    {
+     "label": "10:00pm",
+     "hour": 22.0,
+     "count": 243,
+     "pct": 33.4,
+     "is_anchor": true,
+     "is_late": false
+    },
+    {
+     "label": "10:30pm",
+     "hour": 22.5,
+     "count": 243,
+     "pct": 33.4,
+     "is_anchor": true,
+     "is_late": false
+    },
+    {
+     "label": "11:00pm",
+     "hour": 23.0,
+     "count": 102,
+     "pct": 14.0,
+     "is_anchor": true,
+     "is_late": false
+    },
+    {
+     "label": "11:30pm",
+     "hour": 23.5,
+     "count": 18,
+     "pct": 2.5,
+     "is_anchor": false,
+     "is_late": false
+    },
+    {
+     "label": "12:00am",
+     "hour": 24.0,
+     "count": 1,
+     "pct": 0.1,
+     "is_anchor": false,
+     "is_late": true
+    }
+   ],
+   "anchor_pct": 97,
+   "late_pct": 0
+  }
+ ]
+}

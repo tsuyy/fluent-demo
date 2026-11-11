@@ -1,59 +1,59 @@
 {
   "baseline": {
-    "deep": 48.8,
+    "deep": 49.7,
     "rem": 80.0,
-    "awake": 35.9,
-    "total": 425.1,
-    "n": 365
+    "awake": 37.9,
+    "total": 425.9,
+    "n": 415
   },
   "sports": [
     {
       "sport": "tennis",
-      "deep": 61.5,
-      "rem": 83.5,
-      "awake": 41.4,
-      "total": 445.4,
-      "n": 22
+      "deep": 63.2,
+      "rem": 78.9,
+      "awake": 51.4,
+      "total": 446.6,
+      "n": 33
     },
     {
       "sport": "strength",
-      "deep": 52.5,
-      "rem": 79.8,
-      "awake": 35.8,
-      "total": 426.8,
-      "n": 55
-    },
-    {
-      "sport": "running",
-      "deep": 49.7,
-      "rem": 81.0,
-      "awake": 38.0,
-      "total": 425.1,
-      "n": 93
+      "deep": 53.1,
+      "rem": 80.3,
+      "awake": 37.4,
+      "total": 422.4,
+      "n": 68
     },
     {
       "sport": "cycling",
-      "deep": 49.2,
-      "rem": 77.2,
-      "awake": 36.2,
-      "total": 415.7,
-      "n": 89
+      "deep": 50.3,
+      "rem": 77.3,
+      "awake": 38.3,
+      "total": 416.8,
+      "n": 102
+    },
+    {
+      "sport": "running",
+      "deep": 50.2,
+      "rem": 80.4,
+      "awake": 39.5,
+      "total": 424.7,
+      "n": 107
     },
     {
       "sport": "mindfulness",
-      "deep": 44.7,
-      "rem": 79.5,
+      "deep": 44.8,
+      "rem": 79.4,
       "awake": 34.8,
-      "total": 425.2,
-      "n": 41
+      "total": 424.5,
+      "n": 48
     },
     {
       "sport": "pilates_yoga",
-      "deep": 44.7,
-      "rem": 79.9,
-      "awake": 33.7,
-      "total": 423.4,
-      "n": 39,
+      "deep": 44.8,
+      "rem": 79.8,
+      "awake": 33.9,
+      "total": 422.9,
+      "n": 46,
       "note": "Heated classes Oct 2025+, illness excluded"
     },
     {

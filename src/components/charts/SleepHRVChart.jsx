@@ -12,7 +12,7 @@ const SLEEP_HRV_DATA = [
   // Bottom-left = Recovery needed
   {
     id: 'Normal nights',
-    color: 'rgba(255,255,255,0.4)',
+    color: 'rgba(255,255,255,0.62)',
     data: [
       { x: 88, y: 41.2 },
       { x: 91, y: 42.8 },
@@ -46,6 +46,7 @@ const BASELINE_HRV = 37.2
 
 export default function SleepHRVChart({ height = 180 }) {
   return (
+    <div>
     <div style={{ height, position: 'relative' }}>
 
       {/* Quadrant labels */}
@@ -58,26 +59,26 @@ export default function SleepHRVChart({ height = 180 }) {
         {/* Top right — Restorative */}
         <span style={{
           position: 'absolute', top: 4, right: 4,
-          fontSize: 9, color: 'rgba(255,255,255,0.2)',
+          fontSize: 12, color: 'rgba(255,255,255,0.65)',
           letterSpacing: '0.03em',
         }}>
-          Restorative
+          Higher HRV
         </span>
         {/* Bottom right — Less restorative */}
         <span style={{
           position: 'absolute', bottom: 4, right: 4,
-          fontSize: 9, color: 'rgba(232,80,74,0.4)',
+          fontSize: 12, color: 'rgba(232,80,74,0.8)',
           letterSpacing: '0.03em',
         }}>
-          Less restorative than it looks
+          Low HRV after typical sleep
         </span>
         {/* Top left */}
         <span style={{
           position: 'absolute', top: 4, left: 4,
-          fontSize: 9, color: 'rgba(255,255,255,0.15)',
+          fontSize: 12, color: 'rgba(255,255,255,0.65)',
           letterSpacing: '0.03em',
         }}>
-          More resilient
+          Less efficient, higher HRV
         </span>
       </div>
 
@@ -101,8 +102,8 @@ export default function SleepHRVChart({ height = 180 }) {
           legendPosition: 'middle',
           legendOffset: -38,
           legendTextStyle: {
-            fill: 'rgba(255,255,255,0.2)',
-            fontSize: 9,
+            fill: 'rgba(255,255,255,0.6)',
+            fontSize: 12,
           },
         }}
         axisBottom={{
@@ -113,8 +114,8 @@ export default function SleepHRVChart({ height = 180 }) {
           legendPosition: 'middle',
           legendOffset: 28,
           legendTextStyle: {
-            fill: 'rgba(255,255,255,0.2)',
-            fontSize: 9,
+            fill: 'rgba(255,255,255,0.6)',
+            fontSize: 12,
           },
         }}
         markers={[
@@ -140,28 +141,35 @@ export default function SleepHRVChart({ height = 180 }) {
             background: 'rgba(15,15,14,0.95)',
             border: '1px solid rgba(255,255,255,0.1)',
             borderRadius: 6, padding: '6px 10px',
-            fontSize: 11, color: '#fff',
+            fontSize: 13, color: '#fff',
           }}>
             {node.serieId === 'Mismatch nights' && (
               <div style={{ color: '#E8504A', marginBottom: 2 }}>
-                ← mismatch
+                mismatch night
               </div>
             )}
             Sleep: {node.data.x}% · HRV: {node.data.y}ms
           </div>
         )}
-        legends={[{
-          anchor: 'bottom-right',
-          direction: 'column',
-          itemWidth: 120,
-          itemHeight: 14,
-          itemTextColor: 'rgba(255,255,255,0.3)',
-          symbolSize: 6,
-          symbolShape: 'circle',
-          translateY: -4,
-        }]}
         animate={false}
       />
+    </div>
+
+      {/* Legend below the chart, like the other charts */}
+      <div style={{ display: 'flex', gap: '8px 18px', flexWrap: 'wrap', marginTop: 10, paddingLeft: 44 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+          <div style={{ width: 9, height: 9, borderRadius: '50%', background: 'rgba(255,255,255,0.62)' }} />
+          <span style={{ fontSize: 13, color: 'var(--color-quiet, #A3A29A)' }}>Typical nights</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+          <div style={{ width: 9, height: 9, borderRadius: '50%', background: '#E8504A' }} />
+          <span style={{ fontSize: 13, color: 'var(--color-quiet, #A3A29A)' }}>Mismatch nights (typical efficiency, low HRV)</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+          <div style={{ width: 16, height: 0, borderTop: '1px solid rgba(255,255,255,0.35)' }} />
+          <span style={{ fontSize: 13, color: 'var(--color-quiet, #A3A29A)' }}>Your usual: {BASELINE_EFFICIENCY}% efficiency, {BASELINE_HRV} ms HRV</span>
+        </div>
+      </div>
     </div>
   )
 }

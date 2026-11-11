@@ -28,7 +28,7 @@ export default function RecentSleepMini({ data, height = 70 }) {
   if (recent.length === 0) {
     return (
       <div style={{ height, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <span style={{ fontSize: 11, color: QUIET }}>No data</span>
+        <span style={{ fontSize: 13, color: QUIET }}>No data</span>
       </div>
     )
   }
@@ -83,8 +83,8 @@ export default function RecentSleepMini({ data, height = 70 }) {
             zIndex: 100, pointerEvents: 'none', minWidth: 90,
             boxShadow: '0 4px 16px rgba(0,0,0,0.4)',
           }}>
-            <p style={{ fontSize: 10, fontWeight: 600, color: TEXT, marginBottom: 2 }}>{tip.point.date}</p>
-            <p style={{ fontSize: 10, color: tip.point.efficiency >= 85 ? GOOD : LOW, margin: 0 }}>
+            <p style={{ fontSize: 12, fontWeight: 600, color: TEXT, marginBottom: 2 }}>{tip.point.date}</p>
+            <p style={{ fontSize: 12, color: tip.point.efficiency >= 85 ? GOOD : LOW, margin: 0 }}>
               {tip.point.efficiency}% efficiency
             </p>
           </div>

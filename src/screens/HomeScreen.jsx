@@ -2,17 +2,17 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import PageContainer from '../components/layout/PageContainer'
 import IconDifferent from '../components/nav/icons/IconDifferent'
-import IconChanged   from '../components/nav/icons/IconChanged'
 import IconActivity  from '../components/nav/icons/IconActivity'
 import IconCardio    from '../components/nav/icons/IconCardio'
 import IconSleep     from '../components/nav/icons/IconSleep'
 import IconMoments   from '../components/nav/icons/IconMoments'
+import IconSearch    from '../components/nav/icons/IconSearch'
 import AnimatedMeshBackground from '../components/backgrounds/AnimatedMeshBackground'
 import { useIsNarrow } from '../components/scrolly/useIsNarrow'
 
 const CATEGORIES = [
   { id: 'different', label: 'Something feels different lately', description: 'You bring the feeling. Fluent checks the data.', Icon: IconDifferent },
-  { id: 'changed',   label: "How I've changed over time",       description: 'How your body has shifted over months and years', Icon: IconChanged },
+  { id: 'noticed',    label: 'What Fluent noticed',              description: 'Changes Fluent found in your data', Icon: IconSearch },
   { id: 'activity',  label: 'Movement & Recovery',               description: 'What you do, what it costs, and how your body responds', Icon: IconActivity },
   { id: 'cardio',    label: 'Heart & Nervous System',             description: 'Your cardiovascular health over time', Icon: IconCardio },
   { id: 'sleep',     label: 'Sleep',                              description: 'How your body and mind recover overnight', Icon: IconSleep },
@@ -43,7 +43,7 @@ export default function HomeScreen({ persona, onNavigate, onBack, onPersonaSwitc
       padding: narrow ? '24px' : '48px',
       boxSizing: 'border-box',
     }}>
-      <AnimatedMeshBackground animated opacity={0.9} />
+      <AnimatedMeshBackground animated opacity={0.65} />
 
       <div style={{
         position: 'fixed', top: 32, left: narrow ? 24 : 48, right: narrow ? 24 : 48,

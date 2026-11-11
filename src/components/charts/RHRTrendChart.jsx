@@ -44,7 +44,7 @@ export default function RHRTrendChart({ height = 140, showShift = true }) {
             background: 'rgba(15,15,14,0.95)',
             border: '1px solid rgba(255,255,255,0.1)',
             borderRadius: 6, padding: '6px 10px',
-            fontSize: 11, color: '#fff',
+            fontSize: 13, color: '#fff',
           }}>
             <strong>{point.data.xFormatted}</strong>
             <br />
@@ -86,7 +86,7 @@ export default function RHRTrendChart({ height = 140, showShift = true }) {
             legendPosition: 'bottom-right',
             textStyle: {
               fill: 'rgba(255,255,255,0.25)',
-              fontSize: 9,
+              fontSize: 12,
             },
           },
           showShift && {

@@ -68,7 +68,7 @@ export default function SportHRVChart({ height = 320 }) {
             background: 'rgba(15,15,14,0.95)',
             border: '1px solid rgba(255,255,255,0.1)',
             borderRadius: 6, padding: '8px 12px',
-            fontSize: 12, color: '#fff',
+            fontSize: 13, color: '#fff',
           }}>
             <strong>{indexValue}</strong> · {id}
             <br />

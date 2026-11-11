@@ -21,14 +21,16 @@ import { useId, useState, useEffect, useRef } from 'react'
  * tracking cursor position in the same frame, exactly when the user
  * is actively engaging with the page rather than just looking at it.
  */
+// Demo palette: --color-accent blue, flag pink (#c450e8), --color-recovery green,
+// the lighter blue used in charts, on the app's own dark base/surface colors.
 const DEFAULT_PALETTE = {
-  bg1: 'rgb(30, 14, 8)',
-  bg2: 'rgb(10, 10, 14)',
+  bg1: 'rgb(15, 15, 14)',
+  bg2: 'rgb(26, 26, 24)',
   c1: '6, 129, 252',
-  c2: '139, 92, 246',
-  c3: '126, 217, 87',
-  c4: '255, 122, 26',
-  c5: '255, 201, 60',
+  c2: '196, 80, 232',
+  c3: '39, 196, 138',
+  c4: '107, 158, 255',
+  c5: '196, 80, 232',
 }
 
 const DEFAULT_SHAPES = {

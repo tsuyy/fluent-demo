@@ -59,8 +59,8 @@ export default function QQRTCard({ persona = 'yvonne' }) {
             }}
           >
             <p style={{
-              fontSize: 10,
-              color: 'rgba(255,255,255,0.3)',
+              fontSize: 12,
+              color: 'rgba(255,255,255,0.55)',
               letterSpacing: '0.05em',
               textTransform: 'uppercase',
               marginBottom: 8,
@@ -81,15 +81,15 @@ export default function QQRTCard({ persona = 'yvonne' }) {
               </span>
             </p>
             <p style={{
-              fontSize: 10,
-              color: 'rgba(255,255,255,0.3)',
+              fontSize: 12,
+              color: 'rgba(255,255,255,0.55)',
               lineHeight: 1.4,
             }}>
               {d.label}
             </p>
             <p style={{
-              fontSize: 10,
-              color: 'rgba(255,255,255,0.25)',
+              fontSize: 12,
+              color: 'rgba(255,255,255,0.52)',
               marginTop: 4,
             }}>
               {d.note}

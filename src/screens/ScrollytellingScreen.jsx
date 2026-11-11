@@ -5,7 +5,6 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import SceneIndicator  from '../components/scrolly/SceneIndicator'
 import Scene01Opening    from '../components/scrolly/scenes/yvonne/Scene01Opening'
 import Scene02Heart      from '../components/scrolly/scenes/yvonne/Scene02Heart'
-import Scene03Movement   from '../components/scrolly/scenes/yvonne/Scene03Movement'
 import Scene04Sports     from '../components/scrolly/scenes/yvonne/Scene04Sports'
 import Scene05Sleep      from '../components/scrolly/scenes/yvonne/Scene05Sleep'
 import Scene06Reflection from '../components/scrolly/scenes/yvonne/Scene06Reflection'
@@ -21,7 +20,6 @@ import QuarterlyArcChart from '../components/charts/QuarterlyArcChart'
 // doesn't, and Scene02Heart's new breathing-rate step needs `resp`.
 // This is the same file Heart & Nervous System screen already uses.
 import quarterlyArcData  from '../data/yvonne/quarterly_arc.json'
-import calendarData      from '../data/yvonne/calendar.json'
 import sleepMonthlyData from '../data/yvonne/sleep_monthly.json'
 
 const charts = {
@@ -65,8 +63,6 @@ const SCENES = {
       render: (props) => <Scene01Opening {...props} story={YVONNE_STORY} /> },
     { id: 'heart', label: 'Your heart', migrated: true,
       render: (props) => <Scene02Heart {...props} story={YVONNE_STORY} renderChart={charts.quarterlyArc} /> },
-    { id: 'movement', label: 'How you moved', migrated: true,
-      render: (props) => <Scene03Movement {...props} story={YVONNE_STORY} calendarData={calendarData} /> },
     { id: 'sports', label: 'What the data noticed', migrated: true,
       render: (props) => <Scene04Sports {...props} story={YVONNE_STORY} /> },
      { id: 'sleep', label: 'How you slept', migrated: true,

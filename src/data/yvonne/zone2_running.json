@@ -183,8 +183,88 @@
       "pace": 13.48,
       "distance": 3.5,
       "duration": 47.0
+    },
+    {
+      "date": "2026-09-05",
+      "year": 2026,
+      "hr_avg": 140.2,
+      "pace": 13.63,
+      "distance": 7.2,
+      "duration": 98.0
+    },
+    {
+      "date": "2026-09-08",
+      "year": 2026,
+      "hr_avg": 139.4,
+      "pace": 13.97,
+      "distance": 3.0,
+      "duration": 42.0
+    },
+    {
+      "date": "2026-09-10",
+      "year": 2026,
+      "hr_avg": 146.1,
+      "pace": 13.1,
+      "distance": 7.2,
+      "duration": 95.0
+    },
+    {
+      "date": "2026-09-16",
+      "year": 2026,
+      "hr_avg": 135.7,
+      "pace": 12.94,
+      "distance": 3.3,
+      "duration": 42.0
+    },
+    {
+      "date": "2026-09-20",
+      "year": 2026,
+      "hr_avg": 130.2,
+      "pace": 14.3,
+      "distance": 3.2,
+      "duration": 45.0
+    },
+    {
+      "date": "2026-09-24",
+      "year": 2026,
+      "hr_avg": 140.7,
+      "pace": 13.59,
+      "distance": 4.1,
+      "duration": 56.0
+    },
+    {
+      "date": "2026-10-02",
+      "year": 2026,
+      "hr_avg": 142.9,
+      "pace": 12.95,
+      "distance": 6.5,
+      "duration": 84.0
+    },
+    {
+      "date": "2026-10-05",
+      "year": 2026,
+      "hr_avg": 140.0,
+      "pace": 13.19,
+      "distance": 3.8,
+      "duration": 50.0
+    },
+    {
+      "date": "2026-10-17",
+      "year": 2026,
+      "hr_avg": 140.0,
+      "pace": 13.32,
+      "distance": 7.0,
+      "duration": 93.0
+    },
+    {
+      "date": "2026-10-20",
+      "year": 2026,
+      "hr_avg": 140.9,
+      "pace": 13.38,
+      "distance": 3.8,
+      "duration": 51.0
     }
   ],
-  "n": 23,
+  "n": 33,
   "note": "Zone 2 = HR 130-148bpm. Easy runs only. Progressive/intervals excluded."
 }

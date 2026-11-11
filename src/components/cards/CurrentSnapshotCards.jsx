@@ -1,4 +1,7 @@
 import { useIsNarrow } from '../scrolly/useIsNarrow'
+import MetricTooltip from '../MetricTooltip'
+
+const METRIC_KEY = { 'HRV': 'hrv', 'RHR': 'rhr', 'Deep sleep': 'deep_sleep', 'Active cal': 'active_cal' }
 
 const QUIET = 'var(--color-quiet, #888780)'
 const GOOD  = '#27C48A'
@@ -56,14 +59,17 @@ export default function CurrentSnapshotCards({ metrics }) {
             border: '1px solid rgba(255,255,255,0.08)',
             borderRadius: 10, padding: '12px 14px',
           }}>
-            <p style={{ fontSize: 10, color: QUIET, marginBottom: 6, letterSpacing: '0.03em', textTransform: 'uppercase' }}>
-              {m.label}
-            </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 5, marginBottom: 6 }}>
+              <p style={{ fontSize: 12, color: QUIET, margin: 0, letterSpacing: '0.03em', textTransform: 'uppercase' }}>
+                {m.label}
+              </p>
+              {METRIC_KEY[m.label] && <MetricTooltip metric={METRIC_KEY[m.label]} />}
+            </div>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: 4, marginBottom: 4 }}>
               <span style={{ fontSize: 20, fontWeight: 700 }}>{value}</span>
-              <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)' }}>{m.unit}</span>
+              <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.62)' }}>{m.unit}</span>
             </div>
-            <p style={{ fontSize: 11, color: isGood ? GOOD : BAD, margin: 0, lineHeight: 1.4 }}>
+            <p style={{ fontSize: 13, color: isGood ? GOOD : BAD, margin: 0, lineHeight: 1.4 }}>
               {arrow} {pctLabel}
             </p>
           </div>

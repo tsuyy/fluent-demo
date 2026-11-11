@@ -34,7 +34,7 @@ export default function RecentActivityChart({ data, height = 140, compact = fals
   if (!daily.length) {
     return (
       <div style={{ height, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <span style={{ fontSize: 12, color: QUIET }}>No data</span>
+        <span style={{ fontSize: 13, color: QUIET }}>No data</span>
       </div>
     )
   }
@@ -116,7 +116,7 @@ export default function RecentActivityChart({ data, height = 140, compact = fals
       </svg>
 
       {!compact && baseline != null && (
-        <p style={{ fontSize: 9, color: QUIET, marginTop: 4, paddingLeft: margin.left }}>
+        <p style={{ fontSize: 12, color: QUIET, marginTop: 4, paddingLeft: margin.left }}>
           dashed = {baseline} cal/day personal baseline
         </p>
       )}
@@ -134,11 +134,11 @@ export default function RecentActivityChart({ data, height = 140, compact = fals
             zIndex: 100, pointerEvents: 'none', minWidth: 110,
             boxShadow: '0 4px 16px rgba(0,0,0,0.4)',
           }}>
-            <p style={{ fontSize: 10, fontWeight: 600, color: TEXT, marginBottom: 4 }}>{tip.point.date}</p>
-            <p style={{ fontSize: 10, color: 'rgba(6,129,252,0.9)', margin: 0 }}>
+            <p style={{ fontSize: 12, fontWeight: 600, color: TEXT, marginBottom: 4 }}>{tip.point.date}</p>
+            <p style={{ fontSize: 12, color: 'rgba(6,129,252,0.9)', margin: 0 }}>
               {tip.point.active_cal != null ? `${tip.point.active_cal} cal` : 'no data'}
             </p>
-            <p style={{ fontSize: 10, color: tip.point.hrv_dev < 0 ? '#E8504A' : '#0681fc', margin: 0 }}>
+            <p style={{ fontSize: 12, color: tip.point.hrv_dev < 0 ? '#E8504A' : '#0681fc', margin: 0 }}>
               HRV {tip.point.hrv_dev != null ? `${tip.point.hrv_dev > 0 ? '+' : ''}${tip.point.hrv_dev}ms` : '—'}
             </p>
           </div>

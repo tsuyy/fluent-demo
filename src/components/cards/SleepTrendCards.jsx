@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import MetricTooltip from '../MetricTooltip'
+import { useIsNarrow } from '../scrolly/useIsNarrow'
 
 // metric key attached per row — keeps the tooltip locked to the right
 // definition even if stages are reordered or relabeled later
@@ -26,11 +27,12 @@ const TREND_DATA = {
 
 export default function SleepTrendCards({ persona = 'yvonne' }) {
   const data = TREND_DATA[persona] || TREND_DATA.yvonne
+  const narrow = useIsNarrow()
 
   return (
     <div style={{
       display: 'grid',
-      gridTemplateColumns: 'repeat(4, 1fr)',
+      gridTemplateColumns: narrow ? 'repeat(2, minmax(0, 1fr))' : 'repeat(4, minmax(0, 1fr))',
       gap: 12,
     }}>
       {data.map((item, i) => {
@@ -54,8 +56,8 @@ export default function SleepTrendCards({ persona = 'yvonne' }) {
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: 5, marginBottom: 8 }}>
               <p style={{
-                fontSize: 10,
-                color: 'rgba(255,255,255,0.3)',
+                fontSize: 12,
+                color: 'rgba(255,255,255,0.55)',
                 letterSpacing: '0.04em',
                 textTransform: 'uppercase',
                 margin: 0,
@@ -69,20 +71,20 @@ export default function SleepTrendCards({ persona = 'yvonne' }) {
               lineHeight: 1, marginBottom: 4,
             }}>
               {item.current}
-              <span style={{ fontSize: 12, fontWeight: 400, marginLeft: 2 }}>
+              <span style={{ fontSize: 13, fontWeight: 400, marginLeft: 2 }}>
                 {item.unit}
               </span>
             </p>
             <p style={{
-              fontSize: 11,
+              fontSize: 13,
               color: improved ? '#27C48A' : '#E8504A',
               marginBottom: 4,
             }}>
               {arrow} {diff}{item.unit} vs last quarter
             </p>
             <p style={{
-              fontSize: 10,
-              color: 'rgba(255,255,255,0.25)',
+              fontSize: 12,
+              color: 'rgba(255,255,255,0.52)',
               lineHeight: 1.4,
             }}>
               {item.note}

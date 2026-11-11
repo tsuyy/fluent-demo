@@ -23,8 +23,8 @@ export default function RecentEvidenceMini({ needsExport, height = 70 }) {
       border: '1px dashed rgba(255,255,255,0.1)',
       borderRadius: 8,
     }}>
-      <span style={{ fontSize: 11, color: QUIET }}>Chart pending</span>
-      <span style={{ fontSize: 9, color: 'rgba(255,255,255,0.15)' }}>needs: {needsExport}</span>
+      <span style={{ fontSize: 13, color: QUIET }}>Chart pending</span>
+      <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)' }}>needs: {needsExport}</span>
     </div>
   )
 }

@@ -1,38 +1,51 @@
 {
-  "strength": {
-    "hrr1": 31.3,
-    "hrr2": 36.1,
-    "active_hr": 136.9,
-    "n": 15
-  },
-  "running": {
-    "hrr1": 29.1,
-    "hrr2": 42.9,
-    "active_hr": 169.3,
-    "n": 59
-  },
-  "tennis": {
-    "hrr1": 28.5,
-    "hrr2": 31.4,
-    "active_hr": 131.5,
-    "n": 13
-  },
-  "cycling": {
-    "hrr1": 24.8,
-    "hrr2": 30.6,
-    "active_hr": 150.4,
-    "n": 112
-  },
-  "mindfulness": {
-    "hrr1": 24.8,
-    "hrr2": 19.6,
-    "active_hr": 146.4,
-    "n": 15
-  },
-  "skiing": {
-    "hrr1": 20.1,
-    "hrr2": 26.8,
-    "active_hr": 132.2,
-    "n": 9
-  }
+  "sports": [
+    {
+      "id": "running",
+      "label": "Running",
+      "n": 89,
+      "early": 31.7,
+      "late": 44.6,
+      "n_late": 89,
+      "active_hr": 166.2
+    },
+    {
+      "id": "tennis",
+      "label": "Tennis",
+      "n": 28,
+      "early": 29.6,
+      "late": 36.2,
+      "n_late": 28,
+      "active_hr": 143.5
+    },
+    {
+      "id": "strength",
+      "label": "Strength",
+      "n": 31,
+      "early": 25.6,
+      "late": 31.2,
+      "n_late": 31,
+      "active_hr": 135.3
+    },
+    {
+      "id": "cycling",
+      "label": "Cycling",
+      "n": 125,
+      "early": 23.7,
+      "late": 29.7,
+      "n_late": 122,
+      "active_hr": 149.8
+    },
+    {
+      "id": "skiing",
+      "label": "Skiing",
+      "n": 9,
+      "early": 17.1,
+      "late": 22.9,
+      "n_late": 7,
+      "active_hr": 129.2
+    }
+  ],
+  "last_date": "2026-10-20",
+  "method": "Active heart rate (90th percentile during the session) minus the average heart rate 15-90 s (early) and 90-180 s (late) after it ends."
 }

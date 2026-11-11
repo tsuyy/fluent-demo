@@ -4,6 +4,7 @@ import SleepHRVChart      from '../components/charts/SleepHRVChart'
 import RetirementArcChart from '../components/charts/RetirementArcChart'
 import SeasonalStepsChart from '../components/charts/SeasonalStepsChart'
 import PageContainer      from '../components/layout/PageContainer'
+import FloatingNav        from '../components/nav/FloatingNav'
 import IllnessArcChart      from '../components/charts/IllnessArcChart'
 import SoberExperimentChart from '../components/charts/SoberExperimentChart'
 import illnessArcData  from '../data/yvonne/illness_arc.json'
@@ -12,14 +13,14 @@ import { useIsNarrow } from '../components/scrolly/useIsNarrow'
  
 const CARDS = {
   jamie: [
-    { id: 'monday',    headline: 'Your Mondays are actually your best days',      subtitle: 'Your weekends seem to be costing you more than your work week does — the opposite of what you might expect.', viz: 'weekly_rhythm' },
-    { id: 'sleep_hrv', headline: 'Your sleep looked fine — your HRV says otherwise', subtitle: 'Some weeks your sleep tracked normally, but your HRV tells a different story.', viz: 'sleep_hrv_quadrant' },
+    { id: 'monday',    headline: 'Your resting heart rate is lowest on Mondays',      subtitle: 'About 68 bpm on Mondays, the lowest day of the week, and about 75 bpm on Saturdays, the highest.', viz: 'weekly_rhythm' },
+    { id: 'sleep_hrv', headline: 'Sleep looked normal, but HRV was low the next morning', subtitle: 'On 4 nights, sleep efficiency was typical and the next morning\'s HRV was about 7 ms below your usual.', viz: 'sleep_hrv_quadrant' },
   ],
   yvonne: [
     {
       id: 'illness_arc',
-      headline: 'Two signals. Twelve days before you felt it',
-      subtitle: 'Your body was already working on something — the data just couldn\'t tell you yet',
+      headline: 'Elevated wrist temperature and HRV drop, Feb 11\u201312',
+      subtitle: 'Fluent can show the change. You know what was going on.',
       viz: 'illness_arc',
     },
     {
@@ -40,7 +41,7 @@ const CARDS = {
 }
  
 const GRADIENTS = {
-  jamie:  'radial-gradient(ellipse at 30% 70%, rgba(180,60,60,0.3) 0%, transparent 60%)',
+  jamie:  'radial-gradient(ellipse at 30% 70%, rgba(196,80,232,0.3) 0%, transparent 60%)',
   yvonne: 'radial-gradient(ellipse at 70% 30%, rgba(6,129,252,0.2) 0%, rgba(39,196,138,0.1) 50%, transparent 70%)',
   robert: 'radial-gradient(ellipse at 20% 50%, rgba(39,196,138,0.2) 0%, transparent 60%)',
   alex:   'radial-gradient(ellipse at 60% 40%, rgba(39,196,138,0.15) 0%, transparent 60%)',
@@ -60,16 +61,16 @@ function VizPlaceholder({ type, persona }) {
   if (!type) return null
   return (
     <div style={{ height: 140, background: 'rgba(255,255,255,0.05)', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '16px 0' }}>
-      <span style={{ color: 'var(--color-text-tertiary)', fontSize: 11, letterSpacing: '0.05em' }}>{type?.replace(/_/g, ' ')}</span>
+      <span style={{ color: 'var(--color-text-tertiary)', fontSize: 13, letterSpacing: '0.05em' }}>{type?.replace(/_/g, ' ')}</span>
     </div>
   )
 }
  
 // Props:
-//   onExplore(cardId | 'home') — card tap or "explore other topics"
+//   onExplore(cardId | 'home') — card tap
 //   onSwitch                   — persona chip → picker
 // No onBack — fluent wordmark routes to thesis instead
-export default function WhatFluentNoticed({ persona, onExplore, onSwitch, onHome }) {
+export default function WhatFluentNoticed({ persona, onExplore, onSwitch, onHome, onNavigate }) {
   const cards    = CARDS[persona]     || CARDS.yvonne
   const gradient = GRADIENTS[persona] || GRADIENTS.yvonne
   const label    = PERSONA_LABELS[persona] || persona
@@ -117,32 +118,24 @@ export default function WhatFluentNoticed({ persona, onExplore, onSwitch, onHome
           Here's what Fluent noticed
         </motion.h1>
  
-        <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1fr 1fr', gap: 24, alignItems: 'start', position: 'relative', zIndex: 1 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1fr 1fr', gap: 24, alignItems: 'stretch', position: 'relative', zIndex: 1 }}>
             {cards.map((card, i) => (
             <motion.div
               key={card.id}
               initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 + i * 0.15 }}
               onClick={() => onExplore(card.id)}
-              style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 'var(--radius-lg)', padding: 28, cursor: 'pointer', backdropFilter: 'blur(8px)', transition: 'border-color 0.2s, transform 0.2s', minHeight: 320, maxHeight: 440 }}
+              style={{ display: 'flex', flexDirection: 'column', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 'var(--radius-lg)', padding: 28, cursor: 'pointer', backdropFilter: 'blur(8px)', transition: 'border-color 0.2s, transform 0.2s', minHeight: 320, maxHeight: 440 }}
               whileHover={{ borderColor: 'rgba(255,255,255,0.2)', y: -2 }}
             >
               <h2 style={{ fontSize: 'clamp(16px, 1.5vw, 22px)', fontWeight: 600, lineHeight: 1.3, marginBottom: 12 }}>{card.headline}</h2>
               <VizPlaceholder type={card.viz} persona={persona} />
-              <p style={{ color: 'var(--color-text-secondary)', fontSize: 14, lineHeight: 1.6 }}>{card.subtitle}</p>
+              <p style={{ color: 'var(--color-text-secondary)', fontSize: 14, lineHeight: 1.6, marginTop: 'auto' }}>{card.subtitle}</p>
             </motion.div>
           ))}
         </div>
       </PageContainer>
     </div>
-      {/* Bottom nav — single CTA, no back button */}
-      <div style={{ position: 'fixed', bottom: 32, left: 48, right: 48, display: 'flex', justifyContent: 'flex-end', zIndex: 100, pointerEvents: 'none' }}>
-        <span
-          onClick={() => onExplore('home')}
-          style={{ color: 'var(--color-text-primary)', fontSize: 15, cursor: 'pointer', fontWeight: 500, whiteSpace: 'nowrap', pointerEvents: 'all' }}
-        >
-          explore other topics →
-        </span>
-      </div>
+      <FloatingNav active="noticed" onNavigate={onNavigate} />
     </div>
   )
 }

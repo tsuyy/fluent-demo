@@ -112,20 +112,40 @@
     },
     {
       "month": "2026-08",
-      "deep": 63.9,
-      "rem": 87.1,
-      "awake": 42.5,
-      "total": 434.4,
-      "hrv": 51.7,
-      "rhr": 59.3,
+      "deep": 65.9,
+      "rem": 87.3,
+      "awake": 43.8,
+      "total": 439.0,
+      "hrv": 51.5,
+      "rhr": 59.4,
       "n": 31
+    },
+    {
+      "month": "2026-09",
+      "deep": 57.0,
+      "rem": 81.0,
+      "awake": 56.5,
+      "total": 417.2,
+      "hrv": 49.9,
+      "rhr": 60.2,
+      "n": 30
+    },
+    {
+      "month": "2026-10",
+      "deep": 51.9,
+      "rem": 76.8,
+      "awake": 44.0,
+      "total": 446.0,
+      "hrv": 47.9,
+      "rhr": 61.6,
+      "n": 20
     }
   ],
   "baseline": {
-    "deep": 48.8,
+    "deep": 49.7,
     "rem": 80.0,
-    "awake": 35.9
+    "awake": 37.9
   },
   "note": "Monthly averages from 2025 onward (sleep tracking active). Min 10 nights per month.",
-  "n_months": 12
+  "n_months": 14
 }

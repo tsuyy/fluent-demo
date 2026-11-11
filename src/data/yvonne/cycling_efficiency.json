@@ -23,10 +23,10 @@
     },
     {
       "year": 2026,
-      "hr": 145.7,
+      "hr": 144.8,
       "speed": 12.7,
-      "dist": 18.2,
-      "n": 16
+      "dist": 18.4,
+      "n": 21
     }
   ],
   "zone_controlled": [
@@ -53,10 +53,10 @@
     },
     {
       "year": 2026,
-      "hr": 147.6,
-      "speed": 12.8,
-      "dist": 17.6,
-      "n": 12
+      "hr": 148.3,
+      "speed": 12.9,
+      "dist": 16.9,
+      "n": 14
     }
   ],
   "sessions": [
@@ -1589,12 +1589,62 @@
       "duration": 63.0,
       "in_zone": true,
       "hr_bucket": "mid"
+    },
+    {
+      "date": "2026-09-11",
+      "year": 2026,
+      "hr_avg": 137.9,
+      "speed_mph": 12.7,
+      "distance": 16.6,
+      "duration": 79.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
+    },
+    {
+      "date": "2026-09-27",
+      "year": 2026,
+      "hr_avg": 153.1,
+      "speed_mph": 13.7,
+      "distance": 13.0,
+      "duration": 57.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2026-09-27",
+      "year": 2026,
+      "hr_avg": 151.1,
+      "speed_mph": 12.9,
+      "distance": 12.9,
+      "duration": 60.0,
+      "in_zone": true,
+      "hr_bucket": "high"
+    },
+    {
+      "date": "2026-10-02",
+      "year": 2026,
+      "hr_avg": 129.0,
+      "speed_mph": 11.3,
+      "distance": 22.0,
+      "duration": 117.0,
+      "in_zone": false,
+      "hr_bucket": "low"
+    },
+    {
+      "date": "2026-10-18",
+      "year": 2026,
+      "hr_avg": 138.5,
+      "speed_mph": 12.8,
+      "distance": 29.3,
+      "duration": 138.0,
+      "in_zone": false,
+      "hr_bucket": "mid"
     }
   ],
   "meta": {
     "criteria": ">45min AND >10mi. Outdoor 2023+.",
     "zone": "HR 140-155 for zone_controlled",
-    "n_sessions": 153,
+    "n_sessions": 158,
     "headline": "+15% faster at same HR (2023\u21922026)"
   }
 }

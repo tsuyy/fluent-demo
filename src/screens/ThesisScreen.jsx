@@ -90,7 +90,7 @@ export default function ThesisScreen({ onContinue }) {
             marginBottom: 64,
           }}
         >
-          This demo is built from four years of my own data.
+          This demo is built from nearly five years of my own data.
         </motion.p>
 
         <motion.div

@@ -6,6 +6,7 @@ const SURFACE = '#1A1A18'
 const RHR_COLOR  = '#E8504A'
 const HRV_COLOR  = '#27C48A'
 const RESP_COLOR = 'rgba(255,255,255,0.4)'
+const VO2_COLOR  = '#0681fc'
 
 const PLACEHOLDER_DATA = [
   { quarter: '2022Q1', rhr: 62.7, hrv: 39.2, resp: 21.5 },
@@ -40,6 +41,7 @@ export default function QuarterlyArcChart({
   data: rawData = PLACEHOLDER_DATA,
   highlightLine = null,
   hideAnnotations = false, // was hideChrome — annotations/stat-callouts hideable, legend now always shows
+  showVo2 = false,         // Apple VO2 max estimate (quarterly mean), left axis, needs `vo2` on each quarter
 }) {
   const data = Array.isArray(rawData) ? rawData : (rawData?.quarters ?? PLACEHOLDER_DATA)
 
@@ -55,7 +57,7 @@ export default function QuarterlyArcChart({
   if (!Array.isArray(data) || data.length === 0) {
     return (
       <div style={{ height, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <span style={{ fontSize: 12, color: QUIET }}>
+        <span style={{ fontSize: 13, color: QUIET }}>
           Couldn't find a quarters array — check quarterly_arc.json's actual top-level key name
         </span>
       </div>
@@ -70,8 +72,10 @@ export default function QuarterlyArcChart({
   const xStep = plotW / (n - 1)
   const xFor = (i) => margin.left + xStep * i
 
-  const leftMin = Math.min(...data.map(d => Math.min(d.rhr, d.hrv))) - 4
-  const leftMax = Math.max(...data.map(d => Math.max(d.rhr, d.hrv))) + 4
+  const hasVo2 = showVo2 && data.some(d => d.vo2 != null)
+  const leftVals = data.flatMap(d => [d.rhr, d.hrv, ...(hasVo2 && d.vo2 != null ? [d.vo2] : [])])
+  const leftMin = Math.min(...leftVals) - 4
+  const leftMax = Math.max(...leftVals) + 4
   const yLeft = (v) => margin.top + plotH - ((v - leftMin) / (leftMax - leftMin)) * plotH
 
   const respVals = data.map(d => d.resp).filter(v => v != null)
@@ -87,6 +91,7 @@ export default function QuarterlyArcChart({
   const rhrPath  = linePath('rhr', yLeft)
   const hrvPath  = linePath('hrv', yLeft)
   const respPath = linePath('resp', yRight)
+  const vo2Path  = hasVo2 ? linePath('vo2', yLeft) : null
 
   const tickEvery = n > 12 ? 3 : 1
   const tickIndices = data.map((_, i) => i).filter(i => i % tickEvery === 0)
@@ -117,8 +122,8 @@ export default function QuarterlyArcChart({
             <g key={a.quarter}>
               <line x1={x} y1={margin.top} x2={x} y2={height - margin.bottom}
                 stroke="rgba(255,255,255,0.12)" strokeWidth={1} strokeDasharray="3 3" />
-              <text x={x} y={labelY} textAnchor="middle" fill={TEXT} fontSize={11} fontWeight={600}>{a.label}</text>
-              <text x={x} y={labelY + 13} textAnchor="middle" fill={QUIET} fontSize={9}>{a.note}</text>
+              <text x={x} y={labelY} textAnchor="middle" fill={TEXT} fontSize={13} fontWeight={600}>{a.label}</text>
+              <text x={x} y={labelY + 13} textAnchor="middle" fill={QUIET} fontSize={12}>{a.note}</text>
             </g>
           )
         })}
@@ -129,6 +134,9 @@ export default function QuarterlyArcChart({
         <path d={hrvPath} fill="none" stroke={HRV_COLOR}
           strokeWidth={highlightLine === 'hrv' ? 3 : 2}
           opacity={highlightLine && highlightLine !== 'hrv' ? 0.15 : 1} />
+        {vo2Path && <path d={vo2Path} fill="none" stroke={VO2_COLOR}
+          strokeWidth={highlightLine === 'vo2' ? 3 : 2}
+          opacity={highlightLine && highlightLine !== 'vo2' ? 0.15 : 1} />}
         {respPath && <path d={respPath} fill="none" stroke={RESP_COLOR}
           strokeWidth={highlightLine === 'resp' ? 2.5 : 1.5} strokeDasharray="2 3"
           opacity={highlightLine && highlightLine !== 'resp' ? 0.1 : 1} />}
@@ -139,7 +147,7 @@ export default function QuarterlyArcChart({
         )}
 
         {tickIndices.map(i => (
-          <text key={i} x={xFor(i)} y={height - margin.bottom + 16} textAnchor="middle" fill={QUIET} fontSize={9}>
+          <text key={i} x={xFor(i)} y={height - margin.bottom + 16} textAnchor="middle" fill={QUIET} fontSize={12}>
             {data[i].quarter}
           </text>
         ))}
@@ -158,10 +166,11 @@ export default function QuarterlyArcChart({
             zIndex: 100, pointerEvents: 'none', minWidth: 120,
             boxShadow: '0 4px 16px rgba(0,0,0,0.4)',
           }}>
-            <p style={{ fontSize: 11, fontWeight: 600, color: TEXT, marginBottom: 4 }}>{tip.point.quarter}</p>
-            <p style={{ fontSize: 10, color: RHR_COLOR, margin: 0 }}>RHR {tip.point.rhr} bpm</p>
-            <p style={{ fontSize: 10, color: HRV_COLOR, margin: '2px 0' }}>HRV {tip.point.hrv} ms</p>
-            {tip.point.resp != null && <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.6)', margin: 0 }}>Resp {tip.point.resp} br/min</p>}
+            <p style={{ fontSize: 13, fontWeight: 600, color: TEXT, marginBottom: 4 }}>{tip.point.quarter}</p>
+            <p style={{ fontSize: 12, color: RHR_COLOR, margin: 0 }}>RHR {tip.point.rhr} bpm</p>
+            <p style={{ fontSize: 12, color: HRV_COLOR, margin: '2px 0' }}>HRV {tip.point.hrv} ms</p>
+            {tip.point.resp != null && <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', margin: 0 }}>Resp {tip.point.resp} br/min</p>}
+            {hasVo2 && tip.point.vo2 != null && <p style={{ fontSize: 12, color: VO2_COLOR, margin: '2px 0 0' }}>VO2 max {tip.point.vo2}</p>}
           </div>
         )
       })()}
@@ -170,6 +179,7 @@ export default function QuarterlyArcChart({
         <Legend color={RHR_COLOR} label="RHR" />
         <Legend color={HRV_COLOR} label="HRV" />
         <Legend color={RESP_COLOR} label="Breathing rate" dashed />
+        {hasVo2 && <Legend color={VO2_COLOR} label="VO2 max (Apple estimate)" />}
       </div>
 
       {!hideAnnotations && (
@@ -187,7 +197,7 @@ function Legend({ color, label, dashed }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
       <div style={{ width: 10, height: dashed ? 0 : 2, borderTop: dashed ? `1.5px dashed ${color}` : 'none', background: dashed ? 'transparent' : color }} />
-      <span style={{ fontSize: 10, color: QUIET }}>{label}</span>
+      <span style={{ fontSize: 12, color: QUIET }}>{label}</span>
     </div>
   )
 }
@@ -196,7 +206,7 @@ function StatCallout({ value, label }) {
   return (
     <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 8, padding: '10px 12px', textAlign: 'center' }}>
       <p style={{ fontSize: 16, fontWeight: 700, marginBottom: 2 }}>{value}</p>
-      <p style={{ fontSize: 10, color: QUIET }}>{label}</p>
+      <p style={{ fontSize: 12, color: QUIET }}>{label}</p>
     </div>
   )
 }

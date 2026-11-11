@@ -1,124 +1,257 @@
 {
-  "buckets": [
+ "note": "series6 era: pre-Aug 2025, in_bed stage >3h, overnight only. series10 era: Aug 2025+, episode-based (core/deep/REM/awake, merged gaps \u22642h, night = wall date of episode end). Stats/buckets/avg reflect series10 era only.",
+ "eras": [
+  {
+   "id": "series10",
+   "label": "Series 10",
+   "span": "Nov 2025 on",
+   "total_nights": 327,
+   "buckets": [
     {
-      "label": "8:00am",
-      "hour": 20.0,
-      "count": 0,
-      "pct": 0.0,
-      "is_anchor": false,
-      "is_late": false
+     "label": "8:00pm",
+     "hour": 20.0,
+     "count": 2,
+     "pct": 0.6,
+     "is_anchor": false,
+     "is_late": false
     },
     {
-      "label": "8:30am",
-      "hour": 20.5,
-      "count": 16,
-      "pct": 2.3,
-      "is_anchor": false,
-      "is_late": false
+     "label": "8:30pm",
+     "hour": 20.5,
+     "count": 26,
+     "pct": 8.0,
+     "is_anchor": false,
+     "is_late": false
     },
     {
-      "label": "9:00am",
-      "hour": 21.0,
-      "count": 187,
-      "pct": 27.2,
-      "is_anchor": true,
-      "is_late": false
+     "label": "9:00pm",
+     "hour": 21.0,
+     "count": 79,
+     "pct": 24.2,
+     "is_anchor": true,
+     "is_late": false
     },
     {
-      "label": "9:30am",
-      "hour": 21.5,
-      "count": 79,
-      "pct": 11.5,
-      "is_anchor": true,
-      "is_late": false
+     "label": "9:30pm",
+     "hour": 21.5,
+     "count": 56,
+     "pct": 17.1,
+     "is_anchor": true,
+     "is_late": false
     },
     {
-      "label": "10:00am",
-      "hour": 22.0,
-      "count": 97,
-      "pct": 14.1,
-      "is_anchor": true,
-      "is_late": false
+     "label": "10:00pm",
+     "hour": 22.0,
+     "count": 42,
+     "pct": 12.8,
+     "is_anchor": true,
+     "is_late": false
     },
     {
-      "label": "10:30am",
-      "hour": 22.5,
-      "count": 62,
-      "pct": 9.0,
-      "is_anchor": true,
-      "is_late": false
+     "label": "10:30pm",
+     "hour": 22.5,
+     "count": 23,
+     "pct": 7.0,
+     "is_anchor": true,
+     "is_late": false
     },
     {
-      "label": "11:00am",
-      "hour": 23.0,
-      "count": 66,
-      "pct": 9.6,
-      "is_anchor": false,
-      "is_late": false
+     "label": "11:00pm",
+     "hour": 23.0,
+     "count": 20,
+     "pct": 6.1,
+     "is_anchor": false,
+     "is_late": false
     },
     {
-      "label": "11:30am",
-      "hour": 23.5,
-      "count": 70,
-      "pct": 10.2,
-      "is_anchor": false,
-      "is_late": false
+     "label": "11:30pm",
+     "hour": 23.5,
+     "count": 11,
+     "pct": 3.4,
+     "is_anchor": false,
+     "is_late": false
     },
     {
-      "label": "0:00am",
-      "hour": 24.0,
-      "count": 45,
-      "pct": 6.5,
-      "is_anchor": false,
-      "is_late": true
+     "label": "12:00am",
+     "hour": 24.0,
+     "count": 13,
+     "pct": 4.0,
+     "is_anchor": false,
+     "is_late": true
     },
     {
-      "label": "0:30am",
-      "hour": 24.5,
-      "count": 26,
-      "pct": 3.8,
-      "is_anchor": false,
-      "is_late": true
+     "label": "12:30am",
+     "hour": 24.5,
+     "count": 18,
+     "pct": 5.5,
+     "is_anchor": false,
+     "is_late": true
     },
     {
-      "label": "1:00am",
-      "hour": 25.0,
-      "count": 18,
-      "pct": 2.6,
-      "is_anchor": false,
-      "is_late": true
+     "label": "1:00am",
+     "hour": 25.0,
+     "count": 8,
+     "pct": 2.4,
+     "is_anchor": false,
+     "is_late": true
     },
     {
-      "label": "1:30am",
-      "hour": 25.5,
-      "count": 8,
-      "pct": 1.2,
-      "is_anchor": false,
-      "is_late": true
+     "label": "1:30am",
+     "hour": 25.5,
+     "count": 5,
+     "pct": 1.5,
+     "is_anchor": false,
+     "is_late": true
     },
     {
-      "label": "2:00am",
-      "hour": 26.0,
-      "count": 6,
-      "pct": 0.9,
-      "is_anchor": false,
-      "is_late": true
+     "label": "2:00am",
+     "hour": 26.0,
+     "count": 6,
+     "pct": 1.8,
+     "is_anchor": false,
+     "is_late": true
     },
     {
-      "label": "2:30am",
-      "hour": 26.5,
-      "count": 2,
-      "pct": 0.3,
-      "is_anchor": false,
-      "is_late": true
+     "label": "2:30am",
+     "hour": 26.5,
+     "count": 3,
+     "pct": 0.9,
+     "is_anchor": false,
+     "is_late": true
     }
-  ],
-  "total_nights": 688,
-  "anchor_pct": 61.8,
-  "late_pct": 15.3,
-  "avg_bedtime": 22.59,
-  "std_bedtime_hr": 1.4,
-  "std_bedtime_min": 84.0,
-  "weekday_anchor": "22:30",
-  "weekday_spread_min": 19
+   ],
+   "anchor_pct": 61.2,
+   "late_pct": 20.8,
+   "avg_bedtime": 22.82,
+   "bedtime_std_min": 144.0,
+   "avg_waketime": 6.69,
+   "waketime_std_min": 129.0
+  },
+  {
+   "id": "series6",
+   "label": "Series 6",
+   "span": "2022 to Nov 2024",
+   "total_nights": 688,
+   "buckets": [
+    {
+     "label": "8:00pm",
+     "hour": 20.0,
+     "count": 0,
+     "pct": 0.0,
+     "is_anchor": false,
+     "is_late": false
+    },
+    {
+     "label": "8:30pm",
+     "hour": 20.5,
+     "count": 16,
+     "pct": 2.3,
+     "is_anchor": false,
+     "is_late": false
+    },
+    {
+     "label": "9:00pm",
+     "hour": 21.0,
+     "count": 187,
+     "pct": 27.2,
+     "is_anchor": true,
+     "is_late": false
+    },
+    {
+     "label": "9:30pm",
+     "hour": 21.5,
+     "count": 79,
+     "pct": 11.5,
+     "is_anchor": true,
+     "is_late": false
+    },
+    {
+     "label": "10:00pm",
+     "hour": 22.0,
+     "count": 97,
+     "pct": 14.1,
+     "is_anchor": true,
+     "is_late": false
+    },
+    {
+     "label": "10:30pm",
+     "hour": 22.5,
+     "count": 62,
+     "pct": 9.0,
+     "is_anchor": true,
+     "is_late": false
+    },
+    {
+     "label": "11:00pm",
+     "hour": 23.0,
+     "count": 66,
+     "pct": 9.6,
+     "is_anchor": false,
+     "is_late": false
+    },
+    {
+     "label": "11:30pm",
+     "hour": 23.5,
+     "count": 70,
+     "pct": 10.2,
+     "is_anchor": false,
+     "is_late": false
+    },
+    {
+     "label": "12:00am",
+     "hour": 24.0,
+     "count": 45,
+     "pct": 6.5,
+     "is_anchor": false,
+     "is_late": true
+    },
+    {
+     "label": "12:30am",
+     "hour": 24.5,
+     "count": 26,
+     "pct": 3.8,
+     "is_anchor": false,
+     "is_late": true
+    },
+    {
+     "label": "1:00am",
+     "hour": 25.0,
+     "count": 18,
+     "pct": 2.6,
+     "is_anchor": false,
+     "is_late": true
+    },
+    {
+     "label": "1:30am",
+     "hour": 25.5,
+     "count": 8,
+     "pct": 1.2,
+     "is_anchor": false,
+     "is_late": true
+    },
+    {
+     "label": "2:00am",
+     "hour": 26.0,
+     "count": 6,
+     "pct": 0.9,
+     "is_anchor": false,
+     "is_late": true
+    },
+    {
+     "label": "2:30am",
+     "hour": 26.5,
+     "count": 2,
+     "pct": 0.3,
+     "is_anchor": false,
+     "is_late": true
+    }
+   ],
+   "anchor_pct": 61.8,
+   "late_pct": 16.1,
+   "avg_bedtime": 22.59,
+   "bedtime_std_min": 84.0,
+   "avg_waketime": 6.36,
+   "waketime_std_min": 65.0
+  }
+ ]
 }

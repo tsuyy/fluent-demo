@@ -98,7 +98,7 @@ export default function CyclingAdaptationChart({ data, height = 200, compact = f
   if (!rides.length) {
     return (
       <div style={{ height, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <span style={{ fontSize: 12, color: QUIET }}>Needs cycling_long_rides.json's sessions array</span>
+        <span style={{ fontSize: 13, color: QUIET }}>Needs cycling_long_rides.json's sessions array</span>
       </div>
     )
   }
@@ -112,7 +112,7 @@ export default function CyclingAdaptationChart({ data, height = 200, compact = f
       {!compact && pctChange != null && (
         <div style={{ marginBottom: 8 }}>
           <span style={{ fontSize: 22, fontWeight: 600, color: BLUE }}>+{pctChange}%</span>
-          <span style={{ fontSize: 12, color: QUIET, marginLeft: 6 }}>faster at the same heart rate</span>
+          <span style={{ fontSize: 13, color: QUIET, marginLeft: 6 }}>faster at the same heart rate</span>
         </div>
       )}
 
@@ -149,11 +149,11 @@ export default function CyclingAdaptationChart({ data, height = 200, compact = f
             zIndex: 100, pointerEvents: 'none', minWidth: 130,
             boxShadow: '0 4px 16px rgba(0,0,0,0.4)',
           }}>
-            <p style={{ fontSize: 11, fontWeight: 600, color: TEXT, marginBottom: 4 }}>{tip.date}</p>
-            <p style={{ fontSize: 10, color: tip.in_zone ? BLUE : GREY, margin: 0 }}>
+            <p style={{ fontSize: 13, fontWeight: 600, color: TEXT, marginBottom: 4 }}>{tip.date}</p>
+            <p style={{ fontSize: 12, color: tip.in_zone ? BLUE : GREY, margin: 0 }}>
               {tip.speed_mph} mph at HR {tip.hr_avg}
             </p>
-            <p style={{ fontSize: 9, color: QUIET, margin: '4px 0 0' }}>
+            <p style={{ fontSize: 12, color: QUIET, margin: '4px 0 0' }}>
               {tip.distance}mi · {tip.duration}min {tip.in_zone ? '· zone-controlled' : ''}
             </p>
           </div>
@@ -164,11 +164,11 @@ export default function CyclingAdaptationChart({ data, height = 200, compact = f
         <div style={{ display: 'flex', gap: 14, marginTop: 8 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
             <div style={{ width: 8, height: 8, borderRadius: '50%', background: BLUE }} />
-            <span style={{ fontSize: 10, color: QUIET }}>Zone-controlled (HR 140–155)</span>
+            <span style={{ fontSize: 12, color: QUIET }}>Zone-controlled (HR 140–155)</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
             <div style={{ width: 8, height: 8, borderRadius: '50%', background: GREY }} />
-            <span style={{ fontSize: 10, color: QUIET }}>Other rides</span>
+            <span style={{ fontSize: 12, color: QUIET }}>Other rides</span>
           </div>
         </div>
       )}

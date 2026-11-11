@@ -5,6 +5,9 @@ import SleepHRVChart      from '../components/charts/SleepHRVChart'
 import SleepTrendCards    from '../components/cards/SleepTrendCards'
 import SleepQQRTSection   from '../components/sleep/SleepQQRTSection'
 import PageContainer      from '../components/layout/PageContainer'
+import SportSleepChart from '../components/charts/SportSleepChart'
+import SleepRegularityChart from '../components/charts/SleepRegularityChart'
+import robertSleepTimes from '../data/robert/sleep_times.json'
 import sleepQQRTData  from '../data/yvonne/sleep_qqrt.json'   // already exists
 import sleepTimesData from '../data/yvonne/sleep_times.json'  // ADD this
 import { useIsNarrow } from '../components/scrolly/useIsNarrow'
@@ -12,7 +15,7 @@ import { useIsNarrow } from '../components/scrolly/useIsNarrow'
 const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex' }
 
 const GRADIENTS = {
-  jamie:  'radial-gradient(ellipse at 15% 70%, rgba(180,60,60,0.2) 0%, transparent 55%)',
+  jamie:  'radial-gradient(ellipse at 15% 70%, rgba(196,80,232,0.2) 0%, transparent 55%)',
   yvonne: 'radial-gradient(ellipse at 80% 20%, rgba(6,129,252,0.15) 0%, rgba(39,196,138,0.08) 40%, transparent 65%)',
   robert: 'radial-gradient(ellipse at 20% 60%, rgba(39,196,138,0.15) 0%, transparent 55%)',
   alex:   'radial-gradient(ellipse at 60% 30%, rgba(39,196,138,0.1) 0%, transparent 55%)',
@@ -29,22 +32,23 @@ function ChartCard({ title, subtitle, insight, children, delay = 0, fullWidth = 
         border: '1px solid rgba(255,255,255,0.08)',
         borderRadius: 16, padding: '20px 20px 16px',
         gridColumn: fullWidth ? '1 / -1' : undefined,
+        minWidth: 0, overflow: 'hidden', boxSizing: 'border-box',
       }}
     >
       {title && (
-        <p style={{ fontSize: 13, fontWeight: 600, marginBottom: subtitle ? 4 : 16, lineHeight: 1.3 }}>
+        <p style={{ fontSize: 14, fontWeight: 600, marginBottom: subtitle ? 4 : 16, lineHeight: 1.3 }}>
           {title}
         </p>
       )}
       {subtitle && (
-        <p style={{ fontSize: 11, color: 'var(--color-text-tertiary)', marginBottom: 16, lineHeight: 1.4 }}>
+        <p style={{ fontSize: 13, color: 'var(--color-text-tertiary)', marginBottom: 16, lineHeight: 1.4 }}>
           {subtitle}
         </p>
       )}
       {children}
       {insight && (
           <p style={{
-            fontSize: 12, color: 'var(--color-text-tertiary)',
+            fontSize: 13, color: 'var(--color-text-tertiary)',
             fontStyle: 'italic', lineHeight: 1.5,
             marginTop: 10,
           }}>
@@ -93,7 +97,7 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
         </div>
 
         {/* Content */}
-        <div style={{ flex: 1, overflowY: 'auto', padding: narrow ? '90px 24px 130px' : '90px 56px 130px', position: 'relative', zIndex: 1 }}>
+        <div style={{ flex: 1, overflowY: 'auto', overflowX: 'hidden', padding: narrow ? '90px 24px 130px' : '90px 56px 130px', position: 'relative', zIndex: 1 }}>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} style={{ marginBottom: 32 }}>
             <h1 style={{ fontSize: 'clamp(24px, 3vw, 40px)', fontWeight: 700, marginBottom: 6 }}>
               Sleep
@@ -117,16 +121,22 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
                 Deep sleep, REM, and overnight HRV are all captured during sleep — the most
                 valuable window for understanding how your body recovers.
               </p>
-              <p onClick={() => onNavigate('changed')}
-                style={{ color: 'var(--color-accent)', fontSize: 14, cursor: 'pointer' }}>
-                See what Yvonne's sleep data shows →
-              </p>
             </div>
           )}
 
           {/* Wearable personas */}
           {!isAlex && (
-            <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1fr 1fr', gap: 20 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: narrow ? 'minmax(0, 1fr)' : 'minmax(0, 1fr) minmax(0, 1fr)', gap: 20 }}>
+
+              {/* How your sleep has changed: first for every wearable persona */}
+              <ChartCard
+                title="How your sleep has changed"
+                subtitle="This quarter vs last quarter"
+                delay={0.1}
+                fullWidth
+              >
+                <SleepTrendCards persona={persona} />
+              </ChartCard>
 
               {/* ── Yvonne: QQRT with real charts ── */}
               {isYvonne && (
@@ -152,25 +162,28 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
                 </ChartCard>
               )}
 
-              {/* Trend direction cards — all wearable personas */}
-              <ChartCard
-                title="How your sleep has changed"
-                subtitle="This quarter vs last quarter"
-                delay={0.2}
-                fullWidth
-              >
-                <SleepTrendCards persona={persona} />
-              </ChartCard>
+              {persona === 'robert' && (
+                <ChartCard
+                  title="How regular is your bedtime?"
+                  subtitle="Every night, Jun 2023 – May 2025"
+                  delay={0.2}
+                  fullWidth
+                  insight={`${robertSleepTimes.eras[0].anchor_pct}% of nights you were in bed between 9 and 11pm, and almost none after midnight. Your bedtime moves about 31 minutes either way, which is steady.`}
+                >
+                  <SleepRegularityChart data={robertSleepTimes.eras[0]} height={170} />
+                </ChartCard>
+              )}
 
-              {/* Sleep architecture for Yvonne — secondary, below HRV */}
               {isYvonne && (
                 <ChartCard
-                  title="Sleep architecture — this week"
-                  subtitle="Deep · REM · Core · Awake · hover each bar for breakdown"
-                  delay={0.4}
+                  title="Sleep after each sport"
+                  subtitle="Average deep, REM and awake minutes on the night after a session, against all nights · tap a sport to compare"
+                  delay={0.3}
                   fullWidth
                 >
-                  <SleepArchitectureChart persona={persona} height={180} />
+                  <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <SportSleepChart size={340} />
+                  </div>
                 </ChartCard>
               )}
 
@@ -180,7 +193,7 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
                 style={{
-                  fontSize: 11, color: 'rgba(255,255,255,0.2)',
+                  fontSize: 13, color: 'rgba(255,255,255,0.5)',
                   lineHeight: 1.6, gridColumn: '1 / -1', padding: '0 4px',
                 }}
               >

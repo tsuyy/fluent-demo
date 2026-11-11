@@ -1,21 +1,26 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import FloatingNav from '../components/nav/FloatingNav'
 import QuarterlyArcChart from '../components/charts/QuarterlyArcChart'
 import RHRTrendChart from '../components/charts/RHRTrendChart'
+import WeeklyRhythmFullChart from '../components/charts/WeeklyRhythmFullChart'
 import HRRecoveryChart from '../components/charts/HRRecoveryChart'
 import PageContainer from '../components/layout/PageContainer'
 import { useIsNarrow } from '../components/scrolly/useIsNarrow'
 import Zone2ProgressChart from '../components/charts/Zone2ProgressChart'
 import zone2Data          from '../data/yvonne/zone2_running.json'
-import CyclingAdaptationChart from '../components/charts/CyclingAdaptationChart'
-import cyclingData            from '../data/yvonne/cycling_efficiency.json'
-import quarterlyArc           from '../data/yvonne/quarterly_arc.json'
-import cyclingLongRides from '../data/yvonne/cycling_long_rides.json'  // NOT cycling_efficiency.json
-
+import HRSpeedChart         from '../components/charts/HRSpeedChart'
+import SoberExperimentChart from '../components/charts/SoberExperimentChart'
+import NightsComparisonChart from '../components/charts/NightsComparisonChart'
+import quarterlyArc         from '../data/yvonne/quarterly_arc.json'
+import hrEfficiency         from '../data/yvonne/hr_efficiency.json'
+import soberExperiment      from '../data/yvonne/sober_experiment.json'
+import soberComparison      from '../data/yvonne/sober_comparison.json'
+import substanceNights      from '../data/yvonne/substance_nights.json'
 
 
 const GRADIENTS = {
-  jamie:  'radial-gradient(ellipse at 15% 70%, rgba(180,60,60,0.2) 0%, transparent 55%)',
+  jamie:  'radial-gradient(ellipse at 15% 70%, rgba(196,80,232,0.2) 0%, transparent 55%)',
   yvonne: 'radial-gradient(ellipse at 80% 20%, rgba(6,129,252,0.15) 0%, rgba(39,196,138,0.08) 40%, transparent 65%)',
   robert: 'radial-gradient(ellipse at 20% 60%, rgba(39,196,138,0.15) 0%, transparent 55%)',
   alex:   'radial-gradient(ellipse at 60% 30%, rgba(39,196,138,0.1) 0%, transparent 55%)',
@@ -37,12 +42,12 @@ function ChartCard({ title, subtitle, insight, children, delay = 0, fullWidth = 
         gridColumn: fullWidth ? '1 / -1' : undefined,
       }}
     >
-      <p>{title}</p>
-        {subtitle && <p>{subtitle}</p>}
+      <p style={{ fontSize: 14, fontWeight: 600, marginBottom: subtitle ? 4 : 16, lineHeight: 1.3 }}>{title}</p>
+        {subtitle && <p style={{ fontSize: 13, color: 'var(--color-text-tertiary)', marginBottom: 16, lineHeight: 1.4 }}>{subtitle}</p>}
         {children}
         {insight && (
           <p style={{
-            fontSize: 12, color: 'var(--color-text-tertiary)',
+            fontSize: 13, color: 'var(--color-text-tertiary)',
             fontStyle: 'italic', lineHeight: 1.5,
             marginTop: 10,
           }}>
@@ -61,6 +66,15 @@ export default function HeartNervousSystemScreen({ persona, onNavigate, onBack }
   const isJamie  = persona === 'jamie'
 
   const narrow = useIsNarrow()
+
+  // Moments links here with a target; jump to it once the cards have mounted.
+  useEffect(() => {
+    let target = null
+    try { target = sessionStorage.getItem('fluent.scrollTo'); sessionStorage.removeItem('fluent.scrollTo') } catch { /* storage unavailable */ }
+    if (!target) return
+    const t = setTimeout(() => document.getElementById(target)?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 450)
+    return () => clearTimeout(t)
+  }, [])
 
   return (
     <div style={{
@@ -132,47 +146,76 @@ export default function HeartNervousSystemScreen({ persona, onNavigate, onBack }
         </motion.div>
 
         {/* Yvonne */}
-         {isYvonne && (
-    <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1fr 1fr', gap: 20 }}>
-      {/* Section 1 — unchanged */}
-      <ChartCard
-        title="Your cardiovascular arc — 4 years"
-        subtitle="RHR declining, HRV climbing. The two lines tell the same story."
-        delay={0.1}
-        insight="Breathing rate dropping alongside HRV climbing isn't a coincidence — both track the same underlying shift in how hard your resting body is working."
-        fullWidth
-      >
-          <QuarterlyArcChart data={quarterlyArc} height={280} />
-      </ChartCard>
-      <ChartCard
-        title="Cycling efficiency"
-        subtitle="Long rides · same heart rate · higher speed"
-        delay={0.2}
-        insight="Same effort, meaningfully more speed — this is what getting fitter actually looks like in the data, not just feeling fitter."
-      >
-        <CyclingAdaptationChart data={cyclingLongRides} height={200} />
-      </ChartCard>
-      <ChartCard
-        title="Zone 2 running"
-        subtitle="HR 130–148 · 23 sessions · 2024–2026"
-        delay={0.3}
-        insight="The July 2026 run is the whole story in one point: more distance, lower heart rate, same 'easy' effort you'd have called hard two years ago."
-      >
-        <Zone2ProgressChart data={zone2Data} height={200} />
-      </ChartCard>
+        {isYvonne && (
+          <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1fr 1fr', gap: 20 }}>
+            <ChartCard
+              title="Your cardiovascular arc — nearly 5 years"
+              subtitle="Resting heart rate down; HRV and VO2 max up. Breathing rate down."
+              delay={0.1}
+              insight="These moved together over the same years. My training, my watch and Apple's VO2 estimate also changed, so this shows a pattern with an open cause."
+              fullWidth
+            >
+              <QuarterlyArcChart data={quarterlyArc} height={280} showVo2 />
+              {quarterlyArc.vo2_note && (
+                <p style={{ fontSize: 12, color: 'var(--color-text-tertiary)', lineHeight: 1.5, margin: '8px 0 0' }}>{quarterlyArc.vo2_note}</p>
+              )}
+            </ChartCard>
 
-      {/* Section 3 — unchanged, now full width on its own row */}
-      <ChartCard
-        title="How fast your heart recovers after effort"
-        subtitle="HR recovery by sport"
-        delay={0.4}
-        insight="Running clears the most heart-rate load in the extra 30 seconds — the other sports mostly finish recovering by the one-minute mark."
-        fullWidth
-      >
-        <HRRecoveryChart height={200} />
-      </ChartCard>
-    </div>
-  )}
+            <ChartCard
+              title="Speed at the same heart rate"
+              subtitle="Every cycling and running session at a similar heart rate"
+              delay={0.2}
+              fullWidth
+            >
+              <HRSpeedChart data={hrEfficiency} height={200} />
+            </ChartCard>
+
+            <ChartCard
+              title="Zone 2 running"
+              subtitle="HR 130–148 · 23 sessions · 2024–2026"
+              delay={0.3}
+              insight="The July 2026 run is the whole story in one point: more distance, lower heart rate, same 'easy' effort you'd have called hard two years ago."
+              fullWidth
+            >
+              <Zone2ProgressChart data={zone2Data} height={200} />
+            </ChartCard>
+
+            <ChartCard
+              title="How fast your heart recovers after effort"
+              subtitle="HR recovery by sport"
+              delay={0.4}
+              insight="Running clears the most heart-rate load in the extra 30 seconds — the other sports mostly finish recovering by the one-minute mark."
+              fullWidth
+            >
+              <HRRecoveryChart height={200} />
+            </ChartCard>
+
+            <div id="sober-experiment" style={{ gridColumn: '1 / -1' }}>
+              <ChartCard
+                title="Alcohol-free experiment, Jul 6–20"
+                subtitle="14 nights without alcohol vs the 30 nights before: HRV, resting heart rate, breathing rate and sleep stages"
+                delay={0.5}
+                fullWidth
+              >
+                <SoberExperimentChart data={soberExperiment} height={200} />
+                <div style={{ height: 1, background: 'rgba(255,255,255,0.08)', margin: '16px 0' }} />
+                <NightsComparisonChart data={soberComparison} refId="before" showDots={false} />
+              </ChartCard>
+            </div>
+
+            <div id="substance-nights" style={{ gridColumn: '1 / -1' }}>
+              <ChartCard
+                title="After the experiment: nights with and without"
+                subtitle="Jul 21 – Oct 20 · alcohol you logged, scored on the following night"
+                delay={0.6}
+                insight="On average, more drinks went with lower HRV, and resting heart rate barely moved. One of the three heavier nights was above my usual, and every group is small and self-reported, so this is a pattern to test, not a result."
+                fullWidth
+              >
+                <NightsComparisonChart data={substanceNights} refId="home" />
+              </ChartCard>
+            </div>
+          </div>
+        )}
 
         {/* Jamie */}
         {isJamie && (
@@ -192,21 +235,14 @@ export default function HeartNervousSystemScreen({ persona, onNavigate, onBack }
 
             <ChartCard
               title="HRV weekly pattern"
-              subtitle="Your nervous system follows your weekly rhythm"
+              subtitle="HRV by day, last 8 weeks"
               delay={0.2}
               fullWidth
             >
-              <div style={{
-                height: 160,
-                display: 'flex', alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-                <span style={{
-                  color: 'var(--color-text-tertiary)', fontSize: 11,
-                }}>
-                  HRV day-of-week pattern
-                </span>
-              </div>
+              <WeeklyRhythmFullChart height={200} metric="HRV" />
+              <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.5, margin: '12px 0 4px', fontStyle: 'italic' }}>
+                "HRV mirrors your heart rate: about 41 ms on Mondays and 32.5 ms on Saturdays, against 36.7 ms across these weeks."
+              </p>
             </ChartCard>
           </div>
         )}
@@ -248,7 +284,7 @@ export default function HeartNervousSystemScreen({ persona, onNavigate, onBack }
                     border: '1px solid rgba(255,255,255,0.06)',
                   }}>
                     <p style={{
-                      fontSize: 11, color: 'var(--color-text-tertiary)',
+                      fontSize: 13, color: 'var(--color-text-tertiary)',
                       marginBottom: 12,
                     }}>
                       {w.label}
@@ -257,7 +293,7 @@ export default function HeartNervousSystemScreen({ persona, onNavigate, onBack }
                       {w.hrv}ms
                     </p>
                     <p style={{
-                      fontSize: 11, color: 'var(--color-text-tertiary)',
+                      fontSize: 13, color: 'var(--color-text-tertiary)',
                       marginTop: 4,
                     }}>
                       avg HRV
@@ -294,16 +330,6 @@ export default function HeartNervousSystemScreen({ persona, onNavigate, onBack }
             }}>
               Resting heart rate, HRV, and respiratory rate are all captured
               during sleep — the most reliable window for autonomic measurement.
-            </p>
-            <p
-              onClick={() => onNavigate('changed')}
-              style={{
-                color: 'var(--color-accent)',
-                fontSize: 14, marginTop: 20,
-                cursor: 'pointer',
-              }}
-            >
-              See what Yvonne's data shows →
             </p>
           </div>
         )}

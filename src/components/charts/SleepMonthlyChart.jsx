@@ -42,7 +42,7 @@ export default function SleepMonthlyChart({ data, height = 320, highlightLine = 
   if (!months.length) {
     return (
       <div style={{ height, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <span style={{ fontSize: 12, color: QUIET }}>Needs sleep_monthly.json's months array</span>
+        <span style={{ fontSize: 13, color: QUIET }}>Needs sleep_monthly.json's months array</span>
       </div>
     )
   }
@@ -99,8 +99,8 @@ export default function SleepMonthlyChart({ data, height = 320, highlightLine = 
             <g key={a.month}>
               <line x1={x} y1={margin.top} x2={x} y2={height - margin.bottom}
                 stroke="rgba(255,255,255,0.12)" strokeWidth={1} strokeDasharray="3 3" />
-              <text x={x} y={labelY} textAnchor="middle" fill={TEXT} fontSize={11} fontWeight={600}>{a.label}</text>
-              <text x={x} y={labelY + 13} textAnchor="middle" fill={QUIET} fontSize={9}>{a.note}</text>
+              <text x={x} y={labelY} textAnchor="middle" fill={TEXT} fontSize={13} fontWeight={600}>{a.label}</text>
+              <text x={x} y={labelY + 13} textAnchor="middle" fill={QUIET} fontSize={12}>{a.note}</text>
             </g>
           )
         })}
@@ -123,7 +123,7 @@ export default function SleepMonthlyChart({ data, height = 320, highlightLine = 
 
         {months.map((m, i) => (
           i % 2 === 0 && (
-            <text key={m.month} x={xFor(i)} y={height - margin.bottom + 16} textAnchor="middle" fill={QUIET} fontSize={9}>
+            <text key={m.month} x={xFor(i)} y={height - margin.bottom + 16} textAnchor="middle" fill={QUIET} fontSize={12}>
               {monthLabel(m.month)}
             </text>
           )
@@ -143,10 +143,10 @@ export default function SleepMonthlyChart({ data, height = 320, highlightLine = 
             zIndex: 100, pointerEvents: 'none', minWidth: 120,
             boxShadow: '0 4px 16px rgba(0,0,0,0.4)',
           }}>
-            <p style={{ fontSize: 11, fontWeight: 600, color: TEXT, marginBottom: 4 }}>{monthLabel(tip.point.month)}</p>
-            <p style={{ fontSize: 10, color: DEEP_COLOR, margin: 0 }}>Deep {tip.point.deep}min</p>
-            <p style={{ fontSize: 10, color: REM_COLOR, margin: '2px 0' }}>REM {tip.point.rem}min</p>
-            <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.6)', margin: 0 }}>Awake {tip.point.awake}min</p>
+            <p style={{ fontSize: 13, fontWeight: 600, color: TEXT, marginBottom: 4 }}>{monthLabel(tip.point.month)}</p>
+            <p style={{ fontSize: 12, color: DEEP_COLOR, margin: 0 }}>Deep {tip.point.deep}min</p>
+            <p style={{ fontSize: 12, color: REM_COLOR, margin: '2px 0' }}>REM {tip.point.rem}min</p>
+            <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', margin: 0 }}>Awake {tip.point.awake}min</p>
           </div>
         )
       })()}
@@ -154,15 +154,15 @@ export default function SleepMonthlyChart({ data, height = 320, highlightLine = 
       <div style={{ display: 'flex', gap: 14, marginTop: 8, justifyContent: 'center' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
           <div style={{ width: 10, height: 2, background: DEEP_COLOR }} />
-          <span style={{ fontSize: 10, color: QUIET }}>Deep sleep</span>
+          <span style={{ fontSize: 12, color: QUIET }}>Deep sleep</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
           <div style={{ width: 10, height: 2, background: REM_COLOR }} />
-          <span style={{ fontSize: 10, color: QUIET }}>REM sleep</span>
+          <span style={{ fontSize: 12, color: QUIET }}>REM sleep</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
           <div style={{ width: 10, height: 2, background: AWAKE_COLOR, borderTop: `1px dashed ${AWAKE_COLOR}` }} />
-          <span style={{ fontSize: 10, color: QUIET }}>Awake</span>
+          <span style={{ fontSize: 12, color: QUIET }}>Awake</span>
         </div>
       </div>
     </div>

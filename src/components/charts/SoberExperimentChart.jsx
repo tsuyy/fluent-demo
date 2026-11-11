@@ -6,8 +6,11 @@ const QUIET     = 'var(--color-quiet, #888780)'
 const TEXT      = 'var(--color-text, rgba(255,255,255,0.92))'
 const SURFACE   = '#1A1A18'
 
+const SUBSTANCE_PHASES = ['before', 'after_dirty']   // usual days (before) and nights after use
+const isSubstance = (phase) => SUBSTANCE_PHASES.includes(phase)
+
 const PHASE_COLORS = {
-  before:      'rgba(255,255,255,0.03)',
+  before:      'rgba(232,80,74,0.06)',   // usual days, with alcohol
   during:      'rgba(39,196,138,0.08)',
   after_clean: 'rgba(6,129,252,0.06)',
   after_dirty: 'rgba(232,80,74,0.06)',
@@ -43,7 +46,7 @@ export default function SoberExperimentChart({ data, height = 240, compact = fal
   if (!daily.length) {
     return (
       <div style={{ height, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <span style={{ fontSize: 12, color: QUIET }}>No data</span>
+        <span style={{ fontSize: 13, color: QUIET }}>No data</span>
       </div>
     )
   }
@@ -122,7 +125,7 @@ export default function SoberExperimentChart({ data, height = 240, compact = fal
             : band.phase === 'during' ? '14-day experiment'
             : 'after'
           return (
-            <text key={i} x={midX} y={margin.top - 12} textAnchor="middle" fill={QUIET} fontSize={9}>
+            <text key={i} x={midX} y={margin.top - 12} textAnchor="middle" fill={QUIET} fontSize={12}>
               {label}
             </text>
           )
@@ -135,23 +138,13 @@ export default function SoberExperimentChart({ data, height = 240, compact = fal
         {beforeBaseline != null && (
           <>
             <line x1={margin.left} y1={yScale(beforeBaseline)} x2={width - margin.right} y2={yScale(beforeBaseline)}
-              stroke="rgba(255,255,255,0.2)" strokeWidth={1} strokeDasharray="4 4" />
-            {!compact && (
-              <text x={margin.left + 4} y={yScale(beforeBaseline) - 4} textAnchor="start" fill={QUIET} fontSize={9}>
-                {beforeBaseline}ms before baseline
-              </text>
-            )}
+              stroke="rgba(255,255,255,0.45)" strokeWidth={1.5} strokeDasharray="4 3" />
           </>
         )}
         {duringAvg != null && (
           <>
             <line x1={margin.left} y1={yScale(duringAvg)} x2={width - margin.right} y2={yScale(duringAvg)}
-              stroke="rgba(39,196,138,0.3)" strokeWidth={1} strokeDasharray="4 4" />
-            {!compact && (
-              <text x={margin.left + 4} y={yScale(duringAvg) - 4} textAnchor="start" fill="rgba(39,196,138,0.6)" fontSize={9}>
-                {duringAvg}ms during avg
-              </text>
-            )}
+              stroke="rgba(39,196,138,0.8)" strokeWidth={1.5} strokeDasharray="4 3" />
           </>
         )}
 
@@ -169,8 +162,9 @@ export default function SoberExperimentChart({ data, height = 240, compact = fal
           const x = xScale(idx)
           return (
             <g key={m.date}>
-              <circle cx={x} cy={margin.top + plotH + 4} r={3} fill="rgba(255,255,255,0.4)" />
-              <text x={x} y={height - 6} textAnchor="middle" fill={QUIET} fontSize={8}>
+              <line x1={x} y1={margin.top} x2={x} y2={margin.top + plotH + 6}
+                stroke="rgba(255,255,255,0.55)" strokeWidth={1.5} />
+              <text x={x} y={height - 6} textAnchor="middle" fill={QUIET} fontSize={12}>
                 {m.label}
               </text>
             </g>
@@ -184,16 +178,32 @@ export default function SoberExperimentChart({ data, height = 240, compact = fal
         )}
       </svg>
 
-      {/* Legend — clean vs substance days */}
-      {!compact && <div style={{ display: 'flex', gap: 16, marginTop: 8, paddingLeft: margin.left }}>
+      {/* Legend: day types and reference lines */}
+      {!compact && <div style={{ display: 'flex', gap: '8px 18px', flexWrap: 'wrap', marginTop: 10, paddingLeft: margin.left }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-          <div style={{ width: 8, height: 8, borderRadius: '50%', background: 'rgba(6,129,252,0.6)' }} />
-          <span style={{ fontSize: 10, color: QUIET }}>clean days</span>
+          <div style={{ width: 14, height: 10, borderRadius: 2, background: 'rgba(232,80,74,0.25)', border: '1px solid rgba(255,255,255,0.15)' }} />
+          <span style={{ fontSize: 13, color: QUIET }}>substance days (usual days before, nights after use)</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-          <div style={{ width: 8, height: 8, borderRadius: '50%', background: 'rgba(232,80,74,0.6)' }} />
-          <span style={{ fontSize: 10, color: QUIET }}>substance days</span>
+          <div style={{ width: 14, height: 10, borderRadius: 2, background: 'rgba(39,196,138,0.3)', border: '1px solid rgba(255,255,255,0.15)' }} />
+          <span style={{ fontSize: 13, color: QUIET }}>alcohol-free experiment</span>
         </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+          <div style={{ width: 14, height: 10, borderRadius: 2, background: 'rgba(6,129,252,0.25)', border: '1px solid rgba(255,255,255,0.15)' }} />
+          <span style={{ fontSize: 13, color: QUIET }}>clean days after</span>
+        </div>
+        {beforeBaseline != null && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            <svg width="20" height="8"><line x1="0" y1="4" x2="20" y2="4" stroke="rgba(255,255,255,0.45)" strokeWidth="1.5" strokeDasharray="4 3" /></svg>
+            <span style={{ fontSize: 13, color: QUIET }}>{beforeBaseline} ms baseline (previous 30 nights)</span>
+          </div>
+        )}
+        {duringAvg != null && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            <svg width="20" height="8"><line x1="0" y1="4" x2="20" y2="4" stroke="rgba(39,196,138,0.8)" strokeWidth="1.5" strokeDasharray="4 3" /></svg>
+            <span style={{ fontSize: 13, color: QUIET }}>{duringAvg} ms average during the experiment</span>
+          </div>
+        )}
       </div>}
 
       {/* Tooltip */}
@@ -207,11 +217,14 @@ export default function SoberExperimentChart({ data, height = 240, compact = fal
           zIndex: 100, pointerEvents: 'none',
           boxShadow: '0 4px 16px rgba(0,0,0,0.4)',
         }}>
-          <p style={{ fontSize: 11, fontWeight: 600, color: TEXT, marginBottom: 4 }}>
+          <p style={{ fontSize: 13, fontWeight: 600, color: TEXT, marginBottom: 4 }}>
             {tip.point.date}
           </p>
-          <p style={{ fontSize: 11, color: HRV_COLOR, margin: 0 }}>
+          <p style={{ fontSize: 13, color: HRV_COLOR, margin: 0 }}>
             HRV: {tip.point.hrv}ms
+          </p>
+          <p style={{ fontSize: 12, color: QUIET, margin: '2px 0 0' }}>
+            {isSubstance(tip.point.phase) ? 'substance day' : 'clean day'}
           </p>
         </div>
       )}

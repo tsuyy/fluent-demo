@@ -54,7 +54,7 @@ export default function TimeframeSelector({
               borderRadius: 999,
               padding: '7px 16px',
               fontFamily: 'inherit',
-              fontSize: 13,
+              fontSize: 14,
               letterSpacing: '-0.01em',
               color: isDisabled ? 'rgba(255,255,255,0.22)' : selected ? TEXT : QUIET,
               cursor: isDisabled ? 'not-allowed' : 'pointer',

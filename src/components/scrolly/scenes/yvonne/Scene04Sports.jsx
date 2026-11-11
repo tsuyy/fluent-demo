@@ -125,15 +125,15 @@ export default function Scene04Sports({ story, response, onRespond }) {
             borderRadius: 12, padding: '28px 24px', display: 'grid', gap: 18, width: '100%', maxWidth: 420,
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span style={{ fontSize: 12, color: QUIET, letterSpacing: '0.05em' }}>HRV DELTA AFTER ACTIVITY</span>
-              <span style={{ fontSize: 11, color: QUIET }}>ms</span>
+              <span style={{ fontSize: 13, color: QUIET, letterSpacing: '0.05em' }}>HRV DELTA AFTER ACTIVITY</span>
+              <span style={{ fontSize: 13, color: QUIET }}>ms</span>
             </div>
             <div style={{ display: 'grid', gap: 16 }}>
               {SPORTS.map(sport => (
                 <SportBar key={sport.id} sport={sport} revealed={revealedIds.has(sport.id)} />
               ))}
             </div>
-            <p style={{ fontSize: 11, color: QUIET, marginTop: 4, lineHeight: 1.5 }}>
+            <p style={{ fontSize: 13, color: QUIET, marginTop: 4, lineHeight: 1.5 }}>
               Based on {story?.tennis?.sessions ?? 22} tennis sessions since 2025.
               Compared against your personal HRV baseline.
             </p>

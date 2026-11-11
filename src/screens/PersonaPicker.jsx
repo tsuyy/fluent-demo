@@ -5,10 +5,10 @@ import { useIsNarrow } from '../components/scrolly/useIsNarrow'
 
  
 const PERSONAS = [
-  { id: 'jamie',  name: 'Jamie',  age: 'late 30s',    activity: 'Moderately active', dataProfile: '8 months · inconsistent · minimal annotations',       gradient: 'linear-gradient(135deg, rgba(180,60,60,0.6) 0%, rgba(120,40,140,0.4) 100%)' },
-  { id: 'yvonne', name: 'Yvonne', age: 'early 30s',   activity: 'Very active',        dataProfile: '4+ years · consistent · life events documented',        gradient: 'linear-gradient(135deg, rgba(6,129,252,0.5) 0%, rgba(39,196,138,0.3) 100%)' },
-  { id: 'robert', name: 'Robert', age: 'retired, 65+', activity: 'Moderately active', dataProfile: '2 years · consistent · minimal annotations',            chips: ['golf', 'garden', 'travel'], gradient: 'linear-gradient(135deg, rgba(39,196,138,0.4) 0%, rgba(80,40,160,0.3) 100%)' },
-  { id: 'alex',   name: 'Alex',   age: 'mid 40s',     activity: 'Lightly active',     dataProfile: '5 years phone step data · no wearable',                 gradient: 'linear-gradient(135deg, rgba(39,196,138,0.25) 0%, rgba(100,100,140,0.25) 100%)' },
+  { id: 'jamie',  name: 'Jamie',  age: 'late 30s',    activity: 'Moderately active', dataProfile: '8 months · inconsistent · minimal annotations',       gradient: 'linear-gradient(135deg, rgba(196,80,232,0.35) 0%, rgba(6,129,252,0.2) 100%)' },
+  { id: 'yvonne', name: 'Yvonne', age: 'early 30s',   activity: 'Very active',        dataProfile: '4+ years · consistent · life events documented',        gradient: 'linear-gradient(135deg, rgba(6,129,252,0.3) 0%, rgba(39,196,138,0.2) 100%)' },
+  { id: 'robert', name: 'Robert', age: 'retired, 65+', activity: 'Moderately active', dataProfile: '2 years · consistent · minimal annotations',            chips: ['golf', 'garden', 'travel'], gradient: 'linear-gradient(135deg, rgba(39,196,138,0.3) 0%, rgba(6,129,252,0.2) 100%)' },
+  { id: 'alex',   name: 'Alex',   age: 'mid 40s',     activity: 'Lightly active',     dataProfile: '5 years phone step data · no wearable',                 gradient: 'linear-gradient(135deg, rgba(39,196,138,0.2) 0%, rgba(6,129,252,0.15) 100%)' },
 ]
  
 // currentPersona — highlights the active profile with a "current" chip + brighter border
@@ -45,19 +45,19 @@ export default function PersonaPicker({ onSelect, onBack, currentPersona }) {
                   <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(255,255,255,0.15)', marginBottom: 8 }} />
                   <div>
                     <p style={{ fontWeight: 600, fontSize: 18 }}>{p.name}</p>
-                    <p style={{ color: 'var(--color-text-secondary)', fontSize: 13, marginTop: 2 }}>{p.age}</p>
+                    <p style={{ color: 'var(--color-text-secondary)', fontSize: 14, marginTop: 2 }}>{p.age}</p>
                   </div>
-                  <p style={{ color: 'var(--color-text-secondary)', fontSize: 13 }}>{p.activity}</p>
+                  <p style={{ color: 'var(--color-text-secondary)', fontSize: 14 }}>{p.activity}</p>
                   {p.chips && (
                     <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
                       {p.chips.map(chip => (
-                        <span key={chip} style={{ background: 'rgba(255,255,255,0.12)', borderRadius: 20, padding: '3px 10px', fontSize: 12, color: 'var(--color-text-secondary)' }}>{chip}</span>
+                        <span key={chip} style={{ background: 'rgba(255,255,255,0.12)', borderRadius: 20, padding: '3px 10px', fontSize: 13, color: 'var(--color-text-secondary)' }}>{chip}</span>
                       ))}
                     </div>
                   )}
-                  <p style={{ color: 'var(--color-text-tertiary)', fontSize: 12, marginTop: 'auto', lineHeight: 1.5 }}>{p.dataProfile}</p>
+                  <p style={{ color: 'var(--color-text-tertiary)', fontSize: 13, marginTop: 'auto', lineHeight: 1.5 }}>{p.dataProfile}</p>
                   {isCurrent && (
-                    <div style={{ background: 'rgba(255,255,255,0.12)', borderRadius: 6, padding: '4px 10px', fontSize: 11, fontWeight: 500, color: 'var(--color-text-secondary)', alignSelf: 'flex-start' }}>
+                    <div style={{ background: 'rgba(255,255,255,0.12)', borderRadius: 6, padding: '4px 10px', fontSize: 13, fontWeight: 500, color: 'var(--color-text-secondary)', alignSelf: 'flex-start' }}>
                       current
                     </div>
                   )}

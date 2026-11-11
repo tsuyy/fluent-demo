@@ -1,132 +1,132 @@
 [
   {
     "day": "2022-01-07",
-    "value": 77.0,
+    "value": 77.2,
     "sports": {
       "skiing": 77.0
     }
   },
   {
     "day": "2022-01-27",
-    "value": 32.0,
+    "value": 31.5,
     "sports": {
       "running": 32.0
     }
   },
   {
     "day": "2022-01-29",
-    "value": 47.0,
+    "value": 46.6,
     "sports": {}
   },
   {
     "day": "2022-01-30",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2022-02-01",
-    "value": 46.0,
+    "value": 46.4,
     "sports": {
       "running": 46.0
     }
   },
   {
     "day": "2022-02-04",
-    "value": 36.0,
+    "value": 36.1,
     "sports": {}
   },
   {
     "day": "2022-02-05",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 207.0
     }
   },
   {
     "day": "2022-02-06",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 305.0
     }
   },
   {
     "day": "2022-02-07",
-    "value": 26.0,
+    "value": 25.7,
     "sports": {
       "running": 26.0
     }
   },
   {
     "day": "2022-02-09",
-    "value": 31.0,
+    "value": 31.3,
     "sports": {
       "hiit": 31.0
     }
   },
   {
     "day": "2022-02-12",
-    "value": 50.0,
+    "value": 50.3,
     "sports": {}
   },
   {
     "day": "2022-02-13",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2022-02-14",
-    "value": 44.0,
+    "value": 44.1,
     "sports": {
       "hiit": 44.0
     }
   },
   {
     "day": "2022-02-15",
-    "value": 22.0,
+    "value": 21.8,
     "sports": {}
   },
   {
     "day": "2022-02-19",
-    "value": 116.0,
+    "value": 115.6,
     "sports": {}
   },
   {
     "day": "2022-02-20",
-    "value": 86.0,
+    "value": 85.6,
     "sports": {
       "hiit": 32.0
     }
   },
   {
     "day": "2022-02-21",
-    "value": 25.0,
+    "value": 25.4,
     "sports": {
       "hiit": 25.0
     }
   },
   {
     "day": "2022-02-23",
-    "value": 26.0,
+    "value": 26.4,
     "sports": {}
   },
   {
     "day": "2022-02-24",
-    "value": 22.0,
+    "value": 22.3,
     "sports": {}
   },
   {
     "day": "2022-02-25",
-    "value": 66.0,
+    "value": 65.8,
     "sports": {}
   },
   {
     "day": "2022-02-26",
-    "value": 55.0,
+    "value": 54.6,
     "sports": {}
   },
   {
     "day": "2022-02-27",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "hiit": 40.0
     }
@@ -138,104 +138,104 @@
   },
   {
     "day": "2022-03-02",
-    "value": 46.0,
+    "value": 45.6,
     "sports": {}
   },
   {
     "day": "2022-03-04",
-    "value": 39.0,
+    "value": 39.1,
     "sports": {}
   },
   {
     "day": "2022-03-05",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 220.0
     }
   },
   {
     "day": "2022-03-06",
-    "value": 68.0,
+    "value": 68.5,
     "sports": {
       "skiing": 68.0
     }
   },
   {
     "day": "2022-03-08",
-    "value": 28.0,
+    "value": 28.2,
     "sports": {
       "running": 28.0
     }
   },
   {
     "day": "2022-03-09",
-    "value": 47.0,
+    "value": 46.7,
     "sports": {
       "strength": 35.0
     }
   },
   {
     "day": "2022-03-11",
-    "value": 54.0,
+    "value": 53.5,
     "sports": {}
   },
   {
     "day": "2022-03-13",
-    "value": 46.0,
+    "value": 45.5,
     "sports": {}
   },
   {
     "day": "2022-03-14",
-    "value": 48.0,
+    "value": 48.3,
     "sports": {}
   },
   {
     "day": "2022-03-16",
-    "value": 23.0,
+    "value": 23.2,
     "sports": {}
   },
   {
     "day": "2022-03-18",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 403.0
     }
   },
   {
     "day": "2022-03-19",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2022-03-23",
-    "value": 36.0,
+    "value": 35.9,
     "sports": {}
   },
   {
     "day": "2022-03-24",
-    "value": 67.0,
+    "value": 67.3,
     "sports": {}
   },
   {
     "day": "2022-03-25",
-    "value": 18.0,
+    "value": 18.3,
     "sports": {}
   },
   {
     "day": "2022-03-26",
-    "value": 102.0,
+    "value": 102.4,
     "sports": {
       "strength": 30.0
     }
   },
   {
     "day": "2022-03-27",
-    "value": 42.0,
+    "value": 42.3,
     "sports": {}
   },
   {
     "day": "2022-03-28",
-    "value": 72.0,
+    "value": 71.9,
     "sports": {
       "running": 19.0,
       "strength": 53.0
@@ -243,19 +243,19 @@
   },
   {
     "day": "2022-03-29",
-    "value": 33.0,
+    "value": 32.8,
     "sports": {}
   },
   {
     "day": "2022-03-30",
-    "value": 70.0,
+    "value": 69.8,
     "sports": {
       "strength": 55.0
     }
   },
   {
     "day": "2022-03-31",
-    "value": 28.0,
+    "value": 27.7,
     "sports": {
       "mindfulness": 28.0
     }
@@ -267,110 +267,110 @@
   },
   {
     "day": "2022-04-02",
-    "value": 52.0,
+    "value": 51.5,
     "sports": {
       "mindfulness": 18.0
     }
   },
   {
     "day": "2022-04-03",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2022-04-13",
-    "value": 29.0,
+    "value": 29.4,
     "sports": {}
   },
   {
     "day": "2022-04-15",
-    "value": 42.0,
+    "value": 42.2,
     "sports": {}
   },
   {
     "day": "2022-04-16",
-    "value": 94.0,
+    "value": 93.5,
     "sports": {
       "running": 50.0
     }
   },
   {
     "day": "2022-04-21",
-    "value": 38.0,
+    "value": 37.5,
     "sports": {
       "running": 38.0
     }
   },
   {
     "day": "2022-04-22",
-    "value": 22.0,
+    "value": 21.9,
     "sports": {
       "mindfulness": 22.0
     }
   },
   {
     "day": "2022-04-23",
-    "value": 78.0,
+    "value": 78.5,
     "sports": {}
   },
   {
     "day": "2022-04-24",
-    "value": 29.0,
+    "value": 29.4,
     "sports": {}
   },
   {
     "day": "2022-04-28",
-    "value": 37.0,
+    "value": 36.6,
     "sports": {
       "running": 37.0
     }
   },
   {
     "day": "2022-04-30",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2022-05-01",
-    "value": 61.0,
+    "value": 61.2,
     "sports": {}
   },
   {
     "day": "2022-05-02",
-    "value": 50.0,
+    "value": 50.1,
     "sports": {}
   },
   {
     "day": "2022-05-03",
-    "value": 57.0,
+    "value": 56.9,
     "sports": {
       "running": 57.0
     }
   },
   {
     "day": "2022-05-07",
-    "value": 19.0,
+    "value": 18.9,
     "sports": {
       "mindfulness": 14.0
     }
   },
   {
     "day": "2022-05-08",
-    "value": 99.0,
+    "value": 98.6,
     "sports": {
       "hiit": 47.0
     }
   },
   {
     "day": "2022-05-09",
-    "value": 50.0,
+    "value": 49.5,
     "sports": {
       "running": 40.0
     }
   },
   {
     "day": "2022-05-13",
-    "value": 82.0,
+    "value": 81.9,
     "sports": {
       "mindfulness": 16.0,
       "hiit": 24.0
@@ -378,7 +378,7 @@
   },
   {
     "day": "2022-05-14",
-    "value": 63.0,
+    "value": 63.2,
     "sports": {
       "running": 32.0,
       "hiit": 31.0
@@ -386,21 +386,21 @@
   },
   {
     "day": "2022-05-15",
-    "value": 85.0,
+    "value": 85.4,
     "sports": {
       "mindfulness": 28.0
     }
   },
   {
     "day": "2022-05-17",
-    "value": 36.0,
+    "value": 35.9,
     "sports": {
       "running": 36.0
     }
   },
   {
     "day": "2022-05-18",
-    "value": 64.0,
+    "value": 64.5,
     "sports": {
       "running": 41.0,
       "strength": 24.0
@@ -408,7 +408,7 @@
   },
   {
     "day": "2022-05-20",
-    "value": 29.0,
+    "value": 29.3,
     "sports": {
       "mindfulness": 28.0,
       "hiit": 1.0
@@ -416,36 +416,36 @@
   },
   {
     "day": "2022-05-21",
-    "value": 65.0,
+    "value": 64.8,
     "sports": {}
   },
   {
     "day": "2022-05-22",
-    "value": 90.0,
+    "value": 90.3,
     "sports": {
       "hiit": 30.0
     }
   },
   {
     "day": "2022-05-23",
-    "value": 64.0,
+    "value": 63.5,
     "sports": {
       "running": 64.0
     }
   },
   {
     "day": "2022-05-25",
-    "value": 43.0,
+    "value": 42.9,
     "sports": {}
   },
   {
     "day": "2022-05-29",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2022-05-31",
-    "value": 44.0,
+    "value": 44.5,
     "sports": {
       "running": 44.0
     }
@@ -459,24 +459,24 @@
   },
   {
     "day": "2022-06-04",
-    "value": 60.0,
+    "value": 60.4,
     "sports": {}
   },
   {
     "day": "2022-06-05",
-    "value": 26.0,
+    "value": 25.8,
     "sports": {}
   },
   {
     "day": "2022-06-08",
-    "value": 42.0,
+    "value": 42.5,
     "sports": {
       "running": 42.0
     }
   },
   {
     "day": "2022-06-11",
-    "value": 64.0,
+    "value": 64.2,
     "sports": {
       "running": 38.0,
       "mindfulness": 27.0
@@ -484,35 +484,35 @@
   },
   {
     "day": "2022-06-12",
-    "value": 39.0,
+    "value": 39.2,
     "sports": {
       "running": 39.0
     }
   },
   {
     "day": "2022-06-14",
-    "value": 58.0,
+    "value": 57.7,
     "sports": {
       "running": 51.0
     }
   },
   {
     "day": "2022-06-18",
-    "value": 41.0,
+    "value": 41.2,
     "sports": {
       "running": 41.0
     }
   },
   {
     "day": "2022-06-19",
-    "value": 32.0,
+    "value": 31.8,
     "sports": {
       "running": 32.0
     }
   },
   {
     "day": "2022-06-21",
-    "value": 113.0,
+    "value": 112.8,
     "sports": {}
   },
   {
@@ -524,29 +524,29 @@
   },
   {
     "day": "2022-06-23",
-    "value": 61.0,
+    "value": 61.4,
     "sports": {}
   },
   {
     "day": "2022-06-24",
-    "value": 40.0,
+    "value": 39.6,
     "sports": {}
   },
   {
     "day": "2022-06-25",
-    "value": 112.0,
+    "value": 111.8,
     "sports": {
       "running": 30.0
     }
   },
   {
     "day": "2022-06-26",
-    "value": 82.0,
+    "value": 81.5,
     "sports": {}
   },
   {
     "day": "2022-06-28",
-    "value": 46.0,
+    "value": 46.1,
     "sports": {
       "cycling": 15.0,
       "strength": 31.0
@@ -554,29 +554,29 @@
   },
   {
     "day": "2022-06-29",
-    "value": 55.0,
+    "value": 55.4,
     "sports": {}
   },
   {
     "day": "2022-06-30",
-    "value": 26.0,
+    "value": 26.4,
     "sports": {}
   },
   {
     "day": "2022-07-01",
-    "value": 26.0,
+    "value": 25.9,
     "sports": {}
   },
   {
     "day": "2022-07-02",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "running": 27.0
     }
   },
   {
     "day": "2022-07-03",
-    "value": 75.0,
+    "value": 75.4,
     "sports": {
       "cycling": 25.0,
       "strength": 22.0
@@ -584,24 +584,24 @@
   },
   {
     "day": "2022-07-04",
-    "value": 20.0,
+    "value": 19.9,
     "sports": {}
   },
   {
     "day": "2022-07-08",
-    "value": 22.0,
+    "value": 22.5,
     "sports": {}
   },
   {
     "day": "2022-07-10",
-    "value": 67.0,
+    "value": 66.9,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2022-07-11",
-    "value": 25.0,
+    "value": 25.1,
     "sports": {}
   },
   {
@@ -613,24 +613,24 @@
   },
   {
     "day": "2022-07-14",
-    "value": 94.0,
+    "value": 93.8,
     "sports": {}
   },
   {
     "day": "2022-07-15",
-    "value": 40.0,
+    "value": 40.5,
     "sports": {
       "cycling": 30.0
     }
   },
   {
     "day": "2022-07-16",
-    "value": 35.0,
+    "value": 34.8,
     "sports": {}
   },
   {
     "day": "2022-07-17",
-    "value": 43.0,
+    "value": 43.4,
     "sports": {
       "mindfulness": 13.0,
       "hiit": 30.0
@@ -638,28 +638,28 @@
   },
   {
     "day": "2022-07-18",
-    "value": 18.0,
+    "value": 17.7,
     "sports": {
       "mindfulness": 18.0
     }
   },
   {
     "day": "2022-07-19",
-    "value": 44.0,
+    "value": 43.8,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2022-07-20",
-    "value": 40.0,
+    "value": 39.5,
     "sports": {
       "hiit": 40.0
     }
   },
   {
     "day": "2022-07-21",
-    "value": 22.0,
+    "value": 21.7,
     "sports": {}
   },
   {
@@ -671,82 +671,82 @@
   },
   {
     "day": "2022-07-24",
-    "value": 45.0,
+    "value": 45.2,
     "sports": {
       "cycling": 45.0
     }
   },
   {
     "day": "2022-07-25",
-    "value": 20.0,
+    "value": 20.4,
     "sports": {
       "mindfulness": 20.0
     }
   },
   {
     "day": "2022-07-26",
-    "value": 44.0,
+    "value": 44.1,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2022-07-29",
-    "value": 32.0,
+    "value": 32.1,
     "sports": {
       "strength": 32.0
     }
   },
   {
     "day": "2022-07-30",
-    "value": 67.0,
+    "value": 66.9,
     "sports": {
       "cycling": 30.0
     }
   },
   {
     "day": "2022-07-31",
-    "value": 40.0,
+    "value": 39.7,
     "sports": {
       "mindfulness": 40.0
     }
   },
   {
     "day": "2022-08-01",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {
       "cycling": 45.0
     }
   },
   {
     "day": "2022-08-05",
-    "value": 46.0,
+    "value": 45.5,
     "sports": {
       "hiit": 46.0
     }
   },
   {
     "day": "2022-08-06",
-    "value": 28.0,
+    "value": 28.4,
     "sports": {
       "strength": 28.0
     }
   },
   {
     "day": "2022-08-09",
-    "value": 22.0,
+    "value": 22.4,
     "sports": {
       "hiit": 22.0
     }
   },
   {
     "day": "2022-08-10",
-    "value": 61.0,
+    "value": 60.8,
     "sports": {}
   },
   {
     "day": "2022-08-13",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 56.0,
       "strength": 42.0
@@ -754,76 +754,76 @@
   },
   {
     "day": "2022-08-15",
-    "value": 50.0,
+    "value": 49.6,
     "sports": {
       "hiit": 50.0
     }
   },
   {
     "day": "2022-08-16",
-    "value": 70.0,
+    "value": 69.6,
     "sports": {
       "hiit": 70.0
     }
   },
   {
     "day": "2022-08-17",
-    "value": 29.0,
+    "value": 29.2,
     "sports": {
       "hiit": 29.0
     }
   },
   {
     "day": "2022-08-19",
-    "value": 30.0,
+    "value": 30.5,
     "sports": {
       "running": 30.0
     }
   },
   {
     "day": "2022-08-21",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 483.0
     }
   },
   {
     "day": "2022-08-22",
-    "value": 60.0,
+    "value": 59.9,
     "sports": {}
   },
   {
     "day": "2022-08-23",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2022-08-24",
-    "value": 71.0,
+    "value": 70.8,
     "sports": {}
   },
   {
     "day": "2022-08-25",
-    "value": 48.0,
+    "value": 47.6,
     "sports": {}
   },
   {
     "day": "2022-08-26",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "running": 805.0
     }
   },
   {
     "day": "2022-08-27",
-    "value": 32.0,
+    "value": 32.5,
     "sports": {
       "mindfulness": 32.0
     }
   },
   {
     "day": "2022-09-01",
-    "value": 68.0,
+    "value": 67.7,
     "sports": {
       "cycling": 44.0
     }
@@ -837,77 +837,77 @@
   },
   {
     "day": "2022-09-03",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 222.0
     }
   },
   {
     "day": "2022-09-04",
-    "value": 35.0,
+    "value": 34.7,
     "sports": {}
   },
   {
     "day": "2022-09-05",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2022-09-06",
-    "value": 44.0,
+    "value": 43.9,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2022-09-07",
-    "value": 66.0,
+    "value": 65.6,
     "sports": {
       "strength": 30.0
     }
   },
   {
     "day": "2022-09-10",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2022-09-13",
-    "value": 40.0,
+    "value": 40.1,
     "sports": {}
   },
   {
     "day": "2022-09-14",
-    "value": 17.0,
+    "value": 16.7,
     "sports": {}
   },
   {
     "day": "2022-09-16",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2022-09-17",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2022-09-20",
-    "value": 44.0,
+    "value": 43.9,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2022-09-22",
-    "value": 87.0,
+    "value": 87.4,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2022-09-23",
-    "value": 34.0,
+    "value": 33.5,
     "sports": {
       "strength": 27.0,
       "mindfulness": 7.0
@@ -915,7 +915,7 @@
   },
   {
     "day": "2022-09-24",
-    "value": 58.0,
+    "value": 58.5,
     "sports": {
       "strength": 17.0,
       "mindfulness": 41.0
@@ -923,14 +923,14 @@
   },
   {
     "day": "2022-09-26",
-    "value": 44.0,
+    "value": 44.1,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2022-09-27",
-    "value": 62.0,
+    "value": 61.7,
     "sports": {
       "strength": 44.0,
       "mindfulness": 18.0
@@ -938,108 +938,108 @@
   },
   {
     "day": "2022-09-28",
-    "value": 24.0,
+    "value": 24.2,
     "sports": {
       "mindfulness": 24.0
     }
   },
   {
     "day": "2022-09-29",
-    "value": 22.0,
+    "value": 22.2,
     "sports": {
       "mindfulness": 22.0
     }
   },
   {
     "day": "2022-09-30",
-    "value": 44.0,
+    "value": 44.2,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2022-10-01",
-    "value": 86.0,
+    "value": 86.1,
     "sports": {
       "hiit": 40.0
     }
   },
   {
     "day": "2022-10-02",
-    "value": 67.0,
+    "value": 66.7,
     "sports": {
       "strength": 31.0
     }
   },
   {
     "day": "2022-10-03",
-    "value": 44.0,
+    "value": 43.6,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2022-10-04",
-    "value": 30.0,
+    "value": 30.4,
     "sports": {
       "mindfulness": 30.0
     }
   },
   {
     "day": "2022-10-05",
-    "value": 37.0,
+    "value": 36.6,
     "sports": {
       "hiit": 37.0
     }
   },
   {
     "day": "2022-10-06",
-    "value": 33.0,
+    "value": 33.1,
     "sports": {
       "cycling": 33.0
     }
   },
   {
     "day": "2022-10-09",
-    "value": 44.0,
+    "value": 44.3,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2022-10-12",
-    "value": 34.0,
+    "value": 33.8,
     "sports": {
       "hiit": 34.0
     }
   },
   {
     "day": "2022-10-14",
-    "value": 44.0,
+    "value": 44.1,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2022-10-15",
-    "value": 33.0,
+    "value": 32.7,
     "sports": {}
   },
   {
     "day": "2022-10-16",
-    "value": 58.0,
+    "value": 57.5,
     "sports": {}
   },
   {
     "day": "2022-10-17",
-    "value": 44.0,
+    "value": 44.2,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2022-10-18",
-    "value": 42.0,
+    "value": 42.2,
     "sports": {
       "strength": 30.0,
       "mindfulness": 12.0
@@ -1054,42 +1054,42 @@
   },
   {
     "day": "2022-10-20",
-    "value": 48.0,
+    "value": 48.4,
     "sports": {
       "strength": 48.0
     }
   },
   {
     "day": "2022-10-21",
-    "value": 30.0,
+    "value": 30.5,
     "sports": {
       "cycling": 30.0
     }
   },
   {
     "day": "2022-10-23",
-    "value": 110.0,
+    "value": 110.2,
     "sports": {
       "mindfulness": 38.0
     }
   },
   {
     "day": "2022-10-24",
-    "value": 44.0,
+    "value": 44.2,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2022-10-25",
-    "value": 30.0,
+    "value": 29.8,
     "sports": {
       "hiit": 30.0
     }
   },
   {
     "day": "2022-10-26",
-    "value": 87.0,
+    "value": 87.4,
     "sports": {
       "cycling": 44.0,
       "mindfulness": 44.0
@@ -1097,75 +1097,75 @@
   },
   {
     "day": "2022-10-27",
-    "value": 13.0,
+    "value": 12.8,
     "sports": {
       "mindfulness": 13.0
     }
   },
   {
     "day": "2022-10-28",
-    "value": 35.0,
+    "value": 34.9,
     "sports": {
       "cycling": 35.0
     }
   },
   {
     "day": "2022-10-29",
-    "value": 75.0,
+    "value": 74.9,
     "sports": {}
   },
   {
     "day": "2022-10-30",
-    "value": 40.0,
+    "value": 40.5,
     "sports": {
       "hiit": 40.0
     }
   },
   {
     "day": "2022-10-31",
-    "value": 33.0,
+    "value": 32.7,
     "sports": {
       "mindfulness": 33.0
     }
   },
   {
     "day": "2022-11-01",
-    "value": 44.0,
+    "value": 44.1,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2022-11-02",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "mindfulness": 134.0
     }
   },
   {
     "day": "2022-11-03",
-    "value": 44.0,
+    "value": 43.8,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2022-11-04",
-    "value": 46.0,
+    "value": 45.6,
     "sports": {
       "strength": 46.0
     }
   },
   {
     "day": "2022-11-05",
-    "value": 79.0,
+    "value": 78.9,
     "sports": {
       "cycling": 42.0
     }
   },
   {
     "day": "2022-11-07",
-    "value": 43.0,
+    "value": 43.3,
     "sports": {
       "mindfulness": 23.0,
       "hiit": 20.0
@@ -1173,21 +1173,21 @@
   },
   {
     "day": "2022-11-08",
-    "value": 91.0,
+    "value": 90.8,
     "sports": {
       "cycling": 45.0
     }
   },
   {
     "day": "2022-11-09",
-    "value": 39.0,
+    "value": 39.2,
     "sports": {
       "hiit": 39.0
     }
   },
   {
     "day": "2022-11-10",
-    "value": 44.0,
+    "value": 44.1,
     "sports": {
       "cycling": 44.0
     }
@@ -1199,78 +1199,78 @@
   },
   {
     "day": "2022-11-12",
-    "value": 55.0,
+    "value": 55.4,
     "sports": {}
   },
   {
     "day": "2022-11-13",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2022-11-14",
-    "value": 11.0,
+    "value": 11.1,
     "sports": {}
   },
   {
     "day": "2022-11-15",
-    "value": 42.0,
+    "value": 41.8,
     "sports": {
       "cycling": 42.0
     }
   },
   {
     "day": "2022-11-16",
-    "value": 33.0,
+    "value": 33.4,
     "sports": {
       "strength": 33.0
     }
   },
   {
     "day": "2022-11-17",
-    "value": 32.0,
+    "value": 31.5,
     "sports": {
       "cycling": 32.0
     }
   },
   {
     "day": "2022-11-18",
-    "value": 37.0,
+    "value": 37.3,
     "sports": {
       "hiit": 37.0
     }
   },
   {
     "day": "2022-11-21",
-    "value": 42.0,
+    "value": 41.6,
     "sports": {
       "cycling": 42.0
     }
   },
   {
     "day": "2022-11-30",
-    "value": 31.0,
+    "value": 31.1,
     "sports": {
       "hiit": 31.0
     }
   },
   {
     "day": "2022-12-01",
-    "value": 42.0,
+    "value": 41.8,
     "sports": {
       "cycling": 42.0
     }
   },
   {
     "day": "2022-12-02",
-    "value": 30.0,
+    "value": 30.2,
     "sports": {
       "mindfulness": 30.0
     }
   },
   {
     "day": "2022-12-03",
-    "value": 44.0,
+    "value": 44.1,
     "sports": {
       "cycling": 44.0
     }
@@ -1282,28 +1282,28 @@
   },
   {
     "day": "2022-12-05",
-    "value": 41.0,
+    "value": 41.4,
     "sports": {
       "strength": 41.0
     }
   },
   {
     "day": "2022-12-06",
-    "value": 44.0,
+    "value": 43.9,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2022-12-07",
-    "value": 32.0,
+    "value": 31.9,
     "sports": {
       "strength": 32.0
     }
   },
   {
     "day": "2022-12-08",
-    "value": 58.0,
+    "value": 58.1,
     "sports": {
       "cycling": 44.0,
       "mindfulness": 14.0
@@ -1318,28 +1318,28 @@
   },
   {
     "day": "2022-12-11",
-    "value": 33.0,
+    "value": 32.7,
     "sports": {
       "mindfulness": 33.0
     }
   },
   {
     "day": "2022-12-12",
-    "value": 42.0,
+    "value": 42.2,
     "sports": {
       "strength": 42.0
     }
   },
   {
     "day": "2022-12-13",
-    "value": 33.0,
+    "value": 33.1,
     "sports": {
       "cycling": 33.0
     }
   },
   {
     "day": "2022-12-15",
-    "value": 44.0,
+    "value": 44.1,
     "sports": {
       "cycling": 44.0
     }
@@ -1353,130 +1353,130 @@
   },
   {
     "day": "2022-12-17",
-    "value": 61.0,
+    "value": 60.7,
     "sports": {
       "cycling": 61.0
     }
   },
   {
     "day": "2022-12-19",
-    "value": 26.0,
+    "value": 26.4,
     "sports": {}
   },
   {
     "day": "2022-12-20",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 241.0
     }
   },
   {
     "day": "2022-12-21",
-    "value": 61.0,
+    "value": 61.2,
     "sports": {}
   },
   {
     "day": "2022-12-22",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 204.0
     }
   },
   {
     "day": "2022-12-23",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 141.0
     }
   },
   {
     "day": "2022-12-24",
-    "value": 94.0,
+    "value": 93.9,
     "sports": {
       "skiing": 82.0
     }
   },
   {
     "day": "2022-12-25",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 333.0
     }
   },
   {
     "day": "2022-12-28",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "skiing": 60.0
     }
   },
   {
     "day": "2022-12-29",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 192.0
     }
   },
   {
     "day": "2022-12-31",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 150.0
     }
   },
   {
     "day": "2023-01-02",
-    "value": 90.0,
+    "value": 89.5,
     "sports": {}
   },
   {
     "day": "2023-01-03",
-    "value": 36.0,
+    "value": 36.5,
     "sports": {
       "hiit": 36.0
     }
   },
   {
     "day": "2023-01-04",
-    "value": 92.0,
+    "value": 91.9,
     "sports": {
       "mindfulness": 27.0
     }
   },
   {
     "day": "2023-01-05",
-    "value": 44.0,
+    "value": 43.8,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2023-01-06",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "hiit": 32.0
     }
   },
   {
     "day": "2023-01-07",
-    "value": 116.0,
+    "value": 115.7,
     "sports": {}
   },
   {
     "day": "2023-01-09",
-    "value": 18.0,
+    "value": 17.9,
     "sports": {}
   },
   {
     "day": "2023-01-10",
-    "value": 29.0,
+    "value": 28.7,
     "sports": {
       "hiit": 29.0
     }
   },
   {
     "day": "2023-01-11",
-    "value": 73.0,
+    "value": 73.1,
     "sports": {
       "cycling": 44.0
     }
@@ -1490,62 +1490,62 @@
   },
   {
     "day": "2023-01-14",
-    "value": 48.0,
+    "value": 48.3,
     "sports": {
       "mindfulness": 20.0
     }
   },
   {
     "day": "2023-01-15",
-    "value": 25.0,
+    "value": 25.2,
     "sports": {
       "mindfulness": 25.0
     }
   },
   {
     "day": "2023-01-16",
-    "value": 44.0,
+    "value": 44.3,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2023-01-17",
-    "value": 82.0,
+    "value": 81.5,
     "sports": {
       "strength": 41.0
     }
   },
   {
     "day": "2023-01-21",
-    "value": 63.0,
+    "value": 62.8,
     "sports": {}
   },
   {
     "day": "2023-01-22",
-    "value": 67.0,
+    "value": 66.8,
     "sports": {
       "strength": 23.0
     }
   },
   {
     "day": "2023-01-25",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2023-01-27",
-    "value": 15.0,
+    "value": 15.2,
     "sports": {}
   },
   {
     "day": "2023-01-28",
-    "value": 46.0,
+    "value": 45.5,
     "sports": {}
   },
   {
     "day": "2023-01-29",
-    "value": 82.0,
+    "value": 82.4,
     "sports": {
       "running": 45.0,
       "strength": 24.0
@@ -1553,50 +1553,50 @@
   },
   {
     "day": "2023-02-01",
-    "value": 50.0,
+    "value": 49.8,
     "sports": {}
   },
   {
     "day": "2023-02-03",
-    "value": 46.0,
+    "value": 46.4,
     "sports": {}
   },
   {
     "day": "2023-02-05",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 384.0
     }
   },
   {
     "day": "2023-02-06",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 399.0
     }
   },
   {
     "day": "2023-02-07",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 384.0
     }
   },
   {
     "day": "2023-02-08",
-    "value": 86.0,
+    "value": 85.7,
     "sports": {}
   },
   {
     "day": "2023-02-09",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 432.0
     }
   },
   {
     "day": "2023-02-10",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 446.0
     }
@@ -1610,67 +1610,67 @@
   },
   {
     "day": "2023-02-17",
-    "value": 104.0,
+    "value": 104.3,
     "sports": {}
   },
   {
     "day": "2023-02-18",
-    "value": 19.0,
+    "value": 19.1,
     "sports": {}
   },
   {
     "day": "2023-02-21",
-    "value": 44.0,
+    "value": 44.1,
     "sports": {}
   },
   {
     "day": "2023-02-23",
-    "value": 34.0,
+    "value": 34.2,
     "sports": {}
   },
   {
     "day": "2023-02-25",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2023-02-26",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2023-03-03",
-    "value": 119.0,
+    "value": 118.9,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2023-03-04",
-    "value": 35.0,
+    "value": 34.8,
     "sports": {
       "mindfulness": 35.0
     }
   },
   {
     "day": "2023-03-06",
-    "value": 44.0,
+    "value": 44.1,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2023-03-07",
-    "value": 84.0,
+    "value": 83.5,
     "sports": {
       "hiit": 36.0
     }
   },
   {
     "day": "2023-03-09",
-    "value": 58.0,
+    "value": 58.2,
     "sports": {
       "strength": 44.0
     }
@@ -1682,7 +1682,7 @@
   },
   {
     "day": "2023-03-11",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
@@ -1699,33 +1699,33 @@
   },
   {
     "day": "2023-03-15",
-    "value": 44.0,
+    "value": 44.3,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2023-03-17",
-    "value": 46.0,
+    "value": 45.7,
     "sports": {
       "running": 46.0
     }
   },
   {
     "day": "2023-03-18",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2023-03-20",
-    "value": 93.0,
+    "value": 93.1,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2023-03-21",
-    "value": 46.0,
+    "value": 46.4,
     "sports": {
       "hiit": 46.0
     }
@@ -1739,76 +1739,76 @@
   },
   {
     "day": "2023-03-25",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2023-03-27",
-    "value": 19.0,
+    "value": 19.4,
     "sports": {
       "cycling": 19.0
     }
   },
   {
     "day": "2023-03-28",
-    "value": 93.0,
+    "value": 93.3,
     "sports": {
       "cycling": 50.0
     }
   },
   {
     "day": "2023-03-29",
-    "value": 51.0,
+    "value": 50.7,
     "sports": {
       "strength": 51.0
     }
   },
   {
     "day": "2023-04-01",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2023-04-02",
-    "value": 36.0,
+    "value": 35.7,
     "sports": {}
   },
   {
     "day": "2023-04-03",
-    "value": 39.0,
+    "value": 38.9,
     "sports": {}
   },
   {
     "day": "2023-04-05",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 304.0
     }
   },
   {
     "day": "2023-04-06",
-    "value": 110.0,
+    "value": 110.5,
     "sports": {
       "skiing": 110.0
     }
   },
   {
     "day": "2023-04-07",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 195.0
     }
   },
   {
     "day": "2023-04-08",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 165.0
     }
   },
   {
     "day": "2023-04-09",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 298.0
     }
@@ -1820,14 +1820,14 @@
   },
   {
     "day": "2023-04-13",
-    "value": 101.0,
+    "value": 100.8,
     "sports": {
       "cycling": 73.0
     }
   },
   {
     "day": "2023-04-15",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "cycling": 60.0
     }
@@ -1855,19 +1855,19 @@
   },
   {
     "day": "2023-04-20",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 45.0
     }
   },
   {
     "day": "2023-04-21",
-    "value": 19.0,
+    "value": 18.6,
     "sports": {}
   },
   {
     "day": "2023-04-22",
-    "value": 79.0,
+    "value": 78.9,
     "sports": {
       "running": 6.0,
       "strength": 73.0
@@ -1875,71 +1875,71 @@
   },
   {
     "day": "2023-04-23",
-    "value": 56.0,
+    "value": 56.1,
     "sports": {}
   },
   {
     "day": "2023-04-24",
-    "value": 76.0,
+    "value": 75.5,
     "sports": {
       "cycling": 46.0
     }
   },
   {
     "day": "2023-04-26",
-    "value": 72.0,
+    "value": 72.5,
     "sports": {
       "cycling": 45.0
     }
   },
   {
     "day": "2023-04-27",
-    "value": 57.0,
+    "value": 56.6,
     "sports": {}
   },
   {
     "day": "2023-04-28",
-    "value": 82.0,
+    "value": 81.9,
     "sports": {
       "cycling": 45.0
     }
   },
   {
     "day": "2023-04-29",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2023-05-01",
-    "value": 45.0,
+    "value": 45.4,
     "sports": {
       "cycling": 45.0
     }
   },
   {
     "day": "2023-05-02",
-    "value": 87.0,
+    "value": 87.1,
     "sports": {
       "hiit": 42.0
     }
   },
   {
     "day": "2023-05-03",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {
       "cycling": 45.0
     }
   },
   {
     "day": "2023-05-04",
-    "value": 5.0,
+    "value": 4.6,
     "sports": {
       "cycling": 5.0
     }
   },
   {
     "day": "2023-05-05",
-    "value": 64.0,
+    "value": 64.3,
     "sports": {
       "cycling": 8.0,
       "running": 25.0
@@ -1947,108 +1947,108 @@
   },
   {
     "day": "2023-05-06",
-    "value": 118.0,
+    "value": 117.5,
     "sports": {}
   },
   {
     "day": "2023-05-07",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 142.0
     }
   },
   {
     "day": "2023-05-09",
-    "value": 73.0,
+    "value": 73.1,
     "sports": {
       "strength": 51.0
     }
   },
   {
     "day": "2023-05-10",
-    "value": 44.0,
+    "value": 44.2,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2023-05-11",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2023-05-12",
-    "value": 20.0,
+    "value": 20.5,
     "sports": {
       "cycling": 20.0
     }
   },
   {
     "day": "2023-05-13",
-    "value": 103.0,
+    "value": 103.2,
     "sports": {
       "cycling": 103.0
     }
   },
   {
     "day": "2023-05-14",
-    "value": 104.0,
+    "value": 104.3,
     "sports": {
       "cycling": 70.0
     }
   },
   {
     "day": "2023-05-15",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 108.0
     }
   },
   {
     "day": "2023-05-16",
-    "value": 107.0,
+    "value": 106.6,
     "sports": {
       "cycling": 107.0
     }
   },
   {
     "day": "2023-05-17",
-    "value": 71.0,
+    "value": 70.6,
     "sports": {
       "cycling": 71.0
     }
   },
   {
     "day": "2023-05-19",
-    "value": 112.0,
+    "value": 112.3,
     "sports": {
       "cycling": 112.0
     }
   },
   {
     "day": "2023-05-20",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 95.0
     }
   },
   {
     "day": "2023-05-21",
-    "value": 28.0,
+    "value": 28.4,
     "sports": {
       "cycling": 28.0
     }
   },
   {
     "day": "2023-05-22",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 124.0
     }
   },
   {
     "day": "2023-05-23",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 119.0,
       "mindfulness": 36.0
@@ -2056,7 +2056,7 @@
   },
   {
     "day": "2023-05-24",
-    "value": 76.0,
+    "value": 76.2,
     "sports": {
       "running": 30.0,
       "strength": 46.0
@@ -2064,56 +2064,56 @@
   },
   {
     "day": "2023-05-25",
-    "value": 9.0,
+    "value": 8.9,
     "sports": {
       "cycling": 9.0
     }
   },
   {
     "day": "2023-05-26",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 118.0
     }
   },
   {
     "day": "2023-05-27",
-    "value": 90.0,
+    "value": 90.3,
     "sports": {
       "cycling": 90.0
     }
   },
   {
     "day": "2023-05-28",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 239.0
     }
   },
   {
     "day": "2023-05-29",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 133.0
     }
   },
   {
     "day": "2023-05-30",
-    "value": 75.0,
+    "value": 75.4,
     "sports": {
       "cycling": 75.0
     }
   },
   {
     "day": "2023-05-31",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 132.0
     }
   },
   {
     "day": "2023-06-01",
-    "value": 71.0,
+    "value": 71.2,
     "sports": {
       "cycling": 71.0
     }
@@ -2127,21 +2127,21 @@
   },
   {
     "day": "2023-06-03",
-    "value": 113.0,
+    "value": 112.8,
     "sports": {
       "cycling": 113.0
     }
   },
   {
     "day": "2023-06-04",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 182.0
     }
   },
   {
     "day": "2023-06-05",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 157.0
     }
@@ -2163,14 +2163,14 @@
   },
   {
     "day": "2023-06-09",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 154.0
     }
   },
   {
     "day": "2023-06-10",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 219.0
     }
@@ -2182,56 +2182,56 @@
   },
   {
     "day": "2023-06-12",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 163.0
     }
   },
   {
     "day": "2023-06-14",
-    "value": 83.0,
+    "value": 82.8,
     "sports": {
       "cycling": 83.0
     }
   },
   {
     "day": "2023-06-15",
-    "value": 31.0,
+    "value": 31.1,
     "sports": {
       "cycling": 31.0
     }
   },
   {
     "day": "2023-06-16",
-    "value": 87.0,
+    "value": 87.4,
     "sports": {
       "cycling": 66.0
     }
   },
   {
     "day": "2023-06-17",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 246.0
     }
   },
   {
     "day": "2023-06-18",
-    "value": 14.0,
+    "value": 14.1,
     "sports": {
       "cycling": 14.0
     }
   },
   {
     "day": "2023-06-19",
-    "value": 57.0,
+    "value": 57.1,
     "sports": {
       "strength": 57.0
     }
   },
   {
     "day": "2023-06-20",
-    "value": 88.0,
+    "value": 87.6,
     "sports": {
       "cycling": 52.0,
       "mindfulness": 36.0
@@ -2239,47 +2239,47 @@
   },
   {
     "day": "2023-06-21",
-    "value": 78.0,
+    "value": 78.1,
     "sports": {
       "cycling": 78.0
     }
   },
   {
     "day": "2023-06-22",
-    "value": 62.0,
+    "value": 62.1,
     "sports": {
       "cycling": 23.0
     }
   },
   {
     "day": "2023-06-23",
-    "value": 107.0,
+    "value": 107.2,
     "sports": {
       "cycling": 107.0
     }
   },
   {
     "day": "2023-06-24",
-    "value": 109.0,
+    "value": 108.8,
     "sports": {
       "cycling": 109.0
     }
   },
   {
     "day": "2023-06-25",
-    "value": 24.0,
+    "value": 24.3,
     "sports": {}
   },
   {
     "day": "2023-06-26",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 45.0
     }
   },
   {
     "day": "2023-06-27",
-    "value": 46.0,
+    "value": 46.1,
     "sports": {
       "strength": 8.0,
       "hiit": 38.0
@@ -2287,7 +2287,7 @@
   },
   {
     "day": "2023-06-28",
-    "value": 70.0,
+    "value": 70.2,
     "sports": {
       "cycling": 30.0,
       "strength": 40.0
@@ -2295,28 +2295,28 @@
   },
   {
     "day": "2023-06-29",
-    "value": 12.0,
+    "value": 11.9,
     "sports": {
       "cycling": 12.0
     }
   },
   {
     "day": "2023-06-30",
-    "value": 72.0,
+    "value": 72.3,
     "sports": {
       "cycling": 72.0
     }
   },
   {
     "day": "2023-07-01",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 128.0
     }
   },
   {
     "day": "2023-07-02",
-    "value": 87.0,
+    "value": 87.1,
     "sports": {
       "strength": 55.0
     }
@@ -2330,19 +2330,19 @@
   },
   {
     "day": "2023-07-04",
-    "value": 102.0,
+    "value": 101.6,
     "sports": {
       "cycling": 102.0
     }
   },
   {
     "day": "2023-07-05",
-    "value": 30.0,
+    "value": 29.9,
     "sports": {}
   },
   {
     "day": "2023-07-06",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 156.0,
       "strength": 22.0,
@@ -2351,28 +2351,28 @@
   },
   {
     "day": "2023-07-07",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 159.0
     }
   },
   {
     "day": "2023-07-08",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 222.0
     }
   },
   {
     "day": "2023-07-09",
-    "value": 30.0,
+    "value": 30.2,
     "sports": {
       "mindfulness": 30.0
     }
   },
   {
     "day": "2023-07-10",
-    "value": 84.0,
+    "value": 84.3,
     "sports": {
       "cycling": 41.0,
       "strength": 43.0
@@ -2387,21 +2387,21 @@
   },
   {
     "day": "2023-07-12",
-    "value": 94.0,
+    "value": 93.5,
     "sports": {
       "strength": 70.0
     }
   },
   {
     "day": "2023-07-13",
-    "value": 42.0,
+    "value": 41.9,
     "sports": {
       "cycling": 42.0
     }
   },
   {
     "day": "2023-07-14",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 140.0
     }
@@ -2413,47 +2413,47 @@
   },
   {
     "day": "2023-07-18",
-    "value": 52.0,
+    "value": 52.3,
     "sports": {
       "strength": 52.0
     }
   },
   {
     "day": "2023-07-19",
-    "value": 13.0,
+    "value": 12.9,
     "sports": {
       "cycling": 13.0
     }
   },
   {
     "day": "2023-07-21",
-    "value": 80.0,
+    "value": 80.1,
     "sports": {
       "running": 45.0
     }
   },
   {
     "day": "2023-07-22",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 249.0
     }
   },
   {
     "day": "2023-07-23",
-    "value": 98.0,
+    "value": 97.9,
     "sports": {}
   },
   {
     "day": "2023-07-24",
-    "value": 54.0,
+    "value": 53.7,
     "sports": {
       "strength": 54.0
     }
   },
   {
     "day": "2023-07-26",
-    "value": 47.0,
+    "value": 47.2,
     "sports": {
       "strength": 12.0,
       "hiit": 35.0
@@ -2461,71 +2461,71 @@
   },
   {
     "day": "2023-07-27",
-    "value": 31.0,
+    "value": 31.4,
     "sports": {}
   },
   {
     "day": "2023-07-29",
-    "value": 70.0,
+    "value": 70.1,
     "sports": {
       "cycling": 70.0
     }
   },
   {
     "day": "2023-08-05",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 178.0
     }
   },
   {
     "day": "2023-08-06",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 56.0
     }
   },
   {
     "day": "2023-08-07",
-    "value": 45.0,
+    "value": 45.2,
     "sports": {}
   },
   {
     "day": "2023-08-08",
-    "value": 80.0,
+    "value": 80.5,
     "sports": {
       "strength": 44.0
     }
   },
   {
     "day": "2023-08-10",
-    "value": 42.0,
+    "value": 42.5,
     "sports": {
       "hiit": 24.0
     }
   },
   {
     "day": "2023-08-11",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 151.0
     }
   },
   {
     "day": "2023-08-12",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 158.0
     }
   },
   {
     "day": "2023-08-13",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2023-08-14",
-    "value": 22.0,
+    "value": 22.1,
     "sports": {
       "strength": 22.0
     }
@@ -2537,55 +2537,55 @@
   },
   {
     "day": "2023-08-17",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2023-08-20",
-    "value": 75.0,
+    "value": 75.2,
     "sports": {
       "strength": 75.0
     }
   },
   {
     "day": "2023-08-23",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 216.0
     }
   },
   {
     "day": "2023-08-24",
-    "value": 86.0,
+    "value": 85.8,
     "sports": {}
   },
   {
     "day": "2023-08-25",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2023-08-27",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 183.0
     }
   },
   {
     "day": "2023-08-28",
-    "value": 27.0,
+    "value": 26.8,
     "sports": {}
   },
   {
     "day": "2023-08-29",
-    "value": 104.0,
+    "value": 104.2,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2023-08-30",
-    "value": 101.0,
+    "value": 101.1,
     "sports": {
       "cycling": 16.0
     }
@@ -2599,71 +2599,71 @@
   },
   {
     "day": "2023-09-01",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 139.0
     }
   },
   {
     "day": "2023-09-02",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 246.0
     }
   },
   {
     "day": "2023-09-04",
-    "value": 85.0,
+    "value": 85.1,
     "sports": {
       "cycling": 57.0
     }
   },
   {
     "day": "2023-09-05",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {
       "hiit": 45.0
     }
   },
   {
     "day": "2023-09-06",
-    "value": 56.0,
+    "value": 55.5,
     "sports": {
       "strength": 56.0
     }
   },
   {
     "day": "2023-09-07",
-    "value": 41.0,
+    "value": 41.2,
     "sports": {
       "cycling": 41.0
     }
   },
   {
     "day": "2023-09-08",
-    "value": 46.0,
+    "value": 45.6,
     "sports": {}
   },
   {
     "day": "2023-09-09",
-    "value": 96.0,
+    "value": 96.5,
     "sports": {}
   },
   {
     "day": "2023-09-10",
-    "value": 15.0,
+    "value": 15.3,
     "sports": {}
   },
   {
     "day": "2023-09-11",
-    "value": 82.0,
+    "value": 81.6,
     "sports": {
       "strength": 54.0
     }
   },
   {
     "day": "2023-09-12",
-    "value": 72.0,
+    "value": 71.7,
     "sports": {
       "cycling": 72.0
     }
@@ -2677,26 +2677,26 @@
   },
   {
     "day": "2023-09-15",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 181.0
     }
   },
   {
     "day": "2023-09-16",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 119.0
     }
   },
   {
     "day": "2023-09-17",
-    "value": 65.0,
+    "value": 64.9,
     "sports": {}
   },
   {
     "day": "2023-09-18",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 182.0
     }
@@ -2710,28 +2710,28 @@
   },
   {
     "day": "2023-09-21",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {
       "cycling": 45.0
     }
   },
   {
     "day": "2023-09-22",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 136.0
     }
   },
   {
     "day": "2023-09-23",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 248.0
     }
   },
   {
     "day": "2023-09-24",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 92.0
     }
@@ -2745,42 +2745,42 @@
   },
   {
     "day": "2023-09-26",
-    "value": 46.0,
+    "value": 45.6,
     "sports": {
       "strength": 46.0
     }
   },
   {
     "day": "2023-09-27",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 53.0
     }
   },
   {
     "day": "2023-09-28",
-    "value": 65.0,
+    "value": 65.4,
     "sports": {
       "cycling": 65.0
     }
   },
   {
     "day": "2023-09-29",
-    "value": 61.0,
+    "value": 60.7,
     "sports": {
       "strength": 61.0
     }
   },
   {
     "day": "2023-09-30",
-    "value": 108.0,
+    "value": 108.1,
     "sports": {
       "cycling": 60.0
     }
   },
   {
     "day": "2023-10-01",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 225.0
     }
@@ -2801,12 +2801,12 @@
   },
   {
     "day": "2023-10-04",
-    "value": 24.0,
+    "value": 23.7,
     "sports": {}
   },
   {
     "day": "2023-10-05",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 76.0,
       "strength": 28.0
@@ -2814,91 +2814,91 @@
   },
   {
     "day": "2023-10-06",
-    "value": 64.0,
+    "value": 63.7,
     "sports": {
       "cycling": 64.0
     }
   },
   {
     "day": "2023-10-07",
-    "value": 117.0,
+    "value": 116.6,
     "sports": {
       "cycling": 117.0
     }
   },
   {
     "day": "2023-10-08",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 174.0
     }
   },
   {
     "day": "2023-10-09",
-    "value": 64.0,
+    "value": 63.7,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2023-10-10",
-    "value": 62.0,
+    "value": 61.8,
     "sports": {
       "strength": 62.0
     }
   },
   {
     "day": "2023-10-11",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
     "day": "2023-10-13",
-    "value": 104.0,
+    "value": 104.5,
     "sports": {}
   },
   {
     "day": "2023-10-14",
-    "value": 80.0,
+    "value": 80.4,
     "sports": {}
   },
   {
     "day": "2023-10-15",
-    "value": 72.0,
+    "value": 72.5,
     "sports": {}
   },
   {
     "day": "2023-10-16",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {
       "cycling": 45.0
     }
   },
   {
     "day": "2023-10-17",
-    "value": 64.0,
+    "value": 64.3,
     "sports": {
       "strength": 64.0
     }
   },
   {
     "day": "2023-10-18",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
     "day": "2023-10-19",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
     "day": "2023-10-20",
-    "value": 72.0,
+    "value": 72.1,
     "sports": {}
   },
   {
     "day": "2023-10-21",
-    "value": 87.0,
+    "value": 87.2,
     "sports": {}
   },
   {
@@ -2908,47 +2908,47 @@
   },
   {
     "day": "2023-10-24",
-    "value": 14.0,
+    "value": 13.8,
     "sports": {
       "cycling": 14.0
     }
   },
   {
     "day": "2023-10-25",
-    "value": 61.0,
+    "value": 60.7,
     "sports": {
       "strength": 61.0
     }
   },
   {
     "day": "2023-10-26",
-    "value": 34.0,
+    "value": 33.8,
     "sports": {}
   },
   {
     "day": "2023-10-27",
-    "value": 94.0,
+    "value": 93.8,
     "sports": {
       "cycling": 19.0
     }
   },
   {
     "day": "2023-10-28",
-    "value": 116.0,
+    "value": 116.3,
     "sports": {
       "cycling": 116.0
     }
   },
   {
     "day": "2023-10-29",
-    "value": 38.0,
+    "value": 38.5,
     "sports": {
       "cycling": 38.0
     }
   },
   {
     "day": "2023-10-30",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 114.0,
       "strength": 58.0
@@ -2956,68 +2956,68 @@
   },
   {
     "day": "2023-11-01",
-    "value": 65.0,
+    "value": 64.6,
     "sports": {
       "strength": 65.0
     }
   },
   {
     "day": "2023-11-02",
-    "value": 47.0,
+    "value": 47.3,
     "sports": {
       "cycling": 47.0
     }
   },
   {
     "day": "2023-11-03",
-    "value": 44.0,
+    "value": 44.3,
     "sports": {
       "strength": 44.0
     }
   },
   {
     "day": "2023-11-04",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 172.0
     }
   },
   {
     "day": "2023-11-05",
-    "value": 58.0,
+    "value": 58.2,
     "sports": {
       "cycling": 58.0
     }
   },
   {
     "day": "2023-11-06",
-    "value": 88.0,
+    "value": 88.3,
     "sports": {
       "strength": 56.0
     }
   },
   {
     "day": "2023-11-07",
-    "value": 46.0,
+    "value": 45.7,
     "sports": {}
   },
   {
     "day": "2023-11-08",
-    "value": 31.0,
+    "value": 30.7,
     "sports": {
       "strength": 31.0
     }
   },
   {
     "day": "2023-11-09",
-    "value": 55.0,
+    "value": 55.2,
     "sports": {
       "strength": 55.0
     }
   },
   {
     "day": "2023-11-13",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {
       "cycling": 45.0
     }
@@ -3029,47 +3029,47 @@
   },
   {
     "day": "2023-11-16",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2023-11-17",
-    "value": 67.0,
+    "value": 67.3,
     "sports": {
       "cycling": 67.0
     }
   },
   {
     "day": "2023-11-18",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 123.0
     }
   },
   {
     "day": "2023-11-19",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 144.0
     }
   },
   {
     "day": "2023-11-20",
-    "value": 45.0,
+    "value": 44.7,
     "sports": {}
   },
   {
     "day": "2023-11-22",
-    "value": 46.0,
+    "value": 46.1,
     "sports": {
       "strength": 46.0
     }
   },
   {
     "day": "2023-11-23",
-    "value": 61.0,
+    "value": 60.7,
     "sports": {
       "strength": 61.0
     }
@@ -3083,55 +3083,55 @@
   },
   {
     "day": "2023-11-26",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2023-11-27",
-    "value": 37.0,
+    "value": 36.6,
     "sports": {}
   },
   {
     "day": "2023-11-28",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
     "day": "2023-11-29",
-    "value": 48.0,
+    "value": 48.4,
     "sports": {
       "strength": 48.0
     }
   },
   {
     "day": "2023-11-30",
-    "value": 60.0,
+    "value": 60.5,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2023-12-01",
-    "value": 31.0,
+    "value": 30.7,
     "sports": {}
   },
   {
     "day": "2023-12-04",
-    "value": 61.0,
+    "value": 60.8,
     "sports": {
       "strength": 61.0
     }
   },
   {
     "day": "2023-12-05",
-    "value": 46.0,
+    "value": 45.5,
     "sports": {}
   },
   {
     "day": "2023-12-06",
-    "value": 34.0,
+    "value": 33.6,
     "sports": {}
   },
   {
@@ -3143,154 +3143,154 @@
   },
   {
     "day": "2023-12-08",
-    "value": 66.0,
+    "value": 65.7,
     "sports": {
       "strength": 66.0
     }
   },
   {
     "day": "2023-12-09",
-    "value": 53.0,
+    "value": 52.9,
     "sports": {}
   },
   {
     "day": "2023-12-10",
-    "value": 110.0,
+    "value": 110.3,
     "sports": {
       "cycling": 110.0
     }
   },
   {
     "day": "2023-12-11",
-    "value": 66.0,
+    "value": 66.5,
     "sports": {
       "strength": 66.0
     }
   },
   {
     "day": "2023-12-12",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "strength": 30.0
     }
   },
   {
     "day": "2023-12-15",
-    "value": 30.0,
+    "value": 30.2,
     "sports": {}
   },
   {
     "day": "2023-12-17",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 116.0
     }
   },
   {
     "day": "2023-12-18",
-    "value": 64.0,
+    "value": 63.9,
     "sports": {
       "strength": 64.0
     }
   },
   {
     "day": "2023-12-19",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
     "day": "2023-12-20",
-    "value": 35.0,
+    "value": 35.2,
     "sports": {
       "cycling": 35.0
     }
   },
   {
     "day": "2023-12-21",
-    "value": 62.0,
+    "value": 62.1,
     "sports": {
       "strength": 62.0
     }
   },
   {
     "day": "2023-12-22",
-    "value": 57.0,
+    "value": 57.3,
     "sports": {
       "cycling": 33.0
     }
   },
   {
     "day": "2023-12-23",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 216.0
     }
   },
   {
     "day": "2023-12-24",
-    "value": 71.0,
+    "value": 70.8,
     "sports": {
       "cycling": 43.0
     }
   },
   {
     "day": "2023-12-25",
-    "value": 38.0,
+    "value": 38.4,
     "sports": {}
   },
   {
     "day": "2023-12-26",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 171.0
     }
   },
   {
     "day": "2023-12-27",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 425.0
     }
   },
   {
     "day": "2023-12-29",
-    "value": 45.0,
+    "value": 45.3,
     "sports": {
       "strength": 45.0
     }
   },
   {
     "day": "2023-12-30",
-    "value": 96.0,
+    "value": 95.7,
     "sports": {}
   },
   {
     "day": "2023-12-31",
-    "value": 48.0,
+    "value": 47.7,
     "sports": {}
   },
   {
     "day": "2024-01-01",
-    "value": 92.0,
+    "value": 92.1,
     "sports": {}
   },
   {
     "day": "2024-01-03",
-    "value": 40.0,
+    "value": 40.3,
     "sports": {
       "strength": 40.0
     }
   },
   {
     "day": "2024-01-05",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 299.0
     }
   },
   {
     "day": "2024-01-07",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 222.0
     }
@@ -3304,57 +3304,57 @@
   },
   {
     "day": "2024-01-11",
-    "value": 15.0,
+    "value": 15.2,
     "sports": {}
   },
   {
     "day": "2024-01-13",
-    "value": 31.0,
+    "value": 31.4,
     "sports": {
       "strength": 31.0
     }
   },
   {
     "day": "2024-01-14",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 121.0
     }
   },
   {
     "day": "2024-01-15",
-    "value": 85.0,
+    "value": 84.9,
     "sports": {}
   },
   {
     "day": "2024-01-18",
-    "value": 50.0,
+    "value": 50.3,
     "sports": {
       "running": 50.0
     }
   },
   {
     "day": "2024-01-19",
-    "value": 62.0,
+    "value": 61.6,
     "sports": {
       "strength": 62.0
     }
   },
   {
     "day": "2024-01-20",
-    "value": 99.0,
+    "value": 98.8,
     "sports": {}
   },
   {
     "day": "2024-01-21",
-    "value": 50.0,
+    "value": 50.2,
     "sports": {
       "running": 50.0
     }
   },
   {
     "day": "2024-01-22",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "strength": 60.0
     }
@@ -3368,84 +3368,84 @@
   },
   {
     "day": "2024-01-25",
-    "value": 35.0,
+    "value": 35.2,
     "sports": {
       "strength": 35.0
     }
   },
   {
     "day": "2024-01-26",
-    "value": 55.0,
+    "value": 55.1,
     "sports": {
       "strength": 55.0
     }
   },
   {
     "day": "2024-01-27",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 128.0
     }
   },
   {
     "day": "2024-01-28",
-    "value": 60.0,
+    "value": 60.2,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2024-01-29",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2024-01-30",
-    "value": 74.0,
+    "value": 74.1,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2024-01-31",
-    "value": 78.0,
+    "value": 78.1,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2024-02-01",
-    "value": 68.0,
+    "value": 68.2,
     "sports": {
       "cycling": 68.0
     }
   },
   {
     "day": "2024-02-02",
-    "value": 40.0,
+    "value": 40.2,
     "sports": {
       "cycling": 40.0
     }
   },
   {
     "day": "2024-02-03",
-    "value": 115.0,
+    "value": 114.8,
     "sports": {
       "cycling": 115.0
     }
   },
   {
     "day": "2024-02-04",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 99.0
     }
   },
   {
     "day": "2024-02-05",
-    "value": 76.0,
+    "value": 76.5,
     "sports": {
       "cycling": 15.0,
       "strength": 62.0
@@ -3453,29 +3453,29 @@
   },
   {
     "day": "2024-02-08",
-    "value": 13.0,
+    "value": 12.9,
     "sports": {}
   },
   {
     "day": "2024-02-09",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2024-02-10",
-    "value": 50.0,
+    "value": 50.4,
     "sports": {
       "running": 50.0
     }
   },
   {
     "day": "2024-02-11",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2024-02-12",
-    "value": 84.0,
+    "value": 83.9,
     "sports": {}
   },
   {
@@ -3492,19 +3492,19 @@
   },
   {
     "day": "2024-02-17",
-    "value": 45.0,
+    "value": 45.3,
     "sports": {}
   },
   {
     "day": "2024-02-18",
-    "value": 48.0,
+    "value": 47.7,
     "sports": {
       "running": 48.0
     }
   },
   {
     "day": "2024-02-19",
-    "value": 75.0,
+    "value": 74.8,
     "sports": {
       "cycling": 75.0
     }
@@ -3516,38 +3516,38 @@
   },
   {
     "day": "2024-02-24",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2024-02-27",
-    "value": 30.0,
+    "value": 30.4,
     "sports": {}
   },
   {
     "day": "2024-02-28",
-    "value": 60.0,
+    "value": 60.2,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2024-02-29",
-    "value": 70.0,
+    "value": 70.1,
     "sports": {
       "strength": 70.0
     }
   },
   {
     "day": "2024-03-01",
-    "value": 30.0,
+    "value": 30.3,
     "sports": {}
   },
   {
     "day": "2024-03-02",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 121.0,
       "running": 50.0
@@ -3555,14 +3555,14 @@
   },
   {
     "day": "2024-03-03",
-    "value": 37.0,
+    "value": 37.1,
     "sports": {
       "skiing": 37.0
     }
   },
   {
     "day": "2024-03-05",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "strength": 60.0
     }
@@ -3581,183 +3581,183 @@
   },
   {
     "day": "2024-03-08",
-    "value": 40.0,
+    "value": 39.6,
     "sports": {
       "strength": 40.0
     }
   },
   {
     "day": "2024-03-09",
-    "value": 50.0,
+    "value": 50.1,
     "sports": {
       "running": 50.0
     }
   },
   {
     "day": "2024-03-10",
-    "value": 56.0,
+    "value": 56.1,
     "sports": {
       "strength": 56.0
     }
   },
   {
     "day": "2024-03-11",
-    "value": 30.0,
+    "value": 30.3,
     "sports": {}
   },
   {
     "day": "2024-03-12",
-    "value": 51.0,
+    "value": 50.8,
     "sports": {
       "running": 51.0
     }
   },
   {
     "day": "2024-03-13",
-    "value": 93.0,
+    "value": 93.4,
     "sports": {
       "cycling": 35.0
     }
   },
   {
     "day": "2024-03-14",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
     "day": "2024-03-15",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 126.0
     }
   },
   {
     "day": "2024-03-16",
-    "value": 32.0,
+    "value": 32.4,
     "sports": {
       "cycling": 32.0
     }
   },
   {
     "day": "2024-03-17",
-    "value": 66.0,
+    "value": 66.1,
     "sports": {
       "strength": 66.0
     }
   },
   {
     "day": "2024-03-18",
-    "value": 32.0,
+    "value": 31.6,
     "sports": {
       "strength": 32.0
     }
   },
   {
     "day": "2024-03-19",
-    "value": 51.0,
+    "value": 50.7,
     "sports": {
       "running": 51.0
     }
   },
   {
     "day": "2024-03-22",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 308.0
     }
   },
   {
     "day": "2024-03-23",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 318.0
     }
   },
   {
     "day": "2024-03-24",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 392.0
     }
   },
   {
     "day": "2024-03-26",
-    "value": 50.0,
+    "value": 50.2,
     "sports": {
       "running": 50.0
     }
   },
   {
     "day": "2024-03-27",
-    "value": 60.0,
+    "value": 60.4,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2024-03-28",
-    "value": 50.0,
+    "value": 50.1,
     "sports": {
       "running": 50.0
     }
   },
   {
     "day": "2024-03-29",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 149.0
     }
   },
   {
     "day": "2024-03-30",
-    "value": 43.0,
+    "value": 42.6,
     "sports": {}
   },
   {
     "day": "2024-03-31",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 301.0
     }
   },
   {
     "day": "2024-04-02",
-    "value": 36.0,
+    "value": 35.8,
     "sports": {
       "strength": 36.0
     }
   },
   {
     "day": "2024-04-03",
-    "value": 50.0,
+    "value": 50.4,
     "sports": {
       "running": 50.0
     }
   },
   {
     "day": "2024-04-04",
-    "value": 60.0,
+    "value": 60.4,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2024-04-05",
-    "value": 54.0,
+    "value": 53.8,
     "sports": {
       "cycling": 19.0
     }
   },
   {
     "day": "2024-04-06",
-    "value": 119.0,
+    "value": 119.4,
     "sports": {
       "cycling": 119.0
     }
   },
   {
     "day": "2024-04-07",
-    "value": 51.0,
+    "value": 50.8,
     "sports": {
       "running": 51.0
     }
@@ -3771,47 +3771,47 @@
   },
   {
     "day": "2024-04-09",
-    "value": 29.0,
+    "value": 29.1,
     "sports": {}
   },
   {
     "day": "2024-04-10",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "running": 50.0
     }
   },
   {
     "day": "2024-04-12",
-    "value": 50.0,
+    "value": 50.3,
     "sports": {
       "running": 50.0
     }
   },
   {
     "day": "2024-04-13",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 146.0
     }
   },
   {
     "day": "2024-04-14",
-    "value": 100.0,
+    "value": 100.1,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2024-04-16",
-    "value": 110.0,
+    "value": 110.2,
     "sports": {
       "running": 50.0
     }
   },
   {
     "day": "2024-04-17",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "strength": 60.0
     }
@@ -3823,14 +3823,14 @@
   },
   {
     "day": "2024-04-19",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2024-04-21",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 159.0
     }
@@ -3844,26 +3844,26 @@
   },
   {
     "day": "2024-04-23",
-    "value": 60.0,
+    "value": 59.9,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2024-04-24",
-    "value": 60.0,
+    "value": 59.8,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2024-04-25",
-    "value": 45.0,
+    "value": 45.2,
     "sports": {}
   },
   {
     "day": "2024-04-26",
-    "value": 41.0,
+    "value": 40.6,
     "sports": {}
   },
   {
@@ -3875,116 +3875,116 @@
   },
   {
     "day": "2024-04-28",
-    "value": 64.0,
+    "value": 63.6,
     "sports": {
       "strength": 64.0
     }
   },
   {
     "day": "2024-04-29",
-    "value": 117.0,
+    "value": 116.7,
     "sports": {
       "cycling": 117.0
     }
   },
   {
     "day": "2024-04-30",
-    "value": 100.0,
+    "value": 100.3,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2024-05-01",
-    "value": 30.0,
+    "value": 30.1,
     "sports": {}
   },
   {
     "day": "2024-05-02",
-    "value": 60.0,
+    "value": 60.3,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2024-05-03",
-    "value": 36.0,
+    "value": 35.6,
     "sports": {
       "cycling": 36.0
     }
   },
   {
     "day": "2024-05-04",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 166.0
     }
   },
   {
     "day": "2024-05-05",
-    "value": 35.0,
+    "value": 34.6,
     "sports": {}
   },
   {
     "day": "2024-05-06",
-    "value": 93.0,
+    "value": 92.6,
     "sports": {
       "running": 52.0
     }
   },
   {
     "day": "2024-05-07",
-    "value": 58.0,
+    "value": 58.3,
     "sports": {
       "strength": 58.0
     }
   },
   {
     "day": "2024-05-08",
-    "value": 69.0,
+    "value": 68.6,
     "sports": {}
   },
   {
     "day": "2024-05-09",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
     "day": "2024-05-10",
-    "value": 45.0,
+    "value": 45.4,
     "sports": {
       "strength": 45.0
     }
   },
   {
     "day": "2024-05-11",
-    "value": 63.0,
+    "value": 62.8,
     "sports": {
       "running": 63.0
     }
   },
   {
     "day": "2024-05-12",
-    "value": 23.0,
+    "value": 23.1,
     "sports": {
       "cycling": 23.0
     }
   },
   {
     "day": "2024-05-13",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2024-05-14",
-    "value": 46.0,
+    "value": 45.6,
     "sports": {}
   },
   {
     "day": "2024-05-15",
-    "value": 81.0,
+    "value": 81.4,
     "sports": {
       "strength": 20.0
     }
@@ -3998,21 +3998,21 @@
   },
   {
     "day": "2024-05-17",
-    "value": 112.0,
+    "value": 111.9,
     "sports": {
       "cycling": 112.0
     }
   },
   {
     "day": "2024-05-18",
-    "value": 82.0,
+    "value": 81.6,
     "sports": {
       "cycling": 82.0
     }
   },
   {
     "day": "2024-05-20",
-    "value": 112.0,
+    "value": 111.8,
     "sports": {
       "cycling": 53.0,
       "strength": 59.0
@@ -4027,14 +4027,14 @@
   },
   {
     "day": "2024-05-22",
-    "value": 50.0,
+    "value": 49.9,
     "sports": {
       "cycling": 17.0
     }
   },
   {
     "day": "2024-05-23",
-    "value": 78.0,
+    "value": 77.8,
     "sports": {
       "cycling": 18.0,
       "strength": 60.0
@@ -4042,35 +4042,35 @@
   },
   {
     "day": "2024-05-24",
-    "value": 81.0,
+    "value": 80.9,
     "sports": {
       "cycling": 81.0
     }
   },
   {
     "day": "2024-05-25",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 141.0
     }
   },
   {
     "day": "2024-05-26",
-    "value": 78.0,
+    "value": 78.4,
     "sports": {
       "strength": 33.0
     }
   },
   {
     "day": "2024-05-28",
-    "value": 64.0,
+    "value": 64.2,
     "sports": {
       "running": 64.0
     }
   },
   {
     "day": "2024-05-29",
-    "value": 120.0,
+    "value": 119.6,
     "sports": {
       "strength": 61.0
     }
@@ -4084,21 +4084,21 @@
   },
   {
     "day": "2024-05-31",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 114.0
     }
   },
   {
     "day": "2024-06-01",
-    "value": 60.0,
+    "value": 60.2,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2024-06-02",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 107.0
     }
@@ -4112,33 +4112,33 @@
   },
   {
     "day": "2024-06-04",
-    "value": 77.0,
+    "value": 76.8,
     "sports": {}
   },
   {
     "day": "2024-06-05",
-    "value": 60.0,
+    "value": 60.5,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2024-06-06",
-    "value": 65.0,
+    "value": 65.2,
     "sports": {
       "running": 65.0
     }
   },
   {
     "day": "2024-06-07",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 146.0
     }
   },
   {
     "day": "2024-06-08",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 163.0
     }
@@ -4152,7 +4152,7 @@
   },
   {
     "day": "2024-06-10",
-    "value": 64.0,
+    "value": 64.4,
     "sports": {
       "running": 64.0
     }
@@ -4166,7 +4166,7 @@
   },
   {
     "day": "2024-06-12",
-    "value": 63.0,
+    "value": 62.9,
     "sports": {
       "cycling": 33.0,
       "strength": 30.0
@@ -4174,28 +4174,28 @@
   },
   {
     "day": "2024-06-13",
-    "value": 65.0,
+    "value": 65.2,
     "sports": {
       "running": 65.0
     }
   },
   {
     "day": "2024-06-14",
-    "value": 106.0,
+    "value": 105.6,
     "sports": {
       "cycling": 106.0
     }
   },
   {
     "day": "2024-06-15",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 186.0
     }
   },
   {
     "day": "2024-06-17",
-    "value": 65.0,
+    "value": 65.2,
     "sports": {
       "running": 65.0
     }
@@ -4223,57 +4223,57 @@
   },
   {
     "day": "2024-06-21",
-    "value": 106.0,
+    "value": 106.5,
     "sports": {
       "running": 64.0
     }
   },
   {
     "day": "2024-06-22",
-    "value": 81.0,
+    "value": 80.9,
     "sports": {}
   },
   {
     "day": "2024-06-23",
-    "value": 62.0,
+    "value": 62.5,
     "sports": {
       "strength": 62.0
     }
   },
   {
     "day": "2024-06-24",
-    "value": 63.0,
+    "value": 62.6,
     "sports": {
       "running": 63.0
     }
   },
   {
     "day": "2024-06-25",
-    "value": 24.0,
+    "value": 23.7,
     "sports": {
       "cycling": 24.0
     }
   },
   {
     "day": "2024-06-26",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
     "day": "2024-06-27",
-    "value": 62.0,
+    "value": 62.2,
     "sports": {
       "running": 62.0
     }
   },
   {
     "day": "2024-06-28",
-    "value": 30.0,
+    "value": 30.4,
     "sports": {}
   },
   {
     "day": "2024-06-29",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 29.0,
       "strength": 60.0
@@ -4281,33 +4281,33 @@
   },
   {
     "day": "2024-06-30",
-    "value": 95.0,
+    "value": 95.4,
     "sports": {
       "cycling": 95.0
     }
   },
   {
     "day": "2024-07-01",
-    "value": 63.0,
+    "value": 62.8,
     "sports": {
       "running": 63.0
     }
   },
   {
     "day": "2024-07-02",
-    "value": 63.0,
+    "value": 63.2,
     "sports": {
       "strength": 63.0
     }
   },
   {
     "day": "2024-07-03",
-    "value": 91.0,
+    "value": 90.7,
     "sports": {}
   },
   {
     "day": "2024-07-04",
-    "value": 101.0,
+    "value": 101.3,
     "sports": {
       "cycling": 101.0
     }
@@ -4321,7 +4321,7 @@
   },
   {
     "day": "2024-07-06",
-    "value": 81.0,
+    "value": 80.6,
     "sports": {
       "cycling": 8.0,
       "running": 73.0
@@ -4329,7 +4329,7 @@
   },
   {
     "day": "2024-07-07",
-    "value": 78.0,
+    "value": 78.2,
     "sports": {
       "cycling": 8.0,
       "running": 70.0
@@ -4337,7 +4337,7 @@
   },
   {
     "day": "2024-07-08",
-    "value": 68.0,
+    "value": 67.5,
     "sports": {
       "strength": 68.0
     }
@@ -4349,14 +4349,14 @@
   },
   {
     "day": "2024-07-10",
-    "value": 60.0,
+    "value": 60.3,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2024-07-11",
-    "value": 88.0,
+    "value": 88.5,
     "sports": {
       "cycling": 25.0,
       "running": 64.0
@@ -4364,47 +4364,47 @@
   },
   {
     "day": "2024-07-13",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 164.0
     }
   },
   {
     "day": "2024-07-14",
-    "value": 106.0,
+    "value": 106.1,
     "sports": {
       "running": 66.0
     }
   },
   {
     "day": "2024-07-15",
-    "value": 60.0,
+    "value": 60.2,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2024-07-16",
-    "value": 67.0,
+    "value": 67.2,
     "sports": {}
   },
   {
     "day": "2024-07-17",
-    "value": 65.0,
+    "value": 64.9,
     "sports": {
       "running": 65.0
     }
   },
   {
     "day": "2024-07-19",
-    "value": 63.0,
+    "value": 62.9,
     "sports": {
       "running": 63.0
     }
   },
   {
     "day": "2024-07-20",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 75.0,
       "running": 64.0
@@ -4412,14 +4412,14 @@
   },
   {
     "day": "2024-07-21",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 145.0
     }
   },
   {
     "day": "2024-07-22",
-    "value": 35.0,
+    "value": 35.2,
     "sports": {}
   },
   {
@@ -4431,42 +4431,42 @@
   },
   {
     "day": "2024-07-25",
-    "value": 64.0,
+    "value": 64.2,
     "sports": {
       "running": 64.0
     }
   },
   {
     "day": "2024-07-26",
-    "value": 63.0,
+    "value": 62.6,
     "sports": {
       "strength": 63.0
     }
   },
   {
     "day": "2024-07-27",
-    "value": 94.0,
+    "value": 93.6,
     "sports": {
       "cycling": 94.0
     }
   },
   {
     "day": "2024-07-28",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "running": 62.0
     }
   },
   {
     "day": "2024-07-29",
-    "value": 67.0,
+    "value": 66.7,
     "sports": {
       "running": 67.0
     }
   },
   {
     "day": "2024-07-30",
-    "value": 73.0,
+    "value": 72.7,
     "sports": {
       "cycling": 17.0,
       "strength": 55.0
@@ -4474,7 +4474,7 @@
   },
   {
     "day": "2024-08-01",
-    "value": 65.0,
+    "value": 64.6,
     "sports": {
       "running": 65.0
     }
@@ -4488,136 +4488,136 @@
   },
   {
     "day": "2024-08-03",
-    "value": 67.0,
+    "value": 66.8,
     "sports": {
       "running": 67.0
     }
   },
   {
     "day": "2024-08-04",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 100.0
     }
   },
   {
     "day": "2024-08-05",
-    "value": 44.0,
+    "value": 43.7,
     "sports": {}
   },
   {
     "day": "2024-08-06",
-    "value": 64.0,
+    "value": 64.3,
     "sports": {
       "running": 64.0
     }
   },
   {
     "day": "2024-08-07",
-    "value": 63.0,
+    "value": 63.3,
     "sports": {
       "strength": 63.0
     }
   },
   {
     "day": "2024-08-08",
-    "value": 68.0,
+    "value": 67.9,
     "sports": {
       "running": 68.0
     }
   },
   {
     "day": "2024-08-09",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "strength": 66.0
     }
   },
   {
     "day": "2024-08-10",
-    "value": 70.0,
+    "value": 69.6,
     "sports": {
       "running": 70.0
     }
   },
   {
     "day": "2024-08-11",
-    "value": 33.0,
+    "value": 32.7,
     "sports": {
       "cycling": 33.0
     }
   },
   {
     "day": "2024-08-12",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 164.0
     }
   },
   {
     "day": "2024-08-13",
-    "value": 100.0,
+    "value": 99.7,
     "sports": {
       "cycling": 74.0
     }
   },
   {
     "day": "2024-08-14",
-    "value": 77.0,
+    "value": 76.7,
     "sports": {
       "running": 77.0
     }
   },
   {
     "day": "2024-08-15",
-    "value": 41.0,
+    "value": 40.9,
     "sports": {}
   },
   {
     "day": "2024-08-16",
-    "value": 62.0,
+    "value": 62.2,
     "sports": {
       "strength": 62.0
     }
   },
   {
     "day": "2024-08-17",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 164.0
     }
   },
   {
     "day": "2024-08-18",
-    "value": 80.0,
+    "value": 80.3,
     "sports": {
       "running": 80.0
     }
   },
   {
     "day": "2024-08-19",
-    "value": 61.0,
+    "value": 60.7,
     "sports": {
       "strength": 61.0
     }
   },
   {
     "day": "2024-08-20",
-    "value": 75.0,
+    "value": 74.7,
     "sports": {
       "running": 75.0
     }
   },
   {
     "day": "2024-08-21",
-    "value": 53.0,
+    "value": 52.6,
     "sports": {
       "cycling": 30.0
     }
   },
   {
     "day": "2024-08-23",
-    "value": 89.0,
+    "value": 89.1,
     "sports": {
       "cycling": 32.0,
       "running": 58.0
@@ -4625,73 +4625,73 @@
   },
   {
     "day": "2024-08-24",
-    "value": 95.0,
+    "value": 94.6,
     "sports": {
       "cycling": 95.0
     }
   },
   {
     "day": "2024-08-25",
-    "value": 78.0,
+    "value": 78.4,
     "sports": {
       "running": 78.0
     }
   },
   {
     "day": "2024-08-26",
-    "value": 65.0,
+    "value": 64.8,
     "sports": {
       "strength": 65.0
     }
   },
   {
     "day": "2024-08-27",
-    "value": 32.0,
+    "value": 31.6,
     "sports": {}
   },
   {
     "day": "2024-08-28",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "running": 84.0
     }
   },
   {
     "day": "2024-08-30",
-    "value": 69.0,
+    "value": 69.1,
     "sports": {
       "running": 69.0
     }
   },
   {
     "day": "2024-08-31",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 146.0
     }
   },
   {
     "day": "2024-09-01",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2024-09-02",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 153.0
     }
   },
   {
     "day": "2024-09-03",
-    "value": 78.0,
+    "value": 77.9,
     "sports": {
       "running": 78.0
     }
   },
   {
     "day": "2024-09-04",
-    "value": 90.0,
+    "value": 90.2,
     "sports": {
       "strength": 60.0
     }
@@ -4703,40 +4703,40 @@
   },
   {
     "day": "2024-09-06",
-    "value": 64.0,
+    "value": 64.1,
     "sports": {
       "running": 64.0
     }
   },
   {
     "day": "2024-09-07",
-    "value": 38.0,
+    "value": 37.6,
     "sports": {}
   },
   {
     "day": "2024-09-08",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "running": 47.0
     }
   },
   {
     "day": "2024-09-09",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 163.0
     }
   },
   {
     "day": "2024-09-10",
-    "value": 65.0,
+    "value": 64.7,
     "sports": {
       "running": 65.0
     }
   },
   {
     "day": "2024-09-11",
-    "value": 61.0,
+    "value": 61.4,
     "sports": {
       "strength": 61.0
     }
@@ -4750,14 +4750,14 @@
   },
   {
     "day": "2024-09-14",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 124.0
     }
   },
   {
     "day": "2024-09-15",
-    "value": 66.0,
+    "value": 65.6,
     "sports": {
       "running": 66.0
     }
@@ -4771,26 +4771,26 @@
   },
   {
     "day": "2024-09-17",
-    "value": 64.0,
+    "value": 64.5,
     "sports": {
       "running": 64.0
     }
   },
   {
     "day": "2024-09-18",
-    "value": 52.0,
+    "value": 51.6,
     "sports": {
       "strength": 52.0
     }
   },
   {
     "day": "2024-09-19",
-    "value": 30.0,
+    "value": 30.1,
     "sports": {}
   },
   {
     "day": "2024-09-20",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 84.0
     }
@@ -4804,52 +4804,52 @@
   },
   {
     "day": "2024-09-22",
-    "value": 37.0,
+    "value": 37.3,
     "sports": {}
   },
   {
     "day": "2024-09-23",
-    "value": 63.0,
+    "value": 62.9,
     "sports": {
       "running": 63.0
     }
   },
   {
     "day": "2024-09-25",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "running": 69.0
     }
   },
   {
     "day": "2024-09-26",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "strength": 58.0
     }
   },
   {
     "day": "2024-09-28",
-    "value": 77.0,
+    "value": 76.7,
     "sports": {
       "running": 77.0
     }
   },
   {
     "day": "2024-09-29",
-    "value": 43.0,
+    "value": 42.9,
     "sports": {
       "running": 43.0
     }
   },
   {
     "day": "2024-09-30",
-    "value": 81.0,
+    "value": 81.2,
     "sports": {}
   },
   {
     "day": "2024-10-01",
-    "value": 64.0,
+    "value": 64.4,
     "sports": {
       "strength": 64.0
     }
@@ -4861,14 +4861,14 @@
   },
   {
     "day": "2024-10-03",
-    "value": 49.0,
+    "value": 48.9,
     "sports": {
       "running": 49.0
     }
   },
   {
     "day": "2024-10-04",
-    "value": 58.0,
+    "value": 58.3,
     "sports": {
       "running": 58.0
     }
@@ -4882,45 +4882,45 @@
   },
   {
     "day": "2024-10-07",
-    "value": 79.0,
+    "value": 78.8,
     "sports": {}
   },
   {
     "day": "2024-10-08",
-    "value": 84.0,
+    "value": 84.1,
     "sports": {
       "cycling": 84.0
     }
   },
   {
     "day": "2024-10-09",
-    "value": 40.0,
+    "value": 39.6,
     "sports": {}
   },
   {
     "day": "2024-10-10",
-    "value": 78.0,
+    "value": 78.4,
     "sports": {
       "cycling": 78.0
     }
   },
   {
     "day": "2024-10-11",
-    "value": 59.0,
+    "value": 58.6,
     "sports": {
       "running": 59.0
     }
   },
   {
     "day": "2024-10-12",
-    "value": 60.0,
+    "value": 59.5,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2024-10-14",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 49.0,
       "strength": 71.0
@@ -4933,7 +4933,7 @@
   },
   {
     "day": "2024-10-16",
-    "value": 60.0,
+    "value": 60.3,
     "sports": {
       "running": 60.0
     }
@@ -4947,28 +4947,28 @@
   },
   {
     "day": "2024-10-18",
-    "value": 58.0,
+    "value": 58.1,
     "sports": {
       "running": 58.0
     }
   },
   {
     "day": "2024-10-19",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 164.0
     }
   },
   {
     "day": "2024-10-20",
-    "value": 77.0,
+    "value": 76.7,
     "sports": {
       "running": 77.0
     }
   },
   {
     "day": "2024-10-21",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 171.0
     }
@@ -4980,82 +4980,82 @@
   },
   {
     "day": "2024-10-23",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2024-10-24",
-    "value": 39.0,
+    "value": 38.8,
     "sports": {
       "running": 39.0
     }
   },
   {
     "day": "2024-10-26",
-    "value": 60.0,
+    "value": 60.4,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2024-10-27",
-    "value": 60.0,
+    "value": 60.2,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2024-10-29",
-    "value": 60.0,
+    "value": 60.5,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2024-10-30",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "strength": 62.0
     }
   },
   {
     "day": "2024-11-01",
-    "value": 74.0,
+    "value": 74.1,
     "sports": {
       "running": 74.0
     }
   },
   {
     "day": "2024-11-02",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 229.0
     }
   },
   {
     "day": "2024-11-03",
-    "value": 23.0,
+    "value": 23.4,
     "sports": {}
   },
   {
     "day": "2024-11-04",
-    "value": 60.0,
+    "value": 60.2,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2024-11-05",
-    "value": 66.0,
+    "value": 66.1,
     "sports": {
       "strength": 66.0
     }
   },
   {
     "day": "2024-11-06",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 32.0
     }
@@ -5069,85 +5069,85 @@
   },
   {
     "day": "2024-11-08",
-    "value": 58.0,
+    "value": 58.3,
     "sports": {
       "running": 58.0
     }
   },
   {
     "day": "2024-11-09",
-    "value": 36.0,
+    "value": 36.5,
     "sports": {}
   },
   {
     "day": "2024-11-10",
-    "value": 58.0,
+    "value": 57.9,
     "sports": {
       "running": 58.0
     }
   },
   {
     "day": "2024-11-11",
-    "value": 60.0,
+    "value": 59.9,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2024-11-12",
-    "value": 41.0,
+    "value": 40.9,
     "sports": {}
   },
   {
     "day": "2024-11-13",
-    "value": 59.0,
+    "value": 58.9,
     "sports": {
       "running": 59.0
     }
   },
   {
     "day": "2024-11-14",
-    "value": 15.0,
+    "value": 15.2,
     "sports": {}
   },
   {
     "day": "2024-11-15",
-    "value": 59.0,
+    "value": 59.3,
     "sports": {
       "running": 59.0
     }
   },
   {
     "day": "2024-11-16",
-    "value": 29.0,
+    "value": 28.6,
     "sports": {
       "cycling": 29.0
     }
   },
   {
     "day": "2024-11-17",
-    "value": 57.0,
+    "value": 56.7,
     "sports": {
       "running": 57.0
     }
   },
   {
     "day": "2024-11-18",
-    "value": 67.0,
+    "value": 67.1,
     "sports": {
       "strength": 67.0
     }
   },
   {
     "day": "2024-11-19",
-    "value": 17.0,
+    "value": 17.2,
     "sports": {
       "cycling": 17.0
     }
   },
   {
     "day": "2024-11-20",
-    "value": 119.0,
+    "value": 119.4,
     "sports": {
       "cycling": 28.0,
       "running": 60.0
@@ -5155,19 +5155,19 @@
   },
   {
     "day": "2024-11-22",
-    "value": 74.0,
+    "value": 74.5,
     "sports": {
       "running": 74.0
     }
   },
   {
     "day": "2024-11-23",
-    "value": 30.0,
+    "value": 30.1,
     "sports": {}
   },
   {
     "day": "2024-11-24",
-    "value": 95.0,
+    "value": 94.9,
     "sports": {
       "cycling": 34.0,
       "running": 60.0
@@ -5175,66 +5175,66 @@
   },
   {
     "day": "2024-11-25",
-    "value": 61.0,
+    "value": 61.3,
     "sports": {
       "strength": 61.0
     }
   },
   {
     "day": "2024-11-26",
-    "value": 66.0,
+    "value": 65.8,
     "sports": {}
   },
   {
     "day": "2024-11-27",
-    "value": 70.0,
+    "value": 70.4,
     "sports": {
       "running": 70.0
     }
   },
   {
     "day": "2024-11-28",
-    "value": 69.0,
+    "value": 69.2,
     "sports": {
       "running": 69.0
     }
   },
   {
     "day": "2024-11-29",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
     "day": "2024-11-30",
-    "value": 46.0,
+    "value": 45.9,
     "sports": {
       "running": 46.0
     }
   },
   {
     "day": "2024-12-02",
-    "value": 64.0,
+    "value": 64.3,
     "sports": {
       "strength": 64.0
     }
   },
   {
     "day": "2024-12-04",
-    "value": 60.0,
+    "value": 59.8,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2024-12-06",
-    "value": 61.0,
+    "value": 61.2,
     "sports": {
       "running": 61.0
     }
   },
   {
     "day": "2024-12-07",
-    "value": 91.0,
+    "value": 90.9,
     "sports": {
       "cycling": 11.0,
       "strength": 50.0
@@ -5242,165 +5242,165 @@
   },
   {
     "day": "2024-12-08",
-    "value": 96.0,
+    "value": 95.9,
     "sports": {
       "cycling": 72.0
     }
   },
   {
     "day": "2024-12-09",
-    "value": 58.0,
+    "value": 58.5,
     "sports": {
       "running": 58.0
     }
   },
   {
     "day": "2024-12-10",
-    "value": 70.0,
+    "value": 70.3,
     "sports": {
       "strength": 70.0
     }
   },
   {
     "day": "2024-12-11",
-    "value": 30.0,
+    "value": 30.1,
     "sports": {}
   },
   {
     "day": "2024-12-12",
-    "value": 20.0,
+    "value": 20.3,
     "sports": {}
   },
   {
     "day": "2024-12-13",
-    "value": 60.0,
+    "value": 60.3,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2024-12-14",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {
       "strength": 45.0
     }
   },
   {
     "day": "2024-12-15",
-    "value": 103.0,
+    "value": 103.1,
     "sports": {
       "running": 58.0
     }
   },
   {
     "day": "2024-12-16",
-    "value": 55.0,
+    "value": 55.1,
     "sports": {
       "strength": 55.0
     }
   },
   {
     "day": "2024-12-17",
-    "value": 26.0,
+    "value": 25.8,
     "sports": {}
   },
   {
     "day": "2024-12-18",
-    "value": 59.0,
+    "value": 58.9,
     "sports": {
       "running": 59.0
     }
   },
   {
     "day": "2024-12-20",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2024-12-21",
-    "value": 54.0,
+    "value": 53.5,
     "sports": {}
   },
   {
     "day": "2024-12-22",
-    "value": 60.0,
+    "value": 59.9,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2024-12-24",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 287.0
     }
   },
   {
     "day": "2024-12-25",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 323.0
     }
   },
   {
     "day": "2024-12-27",
-    "value": 59.0,
+    "value": 59.3,
     "sports": {
       "running": 59.0
     }
   },
   {
     "day": "2024-12-28",
-    "value": 58.0,
+    "value": 57.9,
     "sports": {
       "running": 58.0
     }
   },
   {
     "day": "2024-12-29",
-    "value": 66.0,
+    "value": 66.1,
     "sports": {
       "strength": 66.0
     }
   },
   {
     "day": "2024-12-30",
-    "value": 44.0,
+    "value": 43.6,
     "sports": {
       "cycling": 44.0
     }
   },
   {
     "day": "2024-12-31",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
     "day": "2025-01-01",
-    "value": 47.0,
+    "value": 46.9,
     "sports": {
       "running": 47.0
     }
   },
   {
     "day": "2025-01-03",
-    "value": 57.0,
+    "value": 57.2,
     "sports": {
       "running": 57.0
     }
   },
   {
     "day": "2025-01-05",
-    "value": 47.0,
+    "value": 46.9,
     "sports": {
       "running": 47.0
     }
   },
   {
     "day": "2025-01-08",
-    "value": 59.0,
+    "value": 58.6,
     "sports": {
       "strength": 59.0
     }
@@ -5414,24 +5414,24 @@
   },
   {
     "day": "2025-01-13",
-    "value": 103.0,
+    "value": 102.6,
     "sports": {}
   },
   {
     "day": "2025-01-16",
-    "value": 57.0,
+    "value": 56.6,
     "sports": {
       "running": 57.0
     }
   },
   {
     "day": "2025-01-18",
-    "value": 86.0,
+    "value": 85.8,
     "sports": {}
   },
   {
     "day": "2025-01-24",
-    "value": 75.0,
+    "value": 75.4,
     "sports": {
       "cycling": 14.0,
       "strength": 61.0
@@ -5439,7 +5439,7 @@
   },
   {
     "day": "2025-01-25",
-    "value": 45.0,
+    "value": 45.2,
     "sports": {}
   },
   {
@@ -5451,21 +5451,21 @@
   },
   {
     "day": "2025-01-28",
-    "value": 45.0,
+    "value": 45.4,
     "sports": {
       "strength": 45.0
     }
   },
   {
     "day": "2025-01-29",
-    "value": 59.0,
+    "value": 59.4,
     "sports": {
       "running": 59.0
     }
   },
   {
     "day": "2025-01-31",
-    "value": 96.0,
+    "value": 95.6,
     "sports": {
       "strength": 75.0
     }
@@ -5479,123 +5479,123 @@
   },
   {
     "day": "2025-02-03",
-    "value": 45.0,
+    "value": 45.2,
     "sports": {}
   },
   {
     "day": "2025-02-04",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {
       "strength": 45.0
     }
   },
   {
     "day": "2025-02-05",
-    "value": 63.0,
+    "value": 63.4,
     "sports": {
       "strength": 63.0
     }
   },
   {
     "day": "2025-02-07",
-    "value": 58.0,
+    "value": 58.3,
     "sports": {
       "running": 58.0
     }
   },
   {
     "day": "2025-02-08",
-    "value": 25.0,
+    "value": 25.4,
     "sports": {}
   },
   {
     "day": "2025-02-09",
-    "value": 45.0,
+    "value": 45.2,
     "sports": {}
   },
   {
     "day": "2025-02-10",
-    "value": 60.0,
+    "value": 60.3,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2025-02-11",
-    "value": 46.0,
+    "value": 45.6,
     "sports": {
       "strength": 46.0
     }
   },
   {
     "day": "2025-02-12",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2025-02-14",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
     "day": "2025-02-16",
-    "value": 108.0,
+    "value": 108.2,
     "sports": {
       "cycling": 45.0
     }
   },
   {
     "day": "2025-02-17",
-    "value": 63.0,
+    "value": 63.2,
     "sports": {
       "strength": 63.0
     }
   },
   {
     "day": "2025-02-19",
-    "value": 45.0,
+    "value": 45.2,
     "sports": {}
   },
   {
     "day": "2025-02-20",
-    "value": 50.0,
+    "value": 50.1,
     "sports": {
       "strength": 50.0
     }
   },
   {
     "day": "2025-02-21",
-    "value": 56.0,
+    "value": 55.5,
     "sports": {
       "running": 56.0
     }
   },
   {
     "day": "2025-02-22",
-    "value": 69.0,
+    "value": 68.8,
     "sports": {
       "skiing": 69.0
     }
   },
   {
     "day": "2025-02-23",
-    "value": 60.0,
+    "value": 59.6,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2025-02-24",
-    "value": 61.0,
+    "value": 61.3,
     "sports": {
       "strength": 61.0
     }
   },
   {
     "day": "2025-02-26",
-    "value": 58.0,
+    "value": 58.4,
     "sports": {
       "running": 58.0
     }
@@ -5609,7 +5609,7 @@
   },
   {
     "day": "2025-02-28",
-    "value": 88.0,
+    "value": 87.7,
     "sports": {
       "cycling": 26.0,
       "running": 62.0
@@ -5617,14 +5617,14 @@
   },
   {
     "day": "2025-03-01",
-    "value": 75.0,
+    "value": 75.2,
     "sports": {
       "cycling": 75.0
     }
   },
   {
     "day": "2025-03-02",
-    "value": 115.0,
+    "value": 115.3,
     "sports": {
       "cycling": 115.0
     }
@@ -5638,12 +5638,12 @@
   },
   {
     "day": "2025-03-04",
-    "value": 30.0,
+    "value": 30.3,
     "sports": {}
   },
   {
     "day": "2025-03-05",
-    "value": 63.0,
+    "value": 63.1,
     "sports": {
       "running": 63.0
     }
@@ -5657,91 +5657,91 @@
   },
   {
     "day": "2025-03-09",
-    "value": 49.0,
+    "value": 48.8,
     "sports": {
       "running": 49.0
     }
   },
   {
     "day": "2025-03-10",
-    "value": 112.0,
+    "value": 111.7,
     "sports": {
       "strength": 50.0
     }
   },
   {
     "day": "2025-03-14",
-    "value": 68.0,
+    "value": 67.7,
     "sports": {
       "running": 68.0
     }
   },
   {
     "day": "2025-03-16",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 226.0
     }
   },
   {
     "day": "2025-03-17",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 314.0
     }
   },
   {
     "day": "2025-03-18",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 332.0
     }
   },
   {
     "day": "2025-03-19",
-    "value": 112.0,
+    "value": 111.8,
     "sports": {
       "skiing": 112.0
     }
   },
   {
     "day": "2025-03-22",
-    "value": 67.0,
+    "value": 67.2,
     "sports": {
       "running": 67.0
     }
   },
   {
     "day": "2025-03-25",
-    "value": 71.0,
+    "value": 70.8,
     "sports": {
       "cycling": 71.0
     }
   },
   {
     "day": "2025-03-26",
-    "value": 60.0,
+    "value": 60.4,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2025-03-27",
-    "value": 33.0,
+    "value": 32.7,
     "sports": {
       "cycling": 33.0
     }
   },
   {
     "day": "2025-03-28",
-    "value": 61.0,
+    "value": 60.6,
     "sports": {
       "running": 61.0
     }
   },
   {
     "day": "2025-03-29",
-    "value": 86.0,
+    "value": 85.9,
     "sports": {
       "cycling": 26.0,
       "strength": 60.0
@@ -5749,146 +5749,146 @@
   },
   {
     "day": "2025-03-30",
-    "value": 42.0,
+    "value": 42.2,
     "sports": {
       "tennis": 42.0
     }
   },
   {
     "day": "2025-03-31",
-    "value": 61.0,
+    "value": 60.6,
     "sports": {
       "running": 61.0
     }
   },
   {
     "day": "2025-04-02",
-    "value": 61.0,
+    "value": 61.4,
     "sports": {
       "strength": 61.0
     }
   },
   {
     "day": "2025-04-03",
-    "value": 65.0,
+    "value": 65.2,
     "sports": {
       "cycling": 65.0
     }
   },
   {
     "day": "2025-04-05",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
     "day": "2025-04-06",
-    "value": 59.0,
+    "value": 58.6,
     "sports": {
       "running": 59.0
     }
   },
   {
     "day": "2025-04-08",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
     "day": "2025-04-09",
-    "value": 48.0,
+    "value": 48.3,
     "sports": {
       "strength": 48.0
     }
   },
   {
     "day": "2025-04-11",
-    "value": 59.0,
+    "value": 58.6,
     "sports": {
       "running": 59.0
     }
   },
   {
     "day": "2025-04-12",
-    "value": 112.0,
+    "value": 112.2,
     "sports": {
       "cycling": 112.0
     }
   },
   {
     "day": "2025-04-13",
-    "value": 63.0,
+    "value": 62.6,
     "sports": {
       "strength": 63.0
     }
   },
   {
     "day": "2025-04-14",
-    "value": 40.0,
+    "value": 40.2,
     "sports": {}
   },
   {
     "day": "2025-04-16",
-    "value": 60.0,
+    "value": 59.5,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2025-04-18",
-    "value": 63.0,
+    "value": 62.6,
     "sports": {
       "running": 63.0
     }
   },
   {
     "day": "2025-04-19",
-    "value": 114.0,
+    "value": 114.5,
     "sports": {
       "cycling": 114.0
     }
   },
   {
     "day": "2025-04-21",
-    "value": 62.0,
+    "value": 61.9,
     "sports": {
       "strength": 62.0
     }
   },
   {
     "day": "2025-04-22",
-    "value": 66.0,
+    "value": 66.4,
     "sports": {
       "running": 66.0
     }
   },
   {
     "day": "2025-04-24",
-    "value": 76.0,
+    "value": 76.4,
     "sports": {
       "cycling": 76.0
     }
   },
   {
     "day": "2025-04-25",
-    "value": 30.0,
+    "value": 30.1,
     "sports": {}
   },
   {
     "day": "2025-04-26",
-    "value": 62.0,
+    "value": 62.1,
     "sports": {
       "running": 62.0
     }
   },
   {
     "day": "2025-04-27",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 155.0
     }
   },
   {
     "day": "2025-04-28",
-    "value": 85.0,
+    "value": 85.2,
     "sports": {
       "strength": 55.0
     }
@@ -5902,52 +5902,52 @@
   },
   {
     "day": "2025-05-02",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
     "day": "2025-05-03",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2025-05-05",
-    "value": 84.0,
+    "value": 83.5,
     "sports": {
       "cycling": 84.0
     }
   },
   {
     "day": "2025-05-06",
-    "value": 60.0,
+    "value": 60.2,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2025-05-07",
-    "value": 15.0,
+    "value": 15.3,
     "sports": {}
   },
   {
     "day": "2025-05-08",
-    "value": 62.0,
+    "value": 62.1,
     "sports": {
       "running": 62.0
     }
   },
   {
     "day": "2025-05-09",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 147.0
     }
   },
   {
     "day": "2025-05-11",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 186.0
     }
@@ -5961,26 +5961,26 @@
   },
   {
     "day": "2025-05-13",
-    "value": 61.0,
+    "value": 60.8,
     "sports": {
       "running": 61.0
     }
   },
   {
     "day": "2025-05-14",
-    "value": 40.0,
+    "value": 40.1,
     "sports": {}
   },
   {
     "day": "2025-05-15",
-    "value": 64.0,
+    "value": 64.4,
     "sports": {
       "strength": 64.0
     }
   },
   {
     "day": "2025-05-17",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "running": 62.0,
       "tennis": 96.0
@@ -5988,70 +5988,70 @@
   },
   {
     "day": "2025-05-19",
-    "value": 25.0,
+    "value": 24.9,
     "sports": {
       "running": 25.0
     }
   },
   {
     "day": "2025-05-20",
-    "value": 57.0,
+    "value": 56.6,
     "sports": {
       "running": 57.0
     }
   },
   {
     "day": "2025-05-22",
-    "value": 50.0,
+    "value": 50.5,
     "sports": {
       "running": 50.0
     }
   },
   {
     "day": "2025-05-23",
-    "value": 56.0,
+    "value": 55.9,
     "sports": {
       "strength": 56.0
     }
   },
   {
     "day": "2025-05-24",
-    "value": 36.0,
+    "value": 36.4,
     "sports": {
       "running": 36.0
     }
   },
   {
     "day": "2025-05-26",
-    "value": 34.0,
+    "value": 33.6,
     "sports": {
       "running": 34.0
     }
   },
   {
     "day": "2025-05-29",
-    "value": 68.0,
+    "value": 68.5,
     "sports": {
       "cycling": 68.0
     }
   },
   {
     "day": "2025-05-30",
-    "value": 67.0,
+    "value": 66.7,
     "sports": {
       "running": 67.0
     }
   },
   {
     "day": "2025-05-31",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 185.0
     }
   },
   {
     "day": "2025-06-01",
-    "value": 116.0,
+    "value": 116.5,
     "sports": {
       "cycling": 64.0,
       "strength": 53.0
@@ -6059,31 +6059,31 @@
   },
   {
     "day": "2025-06-04",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
     "day": "2025-06-05",
-    "value": 30.0,
+    "value": 30.4,
     "sports": {}
   },
   {
     "day": "2025-06-06",
-    "value": 67.0,
+    "value": 67.4,
     "sports": {
       "strength": 67.0
     }
   },
   {
     "day": "2025-06-07",
-    "value": 54.0,
+    "value": 54.1,
     "sports": {
       "cycling": 54.0
     }
   },
   {
     "day": "2025-06-08",
-    "value": 63.0,
+    "value": 63.1,
     "sports": {
       "running": 63.0
     }
@@ -6097,61 +6097,61 @@
   },
   {
     "day": "2025-06-11",
-    "value": 65.0,
+    "value": 65.1,
     "sports": {
       "running": 65.0
     }
   },
   {
     "day": "2025-06-12",
-    "value": 59.0,
+    "value": 58.6,
     "sports": {
       "strength": 59.0
     }
   },
   {
     "day": "2025-06-14",
-    "value": 46.0,
+    "value": 46.2,
     "sports": {
       "cycling": 46.0
     }
   },
   {
     "day": "2025-06-15",
-    "value": 65.0,
+    "value": 65.1,
     "sports": {
       "running": 65.0
     }
   },
   {
     "day": "2025-06-17",
-    "value": 77.0,
+    "value": 77.4,
     "sports": {
       "cycling": 77.0
     }
   },
   {
     "day": "2025-06-18",
-    "value": 40.0,
+    "value": 40.1,
     "sports": {}
   },
   {
     "day": "2025-06-19",
-    "value": 55.0,
+    "value": 55.3,
     "sports": {
       "strength": 55.0
     }
   },
   {
     "day": "2025-06-21",
-    "value": 52.0,
+    "value": 52.3,
     "sports": {
       "running": 52.0
     }
   },
   {
     "day": "2025-06-24",
-    "value": 68.0,
+    "value": 68.2,
     "sports": {
       "running": 68.0
     }
@@ -6165,7 +6165,7 @@
   },
   {
     "day": "2025-06-27",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 58.0,
       "running": 65.0
@@ -6173,66 +6173,66 @@
   },
   {
     "day": "2025-06-28",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 160.0
     }
   },
   {
     "day": "2025-06-29",
-    "value": 109.0,
+    "value": 108.6,
     "sports": {
       "cycling": 109.0
     }
   },
   {
     "day": "2025-07-02",
-    "value": 60.0,
+    "value": 59.6,
     "sports": {
       "mindfulness": 60.0
     }
   },
   {
     "day": "2025-07-06",
-    "value": 55.0,
+    "value": 55.1,
     "sports": {
       "running": 55.0
     }
   },
   {
     "day": "2025-07-08",
-    "value": 55.0,
+    "value": 55.1,
     "sports": {
       "strength": 55.0
     }
   },
   {
     "day": "2025-07-11",
-    "value": 63.0,
+    "value": 62.7,
     "sports": {}
   },
   {
     "day": "2025-07-12",
-    "value": 52.0,
+    "value": 51.5,
     "sports": {
       "running": 52.0
     }
   },
   {
     "day": "2025-07-13",
-    "value": 57.0,
+    "value": 56.8,
     "sports": {}
   },
   {
     "day": "2025-07-15",
-    "value": 66.0,
+    "value": 66.1,
     "sports": {
       "running": 66.0
     }
   },
   {
     "day": "2025-07-16",
-    "value": 80.0,
+    "value": 80.4,
     "sports": {
       "cycling": 24.0,
       "strength": 56.0
@@ -6240,21 +6240,21 @@
   },
   {
     "day": "2025-07-17",
-    "value": 70.0,
+    "value": 69.5,
     "sports": {
       "cycling": 70.0
     }
   },
   {
     "day": "2025-07-18",
-    "value": 65.0,
+    "value": 64.8,
     "sports": {
       "running": 65.0
     }
   },
   {
     "day": "2025-07-19",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 138.0
     }
@@ -6268,14 +6268,14 @@
   },
   {
     "day": "2025-07-22",
-    "value": 63.0,
+    "value": 63.3,
     "sports": {
       "running": 63.0
     }
   },
   {
     "day": "2025-07-23",
-    "value": 66.0,
+    "value": 66.2,
     "sports": {
       "cycling": 36.0,
       "tennis": 31.0
@@ -6283,68 +6283,68 @@
   },
   {
     "day": "2025-07-25",
-    "value": 68.0,
+    "value": 68.4,
     "sports": {
       "running": 68.0
     }
   },
   {
     "day": "2025-07-26",
-    "value": 40.0,
+    "value": 40.3,
     "sports": {}
   },
   {
     "day": "2025-07-27",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 109.0
     }
   },
   {
     "day": "2025-07-29",
-    "value": 62.0,
+    "value": 62.1,
     "sports": {
       "cycling": 62.0
     }
   },
   {
     "day": "2025-07-30",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "tennis": 75.0
     }
   },
   {
     "day": "2025-08-01",
-    "value": 46.0,
+    "value": 45.8,
     "sports": {
       "cycling": 46.0
     }
   },
   {
     "day": "2025-08-04",
-    "value": 68.0,
+    "value": 67.7,
     "sports": {
       "running": 68.0
     }
   },
   {
     "day": "2025-08-05",
-    "value": 42.0,
+    "value": 42.5,
     "sports": {
       "running": 42.0
     }
   },
   {
     "day": "2025-08-08",
-    "value": 60.0,
+    "value": 60.2,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2025-08-10",
-    "value": 102.0,
+    "value": 102.5,
     "sports": {
       "cycling": 38.0,
       "tennis": 64.0
@@ -6352,14 +6352,14 @@
   },
   {
     "day": "2025-08-11",
-    "value": 64.0,
+    "value": 63.8,
     "sports": {
       "running": 64.0
     }
   },
   {
     "day": "2025-08-13",
-    "value": 100.0,
+    "value": 99.6,
     "sports": {
       "cycling": 35.0,
       "strength": 65.0
@@ -6367,28 +6367,28 @@
   },
   {
     "day": "2025-08-14",
-    "value": 70.0,
+    "value": 70.3,
     "sports": {
       "cycling": 70.0
     }
   },
   {
     "day": "2025-08-15",
-    "value": 64.0,
+    "value": 63.6,
     "sports": {
       "running": 64.0
     }
   },
   {
     "day": "2025-08-16",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 130.0
     }
   },
   {
     "day": "2025-08-17",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 7.0,
       "tennis": 67.0
@@ -6396,14 +6396,14 @@
   },
   {
     "day": "2025-08-18",
-    "value": 65.0,
+    "value": 64.6,
     "sports": {
       "running": 65.0
     }
   },
   {
     "day": "2025-08-19",
-    "value": 60.0,
+    "value": 60.4,
     "sports": {
       "strength": 60.0
     }
@@ -6417,54 +6417,54 @@
   },
   {
     "day": "2025-08-21",
-    "value": 62.0,
+    "value": 62.4,
     "sports": {
       "running": 62.0
     }
   },
   {
     "day": "2025-08-22",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 144.0
     }
   },
   {
     "day": "2025-08-23",
-    "value": 38.0,
+    "value": 38.3,
     "sports": {
       "cycling": 38.0
     }
   },
   {
     "day": "2025-08-24",
-    "value": 14.0,
+    "value": 14.3,
     "sports": {
       "cycling": 14.0
     }
   },
   {
     "day": "2025-08-25",
-    "value": 61.0,
+    "value": 60.9,
     "sports": {
       "running": 61.0
     }
   },
   {
     "day": "2025-08-26",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
     "day": "2025-08-27",
-    "value": 55.0,
+    "value": 55.1,
     "sports": {
       "strength": 55.0
     }
   },
   {
     "day": "2025-08-28",
-    "value": 62.0,
+    "value": 62.4,
     "sports": {
       "cycling": 62.0
     }
@@ -6478,40 +6478,40 @@
   },
   {
     "day": "2025-08-30",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 185.0
     }
   },
   {
     "day": "2025-09-01",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2025-09-02",
-    "value": 61.0,
+    "value": 60.8,
     "sports": {
       "cycling": 61.0
     }
   },
   {
     "day": "2025-09-03",
-    "value": 64.0,
+    "value": 64.3,
     "sports": {
       "running": 64.0
     }
   },
   {
     "day": "2025-09-04",
-    "value": 60.0,
+    "value": 60.5,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2025-09-05",
-    "value": 63.0,
+    "value": 63.2,
     "sports": {
       "strength": 63.0
     }
@@ -6526,21 +6526,21 @@
   },
   {
     "day": "2025-09-07",
-    "value": 77.0,
+    "value": 77.2,
     "sports": {
       "tennis": 77.0
     }
   },
   {
     "day": "2025-09-08",
-    "value": 61.0,
+    "value": 60.9,
     "sports": {
       "running": 61.0
     }
   },
   {
     "day": "2025-09-09",
-    "value": 67.0,
+    "value": 66.9,
     "sports": {
       "cycling": 67.0
     }
@@ -6554,26 +6554,26 @@
   },
   {
     "day": "2025-09-11",
-    "value": 45.0,
+    "value": 45.2,
     "sports": {}
   },
   {
     "day": "2025-09-12",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 127.0
     }
   },
   {
     "day": "2025-09-13",
-    "value": 46.0,
+    "value": 45.9,
     "sports": {
       "strength": 46.0
     }
   },
   {
     "day": "2025-09-14",
-    "value": 82.0,
+    "value": 81.6,
     "sports": {
       "cycling": 26.0,
       "tennis": 56.0
@@ -6581,68 +6581,68 @@
   },
   {
     "day": "2025-09-15",
-    "value": 60.0,
+    "value": 59.7,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2025-09-16",
-    "value": 83.0,
+    "value": 83.1,
     "sports": {
       "cycling": 83.0
     }
   },
   {
     "day": "2025-09-17",
-    "value": 57.0,
+    "value": 56.8,
     "sports": {
       "strength": 57.0
     }
   },
   {
     "day": "2025-09-18",
-    "value": 60.0,
+    "value": 59.8,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2025-09-19",
-    "value": 63.0,
+    "value": 62.8,
     "sports": {
       "cycling": 63.0
     }
   },
   {
     "day": "2025-09-20",
-    "value": 30.0,
+    "value": 30.1,
     "sports": {}
   },
   {
     "day": "2025-09-21",
-    "value": 32.0,
+    "value": 32.3,
     "sports": {
       "tennis": 32.0
     }
   },
   {
     "day": "2025-09-22",
-    "value": 62.0,
+    "value": 61.5,
     "sports": {
       "running": 62.0
     }
   },
   {
     "day": "2025-09-23",
-    "value": 64.0,
+    "value": 63.5,
     "sports": {
       "cycling": 64.0
     }
   },
   {
     "day": "2025-09-24",
-    "value": 70.0,
+    "value": 70.1,
     "sports": {
       "cycling": 10.0,
       "strength": 60.0
@@ -6650,49 +6650,49 @@
   },
   {
     "day": "2025-09-25",
-    "value": 85.0,
+    "value": 85.4,
     "sports": {
       "cycling": 40.0
     }
   },
   {
     "day": "2025-09-26",
-    "value": 41.0,
+    "value": 41.3,
     "sports": {
       "cycling": 10.0
     }
   },
   {
     "day": "2025-09-28",
-    "value": 98.0,
+    "value": 98.3,
     "sports": {
       "cycling": 98.0
     }
   },
   {
     "day": "2025-09-29",
-    "value": 58.0,
+    "value": 58.5,
     "sports": {
       "running": 58.0
     }
   },
   {
     "day": "2025-09-30",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2025-10-02",
-    "value": 52.0,
+    "value": 51.7,
     "sports": {
       "strength": 52.0
     }
   },
   {
     "day": "2025-10-03",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 130.0
     }
@@ -6706,7 +6706,7 @@
   },
   {
     "day": "2025-10-06",
-    "value": 31.0,
+    "value": 30.9,
     "sports": {}
   },
   {
@@ -6718,49 +6718,49 @@
   },
   {
     "day": "2025-10-08",
-    "value": 63.0,
+    "value": 63.2,
     "sports": {
       "cycling": 63.0
     }
   },
   {
     "day": "2025-10-09",
-    "value": 62.0,
+    "value": 61.7,
     "sports": {
       "running": 62.0
     }
   },
   {
     "day": "2025-10-11",
-    "value": 104.0,
+    "value": 104.1,
     "sports": {
       "cycling": 104.0
     }
   },
   {
     "day": "2025-10-12",
-    "value": 47.0,
+    "value": 46.7,
     "sports": {
       "running": 47.0
     }
   },
   {
     "day": "2025-10-13",
-    "value": 60.0,
+    "value": 59.6,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2025-10-14",
-    "value": 60.0,
+    "value": 59.7,
     "sports": {
       "cycling": 60.0
     }
   },
   {
     "day": "2025-10-15",
-    "value": 61.0,
+    "value": 60.9,
     "sports": {
       "running": 61.0
     }
@@ -6781,7 +6781,7 @@
   },
   {
     "day": "2025-10-21",
-    "value": 63.0,
+    "value": 63.1,
     "sports": {
       "cycling": 13.0,
       "mindfulness": 50.0
@@ -6796,21 +6796,21 @@
   },
   {
     "day": "2025-10-23",
-    "value": 60.0,
+    "value": 60.3,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2025-10-24",
-    "value": 116.0,
+    "value": 115.5,
     "sports": {
       "cycling": 116.0
     }
   },
   {
     "day": "2025-10-25",
-    "value": 117.0,
+    "value": 117.2,
     "sports": {
       "cycling": 67.0,
       "mindfulness": 50.0
@@ -6818,21 +6818,21 @@
   },
   {
     "day": "2025-10-26",
-    "value": 46.0,
+    "value": 46.4,
     "sports": {
       "mindfulness": 46.0
     }
   },
   {
     "day": "2025-10-27",
-    "value": 60.0,
+    "value": 60.5,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2025-10-28",
-    "value": 92.0,
+    "value": 91.5,
     "sports": {
       "cycling": 31.0,
       "mindfulness": 60.0
@@ -6840,54 +6840,54 @@
   },
   {
     "day": "2025-10-29",
-    "value": 55.0,
+    "value": 55.3,
     "sports": {
       "strength": 55.0
     }
   },
   {
     "day": "2025-10-31",
-    "value": 63.0,
+    "value": 62.9,
     "sports": {
       "running": 63.0
     }
   },
   {
     "day": "2025-11-01",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 274.0
     }
   },
   {
     "day": "2025-11-02",
-    "value": 51.0,
+    "value": 50.9,
     "sports": {
       "mindfulness": 51.0
     }
   },
   {
     "day": "2025-11-03",
-    "value": 60.0,
+    "value": 60.4,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2025-11-04",
-    "value": 30.0,
+    "value": 30.2,
     "sports": {}
   },
   {
     "day": "2025-11-05",
-    "value": 58.0,
+    "value": 57.8,
     "sports": {
       "strength": 58.0
     }
   },
   {
     "day": "2025-11-06",
-    "value": 64.0,
+    "value": 63.6,
     "sports": {
       "cycling": 13.0,
       "mindfulness": 51.0
@@ -6903,40 +6903,40 @@
   },
   {
     "day": "2025-11-08",
-    "value": 114.0,
+    "value": 113.8,
     "sports": {
       "cycling": 114.0
     }
   },
   {
     "day": "2025-11-10",
-    "value": 45.0,
+    "value": 45.2,
     "sports": {}
   },
   {
     "day": "2025-11-11",
-    "value": 45.0,
+    "value": 45.2,
     "sports": {
       "running": 45.0
     }
   },
   {
     "day": "2025-11-12",
-    "value": 58.0,
+    "value": 58.4,
     "sports": {
       "running": 58.0
     }
   },
   {
     "day": "2025-11-13",
-    "value": 72.0,
+    "value": 72.5,
     "sports": {
       "cycling": 72.0
     }
   },
   {
     "day": "2025-11-14",
-    "value": 94.0,
+    "value": 93.6,
     "sports": {
       "cycling": 34.0,
       "mindfulness": 60.0
@@ -6944,26 +6944,26 @@
   },
   {
     "day": "2025-11-15",
-    "value": 62.0,
+    "value": 61.6,
     "sports": {
       "running": 62.0
     }
   },
   {
     "day": "2025-11-17",
-    "value": 61.0,
+    "value": 60.6,
     "sports": {
       "strength": 61.0
     }
   },
   {
     "day": "2025-11-18",
-    "value": 30.0,
+    "value": 30.1,
     "sports": {}
   },
   {
     "day": "2025-11-19",
-    "value": 60.0,
+    "value": 60.3,
     "sports": {
       "running": 60.0
     }
@@ -6975,7 +6975,7 @@
   },
   {
     "day": "2025-11-21",
-    "value": 91.0,
+    "value": 90.7,
     "sports": {
       "cycling": 29.0,
       "mindfulness": 62.0
@@ -6983,14 +6983,14 @@
   },
   {
     "day": "2025-11-22",
-    "value": 56.0,
+    "value": 55.8,
     "sports": {
       "running": 56.0
     }
   },
   {
     "day": "2025-11-23",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 161.0
     }
@@ -7004,36 +7004,36 @@
   },
   {
     "day": "2025-11-25",
-    "value": 30.0,
+    "value": 30.1,
     "sports": {}
   },
   {
     "day": "2025-11-27",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
     "day": "2025-11-28",
-    "value": 57.0,
+    "value": 57.3,
     "sports": {
       "running": 57.0
     }
   },
   {
     "day": "2025-11-29",
-    "value": 50.0,
+    "value": 50.1,
     "sports": {
       "strength": 50.0
     }
   },
   {
     "day": "2025-12-01",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
     "day": "2025-12-05",
-    "value": 120.0,
+    "value": 120,
     "sports": {}
   },
   {
@@ -7045,19 +7045,19 @@
   },
   {
     "day": "2025-12-07",
-    "value": 61.0,
+    "value": 61.3,
     "sports": {
       "running": 61.0
     }
   },
   {
     "day": "2025-12-09",
-    "value": 30.0,
+    "value": 30.1,
     "sports": {}
   },
   {
     "day": "2025-12-10",
-    "value": 110.0,
+    "value": 110.2,
     "sports": {
       "strength": 55.0,
       "mindfulness": 55.0
@@ -7065,35 +7065,35 @@
   },
   {
     "day": "2025-12-12",
-    "value": 59.0,
+    "value": 58.6,
     "sports": {
       "running": 59.0
     }
   },
   {
     "day": "2025-12-13",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {
       "cycling": 45.0
     }
   },
   {
     "day": "2025-12-14",
-    "value": 60.0,
+    "value": 60.5,
     "sports": {
       "mindfulness": 60.0
     }
   },
   {
     "day": "2025-12-15",
-    "value": 52.0,
+    "value": 51.8,
     "sports": {
       "strength": 52.0
     }
   },
   {
     "day": "2025-12-16",
-    "value": 60.0,
+    "value": 60.2,
     "sports": {
       "mindfulness": 60.0
     }
@@ -7114,7 +7114,7 @@
   },
   {
     "day": "2025-12-19",
-    "value": 30.0,
+    "value": 30.1,
     "sports": {}
   },
   {
@@ -7126,49 +7126,49 @@
   },
   {
     "day": "2025-12-22",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 256.0
     }
   },
   {
     "day": "2025-12-23",
-    "value": 116.0,
+    "value": 116.3,
     "sports": {
       "skiing": 116.0
     }
   },
   {
     "day": "2025-12-24",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 167.0
     }
   },
   {
     "day": "2025-12-25",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 294.0
     }
   },
   {
     "day": "2025-12-26",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 280.0
     }
   },
   {
     "day": "2025-12-29",
-    "value": 62.0,
+    "value": 61.7,
     "sports": {
       "strength": 62.0
     }
   },
   {
     "day": "2025-12-31",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
@@ -7180,21 +7180,21 @@
   },
   {
     "day": "2026-01-02",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "mindfulness": 62.0
     }
   },
   {
     "day": "2026-01-03",
-    "value": 45.0,
+    "value": 44.9,
     "sports": {
       "running": 45.0
     }
   },
   {
     "day": "2026-01-04",
-    "value": 100.0,
+    "value": 100.2,
     "sports": {
       "cycling": 42.0,
       "running": 58.0
@@ -7202,14 +7202,14 @@
   },
   {
     "day": "2026-01-05",
-    "value": 66.0,
+    "value": 65.7,
     "sports": {
       "cycling": 66.0
     }
   },
   {
     "day": "2026-01-06",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 67.0,
       "mindfulness": 70.0
@@ -7217,40 +7217,40 @@
   },
   {
     "day": "2026-01-07",
-    "value": 56.0,
+    "value": 56.5,
     "sports": {
       "running": 56.0
     }
   },
   {
     "day": "2026-01-08",
-    "value": 60.0,
+    "value": 60.4,
     "sports": {}
   },
   {
     "day": "2026-01-10",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 239.0
     }
   },
   {
     "day": "2026-01-11",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 232.0
     }
   },
   {
     "day": "2026-01-12",
-    "value": 53.0,
+    "value": 52.7,
     "sports": {
       "running": 53.0
     }
   },
   {
     "day": "2026-01-14",
-    "value": 83.0,
+    "value": 82.9,
     "sports": {
       "strength": 53.0
     }
@@ -7264,59 +7264,59 @@
   },
   {
     "day": "2026-01-17",
-    "value": 50.0,
+    "value": 50.1,
     "sports": {
       "mindfulness": 50.0
     }
   },
   {
     "day": "2026-01-19",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {}
   },
   {
     "day": "2026-01-20",
-    "value": 34.0,
+    "value": 33.9,
     "sports": {
       "running": 34.0
     }
   },
   {
     "day": "2026-01-21",
-    "value": 76.0,
+    "value": 75.8,
     "sports": {
       "running": 76.0
     }
   },
   {
     "day": "2026-01-23",
-    "value": 40.0,
+    "value": 40.1,
     "sports": {}
   },
   {
     "day": "2026-01-24",
-    "value": 55.0,
+    "value": 54.6,
     "sports": {
       "running": 55.0
     }
   },
   {
     "day": "2026-01-25",
-    "value": 50.0,
+    "value": 50.4,
     "sports": {
       "strength": 50.0
     }
   },
   {
     "day": "2026-01-27",
-    "value": 60.0,
+    "value": 60.3,
     "sports": {
       "mindfulness": 60.0
     }
   },
   {
     "day": "2026-01-28",
-    "value": 92.0,
+    "value": 92.4,
     "sports": {
       "running": 92.0
     }
@@ -7330,7 +7330,7 @@
   },
   {
     "day": "2026-01-31",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "running": 63.0
     }
@@ -7344,33 +7344,33 @@
   },
   {
     "day": "2026-02-02",
-    "value": 43.0,
+    "value": 42.9,
     "sports": {}
   },
   {
     "day": "2026-02-03",
-    "value": 90.0,
+    "value": 90.2,
     "sports": {
       "mindfulness": 60.0
     }
   },
   {
     "day": "2026-02-04",
-    "value": 49.0,
+    "value": 48.6,
     "sports": {
       "running": 49.0
     }
   },
   {
     "day": "2026-02-06",
-    "value": 61.0,
+    "value": 60.7,
     "sports": {
       "strength": 61.0
     }
   },
   {
     "day": "2026-02-07",
-    "value": 108.0,
+    "value": 108.5,
     "sports": {
       "cycling": 11.0,
       "running": 97.0
@@ -7378,19 +7378,19 @@
   },
   {
     "day": "2026-02-09",
-    "value": 30.0,
+    "value": 30.1,
     "sports": {}
   },
   {
     "day": "2026-02-10",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "mindfulness": 60.0
     }
   },
   {
     "day": "2026-02-11",
-    "value": 105.0,
+    "value": 105.4,
     "sports": {
       "running": 105.0
     }
@@ -7405,14 +7405,14 @@
   },
   {
     "day": "2026-02-13",
-    "value": 55.0,
+    "value": 55.2,
     "sports": {
       "strength": 55.0
     }
   },
   {
     "day": "2026-02-14",
-    "value": 101.0,
+    "value": 100.9,
     "sports": {
       "cycling": 43.0,
       "running": 58.0
@@ -7420,75 +7420,75 @@
   },
   {
     "day": "2026-02-16",
-    "value": 50.0,
+    "value": 50.1,
     "sports": {
       "strength": 50.0
     }
   },
   {
     "day": "2026-02-19",
-    "value": 82.0,
+    "value": 82.3,
     "sports": {}
   },
   {
     "day": "2026-02-20",
-    "value": 54.0,
+    "value": 54.5,
     "sports": {
       "running": 54.0
     }
   },
   {
     "day": "2026-02-21",
-    "value": 60.0,
+    "value": 59.5,
     "sports": {
       "running": 60.0
     }
   },
   {
     "day": "2026-02-23",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 226.0
     }
   },
   {
     "day": "2026-02-24",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 193.0
     }
   },
   {
     "day": "2026-02-25",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 282.0
     }
   },
   {
     "day": "2026-02-26",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 284.0
     }
   },
   {
     "day": "2026-02-27",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 196.0
     }
   },
   {
     "day": "2026-03-04",
-    "value": 58.0,
+    "value": 57.9,
     "sports": {
       "running": 58.0
     }
   },
   {
     "day": "2026-03-06",
-    "value": 56.0,
+    "value": 55.5,
     "sports": {
       "strength": 56.0
     }
@@ -7509,7 +7509,7 @@
   },
   {
     "day": "2026-03-09",
-    "value": 62.0,
+    "value": 62.3,
     "sports": {
       "strength": 62.0
     }
@@ -7530,28 +7530,28 @@
   },
   {
     "day": "2026-03-14",
-    "value": 104.0,
+    "value": 104.5,
     "sports": {
       "cycling": 104.0
     }
   },
   {
     "day": "2026-03-15",
-    "value": 112.0,
+    "value": 112.4,
     "sports": {
       "running": 112.0
     }
   },
   {
     "day": "2026-03-16",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2026-03-18",
-    "value": 58.0,
+    "value": 57.5,
     "sports": {
       "running": 58.0
     }
@@ -7573,77 +7573,77 @@
   },
   {
     "day": "2026-03-22",
-    "value": 120.0,
+    "value": 119.8,
     "sports": {
       "running": 120.0
     }
   },
   {
     "day": "2026-03-23",
-    "value": 61.0,
+    "value": 60.7,
     "sports": {
       "strength": 61.0
     }
   },
   {
     "day": "2026-03-25",
-    "value": 57.0,
+    "value": 56.8,
     "sports": {
       "running": 57.0
     }
   },
   {
     "day": "2026-03-27",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "mindfulness": 60.0
     }
   },
   {
     "day": "2026-03-28",
-    "value": 38.0,
+    "value": 37.9,
     "sports": {
       "cycling": 38.0
     }
   },
   {
     "day": "2026-03-29",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "running": 133.0
     }
   },
   {
     "day": "2026-03-31",
-    "value": 51.0,
+    "value": 50.7,
     "sports": {
       "mindfulness": 51.0
     }
   },
   {
     "day": "2026-04-01",
-    "value": 58.0,
+    "value": 58.4,
     "sports": {
       "strength": 58.0
     }
   },
   {
     "day": "2026-04-02",
-    "value": 49.0,
+    "value": 48.9,
     "sports": {
       "running": 49.0
     }
   },
   {
     "day": "2026-04-04",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 271.0
     }
   },
   {
     "day": "2026-04-05",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "skiing": 278.0
     }
@@ -7657,40 +7657,40 @@
   },
   {
     "day": "2026-04-09",
-    "value": 40.0,
+    "value": 40.4,
     "sports": {
       "running": 40.0
     }
   },
   {
     "day": "2026-04-10",
-    "value": 37.0,
+    "value": 37.2,
     "sports": {
       "running": 37.0
     }
   },
   {
     "day": "2026-04-14",
-    "value": 41.0,
+    "value": 40.7,
     "sports": {
       "running": 41.0
     }
   },
   {
     "day": "2026-04-15",
-    "value": 80.0,
+    "value": 79.5,
     "sports": {}
   },
   {
     "day": "2026-04-19",
-    "value": 74.0,
+    "value": 74.2,
     "sports": {
       "running": 74.0
     }
   },
   {
     "day": "2026-04-20",
-    "value": 62.0,
+    "value": 61.5,
     "sports": {
       "cycling": 15.0,
       "mindfulness": 46.0
@@ -7698,7 +7698,7 @@
   },
   {
     "day": "2026-04-21",
-    "value": 92.0,
+    "value": 91.9,
     "sports": {
       "cycling": 31.0,
       "mindfulness": 61.0
@@ -7706,21 +7706,21 @@
   },
   {
     "day": "2026-04-22",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2026-04-23",
-    "value": 58.0,
+    "value": 57.8,
     "sports": {
       "running": 58.0
     }
   },
   {
     "day": "2026-04-25",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 53.0,
       "tennis": 86.0
@@ -7728,28 +7728,28 @@
   },
   {
     "day": "2026-04-26",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "running": 129.0
     }
   },
   {
     "day": "2026-04-29",
-    "value": 49.0,
+    "value": 49.3,
     "sports": {
       "running": 49.0
     }
   },
   {
     "day": "2026-04-30",
-    "value": 66.0,
+    "value": 65.6,
     "sports": {
       "strength": 66.0
     }
   },
   {
     "day": "2026-05-01",
-    "value": 89.0,
+    "value": 88.7,
     "sports": {
       "cycling": 29.0,
       "mindfulness": 60.0
@@ -7757,14 +7757,14 @@
   },
   {
     "day": "2026-05-02",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 142.0
     }
   },
   {
     "day": "2026-05-03",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "running": 162.0
     }
@@ -7779,28 +7779,28 @@
   },
   {
     "day": "2026-05-06",
-    "value": 45.0,
+    "value": 45.3,
     "sports": {
       "strength": 45.0
     }
   },
   {
     "day": "2026-05-07",
-    "value": 40.0,
+    "value": 40.5,
     "sports": {
       "running": 40.0
     }
   },
   {
     "day": "2026-05-08",
-    "value": 39.0,
+    "value": 38.7,
     "sports": {
       "cycling": 39.0
     }
   },
   {
     "day": "2026-05-09",
-    "value": 90.0,
+    "value": 89.5,
     "sports": {
       "cycling": 12.0,
       "tennis": 77.0
@@ -7808,7 +7808,7 @@
   },
   {
     "day": "2026-05-10",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 134.0,
       "running": 74.0
@@ -7816,35 +7816,35 @@
   },
   {
     "day": "2026-05-11",
-    "value": 50.0,
+    "value": 50.1,
     "sports": {
       "mindfulness": 50.0
     }
   },
   {
     "day": "2026-05-12",
-    "value": 70.0,
+    "value": 70.5,
     "sports": {
       "running": 70.0
     }
   },
   {
     "day": "2026-05-14",
-    "value": 59.0,
+    "value": 59.3,
     "sports": {
       "cycling": 59.0
     }
   },
   {
     "day": "2026-05-15",
-    "value": 60.0,
+    "value": 60.1,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2026-05-17",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "running": 147.0
     }
@@ -7859,42 +7859,42 @@
   },
   {
     "day": "2026-05-21",
-    "value": 52.0,
+    "value": 52.5,
     "sports": {
       "running": 52.0
     }
   },
   {
     "day": "2026-05-22",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {
       "strength": 45.0
     }
   },
   {
     "day": "2026-05-23",
-    "value": 109.0,
+    "value": 109.2,
     "sports": {
       "running": 109.0
     }
   },
   {
     "day": "2026-05-25",
-    "value": 106.0,
+    "value": 105.9,
     "sports": {
       "cycling": 106.0
     }
   },
   {
     "day": "2026-05-27",
-    "value": 41.0,
+    "value": 40.7,
     "sports": {
       "cycling": 41.0
     }
   },
   {
     "day": "2026-05-28",
-    "value": 42.0,
+    "value": 42.5,
     "sports": {
       "running": 42.0
     }
@@ -7908,14 +7908,14 @@
   },
   {
     "day": "2026-05-30",
-    "value": 84.0,
+    "value": 83.9,
     "sports": {
       "running": 84.0
     }
   },
   {
     "day": "2026-05-31",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 58.0,
       "tennis": 63.0
@@ -7923,14 +7923,14 @@
   },
   {
     "day": "2026-06-01",
-    "value": 103.0,
+    "value": 103.4,
     "sports": {
       "cycling": 103.0
     }
   },
   {
     "day": "2026-06-02",
-    "value": 88.0,
+    "value": 88.1,
     "sports": {
       "cycling": 28.0,
       "mindfulness": 60.0
@@ -7938,35 +7938,35 @@
   },
   {
     "day": "2026-06-03",
-    "value": 79.0,
+    "value": 79.4,
     "sports": {
       "cycling": 79.0
     }
   },
   {
     "day": "2026-06-04",
-    "value": 53.0,
+    "value": 53.2,
     "sports": {
       "running": 53.0
     }
   },
   {
     "day": "2026-06-05",
-    "value": 50.0,
+    "value": 50.1,
     "sports": {
       "strength": 50.0
     }
   },
   {
     "day": "2026-06-07",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "running": 162.0
     }
   },
   {
     "day": "2026-06-09",
-    "value": 90.0,
+    "value": 90.1,
     "sports": {
       "cycling": 27.0,
       "mindfulness": 64.0
@@ -7974,14 +7974,14 @@
   },
   {
     "day": "2026-06-11",
-    "value": 44.0,
+    "value": 44.1,
     "sports": {
       "running": 44.0
     }
   },
   {
     "day": "2026-06-12",
-    "value": 90.0,
+    "value": 90.4,
     "sports": {
       "cycling": 35.0,
       "strength": 56.0
@@ -7989,7 +7989,7 @@
   },
   {
     "day": "2026-06-13",
-    "value": 120.0,
+    "value": 120,
     "sports": {
       "cycling": 95.0,
       "tennis": 56.0
@@ -7997,7 +7997,7 @@
   },
   {
     "day": "2026-06-15",
-    "value": 89.0,
+    "value": 88.7,
     "sports": {
       "cycling": 29.0,
       "mindfulness": 60.0
@@ -8005,28 +8005,28 @@
   },
   {
     "day": "2026-06-16",
-    "value": 48.0,
+    "value": 47.6,
     "sports": {
       "running": 48.0
     }
   },
   {
     "day": "2026-06-18",
-    "value": 77.0,
+    "value": 76.9,
     "sports": {
       "running": 77.0
     }
   },
   {
     "day": "2026-06-19",
-    "value": 56.0,
+    "value": 55.5,
     "sports": {
       "strength": 56.0
     }
   },
   {
     "day": "2026-06-20",
-    "value": 70.0,
+    "value": 70.5,
     "sports": {
       "cycling": 12.0,
       "tennis": 58.0
@@ -8034,14 +8034,14 @@
   },
   {
     "day": "2026-06-21",
-    "value": 97.0,
+    "value": 97.4,
     "sports": {
       "cycling": 97.0
     }
   },
   {
     "day": "2026-06-22",
-    "value": 88.0,
+    "value": 87.5,
     "sports": {
       "cycling": 27.0,
       "mindfulness": 60.0
@@ -8049,7 +8049,7 @@
   },
   {
     "day": "2026-06-23",
-    "value": 78.0,
+    "value": 78.5,
     "sports": {
       "running": 47.0,
       "strength": 31.0
@@ -8064,47 +8064,47 @@
   },
   {
     "day": "2026-06-26",
-    "value": 46.0,
+    "value": 46.5,
     "sports": {
       "strength": 46.0
     }
   },
   {
     "day": "2026-06-27",
-    "value": 54.0,
+    "value": 53.5,
     "sports": {
       "running": 54.0
     }
   },
   {
     "day": "2026-06-28",
-    "value": 64.0,
+    "value": 63.8,
     "sports": {}
   },
   {
     "day": "2026-06-29",
-    "value": 41.0,
+    "value": 41.3,
     "sports": {
       "tennis": 41.0
     }
   },
   {
     "day": "2026-06-30",
-    "value": 70.0,
+    "value": 70.4,
     "sports": {
       "tennis": 70.0
     }
   },
   {
     "day": "2026-07-01",
-    "value": 61.0,
+    "value": 60.8,
     "sports": {
       "tennis": 61.0
     }
   },
   {
     "day": "2026-07-02",
-    "value": 36.0,
+    "value": 35.8,
     "sports": {}
   },
   {
@@ -8123,28 +8123,28 @@
   },
   {
     "day": "2026-07-05",
-    "value": 48.0,
+    "value": 47.5,
     "sports": {
       "running": 48.0
     }
   },
   {
     "day": "2026-07-07",
-    "value": 54.0,
+    "value": 53.5,
     "sports": {
       "running": 54.0
     }
   },
   {
     "day": "2026-07-08",
-    "value": 54.0,
+    "value": 53.6,
     "sports": {
       "strength": 54.0
     }
   },
   {
     "day": "2026-07-10",
-    "value": 111.0,
+    "value": 110.9,
     "sports": {
       "running": 78.0,
       "strength": 33.0
@@ -8152,7 +8152,7 @@
   },
   {
     "day": "2026-07-11",
-    "value": 91.0,
+    "value": 91.4,
     "sports": {
       "cycling": 32.0,
       "tennis": 59.0
@@ -8160,7 +8160,7 @@
   },
   {
     "day": "2026-07-12",
-    "value": 98.0,
+    "value": 98.3,
     "sports": {
       "cycling": 98.0
     }
@@ -8175,21 +8175,21 @@
   },
   {
     "day": "2026-07-14",
-    "value": 42.0,
+    "value": 42.2,
     "sports": {
       "running": 42.0
     }
   },
   {
     "day": "2026-07-15",
-    "value": 53.0,
+    "value": 52.8,
     "sports": {
       "strength": 53.0
     }
   },
   {
     "day": "2026-07-17",
-    "value": 45.0,
+    "value": 45.1,
     "sports": {
       "strength": 45.0
     }
@@ -8204,21 +8204,21 @@
   },
   {
     "day": "2026-07-19",
-    "value": 61.0,
+    "value": 60.8,
     "sports": {
       "running": 61.0
     }
   },
   {
     "day": "2026-07-20",
-    "value": 60.0,
+    "value": 60.5,
     "sports": {
       "strength": 60.0
     }
   },
   {
     "day": "2026-07-21",
-    "value": 88.0,
+    "value": 87.8,
     "sports": {
       "cycling": 28.0,
       "mindfulness": 60.0
@@ -8226,7 +8226,7 @@
   },
   {
     "day": "2026-07-22",
-    "value": 52.0,
+    "value": 51.7,
     "sports": {
       "running": 52.0
     }
@@ -8240,28 +8240,28 @@
   },
   {
     "day": "2026-07-25",
-    "value": 94.0,
+    "value": 94.5,
     "sports": {
       "cycling": 94.0
     }
   },
   {
     "day": "2026-07-26",
-    "value": 41.0,
+    "value": 41.1,
     "sports": {
       "running": 41.0
     }
   },
   {
     "day": "2026-07-27",
-    "value": 61.0,
+    "value": 61.4,
     "sports": {
       "strength": 61.0
     }
   },
   {
     "day": "2026-07-28",
-    "value": 91.0,
+    "value": 90.9,
     "sports": {
       "cycling": 31.0,
       "strength": 60.0
@@ -8269,7 +8269,7 @@
   },
   {
     "day": "2026-07-29",
-    "value": 106.0,
+    "value": 105.8,
     "sports": {
       "running": 49.0,
       "tennis": 57.0
@@ -8277,35 +8277,35 @@
   },
   {
     "day": "2026-07-30",
-    "value": 63.0,
+    "value": 63.1,
     "sports": {
       "cycling": 63.0
     }
   },
   {
     "day": "2026-07-31",
-    "value": 92.0,
+    "value": 92.1,
     "sports": {
       "running": 92.0
     }
   },
   {
     "day": "2026-08-01",
-    "value": 32.0,
+    "value": 32.2,
     "sports": {
       "strength": 32.0
     }
   },
   {
     "day": "2026-08-03",
-    "value": 48.0,
+    "value": 47.9,
     "sports": {
       "running": 48.0
     }
   },
   {
     "day": "2026-08-04",
-    "value": 89.0,
+    "value": 89.1,
     "sports": {
       "cycling": 29.0,
       "mindfulness": 60.0
@@ -8313,14 +8313,14 @@
   },
   {
     "day": "2026-08-05",
-    "value": 51.0,
+    "value": 51.1,
     "sports": {
       "strength": 51.0
     }
   },
   {
     "day": "2026-08-06",
-    "value": 88.0,
+    "value": 88.4,
     "sports": {
       "cycling": 31.0,
       "tennis": 57.0
@@ -8328,14 +8328,14 @@
   },
   {
     "day": "2026-08-08",
-    "value": 97.0,
+    "value": 97.4,
     "sports": {
       "running": 97.0
     }
   },
   {
     "day": "2026-08-09",
-    "value": 107.0,
+    "value": 106.9,
     "sports": {
       "cycling": 30.0,
       "tennis": 77.0
@@ -8343,17 +8343,432 @@
   },
   {
     "day": "2026-08-10",
-    "value": 53.0,
+    "value": 53.2,
     "sports": {
       "running": 53.0
     }
   },
   {
     "day": "2026-08-11",
-    "value": 86.0,
+    "value": 86.2,
     "sports": {
       "cycling": 27.0,
       "mindfulness": 59.0
+    }
+  },
+  {
+    "day": "2026-08-12",
+    "value": 95.6,
+    "sports": {
+      "tennis": 62.0,
+      "strength": 33.0
+    }
+  },
+  {
+    "day": "2026-08-14",
+    "value": 91.5,
+    "sports": {
+      "running": 92.0
+    }
+  },
+  {
+    "day": "2026-08-15",
+    "value": 53.9,
+    "sports": {
+      "strength": 54.0
+    }
+  },
+  {
+    "day": "2026-08-16",
+    "value": 44.9,
+    "sports": {
+      "cycling": 45.0
+    }
+  },
+  {
+    "day": "2026-08-17",
+    "value": 60.5,
+    "sports": {
+      "cycling": 12.0,
+      "mindfulness": 48.0
+    }
+  },
+  {
+    "day": "2026-08-18",
+    "value": 67.9,
+    "sports": {
+      "running": 68.0
+    }
+  },
+  {
+    "day": "2026-08-19",
+    "value": 50.7,
+    "sports": {
+      "strength": 51.0
+    }
+  },
+  {
+    "day": "2026-08-20",
+    "value": 57.1,
+    "sports": {
+      "cycling": 57.0
+    }
+  },
+  {
+    "day": "2026-08-21",
+    "value": 47.4,
+    "sports": {
+      "running": 47.0
+    }
+  },
+  {
+    "day": "2026-08-22",
+    "value": 69.0,
+    "sports": {
+      "cycling": 34.0,
+      "strength": 35.0
+    }
+  },
+  {
+    "day": "2026-08-23",
+    "value": 88.1,
+    "sports": {
+      "cycling": 34.0,
+      "tennis": 54.0
+    }
+  },
+  {
+    "day": "2026-08-24",
+    "value": 90.4,
+    "sports": {
+      "running": 47.0,
+      "strength": 43.0
+    }
+  },
+  {
+    "day": "2026-08-25",
+    "value": 89.2,
+    "sports": {
+      "cycling": 29.0,
+      "mindfulness": 60.0
+    }
+  },
+  {
+    "day": "2026-08-26",
+    "value": 93.2,
+    "sports": {
+      "tennis": 50.0,
+      "strength": 43.0
+    }
+  },
+  {
+    "day": "2026-08-27",
+    "value": 92.3,
+    "sports": {
+      "cycling": 92.0
+    }
+  },
+  {
+    "day": "2026-08-28",
+    "value": 63.3,
+    "sports": {
+      "cycling": 63.0
+    }
+  },
+  {
+    "day": "2026-08-29",
+    "value": 78.4,
+    "sports": {
+      "cycling": 16.0,
+      "tennis": 62.0
+    }
+  },
+  {
+    "day": "2026-08-30",
+    "value": 96.4,
+    "sports": {
+      "running": 96.0
+    }
+  },
+  {
+    "day": "2026-08-31",
+    "value": 50.5,
+    "sports": {
+      "strength": 50.0
+    }
+  },
+  {
+    "day": "2026-09-01",
+    "value": 108.6,
+    "sports": {
+      "running": 51.0,
+      "mindfulness": 58.0
+    }
+  },
+  {
+    "day": "2026-09-02",
+    "value": 117.3,
+    "sports": {
+      "tennis": 60.0,
+      "strength": 57.0
+    }
+  },
+  {
+    "day": "2026-09-04",
+    "value": 38.1,
+    "sports": {
+      "cycling": 38.0
+    }
+  },
+  {
+    "day": "2026-09-05",
+    "value": 98.3,
+    "sports": {
+      "running": 98.0
+    }
+  },
+  {
+    "day": "2026-09-06",
+    "value": 109.7,
+    "sports": {
+      "cycling": 50.0,
+      "tennis": 60.0
+    }
+  },
+  {
+    "day": "2026-09-08",
+    "value": 120,
+    "sports": {
+      "running": 42.0,
+      "strength": 35.0,
+      "mindfulness": 60.0
+    }
+  },
+  {
+    "day": "2026-09-09",
+    "value": 57.7,
+    "sports": {
+      "tennis": 58.0
+    }
+  },
+  {
+    "day": "2026-09-10",
+    "value": 94.7,
+    "sports": {
+      "running": 95.0
+    }
+  },
+  {
+    "day": "2026-09-11",
+    "value": 120,
+    "sports": {
+      "cycling": 79.0,
+      "strength": 48.0
+    }
+  },
+  {
+    "day": "2026-09-12",
+    "value": 109.0,
+    "sports": {
+      "cycling": 59.0,
+      "tennis": 50.0
+    }
+  },
+  {
+    "day": "2026-09-16",
+    "value": 42.2,
+    "sports": {
+      "running": 42.0
+    }
+  },
+  {
+    "day": "2026-09-20",
+    "value": 45.2,
+    "sports": {
+      "running": 45.0
+    }
+  },
+  {
+    "day": "2026-09-24",
+    "value": 97.2,
+    "sports": {
+      "running": 56.0,
+      "strength": 41.0
+    }
+  },
+  {
+    "day": "2026-09-25",
+    "value": 46.1,
+    "sports": {
+      "strength": 46.0
+    }
+  },
+  {
+    "day": "2026-09-26",
+    "value": 87.8,
+    "sports": {
+      "tennis": 88.0
+    }
+  },
+  {
+    "day": "2026-09-27",
+    "value": 120,
+    "sports": {
+      "cycling": 117.0,
+      "running": 79.0
+    }
+  },
+  {
+    "day": "2026-09-28",
+    "value": 101.1,
+    "sports": {
+      "cycling": 55.0,
+      "mindfulness": 46.0
+    }
+  },
+  {
+    "day": "2026-09-29",
+    "value": 120,
+    "sports": {
+      "cycling": 25.0,
+      "running": 48.0,
+      "mindfulness": 60.0
+    }
+  },
+  {
+    "day": "2026-09-30",
+    "value": 45.0,
+    "sports": {
+      "strength": 45.0
+    }
+  },
+  {
+    "day": "2026-10-01",
+    "value": 45.1,
+    "sports": {
+      "strength": 45.0
+    }
+  },
+  {
+    "day": "2026-10-02",
+    "value": 120,
+    "sports": {
+      "cycling": 117.0,
+      "running": 84.0
+    }
+  },
+  {
+    "day": "2026-10-03",
+    "value": 55.5,
+    "sports": {
+      "tennis": 56.0
+    }
+  },
+  {
+    "day": "2026-10-04",
+    "value": 29.2,
+    "sports": {
+      "tennis": 29.0
+    }
+  },
+  {
+    "day": "2026-10-05",
+    "value": 96.5,
+    "sports": {
+      "running": 50.0,
+      "strength": 46.0
+    }
+  },
+  {
+    "day": "2026-10-06",
+    "value": 85.1,
+    "sports": {
+      "cycling": 25.0,
+      "mindfulness": 60.0
+    }
+  },
+  {
+    "day": "2026-10-07",
+    "value": 96.0,
+    "sports": {
+      "tennis": 51.0,
+      "strength": 45.0
+    }
+  },
+  {
+    "day": "2026-10-09",
+    "value": 87.7,
+    "sports": {
+      "running": 88.0
+    }
+  },
+  {
+    "day": "2026-10-11",
+    "value": 69.1,
+    "sports": {
+      "cycling": 69.0
+    }
+  },
+  {
+    "day": "2026-10-12",
+    "value": 104.3,
+    "sports": {
+      "tennis": 58.0,
+      "strength": 46.0
+    }
+  },
+  {
+    "day": "2026-10-13",
+    "value": 94.0,
+    "sports": {
+      "running": 44.0,
+      "mindfulness": 50.0
+    }
+  },
+  {
+    "day": "2026-10-14",
+    "value": 120,
+    "sports": {
+      "tennis": 72.0,
+      "strength": 53.0
+    }
+  },
+  {
+    "day": "2026-10-16",
+    "value": 16.7,
+    "sports": {
+      "cycling": 17.0
+    }
+  },
+  {
+    "day": "2026-10-17",
+    "value": 120,
+    "sports": {
+      "running": 93.0,
+      "tennis": 71.0
+    }
+  },
+  {
+    "day": "2026-10-18",
+    "value": 120,
+    "sports": {
+      "cycling": 138.0
+    }
+  },
+  {
+    "day": "2026-10-19",
+    "value": 120,
+    "sports": {
+      "cycling": 20.0,
+      "strength": 43.0,
+      "mindfulness": 60.0
+    }
+  },
+  {
+    "day": "2026-10-20",
+    "value": 50.7,
+    "sports": {
+      "running": 51.0
     }
   }
 ]

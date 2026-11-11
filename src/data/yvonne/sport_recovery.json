@@ -1,0 +1,181 @@
+{
+  "sports": [
+    {
+      "id": "skiing",
+      "label": "Skiing",
+      "sessions": 57,
+      "offsets": {
+        "0": {
+          "mean": -11.0,
+          "n": 54
+        },
+        "1": {
+          "mean": -6.8,
+          "n": 54
+        },
+        "2": {
+          "mean": -4.2,
+          "n": 55
+        },
+        "3": {
+          "mean": -0.8,
+          "n": 56
+        }
+      },
+      "peak_day": 0,
+      "peak": -11.0
+    },
+    {
+      "id": "hiit",
+      "label": "HIIT",
+      "sessions": 38,
+      "offsets": {
+        "0": {
+          "mean": -3.9,
+          "n": 38
+        },
+        "1": {
+          "mean": 0.7,
+          "n": 38
+        },
+        "2": {
+          "mean": 2.5,
+          "n": 38
+        },
+        "3": {
+          "mean": 3.1,
+          "n": 38
+        }
+      },
+      "peak_day": 0,
+      "peak": -3.9
+    },
+    {
+      "id": "strength",
+      "label": "Strength",
+      "sessions": 250,
+      "offsets": {
+        "0": {
+          "mean": 0.2,
+          "n": 250
+        },
+        "1": {
+          "mean": 0.8,
+          "n": 250
+        },
+        "2": {
+          "mean": -0.2,
+          "n": 249
+        },
+        "3": {
+          "mean": 0.0,
+          "n": 248
+        }
+      },
+      "peak_day": 1,
+      "peak": 0.8
+    },
+    {
+      "id": "cycling",
+      "label": "Cycling",
+      "sessions": 403,
+      "offsets": {
+        "0": {
+          "mean": -0.9,
+          "n": 403
+        },
+        "1": {
+          "mean": 0.7,
+          "n": 401
+        },
+        "2": {
+          "mean": 1.2,
+          "n": 399
+        },
+        "3": {
+          "mean": 0.9,
+          "n": 398
+        }
+      },
+      "peak_day": 2,
+      "peak": 1.2
+    },
+    {
+      "id": "running",
+      "label": "Running",
+      "sessions": 313,
+      "offsets": {
+        "0": {
+          "mean": -0.5,
+          "n": 310
+        },
+        "1": {
+          "mean": 0.5,
+          "n": 310
+        },
+        "2": {
+          "mean": 1.3,
+          "n": 310
+        },
+        "3": {
+          "mean": 0.2,
+          "n": 309
+        }
+      },
+      "peak_day": 2,
+      "peak": 1.3
+    },
+    {
+      "id": "mindfulness",
+      "label": "Pilates / Yoga",
+      "sessions": 88,
+      "offsets": {
+        "0": {
+          "mean": 1.4,
+          "n": 88
+        },
+        "1": {
+          "mean": 0.5,
+          "n": 88
+        },
+        "2": {
+          "mean": 0.1,
+          "n": 87
+        },
+        "3": {
+          "mean": -0.9,
+          "n": 87
+        }
+      },
+      "peak_day": 0,
+      "peak": 1.4
+    },
+    {
+      "id": "tennis",
+      "label": "Tennis",
+      "sessions": 39,
+      "offsets": {
+        "0": {
+          "mean": -0.9,
+          "n": 39
+        },
+        "1": {
+          "mean": 1.9,
+          "n": 39
+        },
+        "2": {
+          "mean": 4.2,
+          "n": 39
+        },
+        "3": {
+          "mean": 1.4,
+          "n": 39
+        }
+      },
+      "peak_day": 2,
+      "peak": 4.2
+    }
+  ],
+  "last_date": "2026-10-20",
+  "note": "Average HRV change vs the previous 30 nights, on the day of a session and the three days after. Each bar shows the day the average moves furthest. Days with several sessions count once."
+}

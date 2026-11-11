@@ -33,7 +33,7 @@ export default function SleepRegularityChart({ data, height = 180, compact = fal
   if (!buckets.length) {
     return (
       <div style={{ height, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <span style={{ fontSize: 12, color: QUIET }}>Needs sleep_times.json's buckets array</span>
+        <span style={{ fontSize: 13, color: QUIET }}>Needs sleep_times.json's buckets array</span>
       </div>
     )
   }
@@ -73,7 +73,7 @@ export default function SleepRegularityChart({ data, height = 180, compact = fal
         style={{ cursor: 'crosshair', overflow: 'visible' }}
       >
         {/* Annotation above tallest bar */}
-        <text x={xCenter(tallestIdx)} y={margin.top - 8} textAnchor="middle" fill={BLUE} fontSize={11} fontWeight={600}>
+        <text x={xCenter(tallestIdx)} y={margin.top - 8} textAnchor="middle" fill={BLUE} fontSize={14} fontWeight={600}>
           {tallestPct}%
         </text>
 
@@ -115,7 +115,7 @@ export default function SleepRegularityChart({ data, height = 180, compact = fal
                 y={margin.top + plotH + 14}
                 textAnchor="middle"
                 fill={QUIET}
-                fontSize={9}
+                fontSize={13}
               >
                 {displayText}
               </text>
@@ -139,8 +139,8 @@ export default function SleepRegularityChart({ data, height = 180, compact = fal
             zIndex: 100, pointerEvents: 'none', minWidth: 90,
             boxShadow: '0 4px 16px rgba(0,0,0,0.4)',
           }}>
-            <p style={{ fontSize: 10, fontWeight: 600, color: TEXT, marginBottom: 2 }}>{tip.label}</p>
-            <p style={{ fontSize: 10, color: barColor(tip), margin: 0 }}>{tip.count} nights</p>
+            <p style={{ fontSize: 13, fontWeight: 600, color: TEXT, marginBottom: 2 }}>{tip.label}</p>
+            <p style={{ fontSize: 13, color: barColor(tip), margin: 0 }}>{tip.count} nights</p>
           </div>
         )
       })()}

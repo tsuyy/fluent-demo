@@ -43,19 +43,20 @@ export default function SleepArchitectureChart({ persona = 'yvonne', height = 20
   const hasGap = data.some(d => d.gap)
 
   return (
+    <div>
     <div style={{ height }}>
       <ResponsiveBar
-        data={data.filter(d => !d.gap)}
+        data={data}
         keys={['deep', 'rem', 'core', 'awake']}
         indexBy="night"
         groupMode="stacked"
-        margin={{ top: 8, right: 80, bottom: 28, left: 8 }}
+        margin={{ top: 8, right: 8, bottom: 28, left: 8 }}
         padding={0.25}
         colors={[
-          '#1a3a5c',      // deep — dark blue
+          '#3b6ea8',      // deep — mid blue (was too dark to see)
           '#27C48A',      // rem — teal
           '#0681fc',      // core — blue
-          '#E8834A',      // awake — amber
+          '#E8504A',      // awake
         ]}
         borderRadius={2}
         theme={CHART_THEME}
@@ -66,29 +67,12 @@ export default function SleepArchitectureChart({ persona = 'yvonne', height = 20
         }}
         enableLabel={false}
         enableGridY={false}
-        legends={[{
-          dataFrom: 'keys',
-          anchor: 'right',
-          direction: 'column',
-          itemWidth: 70,
-          itemHeight: 18,
-          itemTextColor: 'rgba(255,255,255,0.3)',
-          symbolSize: 8,
-          symbolShape: 'square',
-          translateX: 78,
-          data: [
-            { id: 'deep',  label: 'Deep',  color: '#1a3a5c'  },
-            { id: 'rem',   label: 'REM',   color: '#27C48A'  },
-            { id: 'core',  label: 'Core',  color: '#0681fc'  },
-            { id: 'awake', label: 'Awake', color: '#E8834A'  },
-          ],
-        }]}
         tooltip={({ id, value, indexValue }) => (
           <div style={{
             background: 'rgba(15,15,14,0.95)',
             border: '1px solid rgba(255,255,255,0.1)',
             borderRadius: 6, padding: '6px 10px',
-            fontSize: 11, color: '#fff',
+            fontSize: 13, color: '#fff',
           }}>
             <strong>{indexValue}</strong> · {id}
             <br />
@@ -100,15 +84,22 @@ export default function SleepArchitectureChart({ persona = 'yvonne', height = 20
         animate
         motionConfig="gentle"
       />
-      {hasGap && (
-        <p style={{
-          fontSize: 10,
-          color: 'rgba(255,255,255,0.2)',
-          marginTop: 4, textAlign: 'center',
-        }}>
-          Saturday reading missing — tracker not worn
-        </p>
-      )}
+    </div>
+
+      {/* Legend below the chart, like the other charts */}
+      <div style={{ display: 'flex', gap: '6px 16px', flexWrap: 'wrap', marginTop: 10 }}>
+        {[['Deep', '#3b6ea8'], ['REM', '#27C48A'], ['Core', '#0681fc'], ['Awake', '#E8504A']].map(([label, col]) => (
+          <div key={label} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            <div style={{ width: 10, height: 10, borderRadius: 2, background: col }} />
+            <span style={{ fontSize: 13, color: 'var(--color-quiet, #A3A29A)' }}>{label}</span>
+          </div>
+        ))}
+        {hasGap && (
+          <span style={{ fontSize: 13, color: 'var(--color-quiet, #A3A29A)' }}>
+            Saturday: no reading, tracker not worn
+          </span>
+        )}
+      </div>
     </div>
   )
 }

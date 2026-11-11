@@ -31,7 +31,7 @@ export default function Scene08Closing({ beat, isActive, onComplete, onRestart }
           color: TEXT,
           margin: 0,
         }}>
-          Four years of data can't tell you what kind of life you should live.
+          Nearly five years of data can't tell you what kind of life you should live.
         </p>
       </Beat>
 
@@ -108,7 +108,7 @@ export default function Scene08Closing({ beat, isActive, onComplete, onRestart }
               border: 'none',
               padding: '11px 0',
               color: QUIET,
-              fontSize: 13,
+              fontSize: 14,
               fontFamily: 'inherit',
               cursor: 'pointer',
               letterSpacing: '-0.01em',

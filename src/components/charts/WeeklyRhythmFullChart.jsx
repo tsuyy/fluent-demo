@@ -103,8 +103,8 @@ function buildSegments(data) {
 
 // X-axis ticks — only show Mon labels and S for Saturday
 function getTickLabel(value) {
-  if (value.includes('Mon')) return 'M'
-  if (value.includes('Sat')) return 'S'
+  if (value.includes('Mon')) return 'Mon'
+  if (value.includes('Sat')) return 'Sat'
   return ''
 }
 
@@ -123,39 +123,22 @@ export default function WeeklyRhythmFullChart({ height = 200, metric = 'RHR' }) 
     : { type: 'linear', min: 28, max: 46 }
 
   // Update baseline marker:
-  const baselineValue = metric === 'RHR' ? 70.5 : 37.2
+  const baselineValue = metric === 'RHR' ? 71.0 : 36.7   // mean of the readings shown
+  const unit = metric === 'RHR' ? 'bpm' : 'ms'
 
   // Update line color:
-  const lineColor = metric === 'RHR' ? '#E8504A' : '#0681fc'
+  const lineColor = '#0681fc'
 
   // Build nivo line series — one per segment so gaps show as breaks
   const lineData = segments.map((seg, i) => ({
     id: `segment-${i}`,
-    color: '#E8504A',
+    color: '#0681fc',
     data: seg,
   }))
 
   return (
+    <div>
     <div style={{ height, position: 'relative' }}>
-      {/* Gap legend */}
-      <div style={{
-        position: 'absolute', top: 4, right: 8,
-        display: 'flex', alignItems: 'center', gap: 6,
-        zIndex: 2,
-      }}>
-        <div style={{
-          width: 16, height: 1,
-          borderTop: '1px dashed rgba(255,255,255,0.2)',
-        }} />
-        <span style={{
-          fontSize: 9,
-          color: 'rgba(255,255,255,0.25)',
-          letterSpacing: '0.03em',
-        }}>
-          data gap
-        </span>
-      </div>
-
       <ResponsiveLine
         data={segments.map((seg, i) => ({
                 id: `segment-${i}`,
@@ -177,7 +160,7 @@ export default function WeeklyRhythmFullChart({ height = 200, metric = 'RHR' }) 
             background: 'rgba(15,15,14,0.95)',
             border: '1px solid rgba(255,255,255,0.1)',
             borderRadius: 6, padding: '6px 10px',
-            fontSize: 11, color: '#fff',
+            fontSize: 13, color: '#fff',
         }}>
             <strong>{point.data.xFormatted}</strong>
             <br />
@@ -192,8 +175,8 @@ export default function WeeklyRhythmFullChart({ height = 200, metric = 'RHR' }) 
         pointSymbol={({ x, y, size, datum }) => {
         const isMon = datum.x?.includes('Mon')
         const isSat = datum.x?.includes('Sat')
-        const fill   = isMon ? '#27C48A' : isSat ? '#E8834A' : '#0F0F0E'
-        const stroke = isMon ? '#27C48A' : isSat ? '#E8834A' : '#E8504A'
+        const fill   = isMon ? '#0681fc' : isSat ? '#0681fc' : '#0F0F0E'
+        const stroke = isMon ? '#0681fc' : isSat ? '#0681fc' : '#0681fc'
         const r      = (isMon || isSat) ? (size / 2) + 1 : size / 2
         return (
             <g>
@@ -206,7 +189,7 @@ export default function WeeklyRhythmFullChart({ height = 200, metric = 'RHR' }) 
         axisLeft={{
           tickSize: 0,
           tickPadding: 6,
-          tickValues: [66, 70, 74, 78],
+          tickValues: metric === 'RHR' ? [66, 70, 74, 78] : [30, 34, 38, 42, 46],
         }}
         axisBottom={{
           tickSize: 0,
@@ -226,12 +209,6 @@ export default function WeeklyRhythmFullChart({ height = 200, metric = 'RHR' }) 
               strokeWidth: 1,
               strokeDasharray: '4 4',
             },
-            legend: 'typical',
-            legendPosition: 'bottom-right',
-            textStyle: {
-              fill: 'rgba(255,255,255,0.25)',
-              fontSize: 9,
-            },
           },
           // Week dividers — subtle vertical lines
           ...WEEK_DIVIDERS.map(x => ({
@@ -245,13 +222,29 @@ export default function WeeklyRhythmFullChart({ height = 200, metric = 'RHR' }) 
             background: 'rgba(15,15,14,0.95)',
             border: '1px solid rgba(255,255,255,0.1)',
             borderRadius: 6, padding: '6px 10px',
-            fontSize: 11, color: '#fff',
+            fontSize: 13, color: '#fff',
           }}>
-            {point.data.xFormatted}: {point.data.y} bpm
+            {point.data.xFormatted}: {point.data.y} {unit}
           </div>
         )}
         animate={false}
       />
+    </div>
+
+      {/* Legend below the chart */}
+      <div style={{ display: 'flex', gap: '8px 18px', flexWrap: 'wrap', marginTop: 10 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+          <svg width="22" height="10"><line x1="0" y1="5" x2="22" y2="5" stroke="#0681fc" strokeWidth="2" /><circle cx="11" cy="5" r="3.5" fill="#0681fc" /></svg>
+          <span style={{ fontSize: 13, color: 'var(--color-quiet, #A3A29A)' }}>{metric === 'RHR' ? 'Resting heart rate' : 'HRV'}, daily · larger dots are Mondays and Saturdays</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+          <svg width="22" height="10"><line x1="0" y1="5" x2="22" y2="5" stroke="rgba(255,255,255,0.45)" strokeWidth="1.5" strokeDasharray="4 3" /></svg>
+          <span style={{ fontSize: 13, color: 'var(--color-quiet, #A3A29A)' }}>Typical for these 8 weeks ({baselineValue} {unit})</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+          <span style={{ fontSize: 13, color: 'var(--color-quiet, #A3A29A)' }}>A break in the line means the tracker wasn't worn.</span>
+        </div>
+      </div>
     </div>
   )
 }

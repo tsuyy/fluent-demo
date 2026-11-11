@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import FloatingNav from '../components/nav/FloatingNav'
+import { useIsNarrow } from '../components/scrolly/useIsNarrow'
 import { motion, AnimatePresence } from 'framer-motion'
 import WeeklyRhythmFullChart from '../components/charts/WeeklyRhythmFullChart'
 import SleepHRVChart         from '../components/charts/SleepHRVChart'
@@ -28,68 +30,65 @@ const SEQUENCES = {
 const CARDS = {
   monday: {
     persona: 'jamie',
-    headline: 'Your Mondays are actually your best days',
-    subtitle: 'Your weekends seem to be costing you more than your work week does — the opposite of what you might expect.',
-    observation: 'Your resting heart rate is consistently lower on Mondays than any other day — lower than Friday, lower than Saturday and Sunday. This pattern has shown up in 7 of the last 8 weeks.',
-    interpretation: 'A lower resting heart rate on Monday typically means your body recovered well by the end of the weekend — but it can also mean your weekend stress or disrupted sleep resolved by Sunday night rather than accumulating into Monday.',
-    dataNote: "Based on 8 weeks of available data. Some weekend readings are missing where her tracker wasn't worn.",
+    headline: 'Your resting heart rate is lowest on Mondays',
+    subtitle: 'About 68 bpm on Mondays, the lowest day of the week, and about 75 bpm on Saturdays, the highest.',
+    observation: 'Over the last 8 weeks, Monday had your lowest resting heart rate in every week, averaging 68 bpm. Saturday was highest at about 75 bpm, based on the 5 weeks with a Saturday reading.',
+    interpretation: "One reading: whatever raises your heart rate over the weekend has settled by Monday morning. Resting heart rate also moves with sleep, alcohol, stress and illness, so this shows when it runs high or low, not why.",
+    dataNote: "8 weeks, 46 of 56 days with a reading. Weekends have the most gaps, where your tracker wasn't worn. Exploratory: one person.",
     question: 'Does this match how your Mondays typically feel?',
     questionType: 'felt',
-    chips: ['Yes', 'Not really', 'Skip'],
+    chips: ['Yes', 'Not really', "I don't remember"],
     contextQuestion: 'Anything come to mind about your weekends?',
     contextChips: ['Late night', 'Social', 'Alcohol', 'Travel', 'Stress', 'Busy weekend', 'Other', 'Skip'],
-    acknowledgment: 'Worth knowing either way — your weekends are likely setting your Mondays, not the other way around.',
+    acknowledgment: 'Thanks. If you add what happened on a few weekends, Fluent can check over time whether they shape your Mondays.',
     chart: 'weekly_rhythm',
   },
  
   sleep_hrv: {
     persona: 'jamie',
-    headline: 'Your sleep looked fine — your HRV says otherwise',
-    subtitle: 'Some weeks your sleep tracked normally, but your HRV tells a different story.',
-    observation: "Last week your sleep tracked normally — around 7 hours, reasonable deep and REM stages recorded. But your HRV the following mornings was below your baseline.",
-    interpretation: "These two signals don't always agree. When they don't, the mismatch often explains weeks that feel harder than they should — your nervous system may not have recovered even when your sleep duration looked fine.",
-    dataNote: 'Based on weeks where both sleep and HRV were tracked overnight.',
-    question: null,
-    questionType: null,
-    chips: [],
-    contextQuestion: null,
-    contextChips: [],
-    acknowledgment: null,
+    headline: 'Sleep looked normal, but HRV was low the next morning',
+    subtitle: 'On 4 nights, sleep efficiency was typical and the next morning\'s HRV was about 7 ms below your usual.',
+    observation: "On 4 nights (Nov 8, Dec 2, Feb 13 and Feb 14), sleep efficiency was 87–91%, close to your usual 87%. The next morning's HRV was 29–31 ms, about 7 ms below your usual 37 ms.",
+    interpretation: "One reading: sleep efficiency measures how much of the night you spent asleep, not how well your body recovered, so the two can disagree. HRV can also run lower after alcohol, illness or a late meal. Fluent can't tell which applied on these nights.",
+    dataNote: '4 mismatch nights out of 16 nights with both sleep and HRV tracked. Exploratory: one person.',
+    question: 'Do you remember how those mornings felt?',
+    questionType: 'felt',
+    chips: ["I don't remember", 'Nothing unusual', 'Tired', 'Restless', 'Felt fine'],
+    contextQuestion: 'Anything that might explain those nights?',
+    contextChips: ['Late night', 'Alcohol', 'Stress', 'Illness', 'Travel', 'Other', 'Skip'],
+    acknowledgment: 'Thanks. Adding what was going on lets Fluent compare these nights with future ones.',
     chart: 'sleep_hrv_quadrant',
   },
  
   illness_arc: {
     persona: 'yvonne',
-    headline: 'Two signals. Twelve days before you felt it.',
-    subtitle: "Your body was already working on something — the data just couldn't tell you yet.",
-    observation: "In early February, two sensors deviated from your personal baseline within the same three-day window. February 11th: HRV dropped 10ms below baseline. Wrist temperature elevated above threshold. Neither alone would stand out — together they form a pattern Fluent looks for. February 12th: HRV −16ms, wrist temperature +1.55°. The signal strengthened. Then it appeared to resolve — HRV recovered, wrist temperature returned to baseline, February 14th through 18th looked normal. February 20th: resting heart rate spiked 18 bpm above baseline, HRV dropped again. February 23rd was the peak — RHR +33 bpm, HRV at near personal low.",
-    interpretation: "This sequence — two signals converging, apparent recovery, then a harder second wave — is consistent with an immune response that began before symptoms appeared. The body often starts working on something 10–14 days before you feel it. The wrist temperature elevation on February 11th may reflect that early activation. The apparent recovery in between was real — your body was managing it. The second wave wasn't. This is not a diagnosis. It's a pattern. Whether it matches what you experienced is something only you can add.",
-    dataNote: 'HRV −10ms · Wrist temp +1.09° · Feb 11  |  RHR +33 · HRV −28.6ms · Feb 23',
-    question: 'Does this match what you remember about that period?',
+    headline: 'Elevated wrist temperature and HRV drop, Feb 11–12',
+    subtitle: "Fluent can show the change. You know what was going on.",
+    observation: "On Feb 11–12, two nights in a row, your wrist temperature ran above baseline: +1.0° and +1.5°. HRV was 11–17 ms lower. Resting heart rate didn't move.",
+    observationNote: 'Wrist temperature: how warm your skin runs while you sleep. HRV: how much the timing between heartbeats varies. Lower HRV can be associated with strain, poor sleep, or illness.',
+    interpretation: "You did a 60-minute hot class on Feb 10 and ran 9 miles on Feb 11. After a hot class and a run the next day, your wrist temperature was usually near baseline (median about +0.2°, 8 other occasions). The night after your Feb 11 run it was about +1.5° above. The HRV dip fits your first two runs over 8 miles, four days apart. For comparison, you had a fever on Feb 24–25, when HRV averaged about 30 ms below baseline. The Feb 11–12 change was smaller and came almost two weeks earlier. Whether it meant anything is untested.",
+    interpretationNote: 'Baseline = mean of the previous 30 nights, excluding the night scored. Exploratory, one person, data through Oct 2026.',
+    dataNote: 'Wrist temp +1.0°C, +1.5°C · HRV −10 to −17 ms · RHR unchanged · Feb 11–12  |  Fever window: HRV avg −29.7 ms · Feb 24–25',
+    question: "Looking back at Feb 11–12, changes like these can occur alongside feeling run down, restless sleep, or feeling unusually warm. You may not have noticed anything. How did those days feel?",
     questionType: 'felt',
     chips: [
-      'I was traveling',
-      'I felt off but pushed through',
-      'I had no idea until I got sick',
-      'I was around sick people',
-      'Something else',
-      'Skip',
+      "I don't remember",
+      'Nothing unusual',
+      'Run down',
+      'Restless sleep',
+      'Warm at night',
+      'Body aches',
     ],
-    contextQuestion: null,
-    contextChips: [],
-    // Optional freetext — appears after any non-Skip chip is chosen.
-    // General-purpose field: any Flow 2 card can opt into this by
-    // setting freetextPrompt; cards that don't set it get no field.
-    freetextPrompt: {
-      label: 'Anything specific worth adding?',
-      placeholder: 'e.g. a trip, a hard week...',
-    },
-    acknowledgment: "That's worth knowing either way — this is one of the stronger early-warning patterns in your data.",
+    contextQuestion: 'Anything else going on around then? Add context in your own words or pick from the suggestions. Fluent saves it to Moments for future comparisons.',
+    contextChips: ['Late night', 'Alcohol', 'Travel', 'Felt off', 'Around sick people', 'Enter something else', 'Skip'],
+    acknowledgment: "Saved to Moments. When a similar pattern shows up again, Fluent will show this note beside it, so you can compare.",
     acknowledgmentOverrides: {
-      'I was traveling': "Travel adds load the data can't fully see — disrupted sleep, different rhythms, more exposure. That context changes how this signal reads.",
-      'I felt off but pushed through': "That's worth knowing. The data was showing strain before you registered it consciously. What you did with the information you had was reasonable — you didn't have this view.",
-      'I had no idea until I got sick': "That's the most common response. The signals were there — HRV, wrist temperature — but without something connecting them to how you felt, they were invisible.",
-      'I was around sick people': "That tracks with the timing. The February 11th signal appearing 12 days before peak is consistent with initial exposure. Your body registered contact before symptoms did.",
+      "I don't remember": "That's common; recall fades. Saved to Moments as unrecorded. Next time, Fluent can ask sooner.",
+      'Nothing unusual': "Noted. Changes like this can pass without being felt. Saved to Moments.",
+      'Run down': "Noted. Saved to Moments, so it can be compared with similar readings later.",
+      'Restless sleep': "Noted. Saved to Moments, so it can be compared with similar readings later.",
+      'Warm at night': "Noted. Saved to Moments, so it can be compared with similar readings later.",
+      'Body aches': "Noted. Saved to Moments, so it can be compared with similar readings later.",
     },
     chart: 'illness_arc',
   },
@@ -99,9 +98,9 @@ const CARDS = {
     persona: 'yvonne',
     headline: "Alcohol-free experiment · Jul 6\u201320",
     subtitle: "Here's what your data showed.",
-    observation: "In July 2026, you went alcohol-free for fourteen days. Training, sleep schedule, and diet stayed the same. Fluent tracked the period as it unfolded. Your HRV rose 10.8ms within the first week — a 24% increase above your two-week baseline before the experiment. Deep sleep added nearly 13 minutes per night on average. Respiratory rate dropped slightly. Your resting heart rate barely changed — +0.4 bpm, effectively flat. Your nervous system regulation changed significantly. These are different signals, and alcohol appears to affect one more than the other.",
-    interpretation: "HRV reflects parasympathetic nervous system regulation — the system's ability to recover and adapt. RHR reflects baseline cardiovascular demand. Alcohol suppresses HRV more than it elevates RHR. Your data shows this distinction clearly. After the experiment ended, the days you didn't drink held close to the experiment levels — HRV averaging 53ms, +7.6ms above where you started. The days you did drink averaged 44.7ms, back near baseline. The same pattern playing out in real time, after the experiment was over.",
-    dataNote: 'HRV +10.8ms (+24%) · Deep sleep +13min · RHR unchanged (+0.4bpm) · Jul 6–20 2026  |  Clean after days: HRV 53.1ms (n=14) · Substance days: HRV 44.7ms (n=8)',
+    observation: "In July 2026, you went alcohol-free for fourteen days. Training, sleep schedule, and diet stayed the same. Fluent tracked the period as it unfolded. Your HRV averaged 10.7ms higher than in the 30 nights before the experiment, a 23% increase. Deep sleep added about 9.5 minutes per night on average. Respiratory rate dropped slightly. Your resting heart rate fell about 2 bpm, a much smaller change in proportion (4%). Your nervous system regulation changed significantly. These are different signals, and alcohol appears to affect one more than the other.",
+    interpretation: "HRV reflects parasympathetic nervous system regulation — the system's ability to recover and adapt. RHR reflects baseline cardiovascular demand. On the nights after drinking, your HRV was lower while your resting heart rate did not rise. After the experiment ended, the days you didn't drink stayed above the starting level — HRV averaging 51ms, about 6ms above the 30 nights before the experiment. The nights after drinking or smoking averaged 47.5ms over the same weeks, about 4ms lower. A small gap on 7 nights, and I'd treat it as a hint.",
+    dataNote: 'HRV +10.7ms (+23%) vs the 30 nights before (Jun 6–Jul 5) · Deep sleep +9.5min · RHR −2.2bpm · Jul 6–20 2026  |  Other nights, Jul 21–Aug 11: HRV 51.3ms (n=15) · Nights after substance use: HRV 47.5ms (n=7)',
     question: 'Did this match what you noticed during that period?',
     questionType: 'felt',
     chips: [
@@ -113,7 +112,7 @@ const CARDS = {
     ],
     contextQuestion: 'What did you notice?',
     contextChips: ['Slept better', 'More energy', 'Felt clearer', 'Less anxious', 'Nothing obvious', 'Something else'],
-    acknowledgment: "The body often shifts before the felt experience catches up — or the changes are gradual enough to be invisible day to day. The data can sometimes see what daily life makes hard to notice. Your heart rate barely moved. Your nervous system regulation did. That distinction is worth knowing.",
+    acknowledgment: "The body often shifts before the felt experience catches up — or the changes are gradual enough to be invisible day to day. The data can sometimes see what daily life makes hard to notice. Your resting heart rate moved about 2 bpm. Your nervous system regulation moved far more. That distinction is worth knowing.",
     chart: 'sober_experiment',
   },
  
@@ -187,7 +186,7 @@ function Flow2Chart({ type, metric }) {
   if (!type) return null
   if (type === 'weekly_rhythm')     return <WeeklyRhythmFullChart height={200} metric={metric} />
   if (type === 'sleep_hrv_quadrant') return <SleepHRVChart height={200} />
-  if (type === 'illness_arc')      return <IllnessArcChart data={illnessArcData} height={220} />
+  if (type === 'illness_arc')      return <IllnessArcChart data={illnessArcData} height={300} />
   if (type === 'sober_experiment') return <SoberExperimentChart data={soberData} height={240} />
   if (type === 'retirement_arc')     return <RetirementArcChart height={180} />
   if (type === 'seasonal_steps')     return <SeasonalStepsChart height={180} />
@@ -203,8 +202,8 @@ function Flow2Chart({ type, metric }) {
         >
           <div style={{ width: 8, height: 8, borderRadius: '50%', background: layer.color, flexShrink: 0 }} />
           <div>
-            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)' }}>{layer.label}</p>
-            <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.25)' }}>{layer.desc}</p>
+            <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)' }}>{layer.label}</p>
+            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.52)' }}>{layer.desc}</p>
           </div>
         </motion.div>
       ))}
@@ -216,7 +215,7 @@ function Flow2Chart({ type, metric }) {
 const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex' }
  
 const GRADIENTS = {
-  jamie:  'radial-gradient(ellipse at 20% 80%, rgba(180,60,60,0.2) 0%, transparent 60%)',
+  jamie:  'radial-gradient(ellipse at 20% 80%, rgba(196,80,232,0.2) 0%, transparent 60%)',
   yvonne: 'radial-gradient(ellipse at 70% 30%, rgba(6,129,252,0.15) 0%, rgba(39,196,138,0.08) 40%, transparent 65%)',
   robert: 'radial-gradient(ellipse at 20% 60%, rgba(39,196,138,0.15) 0%, transparent 55%)',
   alex:   'radial-gradient(ellipse at 60% 40%, rgba(39,196,138,0.1) 0%, transparent 55%)',
@@ -224,6 +223,7 @@ const GRADIENTS = {
  
 // ── Main component ─────────────────────────────────────────────────────────────
 export default function Flow2Screen({ cardId, persona, onBack, onNavigate }) {
+  const narrow = useIsNarrow()
   const [step,         setStep]         = useState('chart')
   const [feltAnswer,   setFeltAnswer]   = useState(null)
   const [contextChips, setContextChips] = useState([])
@@ -309,7 +309,7 @@ function handleFelt(chip) {
               {content.chart === 'weekly_rhythm' && (
                 <div style={{ display: 'flex', gap: 8, marginBottom: 12 }}>
                   {['RHR', 'HRV'].map(m => (
-                    <span key={m} onClick={() => setMetric(m)} style={{ background: metric === m ? 'var(--color-accent)' : 'rgba(255,255,255,0.08)', borderRadius: 20, padding: '4px 12px', fontSize: 12, fontWeight: 500, cursor: 'pointer', color: metric === m ? '#fff' : 'var(--color-text-secondary)', transition: 'all 0.2s' }}>{m}</span>
+                    <span key={m} onClick={() => setMetric(m)} style={{ background: metric === m ? 'var(--color-accent)' : 'rgba(255,255,255,0.08)', borderRadius: 20, padding: '4px 12px', fontSize: 13, fontWeight: 500, cursor: 'pointer', color: metric === m ? '#fff' : 'var(--color-text-secondary)', transition: 'all 0.2s' }}>{m}</span>
                   ))}
                 </div>
               )}
@@ -319,7 +319,7 @@ function handleFelt(chip) {
  
           {/* Data note */}
           {content.dataNote && (
-            <p style={{ color: 'var(--color-text-tertiary)', fontSize: 12, marginBottom: 28, lineHeight: 1.5, paddingLeft: 4 }}>
+            <p style={{ color: 'var(--color-text-tertiary)', fontSize: 13, marginBottom: 28, lineHeight: 1.5, paddingLeft: 4 }}>
               {content.dataNote}
             </p>
           )}
@@ -328,14 +328,28 @@ function handleFelt(chip) {
           <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
             style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: 24, marginBottom: 16, display: 'flex', flexDirection: 'column', gap: 16 }}>
             {content.observation && (
-              <p style={{ fontSize: 16, lineHeight: 1.7, margin: 0 }}>
-                {content.observation}
-              </p>
+              <div>
+                <p style={{ fontSize: 16, lineHeight: 1.7, margin: 0 }}>
+                  {content.observation}
+                </p>
+                {content.observationNote && (
+                  <p style={{ fontSize: 13, lineHeight: 1.5, fontStyle: 'italic', color: 'var(--color-text-tertiary)', margin: '8px 0 0' }}>
+                    {content.observationNote}
+                  </p>
+                )}
+              </div>
             )}
             {content.interpretation && (
-              <p style={{ fontSize: 15, lineHeight: 1.7, color: 'var(--color-text-secondary)', margin: 0, paddingLeft: 16, borderLeft: '2px solid rgba(255,255,255,0.1)' }}>
-                {content.interpretation}
-              </p>
+              <div style={{ paddingLeft: 16, borderLeft: '2px solid rgba(255,255,255,0.1)' }}>
+                <p style={{ fontSize: 15, lineHeight: 1.7, color: 'var(--color-text-secondary)', margin: 0 }}>
+                  {content.interpretation}
+                </p>
+                {content.interpretationNote && (
+                  <p style={{ fontSize: 13, lineHeight: 1.5, color: 'var(--color-text-tertiary)', margin: '8px 0 0' }}>
+                    {content.interpretationNote}
+                  </p>
+                )}
+              </div>
             )}
           </motion.div>
  
@@ -344,6 +358,9 @@ function handleFelt(chip) {
             <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}
               style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: 24 }}>
               <p style={{ fontSize: 15, marginBottom: 16, lineHeight: 1.5 }}>{content.question}</p>
+              {content.designNote && (
+                <p style={{ fontSize: 13, lineHeight: 1.5, color: 'var(--color-text-tertiary)', margin: '-8px 0 16px' }}>{content.designNote}</p>
+              )}
  
               {/* FELT — single select */}
               {content.questionType === 'felt' && (
@@ -351,7 +368,7 @@ function handleFelt(chip) {
                   {content.chips.map(chip => (
                     <motion.span key={chip} whileHover={{ scale: step === 'ack' ? 1 : 1.02 }}
                       onClick={() => { if (step !== 'ack') handleFelt(chip) }}
-                      style={{ background: feltAnswer === chip ? 'rgba(6,129,252,0.15)' : 'rgba(255,255,255,0.08)', border: feltAnswer === chip ? '1px solid rgba(6,129,252,0.4)' : '1px solid rgba(255,255,255,0.1)', borderRadius: 20, padding: '8px 16px', fontSize: 13, cursor: step === 'ack' ? 'default' : 'pointer', color: feltAnswer === chip ? '#0681fc' : 'var(--color-text-secondary)', opacity: step === 'ack' && feltAnswer !== chip ? 0.4 : 1, pointerEvents: step === 'ack' ? 'none' : 'auto', transition: 'all 0.15s' }}>
+                      style={{ background: feltAnswer === chip ? 'rgba(6,129,252,0.15)' : 'rgba(255,255,255,0.08)', border: feltAnswer === chip ? '1px solid rgba(6,129,252,0.4)' : '1px solid rgba(255,255,255,0.1)', borderRadius: 20, padding: '8px 16px', fontSize: 14, cursor: step === 'ack' ? 'default' : 'pointer', color: feltAnswer === chip ? '#0681fc' : 'var(--color-text-secondary)', opacity: step === 'ack' && feltAnswer !== chip ? 0.4 : 1, pointerEvents: step === 'ack' ? 'none' : 'auto', transition: 'all 0.15s' }}>
                       {chip}
                     </motion.span>
                   ))}
@@ -365,14 +382,14 @@ function handleFelt(chip) {
                     {content.chips.map(chip => (
                       <motion.span key={chip} whileHover={{ scale: 1.02 }}
                         onClick={() => { if (step === 'ack') return; setContextChips(prev => prev.includes(chip) ? prev.filter(c => c !== chip) : [...prev, chip]); if (step !== 'ack') setStep('context') }}
-                        style={{ background: contextChips.includes(chip) ? 'rgba(39,196,138,0.15)' : 'rgba(255,255,255,0.06)', border: contextChips.includes(chip) ? '1px solid rgba(39,196,138,0.4)' : '1px solid rgba(255,255,255,0.08)', borderRadius: 20, padding: '8px 16px', fontSize: 13, cursor: 'pointer', color: contextChips.includes(chip) ? '#27C48A' : 'var(--color-text-secondary)', transition: 'all 0.15s' }}>
+                        style={{ background: contextChips.includes(chip) ? 'rgba(39,196,138,0.15)' : 'rgba(255,255,255,0.06)', border: contextChips.includes(chip) ? '1px solid rgba(39,196,138,0.4)' : '1px solid rgba(255,255,255,0.08)', borderRadius: 20, padding: '8px 16px', fontSize: 14, cursor: 'pointer', color: contextChips.includes(chip) ? '#27C48A' : 'var(--color-text-secondary)', transition: 'all 0.15s' }}>
                         {chip}
                       </motion.span>
                     ))}
                   </div>
                   {contextChips.length > 0 && step !== 'ack' && (
                     <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} onClick={() => setStep('ack')}
-                      style={{ fontSize: 13, color: 'var(--color-text-secondary)', cursor: 'pointer', display: 'block', marginTop: 4, textDecoration: 'underline', textDecorationColor: 'rgba(255,255,255,0.2)' }}>
+                      style={{ fontSize: 14, color: 'var(--color-text-secondary)', cursor: 'pointer', display: 'block', marginTop: 4, textDecoration: 'underline', textDecorationColor: 'rgba(255,255,255,0.2)' }}>
                       done →
                     </motion.span>
                   )}
@@ -387,14 +404,14 @@ function handleFelt(chip) {
                     <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 12 }}>
                       {content.contextChips.map(chip => (
                         <motion.span key={chip} whileHover={{ scale: 1.02 }} onClick={() => toggleContext(chip)}
-                          style={{ background: contextChips.includes(chip) ? 'rgba(39,196,138,0.15)' : 'rgba(255,255,255,0.06)', border: contextChips.includes(chip) ? '1px solid rgba(39,196,138,0.4)' : '1px solid rgba(255,255,255,0.08)', borderRadius: 20, padding: '6px 14px', fontSize: 12, cursor: 'pointer', color: contextChips.includes(chip) ? '#27C48A' : 'var(--color-text-tertiary)', transition: 'all 0.15s' }}>
+                          style={{ background: contextChips.includes(chip) ? 'rgba(39,196,138,0.15)' : 'rgba(255,255,255,0.06)', border: contextChips.includes(chip) ? '1px solid rgba(39,196,138,0.4)' : '1px solid rgba(255,255,255,0.08)', borderRadius: 20, padding: '6px 14px', fontSize: 13, cursor: 'pointer', color: contextChips.includes(chip) ? '#27C48A' : 'var(--color-text-tertiary)', transition: 'all 0.15s' }}>
                           {chip}
                         </motion.span>
                       ))}
                     </div>
                     {contextChips.length > 0 && (
                       <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} onClick={() => setStep('ack')}
-                        style={{ fontSize: 13, color: 'var(--color-text-secondary)', cursor: 'pointer', textDecoration: 'underline', textDecorationColor: 'rgba(255,255,255,0.2)' }}>
+                        style={{ fontSize: 14, color: 'var(--color-text-secondary)', cursor: 'pointer', textDecoration: 'underline', textDecorationColor: 'rgba(255,255,255,0.2)' }}>
                         done →
                       </motion.span>
                     )}
@@ -412,12 +429,12 @@ function handleFelt(chip) {
                     {cardId === 'rhr_shift' && contextChips.length > 0 && (
                       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}
                         onClick={() => onNavigate('moments')}
-                        style={{ fontSize: 13, color: 'var(--color-accent)', marginTop: 8, cursor: 'pointer' }}>
+                        style={{ fontSize: 14, color: 'var(--color-accent)', marginTop: 8, cursor: 'pointer' }}>
                         See it in your timeline →
                       </motion.p>
                     )}
                     {(contextChips.length > 0 || feltAnswer) && (
-                      <p style={{ fontSize: 12, color: 'var(--color-recovery)', marginTop: 8 }}>✓ saved</p>
+                      <p style={{ fontSize: 13, color: 'var(--color-recovery)', marginTop: 8 }}>✓ saved</p>
                     )}
                   </motion.div>
                 )}
@@ -428,7 +445,7 @@ function handleFelt(chip) {
       </div>
  
       {/* Bottom nav */}
-      <div style={{ position: 'fixed', bottom: 32, left: 48, right: 48, display: 'flex', justifyContent: 'space-between', alignItems: 'center', zIndex: 100 }}>
+      <div style={{ position: 'fixed', bottom: narrow ? 88 : 32, left: 48, right: 48, display: 'flex', justifyContent: 'space-between', alignItems: 'center', zIndex: 100 }}>
         <motion.span whileHover={{ opacity: 0.7 }} onClick={onBack}
           style={{ color: 'var(--color-text-tertiary)', fontSize: 14, cursor: 'pointer' }}>
           ←
@@ -441,6 +458,7 @@ function handleFelt(chip) {
           </motion.span>
         )}
       </div>
+      <FloatingNav active="noticed" onNavigate={onNavigate} />
     </div>
   )
 }

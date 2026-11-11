@@ -1,0 +1,59 @@
+{
+ "note": "Nightly values. Baseline = the 30 nights Jun 6–Jul 5. Exploratory: one person, 14 days.",
+ "metrics": [
+  {
+   "id": "hrv",
+   "label": "HRV",
+   "unit": "ms"
+  },
+  {
+   "id": "rhr",
+   "label": "Resting HR",
+   "unit": "bpm"
+  },
+  {
+   "id": "resp",
+   "label": "Breathing rate",
+   "unit": "br/min"
+  },
+  {
+   "id": "stages",
+   "label": "Sleep stages",
+   "unit": "min",
+   "keys": [
+    "deep",
+    "rem",
+    "core",
+    "awake"
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "before",
+   "label": "Before",
+   "sub": "Jun 6–Jul 5",
+   "hrv": 45.6,
+   "rhr": 58.2,
+   "resp": 16.3,
+   "deep": 51.9,
+   "rem": 87.3,
+   "core": 274.8,
+   "awake": 27.9,
+   "n": 30
+  },
+  {
+   "id": "free",
+   "label": "Alcohol-free",
+   "sub": "Jul 6–20",
+   "hrv": 56.3,
+   "rhr": 56.0,
+   "resp": 15.4,
+   "deep": 61.4,
+   "rem": 90.7,
+   "core": 292.3,
+   "awake": 39.3,
+   "n": 15
+  }
+ ]
+}

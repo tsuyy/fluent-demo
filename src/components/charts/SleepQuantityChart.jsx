@@ -3,7 +3,7 @@ import { ResponsiveLine } from '@nivo/line'
 import { CHART_THEME, tooltipStyle } from './chartTheme'
 
 export default function SleepQuantityChart({ data, height = 160 }) {
-  if (!data?.quantity?.weekly_trend?.length) return <div style={{ height, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)' }}>No data</span></div>
+  if (!data?.quantity?.weekly_trend?.length) return <div style={{ height, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)' }}>No data</span></div>
 
   const lineData = useMemo(() => [{
     id: 'Sleep',
@@ -54,7 +54,7 @@ export default function SleepQuantityChart({ data, height = 160 }) {
           },
           legend: `${mean}hr avg`,
           legendPosition: 'bottom-right',
-          textStyle: { fill: 'rgba(255,255,255,0.3)', fontSize: 9 },
+          textStyle: { fill: 'rgba(255,255,255,0.6)', fontSize: 13 },
         }]}
         tooltip={({ point }) => (
           <div style={tooltipStyle}>

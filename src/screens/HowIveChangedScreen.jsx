@@ -22,7 +22,7 @@ import { sliceQuarterly, usableTimeframes, DEFAULT_TIMEFRAME } from '../utils/ti
 const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex' }
 
 const GRADIENTS = {
-  jamie:  'radial-gradient(ellipse at 15% 70%, rgba(180,60,60,0.2) 0%, transparent 55%)',
+  jamie:  'radial-gradient(ellipse at 15% 70%, rgba(196,80,232,0.2) 0%, transparent 55%)',
   yvonne: 'radial-gradient(ellipse at 80% 20%, rgba(6,129,252,0.15) 0%, rgba(39,196,138,0.08) 40%, transparent 65%)',
   robert: 'radial-gradient(ellipse at 20% 60%, rgba(39,196,138,0.15) 0%, transparent 55%)',
   alex:   'radial-gradient(ellipse at 60% 30%, rgba(39,196,138,0.1) 0%, transparent 55%)',
@@ -96,9 +96,9 @@ function MetricCard({ card, delay }) {
       {/* Label + tooltip trigger */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 10 }}>
         <p style={{
-          fontSize: 10, letterSpacing: '0.05em',
+          fontSize: 12, letterSpacing: '0.05em',
           textTransform: 'uppercase',
-          color: 'rgba(255,255,255,0.3)',
+          color: 'rgba(255,255,255,0.55)',
           margin: 0,
         }}>
           {card.label}
@@ -111,13 +111,13 @@ function MetricCard({ card, delay }) {
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, marginBottom: 4 }}>
         <span style={{ fontSize: 28, fontWeight: 700, lineHeight: 1 }}>{card.current}</span>
         {card.unit && (
-          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>{card.unit}</span>
+          <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.62)' }}>{card.unit}</span>
         )}
       </div>
-      <p style={{ fontSize: 12, color: isGood ? '#27C48A' : 'rgba(255,255,255,0.4)', marginBottom: 4 }}>
+      <p style={{ fontSize: 13, color: isGood ? '#27C48A' : 'rgba(255,255,255,0.4)', marginBottom: 4 }}>
         {arrow} {card.change} {card.context}
       </p>
-      <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.25)', lineHeight: 1.5, marginTop: 8, fontStyle: 'italic' }}>
+      <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.52)', lineHeight: 1.5, marginTop: 8, fontStyle: 'italic' }}>
         "{card.insight}"
       </p>
     </motion.div>
@@ -150,7 +150,7 @@ function FactCard({ fact, delay }) {
       />      
       <div style={{ marginLeft: 12 }}>
         <p style={{ fontSize: 20, fontWeight: 600, marginBottom: 2 }}>{fact.stat}</p>
-        <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.35)', lineHeight: 1.5 }}>{fact.context}</p>
+        <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.6)', lineHeight: 1.5 }}>{fact.context}</p>
       </div>
     </motion.div>
   )
@@ -174,7 +174,7 @@ function StoryButton({ onNavigate }) {
         borderRadius: 8,
         padding: '9px 18px',
         color: 'var(--color-text-secondary)',
-        fontSize: 13,
+        fontSize: 14,
         cursor: 'pointer',
         fontFamily: 'inherit',
         alignSelf: 'flex-start',
@@ -288,10 +288,10 @@ export default function HowIveChangedScreen({ persona, onNavigate, onBack }) {
               <>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 4, flexWrap: 'wrap', gap: 12 }}>
                   <div>
-                    <p style={{ fontSize: 13, fontWeight: 600, marginBottom: 4 }}>
+                    <p style={{ fontSize: 14, fontWeight: 600, marginBottom: 4 }}>
                       Your cardiovascular arc — 18 quarters
                     </p>
-                    <p style={{ fontSize: 11, color: 'var(--color-text-tertiary)', marginBottom: 0 }}>
+                    <p style={{ fontSize: 13, color: 'var(--color-text-tertiary)', marginBottom: 0 }}>
                       RHR declining · HRV climbing · the two lines diverging is the story
                     </p>
                   </div>
@@ -309,24 +309,24 @@ export default function HowIveChangedScreen({ persona, onNavigate, onBack }) {
             )}
             {isRobert && (
               <>
-                <p style={{ fontSize: 13, fontWeight: 600, marginBottom: 4 }}>Your cardiovascular arc — 2 years</p>
-                <p style={{ fontSize: 11, color: 'var(--color-text-tertiary)', marginBottom: 16 }}>Before retirement · transition · new equilibrium</p>
+                <p style={{ fontSize: 14, fontWeight: 600, marginBottom: 4 }}>Your cardiovascular arc — 2 years</p>
+                <p style={{ fontSize: 13, color: 'var(--color-text-tertiary)', marginBottom: 16 }}>Before retirement · transition · new equilibrium</p>
                 <RetirementArcChart height={220} />
               </>
             )}
             {isAlex && (
               <>
-                <p style={{ fontSize: 13, fontWeight: 600, marginBottom: 4 }}>5 years of movement — seasonal pattern</p>
-                <p style={{ fontSize: 11, color: 'var(--color-text-tertiary)', marginBottom: 16 }}>October peak · February quiet · every year</p>
+                <p style={{ fontSize: 14, fontWeight: 600, marginBottom: 4 }}>5 years of movement — seasonal pattern</p>
+                <p style={{ fontSize: 13, color: 'var(--color-text-tertiary)', marginBottom: 16 }}>October peak · February quiet · every year</p>
                 <SeasonalStepsChart height={200} />
               </>
             )}
             {!isYvonne && !isRobert && !isAlex && (
               <>
-                <p style={{ fontSize: 13, fontWeight: 600, marginBottom: 4 }}>8 months of trends</p>
-                <p style={{ fontSize: 11, color: 'var(--color-text-tertiary)', marginBottom: 16 }}>The patterns are starting to emerge</p>
+                <p style={{ fontSize: 14, fontWeight: 600, marginBottom: 4 }}>8 months of trends</p>
+                <p style={{ fontSize: 13, color: 'var(--color-text-tertiary)', marginBottom: 16 }}>The patterns are starting to emerge</p>
                 <div style={{ height: 180, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <p style={{ color: 'rgba(255,255,255,0.2)', fontSize: 12, textAlign: 'center', lineHeight: 1.8 }}>
+                  <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13, textAlign: 'center', lineHeight: 1.8 }}>
                     "Come back in a year.<br />The arc will be clearer."
                   </p>
                 </div>
@@ -337,7 +337,7 @@ export default function HowIveChangedScreen({ persona, onNavigate, onBack }) {
           {/* Interesting facts */}
           {facts.length > 0 && (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
-              <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', letterSpacing: '0.05em', textTransform: 'uppercase', marginBottom: 16 }}>
+              <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', letterSpacing: '0.05em', textTransform: 'uppercase', marginBottom: 16 }}>
                 What the data found
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : (isYvonne ? '1fr 1fr' : '1fr'), gap: 12 }}>

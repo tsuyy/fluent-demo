@@ -204,7 +204,7 @@ export function ScrollCue({ visible }) {
             alignItems: 'center',
             gap: 8,
             color: QUIET,
-            fontSize: 12,
+            fontSize: 13,
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
             pointerEvents: 'none',

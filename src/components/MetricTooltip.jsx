@@ -52,6 +52,13 @@ const METRICS = {
     why: "Most healthy adults maintain SpO₂ above 95% during sleep. Sustained dips can indicate disrupted breathing or altitude effects.",
     caveat: "Consumer wearable SpO₂ readings are estimates, not medical-grade measurements. If you see consistent low readings alongside symptoms, that's worth discussing with a doctor.",
   },
+  active_cal: {
+    label: 'Active Calories',
+    unit: 'calories (cal)',
+    what: 'Energy you burned through movement and exercise, not counting what your body uses at rest.',
+    why: 'It is a rough gauge of how much you moved. Several days well above or below your usual can change how recovered you feel.',
+    caveat: 'Watch estimates are approximate, and the same effort can read differently from day to day. Compare it with your own usual, not with other people.',
+  },
   awake_time: {
     label: 'Awake Time',
     unit: 'minutes per night',
@@ -75,13 +82,13 @@ function PanelContent({ def, onClose }) {
   return (
     <>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-        <span style={{ fontSize: 13, fontWeight: 600, color: TEXT }}>{def.label}</span>
-        <span style={{ fontSize: 11, color: QUIET }}>{def.unit}</span>
+        <span style={{ fontSize: 14, fontWeight: 600, color: TEXT }}>{def.label}</span>
+        <span style={{ fontSize: 13, color: QUIET }}>{def.unit}</span>
       </div>
-      <p style={{ margin: 0, fontSize: 13, lineHeight: 1.6, color: SECONDARY }}>{def.what}</p>
-      <p style={{ margin: 0, fontSize: 13, lineHeight: 1.6, color: SECONDARY }}>{def.why}</p>
+      <p style={{ margin: 0, fontSize: 14, lineHeight: 1.6, color: SECONDARY }}>{def.what}</p>
+      <p style={{ margin: 0, fontSize: 14, lineHeight: 1.6, color: SECONDARY }}>{def.why}</p>
       <p style={{
-        margin: 0, fontSize: 12, lineHeight: 1.6, color: QUIET,
+        margin: 0, fontSize: 13, lineHeight: 1.6, color: QUIET,
         borderTop: `1px solid ${HAIRLINE}`, paddingTop: 10, fontStyle: 'italic',
       }}>
         {def.caveat}
@@ -91,7 +98,7 @@ function PanelContent({ def, onClose }) {
         onClick={onClose}
         style={{
           alignSelf: 'flex-start', background: 'transparent', border: 'none',
-          padding: 0, fontSize: 12, color: QUIET, cursor: 'pointer', fontFamily: 'inherit',
+          padding: 0, fontSize: 13, color: QUIET, cursor: 'pointer', fontFamily: 'inherit',
         }}
       >
         close ×
@@ -120,9 +127,9 @@ export function InlineMetricTooltip({ metric, marker = '＊', label }) {
           cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left',
         }}
       >
-        <span style={{ color: ACCENT, fontSize: 13 }}>{marker}</span>
+        <span style={{ color: ACCENT, fontSize: 14 }}>{marker}</span>
         <span style={{
-          fontSize: 13, color: SECONDARY,
+          fontSize: 14, color: SECONDARY,
           borderBottom: `1px solid ${HAIRLINE}`,
         }}>
           {label || `What is ${def.label}?`}
@@ -211,7 +218,7 @@ export default function MetricTooltip({ metric }) {
           display: 'inline-flex', alignItems: 'center',
           background: 'transparent', border: 'none',
           padding: '1px 2px', margin: 0,
-          fontSize: 13, color: open ? ACCENT : QUIET,
+          fontSize: 14, color: open ? ACCENT : QUIET,
           cursor: 'pointer', fontFamily: 'inherit',
           lineHeight: 1, transition: 'color 0.15s ease',
           flexShrink: 0,

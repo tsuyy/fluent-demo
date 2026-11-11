@@ -55,7 +55,7 @@ export default function SceneIndicator({ labels, current, onJump }) {
                     position: 'absolute',
                     right: 22,
                     whiteSpace: 'nowrap',
-                    fontSize: 12,
+                    fontSize: 13,
                     letterSpacing: '-0.01em',
                     color: TEXT,
                     background: SURFACE,

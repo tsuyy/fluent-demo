@@ -12,9 +12,9 @@ const RED  = '#E8504A'
 function wristHeatColor(v) {
   if (v == null) return 'rgba(255,255,255,0.03)'
   const abs = Math.abs(v)
-  if (abs < 0.3) return 'rgba(180,180,180,0.22)'
-  if (abs < 0.5) return 'rgba(200,190,180,0.4)'
-  if (abs < 0.8) return '#E8A23D'
+  if (abs < 0.3) return 'rgba(255,255,255,0.14)'
+  if (abs < 0.5) return 'rgba(232,80,74,0.3)'
+  if (abs < 0.8) return 'rgba(232,80,74,0.6)'
   return RED
 }
 
@@ -40,7 +40,7 @@ export default function RecentPhysicalChart({ data, height = 140, compact = fals
   if (!daily.length) {
     return (
       <div style={{ height, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <span style={{ fontSize: 12, color: QUIET }}>No data</span>
+        <span style={{ fontSize: 13, color: QUIET }}>No data</span>
       </div>
     )
   }
@@ -114,7 +114,7 @@ export default function RecentPhysicalChart({ data, height = 140, compact = fals
       </svg>
 
       {!compact && (
-        <p style={{ fontSize: 9, color: QUIET, marginTop: 4, paddingLeft: margin.left }}>
+        <p style={{ fontSize: 12, color: QUIET, marginTop: 4, paddingLeft: margin.left }}>
           {hasAnyWrist ? 'strip = wrist temperature deviation' : 'no wrist temperature sensor on this device'}
         </p>
       )}
@@ -132,11 +132,11 @@ export default function RecentPhysicalChart({ data, height = 140, compact = fals
             zIndex: 100, pointerEvents: 'none', minWidth: 100,
             boxShadow: '0 4px 16px rgba(0,0,0,0.4)',
           }}>
-            <p style={{ fontSize: 10, fontWeight: 600, color: TEXT, marginBottom: 4 }}>{tip.point.date}</p>
-            <p style={{ fontSize: 10, color: tip.point.hrv_dev < 0 ? RED : BLUE, margin: 0 }}>
+            <p style={{ fontSize: 12, fontWeight: 600, color: TEXT, marginBottom: 4 }}>{tip.point.date}</p>
+            <p style={{ fontSize: 12, color: tip.point.hrv_dev < 0 ? RED : BLUE, margin: 0 }}>
               HRV {tip.point.hrv_dev != null ? `${tip.point.hrv_dev > 0 ? '+' : ''}${tip.point.hrv_dev}ms` : '—'}
             </p>
-            <p style={{ fontSize: 10, color: 'rgba(200,200,200,0.7)', margin: 0 }}>
+            <p style={{ fontSize: 12, color: 'rgba(200,200,200,0.7)', margin: 0 }}>
               Wrist {tip.point.wrist_dev != null ? `${tip.point.wrist_dev > 0 ? '+' : ''}${tip.point.wrist_dev}°` : 'no reading'}
             </p>
           </div>

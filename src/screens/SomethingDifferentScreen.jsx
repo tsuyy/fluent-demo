@@ -34,6 +34,8 @@ import jamiePhysical from '../data/jamie/recent_physical_14d.json'
 import robertActivity from '../data/robert/recent_activity_14d.json'
 import robertRecovery from '../data/robert/recent_recovery_14d.json'
 import robertPhysical from '../data/robert/recent_physical_14d.json'
+import robertSleepTimes from '../data/robert/sleep_times.json'
+import SleepRegularityChart from '../components/charts/SleepRegularityChart'
 
 const SIGNALS = [
   { id: 'energy',   label: 'My energy feels off',      Icon: IconEnergy },
@@ -60,25 +62,23 @@ const YVONNE_ROUTES = {
   },
   sleep: {
     mode: 2,
-    body: "Your sleep has been variable but within your normal range over the past two weeks — nothing that breaks from your typical pattern.",
+    body: "Your sleep efficiency has stayed in its usual range. Deep sleep averaged about 13% below your 90-day average this week, and REM about 7% below.",
     chart: 'sleepMini', chartData: sleepQQRT,
     chartCaption: 'Your recent sleep efficiency',
   },
   recovery: {
     mode: 2,
-    body: "Your HRV and resting heart rate are both close to baseline right now. Nothing in your recovery data suggests reduced capacity lately.",
+    body: "Your HRV and resting heart rate are both close to their 90-day averages right now. A few single nights ran lower, which is common.",
     chart: 'recovery', chartData: yvonneRecovery,
     chartCaption: 'Your recovery signals this fortnight',
   },
   physical: {
     mode: 2,
-    body: "No illness signature or unusual physiological pattern shows up in your data over the past two weeks. If something specific is going on, it may be outside what a wearable can see.",
+    body: "Over the past two weeks, HRV and wrist temperature have not moved together the way they did in February. That says nothing about whether you are well. If something specific is going on, it may be outside what a wrist sensor can see.",
     chart: 'physical', chartData: yvonnePhysical,
-    chartCaption: 'No convergence pattern detected',
-    // Drafted by dev chat — the source spec cut off mid-sentence here.
-    // Reread before shipping; rewrite if it doesn't sound like you.
-    historicalNote: "Your data does have a history of catching this kind of pattern early — in February, HRV and wrist temperature converged twelve days before symptoms appeared. Nothing like that is showing up right now.",
-    historicalLink: { label: 'See that story →', cardId: 'illness_arc' },
+    chartCaption: 'Not the February pattern',
+    historicalNote: "Nothing like February's pattern (HRV down, wrist temperature up) is showing up right now. In February, the same signals had more than one explanation, so Fluent shows them next to what was going on rather than saying what they meant.",
+    historicalLink: { label: 'See February →', cardId: 'illness_arc' },
   },
   unsure: {
     mode: 2,
@@ -180,14 +180,15 @@ const ROBERT_ROUTES = {
     body: MODE3_GENERIC,
     // Drafted by dev chat — spec didn't give exact wording for
     // Robert's version (only Jamie's sensor-gap note was specified).
-    mode3Note: "Your wrist temperature and HRV both look unremarkable over the past two weeks — no illness signature detected. But most physical sensations still aren't something a wrist sensor can see at all.",
+    mode3Note: "Your wrist temperature and HRV both look unremarkable over the past two weeks. But most physical sensations still aren't something a wrist sensor can see at all.",
     chart: 'physical', chartData: robertPhysical,
-    chartCaption: 'Checked — nothing crossed the threshold',
+    chartCaption: 'Checked — nothing stood out',
   },
   sleep: {
     mode: 2,
     body: "Your sleep has been consistent across two years — one of the steadier signals in your data. Nothing unusual stands out over the past two weeks.",
-    chart: null,
+    chart: 'regularity', chartData: robertSleepTimes.eras[0],
+    chartCaption: 'When you go to bed, every night in two years (each bar is a 30-minute window)',
   },
   unsure: {
     ...ROBERT_STRUCTURE,
@@ -229,13 +230,14 @@ function RouteChart({ type, data }) {
   if (type === 'recovery')  return <RecentRecoveryChart data={data} height={110} compact />
   if (type === 'physical')  return <RecentPhysicalChart data={data} height={110} compact />
   if (type === 'sleepMini') return <RecentSleepMini data={data} height={64} />
+  if (type === 'regularity') return <SleepRegularityChart data={data} height={110} compact />
   if (type === 'sleepHRV')  return <SleepHRVChart height={140} compact legendPosition="left" />
   if (type === 'placeholder') return null // handled separately, needs needsExport text
   return null
 }
 
 // ── Mode-aware content renderer ───────────────────────────────────
-function RouteContent({ route, onInvestigate, onShowNoticed, onSeeYvonne, onExplore }) {
+function RouteContent({ route, onInvestigate, onShowNoticed, onExplore }) {
   const [chipAnswer, setChipAnswer] = useState(null)
 
   // ── Mode 1 — observation → interpretation → chart → context chip → ack ──
@@ -243,17 +245,17 @@ function RouteContent({ route, onInvestigate, onShowNoticed, onSeeYvonne, onExpl
     return (
       <div style={{ paddingTop: 12 }} onClick={(e) => e.stopPropagation()}>
         {route.openingFraming && (
-          <p style={{ fontSize: 13, fontStyle: 'italic', color: 'var(--color-text-tertiary)', marginBottom: 10 }}>
+          <p style={{ fontSize: 14, fontStyle: 'italic', color: 'var(--color-text-tertiary)', marginBottom: 10 }}>
             {route.openingFraming}
           </p>
         )}
         {route.observation && (
-          <p style={{ fontSize: 13, lineHeight: 1.6, color: 'var(--color-text-secondary)', marginBottom: 8 }}>
+          <p style={{ fontSize: 14, lineHeight: 1.6, color: 'var(--color-text-secondary)', marginBottom: 8 }}>
             {route.observation}
           </p>
         )}
         {route.interpretation && (
-          <p style={{ fontSize: 12, lineHeight: 1.6, color: 'var(--color-text-tertiary)', marginBottom: 12 }}>
+          <p style={{ fontSize: 13, lineHeight: 1.6, color: 'var(--color-text-tertiary)', marginBottom: 12 }}>
             {route.interpretation}
           </p>
         )}
@@ -266,8 +268,8 @@ function RouteContent({ route, onInvestigate, onShowNoticed, onSeeYvonne, onExpl
                 border: '1px solid rgba(255,255,255,0.07)',
                 borderRadius: 8, padding: '8px 10px',
               }}>
-                <p style={{ fontSize: 9, color: 'var(--color-quiet, #888780)', marginBottom: 4 }}>{s.label}</p>
-                <p style={{ fontSize: 12, color: 'var(--color-text-secondary)', margin: 0 }}>HRV {s.hrv} · RHR {s.rhr}</p>
+                <p style={{ fontSize: 12, color: 'var(--color-quiet, #888780)', marginBottom: 4 }}>{s.label}</p>
+                <p style={{ fontSize: 13, color: 'var(--color-text-secondary)', margin: 0 }}>HRV {s.hrv} · RHR {s.rhr}</p>
               </div>
             ))}
           </div>
@@ -291,12 +293,12 @@ function RouteContent({ route, onInvestigate, onShowNoticed, onSeeYvonne, onExpl
           </div>
         )}
         {route.chartCaption && (
-          <p style={{ fontSize: 10, color: 'var(--color-quiet, #888780)', marginBottom: 14 }}>{route.chartCaption}</p>
+          <p style={{ fontSize: 12, color: 'var(--color-quiet, #888780)', marginBottom: 14 }}>{route.chartCaption}</p>
         )}
 
         {route.contextQuestion && (
           <>
-            <p style={{ fontSize: 13, color: 'var(--color-text-secondary)', marginBottom: 10 }}>
+            <p style={{ fontSize: 14, color: 'var(--color-text-secondary)', marginBottom: 10 }}>
               {route.contextQuestion}
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 12 }}>
@@ -308,7 +310,7 @@ function RouteContent({ route, onInvestigate, onShowNoticed, onSeeYvonne, onExpl
                   style={{
                     background: chipAnswer === chip ? 'rgba(6,129,252,0.15)' : 'rgba(255,255,255,0.06)',
                     border: `1px solid ${chipAnswer === chip ? 'rgba(6,129,252,0.4)' : 'rgba(255,255,255,0.1)'}`,
-                    borderRadius: 20, padding: '6px 14px', fontSize: 12,
+                    borderRadius: 20, padding: '6px 14px', fontSize: 13,
                     cursor: 'pointer', color: chipAnswer === chip ? '#0681fc' : 'var(--color-text-secondary)',
                     opacity: chipAnswer && chipAnswer !== chip ? 0.4 : 1,
                     transition: 'all 0.15s',
@@ -323,7 +325,7 @@ function RouteContent({ route, onInvestigate, onShowNoticed, onSeeYvonne, onExpl
                 <motion.p
                   initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }}
                   style={{
-                    fontSize: 12, color: 'var(--color-text-tertiary)', lineHeight: 1.6,
+                    fontSize: 13, color: 'var(--color-text-tertiary)', lineHeight: 1.6,
                     borderTop: '1px solid rgba(255,255,255,0.07)', paddingTop: 10,
                   }}
                 >
@@ -341,7 +343,7 @@ function RouteContent({ route, onInvestigate, onShowNoticed, onSeeYvonne, onExpl
   if (route.mode === 2) {
     return (
       <div style={{ paddingTop: 12 }} onClick={(e) => e.stopPropagation()}>
-        <p style={{ fontSize: 13, lineHeight: 1.6, color: 'var(--color-text-secondary)', marginBottom: 12 }}>
+        <p style={{ fontSize: 14, lineHeight: 1.6, color: 'var(--color-text-secondary)', marginBottom: 12 }}>
           {route.body}
         </p>
 
@@ -351,19 +353,19 @@ function RouteContent({ route, onInvestigate, onShowNoticed, onSeeYvonne, onExpl
             : <RouteChart type={route.chart} data={route.chartData} />}
         </div>
         {route.chartCaption && (
-          <p style={{ fontSize: 10, color: 'var(--color-quiet, #888780)', marginBottom: 14 }}>{route.chartCaption}</p>
+          <p style={{ fontSize: 12, color: 'var(--color-quiet, #888780)', marginBottom: 14 }}>{route.chartCaption}</p>
         )}
 
         {route.historicalNote && (
           <div style={{ borderTop: '1px solid rgba(255,255,255,0.07)', paddingTop: 12, marginBottom: 14 }}>
-            <p style={{ fontSize: 12, color: 'var(--color-text-tertiary)', lineHeight: 1.6, marginBottom: 8 }}>
+            <p style={{ fontSize: 13, color: 'var(--color-text-tertiary)', lineHeight: 1.6, marginBottom: 8 }}>
               {route.historicalNote}
             </p>
             {route.historicalLink && (
               <motion.span
                 onClick={() => onInvestigate(route.historicalLink.cardId)}
                 whileHover={{ opacity: 0.8 }}
-                style={{ color: 'var(--color-accent)', fontSize: 12, cursor: 'pointer', display: 'inline-block' }}
+                style={{ color: 'var(--color-accent)', fontSize: 13, cursor: 'pointer', display: 'inline-block' }}
               >
                 {route.historicalLink.label}
               </motion.span>
@@ -374,7 +376,7 @@ function RouteContent({ route, onInvestigate, onShowNoticed, onSeeYvonne, onExpl
         <motion.span
           onClick={onExplore}
           whileHover={{ opacity: 0.8 }}
-          style={{ color: 'var(--color-accent)', fontSize: 13, cursor: 'pointer', display: 'inline-block' }}
+          style={{ color: 'var(--color-accent)', fontSize: 14, cursor: 'pointer', display: 'inline-block' }}
         >
           Explore your data →
         </motion.span>
@@ -386,7 +388,7 @@ function RouteContent({ route, onInvestigate, onShowNoticed, onSeeYvonne, onExpl
   if (route.mode === 3) {
     return (
       <div style={{ paddingTop: 12 }} onClick={(e) => e.stopPropagation()}>
-        <p style={{ fontSize: 13, lineHeight: 1.6, color: 'var(--color-text-secondary)', marginBottom: 10 }}>
+        <p style={{ fontSize: 14, lineHeight: 1.6, color: 'var(--color-text-secondary)', marginBottom: 10 }}>
           {route.body}
         </p>
         {route.chart && (
@@ -395,11 +397,11 @@ function RouteContent({ route, onInvestigate, onShowNoticed, onSeeYvonne, onExpl
           </div>
         )}
         {route.chartCaption && (
-          <p style={{ fontSize: 10, color: 'var(--color-quiet, #888780)', marginBottom: 10 }}>{route.chartCaption}</p>
+          <p style={{ fontSize: 12, color: 'var(--color-quiet, #888780)', marginBottom: 10 }}>{route.chartCaption}</p>
         )}
         {route.mode3Note && (
           <p style={{
-            fontSize: 12, color: 'var(--color-text-tertiary)', lineHeight: 1.6,
+            fontSize: 13, color: 'var(--color-text-tertiary)', lineHeight: 1.6,
             borderTop: '1px solid rgba(255,255,255,0.07)', paddingTop: 10,
           }}>
             {route.mode3Note}
@@ -413,19 +415,12 @@ function RouteContent({ route, onInvestigate, onShowNoticed, onSeeYvonne, onExpl
   if (route.wearableOnly) {
     return (
       <div style={{ paddingTop: 12 }} onClick={(e) => e.stopPropagation()}>
-        <p style={{ fontSize: 13, lineHeight: 1.6, color: 'var(--color-text-secondary)', marginBottom: 12 }}>
+        <p style={{ fontSize: 14, lineHeight: 1.6, color: 'var(--color-text-secondary)', marginBottom: 12 }}>
           {route.reason}
         </p>
-        <p style={{ fontSize: 12, color: 'var(--color-text-tertiary)', lineHeight: 1.6, marginBottom: 14 }}>
+        <p style={{ fontSize: 13, color: 'var(--color-text-tertiary)', lineHeight: 1.6, marginBottom: 14 }}>
           A wearable worn overnight would capture the signals that explain this — HRV, resting heart rate, sleep staging.
         </p>
-        <motion.span
-          onClick={onSeeYvonne}
-          whileHover={{ opacity: 0.8 }}
-          style={{ color: 'var(--color-accent)', fontSize: 13, cursor: 'pointer', display: 'inline-block' }}
-        >
-          See what Yvonne's data shows with a wearable →
-        </motion.span>
       </div>
     )
   }
@@ -433,7 +428,7 @@ function RouteContent({ route, onInvestigate, onShowNoticed, onSeeYvonne, onExpl
   if (route.cardId) {
     return (
       <div style={{ paddingTop: 12 }} onClick={(e) => e.stopPropagation()}>
-        <p style={{ fontSize: 13, lineHeight: 1.6, color: 'var(--color-text-secondary)', marginBottom: 14 }}>
+        <p style={{ fontSize: 14, lineHeight: 1.6, color: 'var(--color-text-secondary)', marginBottom: 14 }}>
           {route.reason}
         </p>
         <motion.button
@@ -441,7 +436,7 @@ function RouteContent({ route, onInvestigate, onShowNoticed, onSeeYvonne, onExpl
           whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
           style={{
             background: 'var(--color-accent)', border: 'none', borderRadius: 8,
-            padding: '10px 20px', color: '#fff', fontSize: 13,
+            padding: '10px 20px', color: '#fff', fontSize: 14,
             fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit',
           }}
         >
@@ -458,7 +453,7 @@ function RouteContent({ route, onInvestigate, onShowNoticed, onSeeYvonne, onExpl
         whileHover={{ scale: 1.02 }}
         style={{
           background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)',
-          borderRadius: 8, padding: '10px 20px', color: '#fff', fontSize: 13,
+          borderRadius: 8, padding: '10px 20px', color: '#fff', fontSize: 14,
           fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit',
         }}
       >
@@ -503,7 +498,7 @@ export default function SomethingDifferentScreen({
 
       <div style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
-        background: 'radial-gradient(ellipse at 50% 40%, rgba(232,80,74,0.08) 0%, transparent 60%)',
+        background: 'radial-gradient(ellipse at 50% 40%, rgba(6,129,252,0.08) 0%, transparent 60%)',
       }} />
 
       <div style={{
@@ -546,7 +541,7 @@ export default function SomethingDifferentScreen({
                 </p>
               </motion.div>
              {persona === 'alex' ? (
-              <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.3)', marginBottom: 28 }}>
+              <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', marginBottom: 28 }}>
                 Based on your step data from the past two weeks.
               </p>
             ) : (
@@ -579,7 +574,7 @@ export default function SomethingDifferentScreen({
                 >
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <Icon size={22} color={isSelected ? 'var(--color-accent)' : 'rgba(255,255,255,0.55)'} />
-                    {isSelected && <span style={{ color: 'var(--color-accent)', fontSize: 13 }}>✓</span>}
+                    {isSelected && <span style={{ color: 'var(--color-accent)', fontSize: 14 }}>✓</span>}
                   </div>
                   <span style={{
                     fontSize: 15, lineHeight: 1.35,
@@ -602,7 +597,6 @@ export default function SomethingDifferentScreen({
                           route={route}
                           onInvestigate={handleInvestigate}
                           onShowNoticed={() => onNavigate('noticed')}
-                          onSeeYvonne={() => onNavigate('changed')}
                           onExplore={() => onNavigate('home')}
                         />
                       </motion.div>
@@ -631,7 +625,7 @@ export default function SomethingDifferentScreen({
               }}>
                 I'm not sure — show me
               </span>
-              {selected === 'unsure' && <span style={{ color: 'var(--color-accent)', fontSize: 13 }}>✓</span>}
+              {selected === 'unsure' && <span style={{ color: 'var(--color-accent)', fontSize: 14 }}>✓</span>}
             </div>
 
             <AnimatePresence>
@@ -647,7 +641,6 @@ export default function SomethingDifferentScreen({
                     route={routes.unsure}
                     onInvestigate={handleInvestigate}
                     onShowNoticed={() => onNavigate('noticed')}
-                    onSeeYvonne={() => onNavigate('changed')}
                     onExplore={() => onNavigate('home')}
                   />
                 </motion.div>

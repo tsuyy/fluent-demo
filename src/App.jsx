@@ -12,7 +12,6 @@ import SomethingDifferentScreen from './screens/SomethingDifferentScreen'
 import MovementRecoveryScreen   from './screens/MovementRecoveryScreen'
 import HeartNervousSystemScreen from './screens/HeartNervousSystemScreen'
 import SleepScreen              from './screens/SleepScreen'
-import HowIveChangedScreen      from './screens/HowIveChangedScreen'
 import MomentsScreen            from './screens/MomentsScreen'
 import ScrollytellingScreen     from './screens/ScrollytellingScreen'
  
@@ -80,6 +79,7 @@ export default function App() {
           setScreen('flow2')
         }
       }}
+      onNavigate={(cat) => setScreen(cat)}
       onHome={() => setScreen('thesis')}         // fluent wordmark → thesis
       onSwitch={() => goToPicker('noticed')}     // persona chip → picker
     />
@@ -186,20 +186,6 @@ export default function App() {
     />
   )
  
-  if (screen === 'changed') return (
-    <HowIveChangedScreen
-      persona={persona}
-      onNavigate={(cat) => {
-        if (cat === 'picker') {
-          goToPicker('changed')   
-        } else {
-          setScreen(cat)
-        }
-      }}
-      onBack={() => setScreen('home')}
-    />
-  )
- 
   if (screen === 'moments') return (
     <MomentsScreen
       persona={persona}
@@ -212,14 +198,6 @@ export default function App() {
       }}
       onBack={() => setScreen('home')}
       onFlow2={(cardId) => { setFlow2Card(cardId); setScreen('flow2')}}
-    />
-  )
- 
-  if (screen === 'scrollytelling') return (
-    <ScrollytellingScreen
-      persona={persona}
-      onBack={() => setScreen('changed')}
-      onComplete={() => setScreen('home')}
     />
   )
  

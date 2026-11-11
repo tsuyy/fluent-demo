@@ -1,16 +1,16 @@
 import { motion } from 'framer-motion'
 import IconHome      from './icons/IconHome'
 import IconDifferent from './icons/IconDifferent'
-import IconChanged   from './icons/IconChanged'
 import IconActivity  from './icons/IconActivity'
 import IconCardio    from './icons/IconCardio'
 import IconSleep     from './icons/IconSleep'
 import IconMoments   from './icons/IconMoments'
+import IconSearch    from './icons/IconSearch'
 import { useIsNarrow } from '../scrolly/useIsNarrow'
 
 const NAV_ITEMS = [
   { id: 'different', Icon: IconDifferent, label: 'Something feels different' },
-  { id: 'changed',   Icon: IconChanged,   label: "How I've changed" },
+  { id: 'noticed',   Icon: IconSearch,    label: 'What Fluent noticed' },
   { id: 'activity',  Icon: IconActivity,  label: 'Movement & Recovery' },
   { id: 'cardio',    Icon: IconCardio,    label: 'Heart & Nervous System' },
   { id: 'sleep',     Icon: IconSleep,     label: 'Sleep' },

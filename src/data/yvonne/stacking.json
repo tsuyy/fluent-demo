@@ -1,0 +1,48 @@
+{
+  "streaks": [
+    {
+      "label": "Rest day",
+      "n": 767,
+      "next_day": -0.1
+    },
+    {
+      "label": "1 day",
+      "n": 413,
+      "next_day": -0.8
+    },
+    {
+      "label": "2 in a row",
+      "n": 227,
+      "next_day": 0.6
+    },
+    {
+      "label": "3 in a row",
+      "n": 125,
+      "next_day": 2.1
+    },
+    {
+      "label": "4 in a row",
+      "n": 67,
+      "next_day": -0.5
+    },
+    {
+      "label": "5+ in a row",
+      "n": 101,
+      "next_day": 2.3
+    }
+  ],
+  "rest": {
+    "short_gap": {
+      "label": "1-3 rest days",
+      "n": 594,
+      "hrv": 2.2
+    },
+    "long_gap": {
+      "label": "4+ rest days",
+      "n": 104,
+      "hrv": 0.6
+    }
+  },
+  "last_date": "2026-10-20",
+  "note": "Active day = 30+ minutes of cycling, running, strength, tennis, skiing or HIIT. Bars show next morning's HRV change against the previous 30 nights. Your baseline adapts to your training, so this cannot show a slow build-up of load."
+}

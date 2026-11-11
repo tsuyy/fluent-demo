@@ -97,7 +97,7 @@ export default function Zone2ProgressChart({ data, height = 200, compact = false
   if (!sessions.length) {
     return (
       <div style={{ height, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <span style={{ fontSize: 12, color: QUIET }}>
+        <span style={{ fontSize: 13, color: QUIET }}>
           Needs zone2_running.json's sessions array
         </span>
       </div>
@@ -107,7 +107,7 @@ export default function Zone2ProgressChart({ data, height = 200, compact = false
   return (
     <div style={{ width: '100%' }}>
       {!compact && (
-        <p style={{ fontSize: 13, fontWeight: 500, color: TEXT, marginBottom: 8 }}>
+        <p style={{ fontSize: 14, fontWeight: 500, color: TEXT, marginBottom: 8 }}>
           Same heart rate. Longer and faster.
         </p>
       )}
@@ -159,9 +159,9 @@ export default function Zone2ProgressChart({ data, height = 200, compact = false
               zIndex: 100, pointerEvents: 'none', minWidth: 130,
               boxShadow: '0 4px 16px rgba(0,0,0,0.4)',
             }}>
-              <p style={{ fontSize: 11, fontWeight: 600, color: TEXT, marginBottom: 4 }}>{tip.date}</p>
-              <p style={{ fontSize: 10, color: hrColor(getHR(tip)), margin: 0 }}>{tip.distance}mi · HR {getHR(tip)}</p>
-              <p style={{ fontSize: 10, color: QUIET, margin: '2px 0 0' }}>{tip.pace} min/mi</p>
+              <p style={{ fontSize: 13, fontWeight: 600, color: TEXT, marginBottom: 4 }}>{tip.date}</p>
+              <p style={{ fontSize: 12, color: hrColor(getHR(tip)), margin: 0 }}>{tip.distance}mi · HR {getHR(tip)}</p>
+              <p style={{ fontSize: 12, color: QUIET, margin: '2px 0 0' }}>{tip.pace} min/mi</p>
             </div>
           )
         })()}
@@ -172,7 +172,7 @@ export default function Zone2ProgressChart({ data, height = 200, compact = false
           {[['HR 130–137', '#27C48A'], ['HR 138–143', '#0681fc'], ['HR 144–148', 'rgba(255,255,255,0.35)']].map(([label, color]) => (
             <div key={label} style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
               <div style={{ width: 8, height: 8, borderRadius: '50%', background: color }} />
-              <span style={{ fontSize: 10, color: QUIET }}>{label}</span>
+              <span style={{ fontSize: 12, color: QUIET }}>{label}</span>
             </div>
           ))}
         </div>

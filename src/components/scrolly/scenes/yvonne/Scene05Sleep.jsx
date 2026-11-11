@@ -1,7 +1,10 @@
 import PuddingScene from '../../PuddingScene'
 import { Lead } from '../../primitives'
 import SleepMonthlyChart from '../../../charts/SleepMonthlyChart'
-import SportSleepChart from '../../../charts/SportSleepChart'
+import SportSleepChart, { SPORTS as SLEEP_SPORTS, BASELINE as SLEEP_BASELINE } from '../../../charts/SportSleepChart'
+
+const deepOf = (name) => SLEEP_SPORTS.find(s => s.sport === name)?.deep
+const pctVsBase = (v) => Math.round(Math.abs(v - SLEEP_BASELINE.deep) / SLEEP_BASELINE.deep * 100)
 
 const QUIET = 'var(--color-quiet, #888780)'
 
@@ -67,9 +70,9 @@ export default function Scene05Sleep({ sleepMonthlyData }) {
       focusSport: 'Tennis',
       content: (
         <div>
-          <Lead>Tennis nights: deep sleep 61.5min.</Lead>
+          <Lead>Tennis nights: deep sleep {deepOf('Tennis')}min.</Lead>
           <p style={{ fontSize: 16, color: 'var(--color-text-tertiary)', marginTop: 12, lineHeight: 1.6 }}>
-            26% above your baseline — the same sport that gives your recovery
+            {pctVsBase(deepOf('Tennis'))}% above your baseline — the same sport that gives your recovery
             the biggest boost also gives your sleep architecture the biggest boost.
           </p>
         </div>
@@ -80,9 +83,9 @@ export default function Scene05Sleep({ sleepMonthlyData }) {
       focusSport: 'Skiing',
       content: (
         <div>
-          <Lead>Skiing nights: deep sleep 37.7min.</Lead>
+          <Lead>Skiing nights: deep sleep {deepOf('Skiing')}min.</Lead>
           <p style={{ fontSize: 16, color: 'var(--color-text-tertiary)', marginTop: 12, lineHeight: 1.6 }}>
-            23% below baseline — the same cost that shows up in next-day HRV
+            {pctVsBase(deepOf('Skiing'))}% below baseline — the same cost that shows up in next-day HRV
             shows up again overnight.
           </p>
         </div>

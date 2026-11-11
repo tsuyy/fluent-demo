@@ -2,14 +2,15 @@ import { ResponsiveLine } from '@nivo/line'
 import { CHART_THEME } from '../../data/chartTheme'
 
 
+// Per-weekday means of the 8 weeks in WeeklyRhythmFullChart
 const JAMIE_WEEKLY = [
-  { x: 'Mon', y: 68.2 },
-  { x: 'Tue', y: 70.1 },
+  { x: 'Mon', y: 68.0 },
+  { x: 'Tue', y: 70.5 },
   { x: 'Wed', y: 69.8 },
-  { x: 'Thu', y: 71.2 },
+  { x: 'Thu', y: 71.7 },
   { x: 'Fri', y: 70.5 },
-  { x: 'Sat', y: 74.1 },
-  { x: 'Sun', y: 72.6 },
+  { x: 'Sat', y: 75.0 },
+  { x: 'Sun', y: 73.0 },
 ]
 
 export default function WeeklyRhythmChart() {
@@ -18,14 +19,14 @@ export default function WeeklyRhythmChart() {
       <ResponsiveLine
         data={[{
           id: 'RHR',
-          color: '#E8504A',
+          color: '#0681fc',
           data: JAMIE_WEEKLY,
         }]}
         margin={{ top: 8, right: 8, bottom: 24, left: 28 }}
         xScale={{ type: 'point' }}
         yScale={{ type: 'linear', min: 65, max: 77 }}
         curve="cardinal"
-        colors={['#E8504A']}
+        colors={['#0681fc']}
         lineWidth={2}
         pointSize={8}
         pointColor="#0F0F0E"
@@ -35,8 +36,8 @@ export default function WeeklyRhythmChart() {
         pointSymbol={({ x, y, size, color, borderWidth, borderColor, datum }) => {
         const isMonday  = datum.x === 'Mon'
         const isSaturday = datum.x === 'Sat'
-        const fill = isMonday ? '#27C48A' : isSaturday ? '#E8834A' : '#0F0F0E'
-        const stroke = isMonday ? '#27C48A' : isSaturday ? '#E8834A' : '#E8504A'
+        const fill = isMonday ? '#0681fc' : isSaturday ? '#0681fc' : '#0F0F0E'
+        const stroke = isMonday ? '#0681fc' : isSaturday ? '#0681fc' : '#0681fc'
         const r = (isMonday || isSaturday) ? size / 2 + 1 : size / 2
 
         return (
@@ -51,7 +52,7 @@ export default function WeeklyRhythmChart() {
         )
         }}
         pointBorderWidth={2}
-        pointBorderColor="#E8504A"
+        pointBorderColor="#0681fc"
         enableGridX={false}
         enableGridY={false}
         axisLeft={null}
@@ -70,7 +71,7 @@ export default function WeeklyRhythmChart() {
             background: 'rgba(15,15,14,0.95)',
             border: '1px solid rgba(255,255,255,0.1)',
             borderRadius: 6, padding: '6px 10px',
-            fontSize: 11, color: '#fff',
+            fontSize: 13, color: '#fff',
         }}>
             <strong>{point.data.xFormatted}</strong>
             <br />
@@ -83,18 +84,18 @@ export default function WeeklyRhythmChart() {
         motionConfig="gentle"
         markers={[{
             axis: 'y',
-            value: 70.5,  // her weekly average — should appear as a mid-line
+            value: 71.0,  // mean of the readings shown
             lineStyle: {
                 stroke: 'rgba(255,255,255,0.25)',
                 strokeWidth: 1,
                 strokeDasharray: '4 4',
             },
-            legend: 'typical',
+            legend: 'typical (71 bpm)',
             legendPosition: 'bottom-right',
             legendOrientation: 'horizontal',
             textStyle: {
-                fill: 'rgba(255,255,255,0.3)',
-                fontSize: 10,
+                fill: 'rgba(255,255,255,0.6)',
+                fontSize: 12,
             },
         }]}
       />

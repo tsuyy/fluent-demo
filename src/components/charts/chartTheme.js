@@ -2,16 +2,16 @@
 export const CHART_THEME = {
   background: 'transparent',
   textColor: 'rgba(255,255,255,0.35)',
-  fontSize: 10,
+  fontSize: 12,
   fontFamily: 'var(--font-display, "DM Sans"), sans-serif',
   axis: {
     domain: { line: { stroke: 'rgba(255,255,255,0.08)', strokeWidth: 1 } },
     ticks: {
       line: { stroke: 'transparent' },
-      text: { fill: 'rgba(255,255,255,0.3)', fontSize: 10 },
+      text: { fill: 'rgba(255,255,255,0.6)', fontSize: 12 },
     },
     legend: {
-      text: { fill: 'rgba(255,255,255,0.2)', fontSize: 9 },
+      text: { fill: 'rgba(255,255,255,0.5)', fontSize: 11 },
     },
   },
   grid: {
@@ -21,7 +21,7 @@ export const CHART_THEME = {
     line: { stroke: 'rgba(255,255,255,0.2)', strokeWidth: 1 },
   },
   legends: {
-    text: { fill: 'rgba(255,255,255,0.3)', fontSize: 10 },
+    text: { fill: 'rgba(255,255,255,0.6)', fontSize: 12 },
   },
   tooltip: {
     container: {

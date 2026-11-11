@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion'
 import FloatingNav from '../components/nav/FloatingNav'
-import SportHRVChart from '../components/charts/SportHRVChart'
+import SportRecoveryBars from '../components/charts/SportRecoveryBars'
+import StackingBars from '../components/charts/StackingBars'
+import StructureCompareBars from '../components/charts/StructureCompareBars'
+import WeeklyRhythmFullChart from '../components/charts/WeeklyRhythmFullChart'
 import RetirementArcChart from '../components/charts/RetirementArcChart'
 import SeasonalStepsChart from '../components/charts/SeasonalStepsChart'
-import HRRecoveryChart from '../components/charts/HRRecoveryChart'
-import SportMixChart from '../components/charts/SportMixChart'
+import MovementCalendar from '../components/charts/MovementCalendar'
+import calendarData from '../data/yvonne/calendar.json'
 import PageContainer from '../components/layout/PageContainer'
 import { useIsNarrow } from '../components/scrolly/useIsNarrow'
 
@@ -12,7 +15,7 @@ import { useIsNarrow } from '../components/scrolly/useIsNarrow'
 const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex' }
 
 const GRADIENTS = {
-  jamie:  'radial-gradient(ellipse at 15% 70%, rgba(180,60,60,0.2) 0%, transparent 55%)',
+  jamie:  'radial-gradient(ellipse at 15% 70%, rgba(196,80,232,0.2) 0%, transparent 55%)',
   yvonne: 'radial-gradient(ellipse at 80% 20%, rgba(6,129,252,0.15) 0%, rgba(39,196,138,0.08) 40%, transparent 65%)',
   robert: 'radial-gradient(ellipse at 20% 60%, rgba(39,196,138,0.15) 0%, transparent 55%)',
   alex:   'radial-gradient(ellipse at 60% 30%, rgba(39,196,138,0.1) 0%, transparent 55%)',
@@ -32,14 +35,14 @@ function ChartCard({ title, subtitle, children, delay = 0 }) {
       }}
     >
       <p style={{
-        fontSize: 13, fontWeight: 600,
+        fontSize: 14, fontWeight: 600,
         marginBottom: 4, lineHeight: 1.3,
       }}>
         {title}
       </p>
       {subtitle && (
         <p style={{
-          fontSize: 11,
+          fontSize: 13,
           color: 'var(--color-text-tertiary)',
           marginBottom: 12,
           lineHeight: 1.4,
@@ -138,33 +141,33 @@ export default function MovementRecoveryScreen({ persona, onNavigate, onBack }) 
         {/* Yvonne — richest view */}
         {isYvonne && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-            {/* Top row — two charts */}
-            <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1fr 1fr', gap: 20 }}>
+            <ChartCard
+              title="When you moved"
+              subtitle="Daily active minutes, 2022 to now · pick a sport to filter"
+              delay={0.05}
+            >
+              <MovementCalendar data={calendarData} />
+            </ChartCard>
+
+            {/* Sport recovery — full width */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 20 }}>
                <ChartCard
                 title="How each sport affects your recovery"
-                subtitle="HRV deviation from baseline, day-of through day+3"
+                subtitle="Average HRV change from your 30-night baseline, at its biggest point in the 3 days after a session"
                 delay={0.1}
               >
-                <SportHRVChart height={200}  />
+                <SportRecoveryBars />
               </ChartCard>
 
               <ChartCard
-                title="HR recovery by sport"
-                subtitle="How fast your heart resets after each activity"
+                title="Does stacking active days cost you?"
+                subtitle="Next morning's HRV change, by how many active days came in a row"
                 delay={0.2}
               >
-                <HRRecoveryChart height={200} />
+                <StackingBars />
               </ChartCard>
             </div>
 
-            {/* Bottom — full width sport mix */}
-              <ChartCard
-                title="How your activity has shifted over the years"
-                subtitle="Sport mix evolution 2022 → 2026"
-                delay={0.3}
-              >
-                <SportMixChart height={160} />
-              </ChartCard>
           </div>
         )}
 
@@ -173,20 +176,13 @@ export default function MovementRecoveryScreen({ persona, onNavigate, onBack }) 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
             <ChartCard
               title="Your weekly rhythm"
-              subtitle="How your body responds across the week"
+              subtitle="Resting heart rate by day, last 8 weeks"
               delay={0.1}
             >
-              <div style={{
-                height: 180,
-                display: 'flex', alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-                <span style={{
-                  color: 'var(--color-text-tertiary)', fontSize: 11,
-                }}>
-                  weekly rhythm chart
-                </span>
-              </div>
+              <WeeklyRhythmFullChart height={200} metric="RHR" />
+              <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.5, margin: '12px 0 4px', fontStyle: 'italic' }}>
+                "Resting heart rate is lowest on Mondays (68 bpm on average) and highest on Saturdays (75 bpm)."
+              </p>
             </ChartCard>
 
             <ChartCard
@@ -212,19 +208,10 @@ export default function MovementRecoveryScreen({ persona, onNavigate, onBack }) 
 
             <ChartCard
               title="Structured vs unstructured weeks"
-              subtitle="Your body responds differently based on how your week is shaped"
+              subtitle="Weeks with plans vs weeks with an open calendar"
               delay={0.2}
             >
-              <div style={{
-                height: 160, display: 'flex',
-                alignItems: 'center', justifyContent: 'center',
-              }}>
-                <span style={{
-                  color: 'var(--color-text-tertiary)', fontSize: 11,
-                }}>
-                  structure comparison chart
-                </span>
-              </div>
+              <StructureCompareBars />
             </ChartCard>
           </div>
         )}
@@ -277,17 +264,17 @@ export default function MovementRecoveryScreen({ persona, onNavigate, onBack }) 
                       flexShrink: 0,
                     }} />
                     <div>
-                      <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)' }}>
+                      <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)' }}>
                         {layer.label}
                       </p>
-                      <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.25)' }}>
+                      <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.52)' }}>
                         {layer.desc}
                       </p>
                     </div>
                   </motion.div>
                 ))}
                 <p style={{
-                  fontSize: 12,
+                  fontSize: 13,
                   color: 'var(--color-text-tertiary)',
                   marginTop: 8, lineHeight: 1.5,
                 }}>

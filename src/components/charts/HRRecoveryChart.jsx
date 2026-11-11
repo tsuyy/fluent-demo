@@ -1,5 +1,6 @@
 import { useState, useRef, useCallback } from 'react'
 import { motion } from 'framer-motion'
+import hrData from '../../data/yvonne/hr_recovery.json'
 
 const QUIET = 'var(--color-quiet, #888780)'
 const TEXT  = 'var(--color-text, rgba(255,255,255,0.92))'
@@ -7,15 +8,23 @@ const SURFACE = '#1A1A18'
 const LATE_COLOR  = 'rgba(39,196,138,0.4)'   // 60s point
 const FINAL_COLOR = '#27C48A'                 // 90s point
 
-// Real data — sorted descending by 90s recovery, so the sport with
-// the most total heart-rate drop reads first.
-const HR_RECOVERY_DATA = [
-  { sport: 'Running',  hrr1: 29.1, hrr2: 42.9 },
-  { sport: 'Strength', hrr1: 31.3, hrr2: 36.1 },
-  { sport: 'Tennis',   hrr1: 28.5, hrr2: 31.4 },
-  { sport: 'Cycling',  hrr1: 24.8, hrr2: 30.6 },
-  { sport: 'Skiing',   hrr1: 20.1, hrr2: 26.8 },
-]
+// Computed by health_insights/export_hr_recovery.py (sorted by the later drop).
+const HR_RECOVERY_DATA = (hrData.sports ?? []).map((d) => ({
+  sport: d.label, hrr1: d.early, hrr2: d.late, n: d.n, active: d.active_hr,
+}))
+
+function takeaway(rows) {
+  if (rows.length < 2) return null
+  const more = (r) => r.hrr2 - r.hrr1                       // extra drop after the first 90 s
+  const top = rows.reduce((a, b) => (more(b) > more(a) ? b : a))
+  const others = rows.filter((r) => r !== top)
+  const lo = Math.round(Math.min(...others.map(more)))
+  const hi = Math.round(Math.max(...others.map(more)))
+  const highest = rows.reduce((a, b) => (b.active > a.active ? b : a))
+  return `${top.sport} keeps recovering the longest: heart rate falls ${Math.round(top.hrr1)} bpm in the first 90 seconds and ${Math.round(top.hrr2)} by three minutes. ` +
+    `The other sports level off sooner, with ${lo}–${hi} bpm more after the first 90 seconds.` +
+    (highest === top ? ` ${top.sport} also starts from the highest heart rate (${Math.round(top.active)} bpm), so part of the bigger drop is where it starts.` : '')
+}
 
 /**
  * HRRecoveryChart — slope/dumbbell chart replacing the grouped-bar
@@ -67,7 +76,7 @@ export default function HRRecoveryChart({ height = 200, compact = false }) {
           const x1 = xFor(d.hrr1), x2 = xFor(d.hrr2)
           return (
             <g key={d.sport}>
-              <text x={margin.left - 10} y={y + 4} textAnchor="end" fill={TEXT} fontSize={11}>
+              <text x={margin.left - 10} y={y + 4} textAnchor="end" fill={TEXT} fontSize={13}>
                 {d.sport}
               </text>
 
@@ -91,7 +100,7 @@ export default function HRRecoveryChart({ height = 200, compact = false }) {
               />
 
               {!compact && (
-                <text x={x2 + 10} y={y + 4} fill={QUIET} fontSize={10}>
+                <text x={x2 + 10} y={y + 4} fill={QUIET} fontSize={12}>
                   −{d.hrr2} bpm
                 </text>
               )}
@@ -104,12 +113,23 @@ export default function HRRecoveryChart({ height = 200, compact = false }) {
         <div style={{ display: 'flex', gap: 14, marginTop: 10, justifyContent: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
             <div style={{ width: 8, height: 8, borderRadius: '50%', background: LATE_COLOR }} />
-            <span style={{ fontSize: 10, color: QUIET }}>60 sec</span>
+            <span style={{ fontSize: 12, color: QUIET }}>Up to 90 sec after</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
             <div style={{ width: 8, height: 8, borderRadius: '50%', background: FINAL_COLOR }} />
-            <span style={{ fontSize: 10, color: QUIET }}>90 sec</span>
+            <span style={{ fontSize: 12, color: QUIET }}>By 3 min after</span>
           </div>
+        </div>
+      )}
+
+      {!compact && (
+        <div style={{ marginTop: 12, display: 'grid', gap: 8 }}>
+          <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.5, margin: 0, fontStyle: 'italic' }}>
+            "{takeaway(HR_RECOVERY_DATA)}"
+          </p>
+          <p style={{ fontSize: 12, color: QUIET, lineHeight: 1.5, margin: 0 }}>
+            Drop from your active heart rate, measured {hrData.sports?.length ? 'up to 90 seconds and 90–180 seconds' : ''} after the session ends. Sessions of 20+ minutes with enough watch readings, through {hrData.last_date}. Skiing is {HR_RECOVERY_DATA.find((d) => d.sport === 'Skiing')?.n ?? 'few'} sessions.
+          </p>
         </div>
       )}
 
@@ -123,12 +143,12 @@ export default function HRRecoveryChart({ height = 200, compact = false }) {
             top: flip ? y - 56 : y + 12,
             background: SURFACE, border: '1px solid rgba(255,255,255,0.12)',
             borderRadius: 8, padding: '8px 12px',
-            zIndex: 100, pointerEvents: 'none', minWidth: 110,
+            zIndex: 100, pointerEvents: 'none', minWidth: 150,
             boxShadow: '0 4px 16px rgba(0,0,0,0.4)',
           }}>
-            <p style={{ fontSize: 11, fontWeight: 600, color: TEXT, marginBottom: 4 }}>{tip.sport.sport}</p>
-            <p style={{ fontSize: 10, color: LATE_COLOR, margin: 0 }}>60s: −{tip.sport.hrr1} bpm</p>
-            <p style={{ fontSize: 10, color: FINAL_COLOR, margin: '2px 0 0' }}>90s: −{tip.sport.hrr2} bpm</p>
+            <p style={{ fontSize: 13, fontWeight: 600, color: TEXT, marginBottom: 4 }}>{tip.sport.sport} <span style={{ fontWeight: 400, color: QUIET }}>· {tip.sport.n} sessions</span></p>
+            <p style={{ fontSize: 12, color: LATE_COLOR, margin: 0 }}>Up to 90s: −{tip.sport.hrr1} bpm</p>
+            <p style={{ fontSize: 12, color: FINAL_COLOR, margin: '2px 0 0' }}>By 3 min: −{tip.sport.hrr2} bpm</p>
           </div>
         )
       })()}
