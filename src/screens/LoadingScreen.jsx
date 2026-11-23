@@ -16,7 +16,7 @@ const COPY = {
   yvonne: {
     headline: "Loading Yvonne's data...",
     lines: [
-      "1,645 days of consistent wearable data.",
+      "1,717 days of consistent wearable data.",
       "Looking for patterns across sleep, activity, cardiovascular data, and life annotations.",
       "Yvonne's question: what's actually shaping how she feels?",
       "This takes about 30 seconds.",
