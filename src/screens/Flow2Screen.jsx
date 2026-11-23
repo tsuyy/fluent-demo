@@ -2,23 +2,16 @@ import { useState } from 'react'
 import FloatingNav from '../components/nav/FloatingNav'
 import { useIsNarrow } from '../components/scrolly/useIsNarrow'
 import { motion, AnimatePresence } from 'framer-motion'
-import WeeklyRhythmFullChart from '../components/charts/WeeklyRhythmFullChart'
-import SleepHRVChart         from '../components/charts/SleepHRVChart'
-import RetirementArcChart    from '../components/charts/RetirementArcChart'
-import SeasonalStepsChart    from '../components/charts/SeasonalStepsChart'
 import IllnessArcChart      from '../components/charts/IllnessArcChart'
 import SoberExperimentChart from '../components/charts/SoberExperimentChart'
 import illnessArcData        from '../data/yvonne/illness_arc.json'
 import soberData              from '../data/yvonne/sober_experiment.json'
  
-// ── Insight sequence per persona ─────────────────────────────────────────────
-// "next insight" advances within the persona's sequence.
+// ── Insight sequence ─────────────────────────────────────────────────────────
+// "next insight" advances within the sequence.
 // Last card → button becomes "explore other topics →" → home.
 const SEQUENCES = {
-  jamie:  ['monday',     'sleep_hrv'],
   yvonne: ['illness_arc', 'sober_experiment'],
-  robert: ['retirement', 'silence'],
-  alex:   ['seasonal',   'capability'],
 }
  
 // ── Card content ──────────────────────────────────────────────────────────────
@@ -28,40 +21,9 @@ const SEQUENCES = {
 //   question       — open invitation (null = no verification block)
 //   questionType   — 'felt' (single-select) | 'annotation' (multi-select) | null
 const CARDS = {
-  monday: {
-    persona: 'jamie',
-    headline: 'Your resting heart rate is lowest on Mondays',
-    subtitle: 'About 68 bpm on Mondays, the lowest day of the week, and about 75 bpm on Saturdays, the highest.',
-    observation: 'Over the last 8 weeks, Monday had your lowest resting heart rate in every week, averaging 68 bpm. Saturday was highest at about 75 bpm, based on the 5 weeks with a Saturday reading.',
-    interpretation: "One reading: whatever raises your heart rate over the weekend has settled by Monday morning. Resting heart rate also moves with sleep, alcohol, stress and illness, so this shows when it runs high or low, not why.",
-    dataNote: "8 weeks, 46 of 56 days with a reading. Weekends have the most gaps, where your tracker wasn't worn. Exploratory: one person.",
-    question: 'Does this match how your Mondays typically feel?',
-    questionType: 'felt',
-    chips: ['Yes', 'Not really', "I don't remember"],
-    contextQuestion: 'Anything come to mind about your weekends?',
-    contextChips: ['Late night', 'Social', 'Alcohol', 'Travel', 'Stress', 'Busy weekend', 'Other', 'Skip'],
-    acknowledgment: 'Thanks. If you add what happened on a few weekends, Fluent can check over time whether they shape your Mondays.',
-    chart: 'weekly_rhythm',
-  },
  
-  sleep_hrv: {
-    persona: 'jamie',
-    headline: 'Sleep looked normal, but HRV was low the next morning',
-    subtitle: 'On 4 nights, sleep efficiency was typical and the next morning\'s HRV was about 7 ms below your usual.',
-    observation: "On 4 nights (Nov 8, Dec 2, Feb 13 and Feb 14), sleep efficiency was 87–91%, close to your usual 87%. The next morning's HRV was 29–31 ms, about 7 ms below your usual 37 ms.",
-    interpretation: "One reading: sleep efficiency measures how much of the night you spent asleep, not how well your body recovered, so the two can disagree. HRV can also run lower after alcohol, illness or a late meal. Fluent can't tell which applied on these nights.",
-    dataNote: '4 mismatch nights out of 16 nights with both sleep and HRV tracked. Exploratory: one person.',
-    question: 'Do you remember how those mornings felt?',
-    questionType: 'felt',
-    chips: ["I don't remember", 'Nothing unusual', 'Tired', 'Restless', 'Felt fine'],
-    contextQuestion: 'Anything that might explain those nights?',
-    contextChips: ['Late night', 'Alcohol', 'Stress', 'Illness', 'Travel', 'Other', 'Skip'],
-    acknowledgment: 'Thanks. Adding what was going on lets Fluent compare these nights with future ones.',
-    chart: 'sleep_hrv_quadrant',
-  },
  
   illness_arc: {
-    persona: 'yvonne',
     headline: 'Elevated wrist temperature and HRV drop, Feb 11–12',
     subtitle: "Fluent can show the change. You know what was going on.",
     observation: "On Feb 11–12, two nights in a row, your wrist temperature ran above baseline: +1.03° and +1.5°. HRV was 11–17 ms lower. Resting heart rate didn't move.",
@@ -95,7 +57,6 @@ const CARDS = {
  
  
   sober_experiment: {
-    persona: 'yvonne',
     headline: "Alcohol-free experiment · Jul 6\u201320",
     subtitle: "Here's what your data showed.",
     observation: "In July 2026, you went alcohol-free for fourteen days. Training, sleep schedule, and diet stayed the same. Fluent tracked the period as it unfolded. Your HRV averaged 10.7ms higher than in the 30 nights before the experiment, a 23% increase. Deep sleep added about 9.5 minutes per night on average. Respiratory rate dropped slightly. Your resting heart rate fell about 2 bpm, a much smaller change in proportion (4%). Your nervous system regulation changed significantly. These are different signals, and alcohol appears to affect one more than the other.",
@@ -116,109 +77,22 @@ const CARDS = {
     chart: 'sober_experiment',
   },
  
-  retirement: {
-    persona: 'robert',
-    headline: 'Retirement left a mark on your heart rate',
-    subtitle: 'Your resting heart rate settled into a new, healthier pattern after you retired.',
-    observation: "Your resting heart rate settled into a new, lower range in the months after you retired — and has stayed there.",
-    interpretation: "This kind of sustained shift over several months is typically associated with a change in baseline daily rhythm rather than a single event. A lower resting heart rate generally reflects less baseline demand on your cardiovascular system.",
-    dataNote: 'Compared against your pre-retirement baseline of 63 bpm.',
-    question: 'Does this match how that transition felt for you?',
-    questionType: 'felt',
-    chips: ["Yes, that's exactly how it felt", 'It felt different than that', 'Skip'],
-    contextQuestion: 'Anything come to mind about that period?',
-    contextChips: ['Took time to adjust', 'Felt immediate', 'Still adjusting', 'Something else', 'Skip'],
-    acknowledgment: 'Your body registered this transition in ways you may never have consciously noticed — even when the experience itself felt like straightforward relief.',
-    chart: 'retirement_arc',
-  },
  
-  silence: {
-    persona: 'robert',
-    headline: "Nothing stood out this quarter — and that's worth knowing",
-    subtitle: "Your key patterns are all consistent with how you've been trending. No news is the finding here.",
-    observation: "Your key patterns this quarter — resting heart rate, activity, sleep — are all consistent with how you've been trending. Nothing exceeded the threshold that would normally prompt a closer look.",
-    interpretation: "Sometimes the most useful thing to know is that nothing unusual is happening. Stability in these signals, sustained over a quarter, is itself meaningful.",
-    dataNote: null,
-    question: null,
-    questionType: null,
-    chips: [],
-    contextQuestion: null,
-    contextChips: [],
-    acknowledgment: null,
-    chart: null,
-  },
  
-  seasonal: {
-    persona: 'alex',
-    headline: 'October was your most active month — February your quietest',
-    subtitle: "Your steps follow a seasonal rhythm you've probably felt but never seen confirmed.",
-    observation: "Your step count follows a seasonal rhythm — higher in autumn, lower in mid-winter. October consistently shows your most active days. February consistently shows your quietest. This pattern has held across the years in your data.",
-    interpretation: "Seasonal variation in activity is common and often invisible until you see it across multiple years. Yours is consistent enough to be a real pattern, not noise.",
-    dataNote: 'Based on 5 years of iPhone step data.',
-    question: 'Does October feel like your most active time of year?',
-    questionType: 'felt',
-    chips: ['Yes, that tracks', 'Not really', 'Skip'],
-    contextQuestion: 'What drives that pattern for you?',
-    contextChips: ['Weather / season', 'Work schedule', 'Social life', 'Daylight hours', 'Just how it is', 'Something else', 'Skip'],
-    acknowledgment: 'Seasonal rhythms in activity are common and often invisible until you see them across multiple years. Yours is consistent enough to be a real pattern, not just noise.',
-    chart: 'seasonal_steps',
-  },
  
-  capability: {
-    persona: 'alex',
-    headline: "Here's what steps can't tell you",
-    subtitle: "Your activity patterns are clear, but Fluent can't see whether those active days left you energized or depleted.",
-    observation: "Your activity patterns are clear — Fluent can see when you move more and when you move less, across weeks, months, and seasons.",
-    interpretation: "But steps alone can't tell us whether those active days left you energized or depleted, how your body recovered overnight, or whether your sleep was restoring or just passing time. That's what a wearable would add.",
-    dataNote: null,
-    question: null,
-    questionType: null,
-    chips: [],
-    contextQuestion: null,
-    contextChips: [],
-    acknowledgment: null,
-    chart: 'capability_gap',
-  },
 }
  
 // ── Chart renderer ─────────────────────────────────────────────────────────────
 function Flow2Chart({ type, metric }) {
   if (!type) return null
-  if (type === 'weekly_rhythm')     return <WeeklyRhythmFullChart height={200} metric={metric} />
-  if (type === 'sleep_hrv_quadrant') return <SleepHRVChart height={200} />
   if (type === 'illness_arc')      return <IllnessArcChart data={illnessArcData} height={300} />
   if (type === 'sober_experiment') return <SoberExperimentChart data={soberData} height={240} />
-  if (type === 'retirement_arc')     return <RetirementArcChart height={180} />
-  if (type === 'seasonal_steps')     return <SeasonalStepsChart height={180} />
-  if (type === 'capability_gap') return (
-    <div style={{ padding: '16px 0' }}>
-      {[
-        { label: 'Recovery signals',  desc: 'How your body responded',    color: '#27C48A' },
-        { label: 'Sleep quality',     desc: 'How you recovered overnight', color: '#0681fc' },
-        { label: 'Cardiovascular',    desc: 'How your heart is adapting',  color: '#E8504A' },
-      ].map((layer, i) => (
-        <motion.div key={layer.label} initial={{ opacity: 0, x: -8 }} animate={{ opacity: 0.5, x: 0 }} transition={{ delay: i * 0.1 }}
-          style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 16px', background: 'rgba(255,255,255,0.04)', borderRadius: 8, border: '1px dashed rgba(255,255,255,0.08)', marginBottom: 10 }}
-        >
-          <div style={{ width: 8, height: 8, borderRadius: '50%', background: layer.color, flexShrink: 0 }} />
-          <div>
-            <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)' }}>{layer.label}</p>
-            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.52)' }}>{layer.desc}</p>
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  )
   return null
 }
  
-const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex' }
  
 const GRADIENTS = {
-  jamie:  'radial-gradient(ellipse at 20% 80%, rgba(196,80,232,0.2) 0%, transparent 60%)',
   yvonne: 'radial-gradient(ellipse at 70% 30%, rgba(6,129,252,0.15) 0%, rgba(39,196,138,0.08) 40%, transparent 65%)',
-  robert: 'radial-gradient(ellipse at 20% 60%, rgba(39,196,138,0.15) 0%, transparent 55%)',
-  alex:   'radial-gradient(ellipse at 60% 40%, rgba(39,196,138,0.1) 0%, transparent 55%)',
 }
  
 // ── Main component ─────────────────────────────────────────────────────────────
@@ -229,7 +103,7 @@ export default function Flow2Screen({ cardId, persona, onBack, onNavigate }) {
   const [contextChips, setContextChips] = useState([])
   const [metric,       setMetric]       = useState('RHR')
  
-  const content   = CARDS[cardId] || CARDS.monday
+  const content   = CARDS[cardId] || CARDS.illness_arc
   const sequence  = SEQUENCES[persona] || SEQUENCES.yvonne
   const cardIndex = sequence.indexOf(cardId)
   const nextCardId = sequence[cardIndex + 1] ?? null
@@ -269,7 +143,6 @@ function handleFelt(chip) {
   }
  
   const showNextButton = step === 'ack' || !content.question
-  const label = PERSONA_LABELS[persona] || persona
  
   return (
     <div style={{ width: '100%', height: '100%', background: 'var(--color-base)', display: 'flex', flexDirection: 'column', overflow: 'hidden', position: 'relative', flex: 1 }}>
@@ -299,13 +172,6 @@ function handleFelt(chip) {
           {content.chart && (
             <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
               style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: '20px 20px 12px', marginBottom: 4 }}>
-              {content.chart === 'weekly_rhythm' && (
-                <div style={{ display: 'flex', gap: 8, marginBottom: 12 }}>
-                  {['RHR', 'HRV'].map(m => (
-                    <span key={m} onClick={() => setMetric(m)} style={{ background: metric === m ? 'var(--color-accent)' : 'rgba(255,255,255,0.08)', borderRadius: 20, padding: '4px 12px', fontSize: 13, fontWeight: 500, cursor: 'pointer', color: metric === m ? '#fff' : 'var(--color-text-secondary)', transition: 'all 0.2s' }}>{m}</span>
-                  ))}
-                </div>
-              )}
               <Flow2Chart type={content.chart} metric={metric} />
             </motion.div>
           )}

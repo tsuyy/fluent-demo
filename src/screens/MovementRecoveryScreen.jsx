@@ -2,23 +2,15 @@ import { motion } from 'framer-motion'
 import FloatingNav from '../components/nav/FloatingNav'
 import SportRecoveryBars from '../components/charts/SportRecoveryBars'
 import StackingBars from '../components/charts/StackingBars'
-import StructureCompareBars from '../components/charts/StructureCompareBars'
-import WeeklyRhythmFullChart from '../components/charts/WeeklyRhythmFullChart'
-import RetirementArcChart from '../components/charts/RetirementArcChart'
-import SeasonalStepsChart from '../components/charts/SeasonalStepsChart'
 import MovementCalendar from '../components/charts/MovementCalendar'
 import calendarData from '../data/yvonne/calendar.json'
 import PageContainer from '../components/layout/PageContainer'
 import { useIsNarrow } from '../components/scrolly/useIsNarrow'
 
 
-const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex' }
 
 const GRADIENTS = {
-  jamie:  'radial-gradient(ellipse at 15% 70%, rgba(196,80,232,0.2) 0%, transparent 55%)',
   yvonne: 'radial-gradient(ellipse at 80% 20%, rgba(6,129,252,0.15) 0%, rgba(39,196,138,0.08) 40%, transparent 65%)',
-  robert: 'radial-gradient(ellipse at 20% 60%, rgba(39,196,138,0.15) 0%, transparent 55%)',
-  alex:   'radial-gradient(ellipse at 60% 30%, rgba(39,196,138,0.1) 0%, transparent 55%)',
 }
 
 function ChartCard({ title, subtitle, children, delay = 0 }) {
@@ -60,9 +52,6 @@ export default function MovementRecoveryScreen({ persona, onNavigate, onBack }) 
   const gradient = GRADIENTS[persona] || GRADIENTS.yvonne
 
   const isYvonne = persona === 'yvonne'
-  const isRobert = persona === 'robert'
-  const isAlex   = persona === 'alex'
-  const isJamie  = persona === 'jamie'
 
   return (
     <div style={{
@@ -156,119 +145,6 @@ export default function MovementRecoveryScreen({ persona, onNavigate, onBack }) 
           </div>
         )}
 
-        {/* Jamie — simpler */}
-        {isJamie && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-            <ChartCard
-              title="Your weekly rhythm"
-              subtitle="Resting heart rate by day, last 8 weeks"
-              delay={0.1}
-            >
-              <WeeklyRhythmFullChart height={200} metric="RHR" />
-              <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.5, margin: '12px 0 4px', fontStyle: 'italic' }}>
-                "Resting heart rate is lowest on Mondays (68 bpm on average) and highest on Saturdays (75 bpm)."
-              </p>
-            </ChartCard>
-
-            <ChartCard
-              title="Activity levels"
-              subtitle="How much you've been moving month by month"
-              delay={0.2}
-            >
-              <SeasonalStepsChart height={160} />
-            </ChartCard>
-          </div>
-        )}
-
-        {/* Robert */}
-        {isRobert && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-            <ChartCard
-              title="Activity before and after retirement"
-              subtitle="How your movement changed"
-              delay={0.1}
-            >
-              <RetirementArcChart height={180} />
-            </ChartCard>
-
-            <ChartCard
-              title="Structured vs unstructured weeks"
-              subtitle="Weeks with plans vs weeks with an open calendar"
-              delay={0.2}
-            >
-              <StructureCompareBars />
-            </ChartCard>
-          </div>
-        )}
-
-        {/* Alex */}
-        {isAlex && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-            <ChartCard
-              title="Your seasonal step pattern"
-              subtitle="How your movement changes across the year"
-              delay={0.1}
-            >
-              <SeasonalStepsChart height={180} />
-            </ChartCard>
-
-            <ChartCard
-              title="What steps can't tell you"
-              subtitle="Here's where a wearable would add depth"
-              delay={0.2}
-            >
-              <div style={{
-                padding: 24,
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 12,
-              }}>
-                {[
-                  { label: 'Recovery signals', desc: 'How your body responded' },
-                  { label: 'Sleep quality', desc: 'How you recovered overnight' },
-                  { label: 'Cardiovascular trend', desc: 'How your heart is adapting' },
-                ].map((layer, i) => (
-                  <motion.div
-                    key={layer.label}
-                    initial={{ opacity: 0, x: -8 }}
-                    animate={{ opacity: 0.5, x: 0 }}
-                    transition={{ delay: 0.3 + i * 0.1 }}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: 12,
-                      padding: '10px 14px',
-                      background: 'rgba(255,255,255,0.04)',
-                      borderRadius: 8,
-                      border: '1px dashed rgba(255,255,255,0.08)',
-                    }}
-                  >
-                    <div style={{
-                      width: 8, height: 8, borderRadius: '50%',
-                      background: 'rgba(255,255,255,0.2)',
-                      flexShrink: 0,
-                    }} />
-                    <div>
-                      <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)' }}>
-                        {layer.label}
-                      </p>
-                      <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.52)' }}>
-                        {layer.desc}
-                      </p>
-                    </div>
-                  </motion.div>
-                ))}
-                <p style={{
-                  fontSize: 13,
-                  color: 'var(--color-text-tertiary)',
-                  marginTop: 8, lineHeight: 1.5,
-                }}>
-                  See what a wearable would add →
-                </p>
-              </div>
-            </ChartCard>
-          </div>
-        )}
       </div>
 
       {/* Floating nav */}

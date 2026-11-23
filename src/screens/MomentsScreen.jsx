@@ -8,8 +8,6 @@ import SportRecoveryBars      from '../components/charts/SportRecoveryBars'
 import RHRTrendChart         from '../components/charts/RHRTrendChart'
 import illnessArcData        from '../data/yvonne/illness_arc.json'
 import soberData              from '../data/yvonne/sober_experiment.json'
-import RetirementArcChart from '../components/charts/RetirementArcChart'
-import SeasonalStepsChart from '../components/charts/SeasonalStepsChart'
 
 // ── Moment data ────────────────────────────────────────────────────────────
 // Ordered most recent → oldest (reverse chronological)
@@ -84,118 +82,8 @@ const MOMENTS = {
     },
   ],
 
-  robert: [
-    {
-      id: 'structure',
-      date: 'Mar 2025',
-      label: 'Structure as a health variable',
-      type: 'pattern',
-      color: '#0681fc',
-      chart: 'retirement_arc',
-      observation: 'Weeks with consistent plans — golf, social commitments, scheduled activity — show measurably different recovery signals than weeks without structure.',
-      insight: 'Structure isn\'t just a preference. For your body, it\'s a recovery tool.',
-      dataNote: 'Structured: HRV 33ms, RHR 57.9 · Unstructured: HRV 26.6, RHR 62.0',
-      annotation: null,
-      forwardLink: null,
-    },
-    {
-      id: 'portugal',
-      date: 'May 2024',
-      label: 'Portugal trip',
-      type: 'travel',
-      color: '#888780',
-      chart: null,
-      observation: 'Brief disruption in routine. HRV dipped during travel, recovered within 4 days of returning home.',
-      insight: 'Your baseline held.',
-      dataNote: 'HRV dip · Recovery day +4',
-      annotation: null,
-      forwardLink: null,
-    },
-    {
-      id: 'golf_routine',
-      date: 'Jan 2024',
-      label: 'Golf routine established',
-      type: 'pattern',
-      color: '#0681fc',
-      chart: null,
-      observation: 'Once a consistent golf schedule began, the structure dependency pattern became visible in the data.',
-      insight: 'Routine created regularity. Regularity showed up in your recovery.',
-      dataNote: 'Structured weeks: HRV consistently higher',
-      annotation: null,
-      forwardLink: null,
-    },
-    {
-      id: 'retirement',
-      date: 'Aug 2023',
-      label: 'Retirement',
-      type: 'milestone',
-      color: '#27C48A',
-      chart: 'retirement_arc',
-      observation: 'Your resting heart rate rose briefly then settled into a new, lower baseline over 5 months. Your body registered the transition before you finished processing it.',
-      insight: 'The body adapts on its own timeline.',
-      dataNote: 'RHR +2.2 bpm first month → −5.8 bpm new baseline',
-      annotation: null,
-      forwardLink: { label: 'See your cardiovascular arc →', screen: 'cardio' },
-    },
-  ],
 
-  jamie: [
-    {
-      id: 'hikes',
-      date: 'Jan 2025',
-      label: 'Weekend hikes begin',
-      type: 'pattern',
-      color: '#27C48A',
-      chart: null,
-      observation: 'A consistent weekend hiking pattern emerged. Monday recovery readings improved in weeks that followed.',
-      insight: 'Movement you enjoy shows up differently than movement you track.',
-      dataNote: 'Monday RHR improved on hike weeks',
-      annotation: null,
-      forwardLink: null,
-    },
-    {
-      id: 'project',
-      date: 'Nov 2024',
-      label: 'Heavy project period',
-      type: 'insight',
-      color: '#E8504A',
-      chart: null,
-      observation: 'Your tracking gaps cluster around your busiest periods. The absence is itself information — your watch wasn\'t charged when things got hard.',
-      insight: 'The data can see the shape of your calendar.',
-      dataNote: 'Tracking coverage dropped to 52% · Nov 2024',
-      annotation: null,
-      forwardLink: null,
-    },
-    {
-      id: 'start',
-      date: 'Aug 2024',
-      label: 'Started tracking',
-      type: 'milestone',
-      color: '#0681fc',
-      chart: null,
-      observation: 'The first consistent data. Some gaps from the start — but the patterns began to emerge within the first month.',
-      insight: 'The longer you track, the more meaningful it becomes.',
-      dataNote: '8 months · 73% coverage',
-      annotation: null,
-      forwardLink: null,
-    },
-  ],
 
-  alex: [
-    {
-      id: 'pattern',
-      date: '2021–2025',
-      label: '5 years of movement',
-      type: 'insight',
-      color: '#0681fc',
-      chart: 'seasonal_steps',
-      observation: 'October peaks and February troughs — every single year without exception. A rhythm you\'ve been living without seeing.',
-      insight: 'Patterns become visible when you look at enough time.',
-      dataNote: 'Oct avg: 10,200 steps · Feb avg: 5,680 steps',
-      annotation: null,
-      forwardLink: null,
-    },
-  ],
 }
 
 // ── Topics ─────────────────────────────────────────────────────────────────
@@ -403,8 +291,6 @@ function MomentChart({ type }) {
   if (!type) return null
   if (type === 'rhr_trend')        return <RHRTrendChart height={140} />
   if (type === 'sport_hrv')        return <SportRecoveryBars compact />
-  if (type === 'retirement_arc')   return <RetirementArcChart height={140} />
-  if (type === 'seasonal_steps')   return <SeasonalStepsChart height={140} />
   if (type === 'illness_arc')      return <IllnessArcChart data={illnessArcData} height={140} compact />
   if (type === 'sober_experiment') return <SoberExperimentChart data={soberData} height={140} compact />
   return null
@@ -656,7 +542,7 @@ function AddMoment({ topics, onAddTopic, onSave, onCancel }) {
 
 // ── Main screen ────────────────────────────────────────────────────────────
 export default function MomentsScreen({ persona, onNavigate, onBack, onFlow2 }) {
-  const baseMoments = MOMENTS[persona] || MOMENTS.jamie
+  const baseMoments = MOMENTS.yvonne
   const [topics, setTopics] = useState(BASE_TOPICS)
   const [userMoments, setUserMoments] = useState([])
   const [adding, setAdding] = useState(false)
@@ -702,7 +588,7 @@ export default function MomentsScreen({ persona, onNavigate, onBack, onFlow2 }) 
 
       <div style={{ position: 'absolute', top: 32, left: 48, right: 48, display: 'flex', justifyContent: 'space-between', alignItems: 'center', zIndex: 10 }}>
         <span style={{ fontSize: 16, fontWeight: 500 }}>fluent</span>
-        <span onClick={onBack} style={{ fontSize: 14, color: 'var(--color-text-secondary)', cursor: 'pointer', flexShrink: 0, whiteSpace: 'nowrap' }}>{persona}</span>
+        <span onClick={onBack} style={{ fontSize: 14, color: 'var(--color-text-secondary)', cursor: 'pointer', flexShrink: 0, whiteSpace: 'nowrap' }}>← home</span>
       </div>
 
       <div style={{ flex: 1, overflowY: 'auto', padding: '100px 24px 120px', position: 'relative', zIndex: 1 }}>
@@ -746,13 +632,6 @@ export default function MomentsScreen({ persona, onNavigate, onBack, onFlow2 }) 
               style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)', lineHeight: 1.7, marginTop: 16, fontStyle: 'italic' }}>
               The data can see it. Whether it matches how you feel — that's the conversation Fluent is trying to start.
             </motion.p>
-          )}
-          {persona === 'alex' && (
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} style={{ marginTop: 32 }}>
-              <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.52)', lineHeight: 1.7 }}>
-                Life context makes patterns meaningful. With a wearable and a few notes over time, Fluent can tell you not just when things changed — but why.
-              </p>
-            </motion.div>
           )}
         </PageContainer>
       </div>

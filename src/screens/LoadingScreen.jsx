@@ -3,16 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useIsNarrow } from '../components/scrolly/useIsNarrow'
 
 const COPY = {
-  jamie: {
-    headline: "Loading Jamie's data...",
-    lines: [
-      "8 months of inconsistent wearable data.",
-      "Some weeks have gaps — her watch wasn't always charged. Fluent shows what's there and names what isn't.",
-      "Jamie's question: why do some weeks feel so much harder than others?",
-      "This takes about 30 seconds.",
-    ],
-    gradient: "radial-gradient(ellipse at 20% 60%, rgba(196,80,232,0.2) 0%, rgba(6,129,252,0.1) 50%, transparent 70%)",
-  },
   yvonne: {
     headline: "Loading Yvonne's data...",
     lines: [
@@ -22,26 +12,6 @@ const COPY = {
       "This takes about 30 seconds.",
     ],
     gradient: "radial-gradient(ellipse at 70% 30%, rgba(6,129,252,0.2) 0%, rgba(39,196,138,0.1) 50%, transparent 70%)",
-  },
-  robert: {
-    headline: "Loading Robert's data...",
-    lines: [
-      "547 days of consistent wearable data.",
-      "Looking for patterns across activity, cardiovascular health, and sleep.",
-      "Robert's question: what did retiring actually do to his body?",
-      "This takes about 30 seconds.",
-    ],
-    gradient: "radial-gradient(ellipse at 30% 70%, rgba(39,196,138,0.2) 0%, rgba(6,129,252,0.1) 50%, transparent 70%)",
-  },
-  alex: {
-    headline: "Loading Alex's data...",
-    lines: [
-      "Alex's activity history from phone step tracking — no wearable.",
-      "Fluent shows what's visible from steps alone and where a tracker would add depth.",
-      "Alex's question: what does his phone already know about him?",
-      "This takes about 30 seconds.",
-    ],
-    gradient: "radial-gradient(ellipse at 60% 40%, rgba(39,196,138,0.14) 0%, rgba(6,129,252,0.1) 50%, transparent 70%)",
   },
 }
 

@@ -16,7 +16,7 @@ const BAD   = '#E8504A'
  * a number is actually notable without needing to already know what
  * a normal HRV/RHR/etc value looks like for this person. Falls back
  * to computing the percentage from value+deviation if a real
- * deviation_pct/pct isn't provided (Jamie/Robert's synthetic data).
+ * deviation_pct/pct isn't provided.
  *
  * Renders however many metrics are passed — no hardcoded "always 4."
  */

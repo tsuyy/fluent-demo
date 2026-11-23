@@ -25,18 +25,6 @@ import yvonneRecovery from '../data/yvonne/recent_recovery_14d.json'
 import yvonnePhysical from '../data/yvonne/recent_physical_14d.json'
 import sleepQQRT       from '../data/yvonne/sleep_qqrt.json'
 
-// Jamie — synthetic (overtraining scenario)
-import jamieActivity from '../data/jamie/recent_activity_14d.json'
-import jamieRecovery from '../data/jamie/recent_recovery_14d.json'
-import jamiePhysical from '../data/jamie/recent_physical_14d.json'
-
-// Robert — synthetic (structure-dependency scenario)
-import robertActivity from '../data/robert/recent_activity_14d.json'
-import robertRecovery from '../data/robert/recent_recovery_14d.json'
-import robertPhysical from '../data/robert/recent_physical_14d.json'
-import robertSleepTimes from '../data/robert/sleep_times.json'
-import SleepRegularityChart from '../components/charts/SleepRegularityChart'
-
 const SIGNALS = [
   { id: 'energy',   label: 'My energy feels off',      Icon: IconEnergy },
   { id: 'sleep',    label: 'My sleep feels different',  Icon: IconSleep },
@@ -44,7 +32,6 @@ const SIGNALS = [
   { id: 'physical', label: 'Something feels physical',   Icon: IconPhysical },
 ]
 
-const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex' }
 
 const MODE3_GENERIC = "Most physical sensations aren't visible to a wrist sensor. Steps and HRV can catch some patterns — but pain, injury, or specific symptoms are information only you have right now."
 
@@ -88,139 +75,8 @@ const YVONNE_ROUTES = {
   },
 }
 
-// ─────────────────────────────────────────────────────────────────
-// JAMIE — energy & recovery both fire the overtraining signature
-// (same underlying scenario, different supporting chart). Physical
-// is Mode 3 with a device-specific note (no wrist sensor). Sleep
-// stays Mode 1 sleep-mismatch, reusing the existing SleepHRVChart.
-// ─────────────────────────────────────────────────────────────────
-const JAMIE_OVERTRAINING = {
-  mode: 1,
-  observation: "Your training load has been notably higher than your personal average over the past two weeks — and your recovery signals are showing it. Your HRV has been suppressed while your activity has been elevated.",
-  interpretation: "This pattern can show up during either accumulated fatigue or a deliberate hard training block — the data alone can't tell which. That's usually something only you know.",
-  contextQuestion: 'Has your training been heavier than usual lately?',
-  chips: ['Yes, more than normal', 'About the same', 'Actually less', 'Something else', 'Skip'],
-  acknowledgment: "That makes sense. A rest day or two often helps more than another session would. Worth watching over the next few days.",
-}
-
-const JAMIE_ROUTES = {
-  energy: {
-    ...JAMIE_OVERTRAINING,
-    chart: 'activity', chartData: jamieActivity,
-    chartCaption: 'Active calories vs your baseline, past two weeks',
-  },
-  recovery: {
-    ...JAMIE_OVERTRAINING,
-    chart: 'recovery', chartData: jamieRecovery,
-    chartCaption: 'HRV and resting heart rate, past two weeks',
-  },
-  physical: {
-    mode: 3,
-    body: MODE3_GENERIC,
-    mode3Note: "This check needs wrist temperature data — your tracker doesn't have that sensor, so we can only see half the picture.",
-    chart: 'physical', chartData: jamiePhysical,
-    chartCaption: 'No wrist temperature sensor on this device',
-  },
-  sleep: {
-    mode: 1,
-    observation: "Your sleep looked normal — but your HRV tells a different story some weeks.",
-    chart: 'sleepHRV',
-    chartCaption: 'Sleep efficiency × next-day HRV — the mismatch nights stand out',
-  },
-  unsure: {
-    ...JAMIE_OVERTRAINING,
-    openingFraming: "That's okay — let's look at what's been different about the past two weeks.",
-    chart: 'activity', chartData: jamieActivity,
-    chartCaption: 'Active calories vs your baseline, past two weeks',
-  },
-}
-
-const JAMIE_SNAPSHOT = [
-    { label: 'HRV', unit: 'ms', value: 31.4, baseline: 37.2, deviation: -5.8, isGood: false, displayDev: '-5.8ms' },
-    { label: 'RHR', unit: 'bpm', value: 74.2, baseline: 70.3, deviation: 3.9, isGood: false, displayDev: '+3.9bpm' },
-    { label: 'Deep sleep', unit: 'min', value: 52.1, baseline: 56.3, deviation: -4.2, isGood: false, displayDev: '-4.2min' },
-    { label: 'Active cal', unit: 'cal', value: 832, baseline: 650, deviation: 182, isGood: false, displayDev: '+182cal' },
-  ]
-
-// ─────────────────────────────────────────────────────────────────
-// ROBERT — energy & recovery both fire the structure-dependency
-// signature. Physical is Mode 3, but the illness-convergence check
-// did run (he has a wrist sensor) and found nothing — so the note
-// differs from Jamie's. Sleep is a stable Mode 2 with no chart.
-// ─────────────────────────────────────────────────────────────────
-const ROBERT_STRUCTURE = {
-  mode: 1,
-  observation: "Your recovery signals are better in weeks with consistent plans and structure than in open, unscheduled weeks.",
-  interpretation: "For your body, structure appears to be a health variable — not just a preference. Unstructured weeks show consistently lower HRV and higher resting heart rate.",
-  statPair: {
-    structured:   { label: 'Structured weeks',   hrv: '33ms',   rhr: '57.9 bpm' },
-    unstructured: { label: 'Unstructured weeks', hrv: '26.6ms', rhr: '62.0 bpm' },
-  },
-  contextQuestion: 'Has this been a less structured week?',
-  chips: ['Yes, open calendar', 'About normal', 'Actually very busy', 'Skip'],
-  // Drafted by dev chat — no acknowledgment line was given in the
-  // spec for Robert's structure scenario (Jamie's had one, this
-  // didn't). Reword freely.
-  acknowledgment: "That tracks — for you, structure isn't just a preference, it's something your body responds to directly.",
-}
-
-const ROBERT_ROUTES = {
-  energy: {
-    ...ROBERT_STRUCTURE,
-    chart: 'activity', chartData: robertActivity,
-    chartCaption: 'Activity pattern, past two weeks',
-  },
-  recovery: {
-    ...ROBERT_STRUCTURE,
-    chart: 'recovery', chartData: robertRecovery,
-    chartCaption: 'HRV and resting heart rate, past two weeks',
-  },
-  physical: {
-    mode: 3,
-    body: MODE3_GENERIC,
-    // Drafted by dev chat — spec didn't give exact wording for
-    // Robert's version (only Jamie's sensor-gap note was specified).
-    mode3Note: "Your wrist temperature and HRV both look unremarkable over the past two weeks. But most physical sensations still aren't something a wrist sensor can see at all.",
-    chart: 'physical', chartData: robertPhysical,
-    chartCaption: 'Checked — nothing stood out',
-  },
-  sleep: {
-    mode: 2,
-    body: "Your sleep has been consistent across two years — one of the steadier signals in your data. Nothing unusual stands out over the past two weeks.",
-    chart: 'regularity', chartData: robertSleepTimes.eras[0],
-    chartCaption: 'When you go to bed, every night in two years (each bar is a 30-minute window)',
-  },
-  unsure: {
-    ...ROBERT_STRUCTURE,
-    openingFraming: "Let's see what's been different lately.",
-    chart: 'activity', chartData: robertActivity,
-    chartCaption: 'Activity pattern, past two weeks',
-  },
-}
-
- const ROBERT_SNAPSHOT = [
-    { label: 'HRV', unit: 'ms', value: 27.8, baseline: 30.9, deviation: -3.1, isGood: false, displayDev: '-3.1ms' },
-    { label: 'RHR', unit: 'bpm', value: 61.4, baseline: 58.6, deviation: 2.8, isGood: false, displayDev: '+2.8bpm' },
-    { label: 'Deep sleep', unit: 'min', value: 44.2, baseline: 42.4, deviation: 1.8, isGood: true, displayDev: '+1.8min' },
-    { label: 'Active cal', unit: 'cal', value: 245, baseline: 380, deviation: -135, isGood: false, displayDev: '-135cal' },
-  ]
-  
-// ─────────────────────────────────────────────────────────────────
-// ALEX — unchanged, old route shape (all five → Mode 3, no wearable)
-// ─────────────────────────────────────────────────────────────────
-const ALEX_ROUTES = {
-  energy:   { cardId: 'seasonal', reason: 'Your step patterns show when you move more and less — that seasonal rhythm may be related to your energy levels.' },
-  sleep:    { cardId: null, wearableOnly: true, reason: 'Sleep signals require overnight wearable tracking. Steps alone can\'t explain sleep changes.' },
-  recovery: { cardId: null, wearableOnly: true, reason: 'Recovery signals like HRV require a wearable worn overnight. Steps show movement volume but not how your body responded.' },
-  physical: { cardId: null, wearableOnly: true, reason: 'Cardiovascular signals require overnight wearable tracking. Steps can\'t show how your heart is adapting.' },
-  unsure:   { cardId: 'seasonal', reason: 'Here\'s what your step data shows — and where a wearable would add depth.' },
-}
-
 const SIGNAL_ROUTES = {
   yvonne: YVONNE_ROUTES,
-  jamie:  JAMIE_ROUTES,
-  robert: ROBERT_ROUTES,
-  alex:   ALEX_ROUTES,
 }
 
 // ── Chart dispatcher ──────────────────────────────────────────────
@@ -230,7 +86,6 @@ function RouteChart({ type, data }) {
   if (type === 'recovery')  return <RecentRecoveryChart data={data} height={110} compact />
   if (type === 'physical')  return <RecentPhysicalChart data={data} height={110} compact />
   if (type === 'sleepMini') return <RecentSleepMini data={data} height={64} />
-  if (type === 'regularity') return <SleepRegularityChart data={data} height={110} compact />
   if (type === 'sleepHRV')  return <SleepHRVChart height={140} compact legendPosition="left" />
   if (type === 'placeholder') return null // handled separately, needs needsExport text
   return null
@@ -384,7 +239,7 @@ function RouteContent({ route, onInvestigate, onShowNoticed, onExplore }) {
     )
   }
 
-  // ── Mode 3 — structurally unanswerable, persona-specific note ──
+  // ── Mode 3 — structurally unanswerable ──
   if (route.mode === 3) {
     return (
       <div style={{ paddingTop: 12 }} onClick={(e) => e.stopPropagation()}>
@@ -407,20 +262,6 @@ function RouteContent({ route, onInvestigate, onShowNoticed, onExplore }) {
             {route.mode3Note}
           </p>
         )}
-      </div>
-    )
-  }
-
-  // ── Legacy shape — Alex only, until his turn to be rebuilt ──
-  if (route.wearableOnly) {
-    return (
-      <div style={{ paddingTop: 12 }} onClick={(e) => e.stopPropagation()}>
-        <p style={{ fontSize: 14, lineHeight: 1.6, color: 'var(--color-text-secondary)', marginBottom: 12 }}>
-          {route.reason}
-        </p>
-        <p style={{ fontSize: 13, color: 'var(--color-text-tertiary)', lineHeight: 1.6, marginBottom: 14 }}>
-          A wearable worn overnight would capture the signals that explain this — HRV, resting heart rate, sleep staging.
-        </p>
       </div>
     )
   }
@@ -468,15 +309,11 @@ export default function SomethingDifferentScreen({
 }) {
   const [selected, setSelected] = useState(null)
   const narrow = useIsNarrow()
-  const routes = SIGNAL_ROUTES[persona] || SIGNAL_ROUTES.jamie
+  const routes = SIGNAL_ROUTES.yvonne
   const SNAPSHOT_LABELS = ['HRV', 'RHR', 'Deep sleep', 'Active cal']
  
   const snapshotMetrics =
-    persona === 'yvonne'
-      ? SNAPSHOT_LABELS.map(label => currentSnapshot.metrics.find(m => m.label === label)).filter(Boolean)
-      : persona === 'jamie' ? JAMIE_SNAPSHOT
-      : persona === 'robert' ? ROBERT_SNAPSHOT
-      : null
+    SNAPSHOT_LABELS.map(label => currentSnapshot.metrics.find(m => m.label === label)).filter(Boolean)
  
 
   function handleSelect(id) {
@@ -531,13 +368,7 @@ export default function SomethingDifferentScreen({
                   You bring the feeling. Fluent checks the data.
                 </p>
               </motion.div>
-             {persona === 'alex' ? (
-              <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', marginBottom: 28 }}>
-                Based on your step data from the past two weeks.
-              </p>
-            ) : (
               <CurrentSnapshotCards metrics={snapshotMetrics} />
-            )}
               <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1fr 1fr', gap: 12, marginBottom: 20 }}>
             {SIGNALS.map((signal, i) => {
               const isSelected = selected === signal.id

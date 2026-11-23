@@ -9,7 +9,7 @@ import { useId, useState, useEffect, useRef } from 'react'
  * nothing, since the expensive part is recomputing the blur+goo
  * filter every frame while children move, not the filter itself.
  * Reserve `animated` for screens with nothing else competing for
- * attention or render budget (thesis, persona picker, home) —
+ * attention or render budget (thesis, home) —
  * everywhere else, static gives the same look for near-zero ongoing
  * cost and keeps the background from pulling focus off charts.
  *
@@ -58,7 +58,7 @@ export default function AnimatedMeshBackground({
   circleSize = 80,
   blending = 'hard-light',
   opacity = 1,
-  animated = false, // reserve true for thesis / persona picker / home only
+  animated = false, // reserve true for thesis / home only
   pauseOnMouseMove = true,
   idleDelay = 400, // ms of no mouse movement before animation resumes
 }) {

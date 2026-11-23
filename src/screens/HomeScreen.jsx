@@ -19,9 +19,8 @@ const CATEGORIES = [
   { id: 'moments',   label: 'Moments that shaped my health',      description: 'Where data and life intersect', Icon: IconMoments },
 ]
 
-const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex' }
 
-export default function HomeScreen({ persona, onNavigate, onBack, onPersonaSwitch }) {
+export default function HomeScreen({ persona, onNavigate, onBack }) {
   const [hovered,  setHovered]  = useState(null)
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
   const narrow = useIsNarrow()
@@ -31,8 +30,6 @@ export default function HomeScreen({ persona, onNavigate, onBack, onPersonaSwitc
     window.addEventListener('mousemove', move)
     return () => window.removeEventListener('mousemove', move)
   }, [])
-
-  const personaLabel = PERSONA_LABELS[persona] || persona
 
   return (
     <div style={{

@@ -1,8 +1,4 @@
 import { motion } from 'framer-motion'
-import WeeklyRhythmChart  from '../components/charts/WeeklyRhythmChart'
-import SleepHRVChart      from '../components/charts/SleepHRVChart'
-import RetirementArcChart from '../components/charts/RetirementArcChart'
-import SeasonalStepsChart from '../components/charts/SeasonalStepsChart'
 import PageContainer      from '../components/layout/PageContainer'
 import FloatingNav        from '../components/nav/FloatingNav'
 import IllnessArcChart      from '../components/charts/IllnessArcChart'
@@ -12,10 +8,6 @@ import soberData        from '../data/yvonne/sober_experiment.json'
 import { useIsNarrow } from '../components/scrolly/useIsNarrow'
  
 const CARDS = {
-  jamie: [
-    { id: 'monday',    headline: 'Your resting heart rate is lowest on Mondays',      subtitle: 'About 68 bpm on Mondays, the lowest day of the week, and about 75 bpm on Saturdays, the highest.', viz: 'weekly_rhythm' },
-    { id: 'sleep_hrv', headline: 'Sleep looked normal, but HRV was low the next morning', subtitle: 'On 4 nights, sleep efficiency was typical and the next morning\'s HRV was about 7 ms below your usual.', viz: 'sleep_hrv_quadrant' },
-  ],
   yvonne: [
     {
       id: 'illness_arc',
@@ -30,34 +22,18 @@ const CARDS = {
       viz: 'sober_experiment',
     },
   ],
-  robert: [
-    { id: 'retirement', headline: 'Retirement left a mark on your heart rate',    subtitle: 'Your resting heart rate settled into a new, healthier pattern after you retired.', viz: 'retirement_arc' },
-    { id: 'silence',    headline: "Nothing stood out this quarter — and that's worth knowing", subtitle: "Your key patterns are all consistent with how you've been trending. No news is the finding here.", viz: null },
-  ],
-  alex: [
-    { id: 'seasonal',   headline: 'October was your most active month — February your quietest', subtitle: "Your steps follow a seasonal rhythm you've probably felt but never seen confirmed.", viz: 'seasonal_steps' },
-    { id: 'capability', headline: "Here's what steps can't tell you",              subtitle: "Your activity patterns are clear, but Fluent can't see whether those active days left you energized or depleted.", viz: 'capability_gap' },
-  ],
 }
  
 const GRADIENTS = {
-  jamie:  'radial-gradient(ellipse at 30% 70%, rgba(196,80,232,0.3) 0%, transparent 60%)',
   yvonne: 'radial-gradient(ellipse at 70% 30%, rgba(6,129,252,0.2) 0%, rgba(39,196,138,0.1) 50%, transparent 70%)',
-  robert: 'radial-gradient(ellipse at 20% 50%, rgba(39,196,138,0.2) 0%, transparent 60%)',
-  alex:   'radial-gradient(ellipse at 60% 40%, rgba(39,196,138,0.15) 0%, transparent 60%)',
 }
  
-const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex' }
  
 function VizPlaceholder({ type, persona }) {
-  if (type === 'weekly_rhythm' && persona === 'jamie') return <WeeklyRhythmChart />
-  if (type === 'sleep_hrv_quadrant') return <SleepHRVChart height={160} />
   if (type === 'illness_arc')
     return <IllnessArcChart data={illnessArcData} height={130} compact={true} />
   if (type === 'sober_experiment')
     return <SoberExperimentChart data={soberData} height={130} compact />  
-  if (type === 'retirement_arc')     return <RetirementArcChart height={160} />
-  if (type === 'seasonal_steps')     return <SeasonalStepsChart height={160} />
   if (!type) return null
   return (
     <div style={{ height: 140, background: 'rgba(255,255,255,0.05)', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '16px 0' }}>
@@ -68,12 +44,11 @@ function VizPlaceholder({ type, persona }) {
  
 // Props:
 //   onExplore(cardId | 'home') — card tap
-//   onSwitch                   — persona chip → picker
+
 // No onBack — fluent wordmark routes to thesis instead
-export default function WhatFluentNoticed({ persona, onExplore, onSwitch, onHome, onNavigate }) {
+export default function WhatFluentNoticed({ persona, onExplore, onHome, onNavigate }) {
   const cards    = CARDS[persona]     || CARDS.yvonne
   const gradient = GRADIENTS[persona] || GRADIENTS.yvonne
-  const label    = PERSONA_LABELS[persona] || persona
   const narrow = useIsNarrow()
  
   return (

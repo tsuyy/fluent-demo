@@ -1,24 +1,17 @@
 import { motion } from 'framer-motion'
 import FloatingNav        from '../components/nav/FloatingNav'
-import SleepArchitectureChart from '../components/charts/SleepArchitectureChart'
 import SleepHRVChart      from '../components/charts/SleepHRVChart'
 import SleepTrendCards    from '../components/cards/SleepTrendCards'
 import SleepQQRTSection   from '../components/sleep/SleepQQRTSection'
 import PageContainer      from '../components/layout/PageContainer'
 import SportSleepChart from '../components/charts/SportSleepChart'
-import SleepRegularityChart from '../components/charts/SleepRegularityChart'
-import robertSleepTimes from '../data/robert/sleep_times.json'
 import sleepQQRTData  from '../data/yvonne/sleep_qqrt.json'   // already exists
 import sleepTimesData from '../data/yvonne/sleep_times.json'  // ADD this
 import { useIsNarrow } from '../components/scrolly/useIsNarrow'
 
-const PERSONA_LABELS = { jamie: 'Jamie', yvonne: 'Yvonne', robert: 'Robert', alex: 'Alex' }
 
 const GRADIENTS = {
-  jamie:  'radial-gradient(ellipse at 15% 70%, rgba(196,80,232,0.2) 0%, transparent 55%)',
   yvonne: 'radial-gradient(ellipse at 80% 20%, rgba(6,129,252,0.15) 0%, rgba(39,196,138,0.08) 40%, transparent 65%)',
-  robert: 'radial-gradient(ellipse at 20% 60%, rgba(39,196,138,0.15) 0%, transparent 55%)',
-  alex:   'radial-gradient(ellipse at 60% 30%, rgba(39,196,138,0.1) 0%, transparent 55%)',
 }
 
 function ChartCard({ title, subtitle, insight, children, delay = 0, fullWidth = false }) {
@@ -60,7 +53,6 @@ function ChartCard({ title, subtitle, insight, children, delay = 0, fullWidth = 
 
 export default function SleepScreen({ persona, onNavigate, onBack }) {
   const gradient = GRADIENTS[persona] || GRADIENTS.yvonne
-  const isAlex   = persona === 'alex'
   const isYvonne = persona === 'yvonne'
   const narrow = useIsNarrow()
 
@@ -98,25 +90,8 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
             </p>
           </motion.div>
 
-          {/* Alex — capability gap */}
-          {isAlex && (
-            <div style={{
-              padding: 32, borderRadius: 16,
-              background: 'rgba(255,255,255,0.04)',
-              border: '1px solid rgba(255,255,255,0.08)',
-            }}>
-              <p style={{ fontSize: 16, marginBottom: 12, lineHeight: 1.5 }}>
-                Sleep staging requires a wearable worn overnight.
-              </p>
-              <p style={{ color: 'var(--color-text-tertiary)', fontSize: 14, lineHeight: 1.6, marginBottom: 20 }}>
-                Deep sleep, REM, and overnight HRV are all captured during sleep — the most
-                valuable window for understanding how your body recovers.
-              </p>
-            </div>
-          )}
-
           {/* Wearable personas */}
-          {!isAlex && (
+          {true && (
             <div style={{ display: 'grid', gridTemplateColumns: narrow ? 'minmax(0, 1fr)' : 'minmax(0, 1fr) minmax(0, 1fr)', gap: 20 }}>
 
               {/* How your sleep has changed: first for every wearable persona */}
@@ -139,30 +114,6 @@ export default function SleepScreen({ persona, onNavigate, onBack }) {
                 >
                   <SleepQQRTSection data={sleepQQRTData} sleepTimes={sleepTimesData} />
                 </motion.div>
-              )}
-
-              {/* ── Non-Yvonne: sleep architecture first ── */}
-              {!isYvonne && (
-                <ChartCard
-                  title="Sleep architecture — this week"
-                  subtitle="Deep · REM · Core · Awake"
-                  delay={0.1}
-                  fullWidth
-                >
-                  <SleepArchitectureChart persona={persona} height={200} />
-                </ChartCard>
-              )}
-
-              {persona === 'robert' && (
-                <ChartCard
-                  title="How regular is your bedtime?"
-                  subtitle="Every night, Jun 2023 – May 2025"
-                  delay={0.2}
-                  fullWidth
-                  insight={`${robertSleepTimes.eras[0].anchor_pct}% of nights you were in bed between 9 and 11pm, and almost none after midnight. Your bedtime moves about 31 minutes either way, which is steady.`}
-                >
-                  <SleepRegularityChart data={robertSleepTimes.eras[0]} height={170} />
-                </ChartCard>
               )}
 
               {isYvonne && (

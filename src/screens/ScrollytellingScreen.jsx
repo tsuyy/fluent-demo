@@ -80,7 +80,6 @@ const SCENES = {
         />
       ) },
   ],
-  robert: [],
 }
 
 const HOLD_IN = 0.04

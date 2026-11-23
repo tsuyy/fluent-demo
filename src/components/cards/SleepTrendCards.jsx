@@ -11,18 +11,6 @@ const TREND_DATA = {
     { stage: 'Awake Time',  metric: 'awake_time',        current: 31, prev: 43, unit: 'min', dir: 'down', note: 'Sleep continuity — improving' },
     { stage: 'Efficiency',  metric: 'sleep_efficiency',  current: 92, prev: 87, unit: '%',   dir: 'up',   note: 'Time in bed well used' },
   ],
-  jamie: [
-    { stage: 'Deep Sleep',  metric: 'deep_sleep',       current: 49, prev: 44, unit: 'min', dir: 'up',   note: 'Gradually improving' },
-    { stage: 'REM Sleep',   metric: 'rem',               current: 78, prev: 74, unit: 'min', dir: 'up',   note: 'Stable' },
-    { stage: 'Awake Time',  metric: 'awake_time',        current: 32, prev: 38, unit: 'min', dir: 'down', note: 'Improving' },
-    { stage: 'Efficiency',  metric: 'sleep_efficiency',  current: 88, prev: 85, unit: '%',   dir: 'up',   note: 'Above 85% threshold' },
-  ],
-  robert: [
-    { stage: 'Deep Sleep',  metric: 'deep_sleep',       current: 53, prev: 48, unit: 'min', dir: 'up',   note: 'Better since retirement' },
-    { stage: 'REM Sleep',   metric: 'rem',               current: 71, prev: 68, unit: 'min', dir: 'up',   note: 'Consistent' },
-    { stage: 'Awake Time',  metric: 'awake_time',        current: 26, prev: 42, unit: 'min', dir: 'down', note: 'Significantly improved' },
-    { stage: 'Efficiency',  metric: 'sleep_efficiency',  current: 88, prev: 82, unit: '%',   dir: 'up',   note: 'Retirement improved sleep' },
-  ],
 }
 
 export default function SleepTrendCards({ persona = 'yvonne' }) {
