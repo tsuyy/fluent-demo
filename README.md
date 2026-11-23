@@ -16,13 +16,13 @@ React 19, Vite, framer-motion, and nivo plus hand-written SVG charts.
 
 ## Data
 
-The demo runs on Yvonne's own Apple Watch data (Jan 2022 to Oct 2026).
+The demo runs on my own Apple Watch data (Jan 2022 to Oct 2026).
 
 ## Where things are
 
 - `src/screens/`: Home, What Fluent noticed, Something Feels Different, Movement & Recovery, Heart & Nervous System, Sleep, Moments, and the two follow-up flows.
 - `src/components/charts/`: chart components. Each states a takeaway computed from the data it draws.
-- `src/data/yvonne/`: exported JSON for Yvonne's screens. Written by the private pipeline (`export_master.py`), not edited by hand.
+- `src/data/yvonne/`: exported JSON for the demo screens. Written by the private pipeline (`export_master.py`), not edited by hand.
 
 ## Baseline rule
 
@@ -30,4 +30,4 @@ Every comparison uses the mean of the previous 30 days, excluding the day scored
 
 ## Privacy
 
-Yvonne's data is exported from a local pipeline and contains personal health information. Do not publish `src/data/yvonne/` outside this project.
+My data is exported from a local pipeline and contains personal health information. Do not publish `src/data/yvonne/` outside this project.

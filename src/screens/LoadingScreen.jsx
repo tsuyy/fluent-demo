@@ -4,11 +4,11 @@ import { useIsNarrow } from '../components/scrolly/useIsNarrow'
 
 const COPY = {
   yvonne: {
-    headline: "Loading Yvonne's data...",
+    headline: "Loading my data...",
     lines: [
       "1,717 days of consistent wearable data.",
       "Looking for patterns across sleep, activity, cardiovascular data, and life annotations.",
-      "Yvonne's question: what's actually shaping how she feels?",
+      "My question: what's actually shaping how I feel?",
       "This takes about 30 seconds.",
     ],
     gradient: "radial-gradient(ellipse at 70% 30%, rgba(6,129,252,0.2) 0%, rgba(39,196,138,0.1) 50%, transparent 70%)",
