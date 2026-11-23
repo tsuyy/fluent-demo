@@ -69,7 +69,7 @@ const CARDS = {
     interpretation: "You did a 60-minute hot class on Feb 10 and ran 9 miles on Feb 11. Across eight other hot-class-and-run occasions, wrist temperature was typically close to baseline (median +0.2°C). This time, it was about +1.5°C above baseline. Your HRV dip also coincided with your first two runs over 8 miles, four days apart. For comparison, you had a fever on Feb 24–25, when HRV averaged about 30 ms below baseline. The Feb 11–12 change was smaller and came almost two weeks earlier. These patterns offer possible context, but don't establish what caused the changes.",
     interpretationNote: 'Baseline = mean of the previous 30 nights, excluding the night scored. Exploratory, one person, data through Oct 2026.',
     dataNote: 'Wrist temp +1.03°C, +1.46°C · HRV −10.5 to −16.8 ms · RHR unchanged · Feb 11–12  |  Fever window: HRV avg −29.7 ms · Feb 24–25',
-    question: "Looking back at Feb 11–12, changes like these can occur alongside feeling run down, restless sleep, or feeling unusually warm. You may not have noticed anything. How did those days feel?",
+    question: "Looking back at Feb 11–12, changes like these can occur alongside feeling run down, restless sleep, or feeling unusually warm. How did those days feel?",
     questionType: 'felt',
     chips: [
       "I don't remember",
