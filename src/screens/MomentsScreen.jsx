@@ -588,7 +588,6 @@ export default function MomentsScreen({ persona, onNavigate, onBack, onFlow2 }) 
 
       <div style={{ position: 'absolute', top: 32, left: 48, right: 48, display: 'flex', justifyContent: 'space-between', alignItems: 'center', zIndex: 10 }}>
         <span style={{ fontSize: 16, fontWeight: 500 }}>fluent</span>
-        <span onClick={onBack} style={{ fontSize: 14, color: 'var(--color-text-secondary)', cursor: 'pointer', flexShrink: 0, whiteSpace: 'nowrap' }}>← home</span>
       </div>
 
       <div style={{ flex: 1, overflowY: 'auto', padding: '100px 24px 120px', position: 'relative', zIndex: 1 }}>

@@ -134,20 +134,6 @@ export default function HomeScreen({ persona, onNavigate, onBack }) {
           )
         })()}
       </AnimatePresence>
-
-      <motion.span
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8 }}
-        onClick={onBack}
-        style={{
-          position: 'fixed', bottom: 36, left: narrow ? 24 : 48,
-          color: 'var(--color-text-tertiary)',
-          fontSize: 14, cursor: 'pointer', zIndex: 10,
-        }}
-      >
-        ←
-      </motion.span>
     </div>
   )
 }

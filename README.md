@@ -16,7 +16,7 @@ React 19, Vite, framer-motion, and nivo plus hand-written SVG charts.
 
 ## Data
 
-The demo runs on Yvonne's own Apple Watch data (Jan 2022 to Oct 2026). Earlier versions also had three fictional personas (Jamie, Robert, Alex). They were removed along with their data and code.
+The demo runs on Yvonne's own Apple Watch data (Jan 2022 to Oct 2026).
 
 ## Where things are
 
