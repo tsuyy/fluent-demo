@@ -14,17 +14,16 @@ npm run build    # production build in dist/
 
 React 19, Vite, framer-motion, and nivo plus hand-written SVG charts.
 
-## Personas
+## Data
 
-- **Yvonne**: the primary path, built from real Apple Watch data (Jan 2022 to Oct 2026).
-- **Jamie, Robert, Alex**: fictional personas with hand-written data, used to test whether the same system holds up with different amounts of data and different life stages. Alex has steps only, no wearable.
+The demo runs on Yvonne's own Apple Watch data (Jan 2022 to Oct 2026). Earlier versions also had three fictional personas (Jamie, Robert, Alex). They are no longer reachable from the demo, and their data and code are still in the repo until cleaned up.
 
 ## Where things are
 
 - `src/screens/`: Home, What Fluent noticed, Something Feels Different, Movement & Recovery, Heart & Nervous System, Sleep, Moments, and the two follow-up flows.
 - `src/components/charts/`: chart components. Each states a takeaway computed from the data it draws.
 - `src/data/yvonne/`: exported JSON for Yvonne's screens. Written by the private pipeline (`export_master.py`), not edited by hand.
-- `src/data/{jamie,robert,alex}/`: persona data. Robert's bedtime file is illustrative.
+- `src/data/{jamie,robert,alex}/`: legacy persona data, unused.
 
 ## Baseline rule
 

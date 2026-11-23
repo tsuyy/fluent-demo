@@ -51,19 +51,6 @@ export default function HomeScreen({ persona, onNavigate, onBack, onPersonaSwitc
         zIndex: 20,
       }}>
         <span style={{ fontSize: 16, fontWeight: 500 }}>fluent</span>
-        <motion.span
-          whileHover={{ opacity: 0.7 }}
-          onClick={onPersonaSwitch}
-          style={{
-            fontSize: 14, color: 'var(--color-text-secondary)',
-            cursor: 'pointer', flexShrink: 0, whiteSpace: 'nowrap',
-            background: 'rgba(255,255,255,0.06)',
-            border: '1px solid rgba(255,255,255,0.1)',
-            borderRadius: 20, padding: '4px 12px',
-          }}
-        >
-          {personaLabel}
-        </motion.span>
       </div>
 
       <PageContainer>

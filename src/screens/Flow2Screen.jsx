@@ -279,13 +279,6 @@ function handleFelt(chip) {
       {/* Top nav — consistent pill style */}
       <div style={{ position: 'fixed', top: 32, left: 48, right: 48, display: 'flex', justifyContent: 'space-between', alignItems: 'center', zIndex: 20 }}>
         <span style={{ fontSize: 16, fontWeight: 500 }}>fluent</span>
-        <motion.span
-          whileHover={{ opacity: 0.7 }}
-          onClick={() => onNavigate('picker')}
-          style={{ fontSize: 14, color: 'var(--color-text-secondary)', cursor: 'pointer', flexShrink: 0, whiteSpace: 'nowrap', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 20, padding: '4px 12px' }}
-        >
-          {label}
-        </motion.span>
       </div>
  
       {/* Scrollable content */}

@@ -4,7 +4,6 @@ import './index.css'
  
 import ThesisScreen             from './screens/ThesisScreen'
 import LoadingScreen            from './screens/LoadingScreen'
-import PersonaPicker            from './screens/PersonaPicker'
 import WhatFluentNoticed        from './screens/WhatFluentNoticed'
 import HomeScreen               from './screens/HomeScreen'
 import Flow2Screen              from './screens/Flow2Screen'
@@ -20,23 +19,15 @@ export default function App() {
   const [persona,         setPersona]         = useState(null)
   const [flow2Card,       setFlow2Card]       = useState(null)
   const [visitedPersonas, setVisitedPersonas] = useState(new Set())
-  const [pickerPrev,      setPickerPrev]      = useState('noticed') // where picker's back button goes
  
   // ── Helpers ───────────────────────────────────────────────────────────────
  
-  function goToPicker(from) {
-    setPickerPrev(from)
-    setScreen('picker')
-  }
- 
-  // Flow2Screen emits 'flow2:cardId' for next-insight, 'picker' for persona chip,
+  // Flow2Screen emits 'flow2:cardId' for next-insight,
   // 'home' for last-card CTA, and category strings for other nav.
   function handleFlow2Navigate(target) {
     if (target.startsWith('flow2:')) {
       setFlow2Card(target.slice(6))
       // stay on flow2 screen — card change handled by the prop update
-    } else if (target === 'picker') {
-      goToPicker('flow2')
     } else {
       setScreen(target)
     }
@@ -81,7 +72,6 @@ export default function App() {
       }}
       onNavigate={(cat) => setScreen(cat)}
       onHome={() => setScreen('thesis')}         // fluent wordmark → thesis
-      onSwitch={() => goToPicker('noticed')}     // persona chip → picker
     />
   )
  
@@ -103,27 +93,9 @@ export default function App() {
     <HomeScreen
       persona={persona}
       onNavigate={(cat) => {
-        if (cat === 'secondary') {
-          goToPicker('home')
-        } else {
-          setScreen(cat)
-        }
+        setScreen(cat)
       }}
       onBack={() => setScreen('noticed')}
-      onPersonaSwitch={() => goToPicker('home')}
-    />
-  )
- 
-  // ── Persona picker ────────────────────────────────────────────────────────
- 
-  if (screen === 'picker') return (
-    <PersonaPicker
-      currentPersona={persona}
-      onSelect={(p) => {
-        setPersona(p)
-        setScreen('loading')
-      }}
-      onBack={() => setScreen(pickerPrev)}
     />
   )
  
@@ -133,11 +105,7 @@ export default function App() {
     <SomethingDifferentScreen
       persona={persona}
       onNavigate={(cat) => {
-        if (cat === 'picker') {
-          goToPicker('different')  
-        } else {
-          setScreen(cat)
-        }
+        setScreen(cat)
       }}      
       onBack={() => setScreen('home')}
       onFlow2={(cardId) => { setFlow2Card(cardId); setScreen('flow2') }}
@@ -148,11 +116,7 @@ export default function App() {
     <MovementRecoveryScreen
       persona={persona}
       onNavigate={(cat) => {
-        if (cat === 'picker') {
-          goToPicker('activity')   
-        } else {
-          setScreen(cat)
-        }
+        setScreen(cat)
       }}      
       onBack={() => setScreen('home')}
     />
@@ -162,11 +126,7 @@ export default function App() {
     <HeartNervousSystemScreen
       persona={persona}
       onNavigate={(cat) => {
-        if (cat === 'picker') {
-          goToPicker('cardio')  
-        } else {
-          setScreen(cat)
-        }
+        setScreen(cat)
       }}
       onBack={() => setScreen('home')}
     />
@@ -176,11 +136,7 @@ export default function App() {
     <SleepScreen
       persona={persona}
       onNavigate={(cat) => {
-        if (cat === 'picker') {
-          goToPicker('sleep')  
-        } else {
-          setScreen(cat)
-        }
+        setScreen(cat)
       }}      
       onBack={() => setScreen('home')}
     />
@@ -190,11 +146,7 @@ export default function App() {
     <MomentsScreen
       persona={persona}
       onNavigate={(cat) => {
-        if (cat === 'picker') {
-          goToPicker('moments')   // ← use the actual screen name as prevScreen
-        } else {
-          setScreen(cat)
-        }
+        setScreen(cat)
       }}
       onBack={() => setScreen('home')}
       onFlow2={(cardId) => { setFlow2Card(cardId); setScreen('flow2')}}
